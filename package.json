@@ -1,60 +1,34 @@
 {
   "name": "webformance-guardian",
   "version": "0.1.0",
-  "description": "A powerful web performance monitoring and testing tool",
-  "main": "dist/index.js",
+  "private": true,
   "scripts": {
-    "test": "jest",
-    "test:unit": "jest",
-    "test:coverage": "jest --coverage",
-    "test:ci": "npm run test:unit",
-    "report:stably": "ts-node src/core/generate-report.ts stably",
-    "ui:serve": "node src/ui/server.js",
-    "build": "tsc",
     "dev": "next dev",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest",
+    "report:stably": "node scripts/generate-report.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pmatheusvinhas/webformance-guardian.git"
-  },
-  "keywords": [
-    "web",
-    "performance",
-    "testing",
-    "monitoring",
-    "automation"
-  ],
-  "author": "Paulo M. Vinhas",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pmatheusvinhas/webformance-guardian/issues"
-  },
-  "homepage": "https://github.com/pmatheusvinhas/webformance-guardian#readme",
   "dependencies": {
-    "@playwright/test": "^1.41.0",
-    "@types/chart.js": "^2.9.41",
-    "chart.js": "^4.4.1",
-    "dotenv": "^16.3.1",
-    "groq-sdk": "^0.3.0",
-    "next": "^14.1.0",
-    "node-fetch": "^2.7.0",
+    "next": "14.0.4",
     "react": "^18.2.0",
-    "react-chartjs-2": "^5.3.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "react-chartjs-2": "^5.2.0",
+    "chart.js": "^4.4.1",
+    "playwright": "^1.40.1",
+    "groq-sdk": "^0.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.11",
-    "@types/node": "^20.10.5",
-    "@types/node-fetch": "^2.6.9",
-    "@types/react": "^18.2.48",
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
-    "autoprefixer": "^10.4.17",
+    "typescript": "^5.3.3",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "@types/jest": "^29.5.11",
     "jest": "^29.7.0",
-    "postcss": "^8.4.33",
     "ts-jest": "^29.1.1"
   }
 }
