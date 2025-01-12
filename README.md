@@ -4,7 +4,12 @@
 
 A continuous web performance monitoring project developed as part of the application process for Stably AI.
 
-## 🎯 Objective
+## 🎯 Project Status
+
+[![CI/CD](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/main.yml/badge.svg)](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/main.yml)
+[![Performance Tests](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml/badge.svg)](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml)
+
+## 📝 Objective
 
 Demonstrate the capability to create a complete web performance monitoring solution that:
 - Executes automated tests periodically
@@ -21,7 +26,7 @@ Demonstrate the capability to create a complete web performance monitoring solut
   - Metrics collection: Load Time, TTFB, FCP
 
 - **AI Analysis**
-  - Automatic analysis via Groq AI (Mixtral 8x7B)
+  - Automatic analysis using Groq API (Mixtral 8x7B)
   - Actionable insights generation
   - Critical issues identification
   - Optimization recommendations
@@ -55,10 +60,6 @@ We use Groq AI's Mixtral 8x7B model to:
 - Identify critical issues
 - Generate technical recommendations
 - Prioritize optimizations
-
-## 🚦 Project Status
-
-[![Performance Tests](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml/badge.svg)](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml)
 
 ## 📝 License
 

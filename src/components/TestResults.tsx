@@ -100,18 +100,32 @@ export const TestResults: React.FC<TestResultsProps> = ({ results, analysis }) =
       {/* Header with GitHub Actions Status */}
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold">Performance Test Results</h1>
-        <a
-          href="https://github.com/paulo-eduardo/demoSelenium/actions/workflows/performance.yml"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center"
-        >
-          <img
-            src="https://github.com/paulo-eduardo/demoSelenium/actions/workflows/performance.yml/badge.svg"
-            alt="Performance Tests Status"
-            className="h-6"
-          />
-        </a>
+        <div className="flex gap-4">
+          <a
+            href="https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/main.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center"
+          >
+            <img
+              src="https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/main.yml/badge.svg"
+              alt="CI/CD Status"
+              className="h-6"
+            />
+          </a>
+          <a
+            href="https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center"
+          >
+            <img
+              src="https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml/badge.svg"
+              alt="Performance Tests Status"
+              className="h-6"
+            />
+          </a>
+        </div>
       </div>
 
       {/* Summary Section with AI Badge */}

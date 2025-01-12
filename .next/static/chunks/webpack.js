@@ -181,7 +181,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("18156c30e3f66f57")
+/******/ 		__webpack_require__.h = () => ("2cc54fc5e517cada")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -688,7 +688,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/webformance-guardian/_next/";
+/******/ 		__webpack_require__.p = "/_next/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/react refresh */
