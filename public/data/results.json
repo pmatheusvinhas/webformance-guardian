@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Homepage Load",
+    "passed": true,
+    "duration": 4299,
+    "metrics": {
+      "ttfb": 54.60000014305115,
+      "fcp": 3716.9000000953674,
+      "loadTime": 859.8000001907349
+    }
+  },
+  {
+    "title": "Pricing Page Load",
+    "passed": true,
+    "duration": 164,
+    "metrics": {
+      "ttfb": 25,
+      "fcp": 137,
+      "loadTime": 99.79999995231628
+    }
+  },
+  {
+    "title": "Blog Page Load",
+    "passed": true,
+    "duration": 146,
+    "metrics": {
+      "ttfb": 31.300000190734863,
+      "fcp": 117.70000004768372,
+      "loadTime": 102.40000009536743
+    }
+  },
+  {
+    "title": "CTA Button Click",
+    "passed": false,
+    "duration": 30237,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button[type=\"submit\"]') to be visible\u001b[22m\n",
+    "metrics": {}
+  },
+  {
+    "title": "Contact Form Interaction",
+    "passed": false,
+    "duration": 30355,
+    "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form') to be visible\u001b[22m\n",
+    "metrics": {}
+  }
+]

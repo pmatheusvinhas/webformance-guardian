@@ -1,132 +1,65 @@
-# Webformance Guardian
+# WebFormance Guardian
 
-A web performance monitoring tool with AI-powered analysis. This project demonstrates automated performance testing and analysis using Playwright, TypeScript, and AI models for generating insights.
+[Demo](https://pmatheusvinhas.github.io/webformance-guardian/)
 
-## Features
+A continuous web performance monitoring project developed as part of the application process for Stably AI.
 
-- 🚀 Automated performance testing with Playwright
-- 🧠 AI-powered test generation and analysis
-- 📊 Interactive dashboard for visualizing results
-- 📈 Historical performance tracking
-- 🔄 Daily automated testing via GitHub Actions
+## 🎯 Objective
 
-## Prerequisites
+Demonstrate the capability to create a complete web performance monitoring solution that:
+- Executes automated tests periodically
+- Collects crucial performance metrics
+- Analyzes results using AI
+- Presents actionable insights
+- Maintains performance history
 
-- Node.js 16+
-- npm or yarn
-- A Hugging Face API token
+## 🚀 Features
 
-## Installation
+- **Automated Testing**
+  - Runs every 5 hours via GitHub Actions
+  - Performance tests using Playwright
+  - Metrics collection: Load Time, TTFB, FCP
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/web-performance-guardian.git
-cd web-performance-guardian
-```
+- **AI Analysis**
+  - Automatic analysis via Groq AI (Mixtral 8x7B)
+  - Actionable insights generation
+  - Critical issues identification
+  - Optimization recommendations
 
-2. Install dependencies:
-```bash
-npm install
-```
+- **Interactive Dashboard**
+  - Real-time metrics visualization
+  - Interactive charts with Chart.js
+  - GitHub Actions status
+  - 6-day performance history
+  - Modern UI with Tailwind CSS
 
-3. Create a `.env` file based on `.env.example`:
-```bash
-cp .env.example .env
-```
+## 🛠 Technologies
 
-4. Add your Hugging Face API token to `.env`:
-```
-HUGGINGFACE_API_TOKEN=your_token_here
-```
+- **Frontend**: Next.js, TypeScript, Tailwind CSS
+- **Testing**: Playwright
+- **Visualization**: Chart.js
+- **CI/CD**: GitHub Actions
+- **AI**: Groq API (Mixtral 8x7B)
+- **Deploy**: GitHub Pages
 
-## Usage
+## 📊 Collected Metrics
 
-### Running Performance Tests
+- **Load Time**: Total page load time
+- **TTFB (Time To First Byte)**: Initial server response
+- **FCP (First Contentful Paint)**: First content rendering
 
-To run performance tests for a specific site:
+## 🤖 AI Analysis
 
-```bash
-npm run report:stably
-```
+We use Groq AI's Mixtral 8x7B model to:
+- Analyze performance trends
+- Identify critical issues
+- Generate technical recommendations
+- Prioritize optimizations
 
-This will:
-1. Generate and run performance tests
-2. Analyze the results using AI
-3. Save the results and analysis
-4. Update the dashboard
+## 🚦 Project Status
 
-### Viewing Results
+[![Performance Tests](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml/badge.svg)](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml)
 
-Start the UI server:
+## 📝 License
 
-```bash
-npm run ui:serve
-```
-
-Then open `http://localhost:3000` in your browser to view the dashboard.
-
-## Project Structure
-
-```
-├── src/
-│   ├── core/           # Core functionality
-│   │   ├── ai-analyzer.ts
-│   │   ├── performance-analyzer.ts
-│   │   ├── test-reporter.ts
-│   │   └── types.ts
-│   ├── sites/         # Site-specific configurations
-│   └── ui/            # Dashboard interface
-├── tests/
-│   ├── performance/   # Performance tests
-│   └── unit/         # Unit tests
-└── .github/
-    └── workflows/    # GitHub Actions workflows
-```
-
-## Testing
-
-Run unit tests:
-```bash
-npm test
-```
-
-Run tests with coverage:
-```bash
-npm run test:coverage
-```
-
-## CI/CD
-
-The project uses GitHub Actions for:
-- Running unit tests
-- Daily performance testing
-- Updating the dashboard
-- Deploying to GitHub Pages
-
-## Technical Details
-
-### AI Models
-
-We use the following models from Hugging Face:
-- `mistralai/Mistral-7B-Instruct-v0.1` for test generation and analysis
-- Chosen for its strong performance in structured output generation and natural language understanding
-
-### Performance Metrics
-
-The tool measures:
-- Time to First Byte (TTFB)
-- First Contentful Paint (FCP)
-- Largest Contentful Paint (LCP)
-- Custom metrics as needed
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
+MIT 

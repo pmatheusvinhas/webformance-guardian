@@ -1,0 +1,37 @@
+name: Performance Tests
+
+on:
+  schedule:
+    - cron: '0 */5 * * *'  # Executa a cada 5 horas
+  workflow_dispatch:        # Permite execução manual
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+        
+      - name: Run performance tests
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: npm run report:stably
+        
+      - name: Commit and push if there are changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data/
+          git commit -m "Update performance data [skip ci]" || exit 0
+          git push 

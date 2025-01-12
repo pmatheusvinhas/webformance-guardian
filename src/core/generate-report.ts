@@ -1,161 +1,122 @@
-import 'dotenv/config';
-import { TestReporter } from './test-reporter';
-import { AIAnalyzer } from './ai-analyzer';
 import { TestRunner } from './test-runner';
-import { TestResult, TestAnalysis } from './types';
-import * as path from 'path';
+import { AIAnalyzer } from './ai-analyzer';
+import { TestResult } from './types';
 import * as fs from 'fs';
+import * as path from 'path';
+import dotenv from 'dotenv';
 
-function validateEnvironment() {
-  if (!process.env.HUGGINGFACE_API_TOKEN) {
-    throw new Error('HUGGINGFACE_API_TOKEN environment variable is required');
-  }
-  if (!process.env.SITE_URL) {
-    throw new Error('SITE_URL environment variable is required');
-  }
-}
+dotenv.config();
 
-async function cleanup(site: string) {
-  // Clean up temporary directories
-  const cleanupDirs = [
-    'test-results',    // Playwright temp results
-    'playwright-report' // Playwright temp report
-  ];
-
-  // Clean up generated test files
-  const testFile = path.join('tests', 'sites', site, 'generated-performance.spec.ts');
-
-  // Clean directories
-  for (const dir of cleanupDirs) {
-    if (fs.existsSync(dir)) {
-      fs.rmSync(dir, { recursive: true, force: true });
-      console.log(`Cleaned directory: ${dir}`);
-    }
-  }
-
-  // Clean files
-  if (fs.existsSync(testFile)) {
-    fs.unlinkSync(testFile);
-    console.log(`Cleaned file: ${testFile}`);
-  }
-}
-
-async function waitForModelAvailability(analyzer: AIAnalyzer, maxAttempts = 5): Promise<void> {
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    try {
-      await analyzer.checkModelAvailability();
-      return;
-    } catch (error) {
-      if (error instanceof Error && error.message.includes('currently loading')) {
-        const waitTime = Math.min(attempt * 10, 30); // Exponential backoff, max 30 seconds
-        console.log(`\n⏳ AI model is still loading. Waiting ${waitTime} seconds before retry (attempt ${attempt}/${maxAttempts})...`);
-        await new Promise(resolve => setTimeout(resolve, waitTime * 1000));
-      } else {
-        throw error;
-      }
-    }
-  }
-  throw new Error('AI model failed to load after maximum retry attempts');
-}
-
-async function generateReport(site: string) {
-  console.log('\n🔍 Environment check:');
-  validateEnvironment();
-
-  const siteUrl = process.env.SITE_URL;
-  if (!siteUrl) {
-    throw new Error('SITE_URL environment variable is required');
-  }
-
-  console.log('\n🧹 Cleaning up temporary files...');
-  await cleanup(site);
-
-  console.log(`\n🤖 Generating test cases for ${site}...`);
-  const analyzer = new AIAnalyzer(process.env.HUGGINGFACE_API_TOKEN!);
-  const testCases = await analyzer.generateTestCases(siteUrl);
+async function saveToUI(results: TestResult[], analysis: any) {
+  const uiDir = path.join(process.cwd(), 'public', 'data');
   
-  console.log(`\n✨ Generated ${testCases.length} test cases`);
-  testCases.forEach(test => console.log(`   • ${test.title}`));
-
-  console.log('\n📝 Generating test code...');
-  const testCode = await analyzer.generateTestCode(testCases);
-  const testFilePath = path.join(process.cwd(), 'tests', 'sites', site, 'generated-performance.spec.ts');
-  await fs.promises.writeFile(testFilePath, testCode);
-  console.log(`   💾 Test code saved to: ${testFilePath}`);
-
-  console.log('\n🚀 Running generated tests...');
-  const runner = new TestRunner(siteUrl);
-  const results = await runner.runAllTests(testCases);
-
-  // Verifica se há resultados
-  if (!results || results.length === 0) {
-    console.error('\n❌ No test results generated.');
-    process.exit(1);
+  // Ensure directory exists
+  if (!fs.existsSync(uiDir)) {
+    fs.mkdirSync(uiDir, { recursive: true });
   }
 
-  // Análise dos resultados dos testes
-  const passedTests = results.filter(r => r.status === 'passed');
-  const failedTests = results.filter(r => r.status === 'failed');
-  const criticalFailures = failedTests.filter(result => 
-    result.error?.toLowerCase().includes('timeout')
+  // Save current results and analysis
+  fs.writeFileSync(path.join(uiDir, 'results.json'), JSON.stringify(results, null, 2));
+  fs.writeFileSync(path.join(uiDir, 'analysis.json'), JSON.stringify(analysis, null, 2));
+
+  // Save to history with timestamp
+  const historyDir = path.join(uiDir, 'history');
+  if (!fs.existsSync(historyDir)) {
+    fs.mkdirSync(historyDir, { recursive: true });
+  }
+
+  const timestamp = new Date().toISOString().replace(/:/g, '-');
+  fs.writeFileSync(
+    path.join(historyDir, `results-${timestamp}.json`),
+    JSON.stringify(results, null, 2)
+  );
+  fs.writeFileSync(
+    path.join(historyDir, `analysis-${timestamp}.json`),
+    JSON.stringify(analysis, null, 2)
   );
 
-  // Log detalhado dos resultados
-  console.log('\n📊 Test Results Analysis:');
-  console.log(`   ✅ Passed Tests: ${passedTests.length}`);
-  console.log(`   ❌ Failed Tests: ${failedTests.length}`);
-  if (criticalFailures.length > 0) {
-    console.log(`   ⚠️  Critical Failures: ${criticalFailures.length}`);
-  }
-
-  // Verifica condições para prosseguir
-  if (failedTests.length === results.length) {
-    console.error('\n❌ All tests failed. Not generating reports.');
-    console.error('Please check your network connection and try again.');
-    process.exit(1);
-  }
-
-  if (criticalFailures.length > testCases.length / 2) {
-    console.error('\n❌ Too many critical failures detected. Not generating reports.');
-    console.error('Failed tests:');
-    criticalFailures.forEach(failure => {
-      console.error(`   • ${failure.title}: ${failure.error}`);
-    });
-    process.exit(1);
-  }
-
-  // Gera relatórios usando o TestReporter
-  console.log('\n💾 Saving results...');
-  const reporter = new TestReporter(site);
-  results.forEach(result => reporter.addResult(result));
-  reporter.generateReports();
-
-  // Só prossegue com análise AI se houver testes bem-sucedidos
-  if (passedTests.length > 0) {
-    console.log('\n🧠 Analyzing test results...');
+  // Update history index
+  const historyIndexPath = path.join(uiDir, 'history-index.json');
+  let historyIndex = [];
+  
+  if (fs.existsSync(historyIndexPath)) {
     try {
-      // Aguarda disponibilidade do modelo antes de prosseguir
-      await waitForModelAvailability(analyzer);
-      const analysis = await analyzer.analyzeTestResults(results);
-      console.log('   ✅ Analysis completed successfully');
+      historyIndex = JSON.parse(fs.readFileSync(historyIndexPath, 'utf-8'));
     } catch (error) {
-      console.error('\n⚠️  AI Analysis failed:', error instanceof Error ? error.message : 'Unknown error');
-      console.log('   📝 Proceeding with basic report generation...');
+      console.warn('Failed to parse history index, starting fresh');
     }
   }
 
-  console.log('\n✨ Reports generated successfully!');
-  console.log(`   💻 You can now run "npm run ui:serve" to view the results for ${site}.`);
+  const passedTests = results.filter(r => r.passed).length;
+  historyIndex.push({
+    timestamp,
+    totalTests: results.length,
+    passedTests,
+    failedTests: results.length - passedTests,
+    averageMetrics: calculateAverageMetrics(results)
+  });
+
+  // Keep only last 30 days of history
+  historyIndex = historyIndex.slice(-144); // 144 = 24 * 6 (6 dias de dados a cada 5 horas)
+  
+  fs.writeFileSync(historyIndexPath, JSON.stringify(historyIndex, null, 2));
 }
 
-// Execute report generation
-const site = process.argv[2];
-if (!site) {
-  console.error('Please provide a site name as an argument');
-  process.exit(1);
+function calculateAverageMetrics(results: TestResult[]) {
+  const metrics = results.reduce((acc, r) => {
+    if (r.metrics) {
+      acc.loadTime += r.metrics.loadTime || 0;
+      acc.ttfb += r.metrics.ttfb || 0;
+      acc.fcp += r.metrics.fcp || 0;
+      acc.count++;
+    }
+    return acc;
+  }, { loadTime: 0, ttfb: 0, fcp: 0, count: 0 });
+
+  return {
+    loadTime: metrics.count ? Math.round(metrics.loadTime / metrics.count) : 0,
+    ttfb: metrics.count ? Math.round(metrics.ttfb / metrics.count) : 0,
+    fcp: metrics.count ? Math.round(metrics.fcp / metrics.count) : 0
+  };
 }
 
-generateReport(site).catch(error => {
-  console.error('Error generating report:', error);
-  process.exit(1);
-}); 
+export async function generateReport(site: string = 'stably') {
+  console.log(`Generating performance report for ${site}...`);
+
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) {
+    throw new Error('GROQ_API_KEY is required');
+  }
+
+  const baseUrl = site === 'stably' ? 'https://stably.ai' : `https://${site}`;
+
+  try {
+    // Run tests
+    const runner = new TestRunner(baseUrl);
+    const results = await runner.runTests();
+    console.log(`Completed ${results.length} tests`);
+
+    // Analyze results
+    const analyzer = new AIAnalyzer(apiKey);
+    const analysis = await analyzer.analyzePerformance(results);
+    console.log('Analysis completed');
+
+    // Save results
+    await saveToUI(results, analysis);
+    console.log('Results saved');
+
+    return { results, analysis };
+  } catch (error) {
+    console.error('Error generating report:', error);
+    throw error;
+  }
+}
+
+// Se executado diretamente
+if (require.main === module) {
+  const site = process.argv[2] || 'stably';
+  generateReport(site).catch(error => {
+    console.error('Failed to generate report:', error);
+    process.exit(1);
+  });
+} 

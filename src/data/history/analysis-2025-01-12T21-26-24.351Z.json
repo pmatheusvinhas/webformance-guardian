@@ -1,0 +1,11 @@
+{
+  "summary": "Failed to generate analysis due to an error.",
+  "issues": [
+    {
+      "severity": "critical",
+      "message": "Analysis generation failed",
+      "recommendation": "Please check the API token and try again."
+    }
+  ],
+  "insights": []
+}

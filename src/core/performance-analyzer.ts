@@ -1,36 +1,5 @@
 import fetch from 'node-fetch';
-
-export interface PerformanceMetrics {
-  mainSite: {
-    timing: {
-      ttfb: number;
-      fcp: number;
-      lcp: number;
-    };
-    totalTime: number;
-  };
-  appRedirect: {
-    timing: {
-      ttfb: number;
-      fcp: number;
-      lcp: number;
-    };
-    totalTime: number;
-  };
-  authPage: {
-    timing: {
-      ttfb: number;
-      fcp: number;
-      lcp: number;
-    };
-    totalTime: number;
-    formTiming: {
-      emailInputTime: number;
-      passwordInputTime: number;
-      buttonTime: number;
-    };
-  };
-}
+import { TestResult } from './types';
 
 export interface PerformanceAnalysis {
   summary: string;
@@ -49,81 +18,112 @@ export class PerformanceAnalyzer {
   constructor(private readonly apiToken: string) {}
 
   private async query(input: string): Promise<string> {
-    const response = await fetch(`${this.HUGGINGFACE_API}/${this.MODEL}`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${this.apiToken}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        inputs: input,
-        parameters: {
-          max_new_tokens: 250,
-          temperature: 0.1,
-          top_p: 0.95,
-          do_sample: false
-        }
-      })
-    });
+    console.log('Sending request to Hugging Face API...');
+    
+    try {
+      const response = await fetch(`${this.HUGGINGFACE_API}/${this.MODEL}`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this.apiToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          inputs: input,
+          parameters: {
+            max_new_tokens: 250,
+            temperature: 0.3,
+            top_p: 0.95,
+            do_sample: true,
+            return_full_text: false
+          }
+        })
+      });
 
-    if (!response.ok) {
-      throw new Error(`Hugging Face API error: ${response.statusText}`);
+      if (!response.ok) {
+        throw new Error(`Hugging Face API error: ${response.statusText} (${response.status})`);
+      }
+
+      const result = await response.json();
+      console.log('Raw API Response:', JSON.stringify(result, null, 2));
+
+      if (!Array.isArray(result)) {
+        throw new Error('Invalid response from Hugging Face API');
+      }
+
+      return result[0].generated_text || 'No analysis generated';
+    } catch (error) {
+      console.error('Error querying Hugging Face API:', error);
+      throw error;
     }
-
-    const result = await response.json();
-    if (!result || (!Array.isArray(result) && !result.generated_text)) {
-      throw new Error('Invalid response from Hugging Face API');
-    }
-
-    return Array.isArray(result) ? result[0].generated_text : result.generated_text;
   }
 
-  async analyzePerformance(metrics: PerformanceMetrics): Promise<PerformanceAnalysis> {
-    const prompt = `Analyze these web performance metrics and provide insights:
+  async analyzePerformance(results: TestResult[]): Promise<PerformanceAnalysis> {
+    console.log('Generating analysis prompt...');
+    const prompt = this.generateAnalysisPrompt(results);
+    console.log('Analysis Prompt:', prompt);
 
-Main Site:
-- TTFB: ${metrics.mainSite.timing.ttfb}ms
-- FCP: ${metrics.mainSite.timing.fcp}ms
-- LCP: ${metrics.mainSite.timing.lcp}ms
-- Total Time: ${metrics.mainSite.totalTime}ms
+    try {
+      const response = await this.query(prompt);
+      console.log('Parsing analysis response...');
+      return this.parseAnalysis(response);
+    } catch (error) {
+      console.error('Error analyzing performance:', error);
+      return {
+        summary: 'Failed to generate analysis due to an error.',
+        issues: [{
+          severity: 'critical',
+          message: 'Analysis generation failed',
+          recommendation: 'Please check the API token and try again.'
+        }],
+        insights: []
+      };
+    }
+  }
 
-App Redirect:
-- TTFB: ${metrics.appRedirect.timing.ttfb}ms
-- FCP: ${metrics.appRedirect.timing.fcp}ms
-- LCP: ${metrics.appRedirect.timing.lcp}ms
-- Total Time: ${metrics.appRedirect.totalTime}ms
+  private generateAnalysisPrompt(results: TestResult[]): string {
+    const passedTests = results.filter(r => r.passed);
+    const failedTests = results.filter(r => !r.passed);
+    
+    const avgMetrics = results.reduce((acc, r) => {
+      if (r.metrics) {
+        acc.loadTime += r.metrics.loadTime || 0;
+        acc.ttfb += r.metrics.ttfb || 0;
+        acc.fcp += r.metrics.fcp || 0;
+        acc.count++;
+      }
+      return acc;
+    }, { loadTime: 0, ttfb: 0, fcp: 0, count: 0 });
 
-Auth Page:
-- TTFB: ${metrics.authPage.timing.ttfb}ms
-- FCP: ${metrics.authPage.timing.fcp}ms
-- LCP: ${metrics.authPage.timing.lcp}ms
-- Total Time: ${metrics.authPage.totalTime}ms
-- Email Input Time: ${metrics.authPage.formTiming.emailInputTime}ms
-- Password Input Time: ${metrics.authPage.formTiming.passwordInputTime}ms
-- Button Time: ${metrics.authPage.formTiming.buttonTime}ms
+    return `You are a performance analysis expert. Analyze these web performance test results and provide a detailed analysis following the exact format below. Be specific and technical in your analysis.
 
-Provide analysis in this format:
+Test Results:
+- Success Rate: ${((passedTests.length/results.length)*100).toFixed(1)}% (${passedTests.length}/${results.length})
+- Average TTFB: ${avgMetrics.count ? Math.round(avgMetrics.ttfb / avgMetrics.count) : 0}ms
+- Average FCP: ${avgMetrics.count ? Math.round(avgMetrics.fcp / avgMetrics.count) : 0}ms
+- Average Load Time: ${avgMetrics.count ? Math.round(avgMetrics.loadTime / avgMetrics.count) : 0}ms
+${failedTests.length > 0 ? `\nFailed Tests:\n${failedTests.map(t => `- ${t.title}`).join('\n')}` : ''}
+
+Required Response Format:
 
 SUMMARY
-[One paragraph summary of overall performance]
+The website demonstrates [overall performance assessment]. TTFB averages at [X]ms which is [evaluation]. FCP at [X]ms indicates [implication]. Load times averaging [X]ms suggest [conclusion].
 
 ISSUES
 Critical:
-- [Issue]: [Recommendation]
+- [Specific critical issue found]: [Concrete recommendation]
 
 Warning:
-- [Issue]: [Recommendation]
+- [Specific warning level issue]: [Actionable recommendation]
 
 Info:
-- [Issue]: [Recommendation]
+- [Specific informational point]: [Helpful recommendation]
 
 INSIGHTS
-- [Key insight 1]
-- [Key insight 2]
-- [Key insight 3]`;
+- [Specific insight about performance metrics]
+- [Specific observation about test results]
+- [Specific pattern or trend identified]
 
-    const response = await this.query(prompt);
-    return this.parseAnalysis(response);
+Note: Replace all text in brackets with specific analysis based on the test results. Be technical and precise.`;
   }
 
   private parseAnalysis(text: string): PerformanceAnalysis {

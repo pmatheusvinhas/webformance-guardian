@@ -1,154 +1,109 @@
 import { chromium, Page } from '@playwright/test';
-import { TestCase, TestResult } from './types';
+import { TestResult } from './types';
 
 export class TestRunner {
-  constructor(private url: string) {}
+  private readonly baseUrl: string;
 
-  private async measurePerformance(page: Page): Promise<{[key: string]: number}> {
-    const metrics = await page.evaluate(() => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
-      
-      const loadTime = Math.max(0, navigation.loadEventEnd - navigation.requestStart);
-      const ttfb = Math.max(0, navigation.responseStart - navigation.requestStart);
-      const fcpTime = fcp ? Math.max(0, fcp.startTime) : 0;
-      
-      return {
-        ttfb: ttfb,
-        fcp: fcpTime,
-        loadTime: loadTime
-      };
-    });
-    
-    return metrics;
+  constructor(baseUrl: string) {
+    this.baseUrl = baseUrl;
   }
 
-  async runTest(test: TestCase): Promise<TestResult> {
-    const startTime = Date.now();
-    let lastError: Error | null = null;
-    const maxRetries = test.retries || 0;
-    let browser;
-    
-    for (let attempt = 0; attempt <= maxRetries; attempt++) {
-      try {
-        browser = await chromium.launch();
-        const page = await browser.newPage();
-        
-        console.log(`\n🔄 Running test: ${test.title}`);
-        if (attempt > 0) {
-          console.log(`   Retry attempt ${attempt + 1}/${maxRetries + 1}`);
-        }
-        
-        // Configura timeout para navegação
-        page.setDefaultNavigationTimeout(test.threshold || 30000);
-        page.setDefaultTimeout(test.threshold || 30000);
-        
-        // Inicia medição
-        console.log('   ⏳ Navigating to page...');
-        await page.goto(this.url, { waitUntil: 'domcontentloaded' });
-        
-        if (test.selector) {
-          console.log(`   🔍 Waiting for element: ${test.selector}`);
-          // Espera o elemento estar presente no DOM
-          await page.waitForSelector(test.selector, { state: 'attached' });
-          
-          // Se for um botão ou link, espera estar clicável
-          const element = await page.$(test.selector);
-          const tagName = await element?.evaluate(el => el.tagName.toLowerCase());
-          if (tagName === 'button' || tagName === 'a') {
-            await page.waitForSelector(test.selector, { state: 'visible' });
-          }
-        }
-        
-        // Coleta métricas de performance
-        console.log('   📊 Collecting performance metrics...');
-        const metrics = await this.measurePerformance(page);
-        await browser.close();
-        browser = null;
-        
-        const result: TestResult = {
-          title: test.title,
-          status: 'passed',
-          duration: Date.now() - startTime,
-          metrics: metrics
-        };
+  async runTests(): Promise<TestResult[]> {
+    const browser = await chromium.launch();
+    const results: TestResult[] = [];
 
-        if (test.threshold && metrics.loadTime > test.threshold) {
-          result.warning = `Performance threshold of ${test.threshold}ms exceeded (took ${metrics.loadTime}ms)`;
-          console.log(`   ⚠️  ${result.warning}`);
-        }
-        
-        console.log(`   ✅ Test completed successfully`);
-        console.log(`      Load Time: ${metrics.loadTime}ms`);
-        console.log(`      TTFB: ${metrics.ttfb}ms`);
-        console.log(`      FCP: ${metrics.fcp}ms`);
-        
-        return result;
-        
-      } catch (error) {
-        if (browser) {
-          await browser.close();
-          browser = null;
-        }
-        
-        lastError = error as Error;
-        const errorMsg = error instanceof Error ? error.message : 'Unknown error';
-        console.log(`   ❌ Test failed: ${errorMsg}`);
-        
-        if (attempt < maxRetries) {
-          console.log(`   ⏳ Retrying in 2 seconds...`);
-          await new Promise(resolve => setTimeout(resolve, 2000));
-          continue;
-        }
-      }
+    try {
+      const context = await browser.newContext();
+      const page = await context.newPage();
+
+      // Test 1: Homepage Load
+      results.push(await this.testPageLoad(page, '/', 'Homepage Load'));
+
+      // Test 2: Navigation Performance
+      results.push(await this.testPageLoad(page, '/pricing', 'Pricing Page Load'));
+      results.push(await this.testPageLoad(page, '/blog', 'Blog Page Load'));
+
+      // Test 3: Interactive Elements
+      results.push(await this.testInteractiveElement(page, '/', 'button[type="submit"]', 'CTA Button Click'));
+      results.push(await this.testInteractiveElement(page, '/contact', 'form', 'Contact Form Interaction'));
+
+    } catch (error) {
+      console.error('Error running tests:', error);
+    } finally {
+      await browser.close();
     }
-    
-    return {
-      title: test.title,
-      status: 'failed',
-      duration: Date.now() - startTime,
-      error: lastError?.message || 'Unknown error',
-      metrics: {
-        ttfb: 0,
-        fcp: 0,
-        loadTime: 0
+
+    return results;
+  }
+
+  private async testPageLoad(page: Page, path: string, title: string): Promise<TestResult> {
+    const startTime = Date.now();
+    let metrics = {};
+    let error = undefined;
+    let passed = true;
+
+    try {
+      const response = await page.goto(`${this.baseUrl}${path}`);
+      if (!response?.ok()) {
+        throw new Error(`Failed to load page: ${response?.status()}`);
       }
+
+      // Coletar métricas de performance
+      const timing = await page.evaluate(() => {
+        const perf = window.performance;
+        const pageNav = perf.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        return {
+          ttfb: pageNav.responseStart - pageNav.requestStart,
+          fcp: perf.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+          loadTime: pageNav.loadEventEnd - pageNav.requestStart
+        };
+      });
+
+      metrics = timing;
+    } catch (e) {
+      error = e instanceof Error ? e.message : 'Unknown error';
+      passed = false;
+    }
+
+    return {
+      title,
+      passed,
+      duration: Date.now() - startTime,
+      error,
+      metrics: metrics as { loadTime: number; ttfb: number; fcp: number }
     };
   }
 
-  // Método para executar todos os testes
-  async runAllTests(testCases: TestCase[]): Promise<TestResult[]> {
-    console.log('\n📋 Starting test execution...');
-    console.log(`   Total tests: ${testCases.length}\n`);
-    
-    const results: TestResult[] = [];
-    for (const test of testCases) {
-      const result = await this.runTest(test);
-      results.push(result);
-    }
-    
-    // Print summary
-    const passed = results.filter(r => r.status === 'passed').length;
-    const failed = results.filter(r => r.status === 'failed').length;
-    const warnings = results.filter(r => r.warning).length;
-    
-    console.log('\n📊 Test Execution Summary:');
-    console.log(`   ✅ Passed: ${passed}`);
-    console.log(`   ❌ Failed: ${failed}`);
-    if (warnings > 0) {
-      console.log(`   ⚠️  Tests with warnings: ${warnings}`);
-    }
-    console.log('');
-    
+  private async testInteractiveElement(page: Page, path: string, selector: string, title: string): Promise<TestResult> {
+    const startTime = Date.now();
+    let metrics = {};
+    let error = undefined;
+    let passed = true;
+
     try {
-      // Força o encerramento de qualquer browser que possa ter ficado aberto
-      const browserServer = await chromium.launchServer();
-      await browserServer.close();
-    } catch (error) {
-      console.error('Error cleaning up browsers:', error);
+      await page.goto(`${this.baseUrl}${path}`);
+      await page.waitForSelector(selector);
+
+      const interactionStart = Date.now();
+      await page.click(selector);
+      const interactionTime = Date.now() - interactionStart;
+
+      metrics = {
+        loadTime: interactionTime,
+        ttfb: 0, // Não aplicável para interações
+        fcp: 0   // Não aplicável para interações
+      };
+    } catch (e) {
+      error = e instanceof Error ? e.message : 'Unknown error';
+      passed = false;
     }
-    
-    return results;
+
+    return {
+      title,
+      passed,
+      duration: Date.now() - startTime,
+      error,
+      metrics: metrics as { loadTime: number; ttfb: number; fcp: number }
+    };
   }
 } 

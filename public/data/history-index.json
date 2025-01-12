@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2025-01-12T23-17-53.950Z",
+    "totalTests": 5,
+    "passedTests": 3,
+    "failedTests": 2,
+    "averageMetrics": {
+      "loadTime": 212,
+      "ttfb": 22,
+      "fcp": 794
+    }
+  }
+]

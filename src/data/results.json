@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Homepage Load Performance",
+    "passed": true,
+    "duration": 1500,
+    "metrics": {
+      "loadTime": 1200,
+      "ttfb": 200,
+      "fcp": 800
+    }
+  },
+  {
+    "title": "Login Form Interaction",
+    "passed": false,
+    "duration": 2500,
+    "error": "Response time exceeded threshold (2000ms)",
+    "metrics": {
+      "loadTime": 2500,
+      "ttfb": 300,
+      "fcp": 1200
+    }
+  },
+  {
+    "title": "Product Search Performance",
+    "passed": true,
+    "duration": 1800,
+    "metrics": {
+      "loadTime": 1500,
+      "ttfb": 250,
+      "fcp": 900
+    }
+  }
+]

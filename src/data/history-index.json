@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2025-01-12T21-17-44.365Z",
+    "totalTests": 20,
+    "passedTests": 19,
+    "failedTests": 1
+  },
+  {
+    "timestamp": "2025-01-12T21-26-24.351Z",
+    "totalTests": 20,
+    "passedTests": 18,
+    "failedTests": 2
+  },
+  {
+    "timestamp": "2025-01-12T21-27-21.046Z",
+    "totalTests": 20,
+    "passedTests": 19,
+    "failedTests": 1
+  },
+  {
+    "timestamp": "2025-01-12T21-28-25.604Z",
+    "totalTests": 20,
+    "passedTests": 19,
+    "failedTests": 1
+  }
+]

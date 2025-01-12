@@ -1,0 +1,243 @@
+[
+  {
+    "title": "Page Load Performance - Stably - AI-powered QA automation",
+    "status": "passed",
+    "passed": true,
+    "duration": 1299,
+    "metrics": {
+      "ttfb": 39.09999990463257,
+      "fcp": 442,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Stably - AI-powered QA automation",
+    "status": "passed",
+    "passed": true,
+    "duration": 1336,
+    "metrics": {
+      "ttfb": 29.199999809265137,
+      "fcp": 367.7999999523163,
+      "loadTime": 615.2999999523163
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - Stably - AI-powered QA automation",
+    "status": "passed",
+    "passed": true,
+    "duration": 1160,
+    "metrics": {
+      "ttfb": 38.5,
+      "fcp": 446.89999985694885,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Stably - AI-powered QA automation",
+    "status": "passed",
+    "passed": true,
+    "duration": 1305,
+    "metrics": {
+      "ttfb": 28.899999856948853,
+      "fcp": 365.30000019073486,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - Pricing - AI-powered QA Automation | Affordable Plans for All Team Sizes",
+    "status": "passed",
+    "passed": true,
+    "duration": 1052,
+    "metrics": {
+      "ttfb": 68.59999990463257,
+      "fcp": 0,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Pricing - AI-powered QA Automation | Affordable Plans for All Team Sizes",
+    "status": "passed",
+    "passed": true,
+    "duration": 1438,
+    "metrics": {
+      "ttfb": 39.200000047683716,
+      "fcp": 587.7000000476837,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - Blog - AI-powered QA automation",
+    "status": "passed",
+    "passed": true,
+    "duration": 930,
+    "metrics": {
+      "ttfb": 24.199999809265137,
+      "fcp": 377.2000000476837,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Blog - AI-powered QA automation",
+    "status": "passed",
+    "passed": true,
+    "duration": 1260,
+    "metrics": {
+      "ttfb": 46.40000009536743,
+      "fcp": 407.59999990463257,
+      "loadTime": 658.2000000476837
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - Careers at Stably | AI-Powered QA Automation Team",
+    "status": "passed",
+    "passed": true,
+    "duration": 955,
+    "metrics": {
+      "ttfb": 25.399999856948853,
+      "fcp": 370.60000014305115,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Careers at Stably | AI-Powered QA Automation Team",
+    "status": "passed",
+    "passed": true,
+    "duration": 1101,
+    "metrics": {
+      "ttfb": 37.19999980926514,
+      "fcp": 372.69999980926514,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - Privacy Policy",
+    "status": "passed",
+    "passed": true,
+    "duration": 958,
+    "metrics": {
+      "ttfb": 44.10000014305115,
+      "fcp": 396,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Privacy Policy",
+    "status": "passed",
+    "passed": true,
+    "duration": 1182,
+    "metrics": {
+      "ttfb": 85,
+      "fcp": 410.5,
+      "loadTime": 605.5
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - Email Protection | Cloudflare",
+    "status": "passed",
+    "passed": true,
+    "duration": 968,
+    "metrics": {
+      "ttfb": 41.5,
+      "fcp": 363.2000000476837,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Email Protection | Cloudflare",
+    "status": "failed",
+    "passed": false,
+    "duration": 13368,
+    "error": "page.waitForSelector: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button#cf-footer-ip-reveal, input#cf-footer-ip-reveal')\u001b[22m\n",
+    "metrics": {
+      "ttfb": 0,
+      "fcp": 0,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - Terms and Conditions - Stably AI",
+    "status": "passed",
+    "passed": true,
+    "duration": 1004,
+    "metrics": {
+      "ttfb": 39.09999990463257,
+      "fcp": 417,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Terms and Conditions - Stably AI",
+    "status": "passed",
+    "passed": true,
+    "duration": 1496,
+    "metrics": {
+      "ttfb": 31.299999952316284,
+      "fcp": 369.5,
+      "loadTime": 750.6999998092651
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - How AI Tools Supercharge Our Development at Stably",
+    "status": "passed",
+    "passed": true,
+    "duration": 954,
+    "metrics": {
+      "ttfb": 27,
+      "fcp": 372.89999985694885,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - How AI Tools Supercharge Our Development at Stably",
+    "status": "passed",
+    "passed": true,
+    "duration": 1376,
+    "metrics": {
+      "ttfb": 43.5,
+      "fcp": 394.2000000476837,
+      "loadTime": 630
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Page Load Performance - Cookie Management in Playwright",
+    "status": "passed",
+    "passed": true,
+    "duration": 1031,
+    "metrics": {
+      "ttfb": 54.299999952316284,
+      "fcp": 405.7999999523163,
+      "loadTime": 0
+    },
+    "url": "https://stably.ai"
+  },
+  {
+    "title": "Button Click Performance - Cookie Management in Playwright",
+    "status": "passed",
+    "passed": true,
+    "duration": 1570,
+    "metrics": {
+      "ttfb": 31,
+      "fcp": 632,
+      "loadTime": 647.9000000953674
+    },
+    "url": "https://stably.ai"
+  }
+]

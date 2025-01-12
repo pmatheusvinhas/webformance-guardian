@@ -1,0 +1,27 @@
+{
+  "summary": "The website demonstrates mixed performance characteristics. While most pages load within acceptable thresholds, there are some concerning areas, particularly around form interactions. The average TTFB of 250ms is acceptable, but the FCP averaging 966ms indicates room for improvement.",
+  "issues": [
+    {
+      "severity": "critical",
+      "message": "Login form response time exceeds threshold",
+      "recommendation": "Optimize server-side processing for login requests and implement client-side form validation to reduce server load"
+    },
+    {
+      "severity": "warning",
+      "message": "First Contentful Paint (FCP) above recommended threshold",
+      "recommendation": "Implement lazy loading for non-critical resources and optimize critical rendering path"
+    },
+    {
+      "severity": "info",
+      "message": "Time to First Byte (TTFB) shows room for improvement",
+      "recommendation": "Consider implementing server-side caching and optimizing database queries"
+    }
+  ],
+  "insights": [
+    "Homepage performance is consistently good with fast load times",
+    "Form interactions show higher latency compared to static page loads",
+    "Search functionality maintains good performance despite complexity",
+    "Consider implementing performance budgets to prevent regression",
+    "Mobile performance metrics should be monitored separately"
+  ]
+}
