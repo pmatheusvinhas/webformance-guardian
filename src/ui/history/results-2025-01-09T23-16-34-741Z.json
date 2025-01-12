@@ -1,0 +1,126 @@
+{
+  "timestamp": "2025-01-09T23:16:34.696Z",
+  "tests": [
+    {
+      "title": "Page Performance: Stably - AI-powered QA automation",
+      "status": "passed",
+      "duration": 1375,
+      "metrics": {
+        "ttfb": 62.300000071525574,
+        "fcp": 758.1999999284744,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: Stably - AI-powered QA automation",
+      "status": "passed",
+      "duration": 945,
+      "metrics": {
+        "ttfb": 42.59999990463257,
+        "fcp": 346.7999999523163,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: Pricing - AI-powered QA Automation | Affordable Plans for All Team Sizes",
+      "status": "passed",
+      "duration": 841,
+      "metrics": {
+        "ttfb": 51.60000002384186,
+        "fcp": 355.3000000715256,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: Blog - AI-powered QA automation",
+      "status": "passed",
+      "duration": 610,
+      "metrics": {
+        "ttfb": 54.200000047683716,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: Careers at Stably | AI-Powered QA Automation Team",
+      "status": "passed",
+      "duration": 731,
+      "metrics": {
+        "ttfb": 26,
+        "fcp": 292.1999999284744,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: Privacy Policy",
+      "status": "passed",
+      "duration": 800,
+      "metrics": {
+        "ttfb": 44.300000071525574,
+        "fcp": 339.6999999284744,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: Terms and Conditions - Stably AI",
+      "status": "passed",
+      "duration": 846,
+      "metrics": {
+        "ttfb": 120.29999995231628,
+        "fcp": 400.5,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: How AI Tools Supercharge Our Development at Stably",
+      "status": "passed",
+      "duration": 736,
+      "metrics": {
+        "ttfb": 46,
+        "fcp": 324.89999997615814,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: Cookie Management in Playwright",
+      "status": "passed",
+      "duration": 731,
+      "metrics": {
+        "ttfb": 56.199999928474426,
+        "fcp": 329.2999999523163,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Page Performance: Multi-Tab Testing Made Simple",
+      "status": "passed",
+      "duration": 702,
+      "metrics": {
+        "ttfb": 28.600000023841858,
+        "fcp": 286.60000002384186,
+        "loadTime": 0
+      }
+    }
+  ],
+  "metrics": {
+    "mainSite": {
+      "timing": {
+        "ttfb": {
+          "average": 53.210000002384184,
+          "min": 26,
+          "max": 120.29999995231628
+        },
+        "fcp": {
+          "average": 343.34999997615813,
+          "min": 0,
+          "max": 758.1999999284744
+        },
+        "loadTime": {
+          "average": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    }
+  }
+}

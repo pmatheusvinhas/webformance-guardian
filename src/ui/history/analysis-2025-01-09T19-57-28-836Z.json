@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-01-09T19:57:28.804Z",
+  "performance": {
+    "score": 97,
+    "metrics": {
+      "average_response_time": 430.27500000099343,
+      "pass_rate": 100,
+      "total_duration": 29939
+    }
+  },
+  "issues": [],
+  "ai_insights": {
+    "patterns": [
+      "High variance in load times detected"
+    ],
+    "recommendations": [
+      "Investigate elements with inconsistent load times"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Testing
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Environment variables
+.env
+
+# Reports
+/reports/
+/dist/

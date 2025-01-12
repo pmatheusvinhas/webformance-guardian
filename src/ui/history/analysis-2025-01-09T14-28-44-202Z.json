@@ -1,0 +1,12 @@
+{
+  "summary": "No analysis available",
+  "issues": [],
+  "performance": {
+    "score": 0,
+    "metrics": {
+      "average_response_time": 0,
+      "pass_rate": 0,
+      "total_duration": 0
+    }
+  }
+}

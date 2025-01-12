@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-01-09T20:18:18.995Z",
+  "performance": {
+    "score": 51,
+    "metrics": {
+      "average_response_time": 188.84999998978205,
+      "pass_rate": 32,
+      "total_duration": 61576
+    }
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "message": "Test Failures Detected",
+      "suggestion": "34 tests failed. Review error messages and consider implementing retry mechanisms."
+    }
+  ],
+  "ai_insights": {
+    "patterns": [
+      "High variance in load times detected"
+    ],
+    "recommendations": [
+      "Investigate elements with inconsistent load times"
+    ]
+  }
+}

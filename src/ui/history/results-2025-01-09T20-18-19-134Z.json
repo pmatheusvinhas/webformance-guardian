@@ -1,0 +1,560 @@
+{
+  "timestamp": "2025-01-09T20:18:18.995Z",
+  "tests": [
+    {
+      "title": "Stably - AI-powered QA automation Load Performance",
+      "status": "passed",
+      "duration": 2437,
+      "metrics": {
+        "ttfb": 96,
+        "fcp": 442.8000000715256,
+        "loadTime": 709.1000000238419
+      }
+    },
+    {
+      "title": "a Performance",
+      "status": "passed",
+      "duration": 1153,
+      "metrics": {
+        "ttfb": 72.90000009536743,
+        "fcp": 222.90000009536743,
+        "loadTime": 195.5
+      }
+    },
+    {
+      "title": "How It Works Performance",
+      "status": "passed",
+      "duration": 976,
+      "metrics": {
+        "ttfb": 41.299999952316284,
+        "fcp": 153.79999995231628,
+        "loadTime": 131.20000004768372
+      }
+    },
+    {
+      "title": "Pricing Performance",
+      "status": "passed",
+      "duration": 1106,
+      "metrics": {
+        "ttfb": 94.5,
+        "fcp": 224.40000009536743,
+        "loadTime": 194.10000002384186
+      }
+    },
+    {
+      "title": "Blogs Performance",
+      "status": "passed",
+      "duration": 1026,
+      "metrics": {
+        "ttfb": 43.799999952316284,
+        "fcp": 167.29999995231628,
+        "loadTime": 140.5
+      }
+    },
+    {
+      "title": "Docs Performance",
+      "status": "passed",
+      "duration": 2626,
+      "metrics": {
+        "ttfb": 609.6999999284744,
+        "fcp": 0,
+        "loadTime": -746.9000000953674
+      }
+    },
+    {
+      "title": "Career Performance",
+      "status": "passed",
+      "duration": 1039,
+      "metrics": {
+        "ttfb": 33.39999997615814,
+        "fcp": 180.29999995231628,
+        "loadTime": 159.10000002384186
+      }
+    },
+    {
+      "title": "Get Started Performance",
+      "status": "passed",
+      "duration": 966,
+      "metrics": {
+        "ttfb": 31.299999952316284,
+        "fcp": 133.5,
+        "loadTime": 114.79999995231628
+      }
+    },
+    {
+      "title": "Log in Performance",
+      "status": "passed",
+      "duration": 1007,
+      "metrics": {
+        "ttfb": 50.700000047683716,
+        "fcp": 152.30000007152557,
+        "loadTime": 135.70000004768372
+      }
+    },
+    {
+      "title": "Get Started Performance",
+      "status": "failed",
+      "duration": 1178,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > a:nth-child(1)",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Book Demo Performance",
+      "status": "failed",
+      "duration": 927,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > a:nth-child(2)",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Start 30-day free trial -> Performance",
+      "status": "failed",
+      "duration": 954,
+      "error": "Element not found: div:nth-child(1) > main > #howitworks > div:nth-child(3) > div > div > div:nth-child(1) > div:nth-child(4) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Meet AI test runner -> Performance",
+      "status": "failed",
+      "duration": 939,
+      "error": "Element not found: div:nth-child(1) > main > #howitworks > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(4) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Try zero-flake testing -> Performance",
+      "status": "failed",
+      "duration": 1008,
+      "error": "Element not found: div:nth-child(1) > main > #howitworks > div:nth-child(5) > div > div > div:nth-child(1) > div:nth-child(4) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Explore auto-maintenance -> Performance",
+      "status": "failed",
+      "duration": 1136,
+      "error": "Element not found: div:nth-child(1) > main > #howitworks > div:nth-child(6) > div > div > div:nth-child(1) > div:nth-child(4) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Start free trial Performance",
+      "status": "failed",
+      "duration": 1172,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(7) > div > div:nth-child(3) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Features Performance",
+      "status": "failed",
+      "duration": 969,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(1) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Pricing Performance",
+      "status": "failed",
+      "duration": 932,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(2) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Blog Performance",
+      "status": "failed",
+      "duration": 939,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(3) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "LinkedIn Performance",
+      "status": "failed",
+      "duration": 974,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(1) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Twitter Performance",
+      "status": "failed",
+      "duration": 1130,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(2) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Contact Performance",
+      "status": "failed",
+      "duration": 912,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(3) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Privacy Performance",
+      "status": "failed",
+      "duration": 904,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(1) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Terms & Conditions Performance",
+      "status": "failed",
+      "duration": 912,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(2) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "a Performance",
+      "status": "failed",
+      "duration": 975,
+      "error": "Element not found: div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > a",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "How It Works Performance",
+      "status": "passed",
+      "duration": 946,
+      "metrics": {
+        "ttfb": 26.59999990463257,
+        "fcp": 133.10000002384186,
+        "loadTime": 109.09999990463257
+      }
+    },
+    {
+      "title": "Pricing Performance",
+      "status": "passed",
+      "duration": 1002,
+      "metrics": {
+        "ttfb": 28.199999928474426,
+        "fcp": 142.39999997615814,
+        "loadTime": 107.19999992847443
+      }
+    },
+    {
+      "title": "Blogs Performance",
+      "status": "passed",
+      "duration": 1281,
+      "metrics": {
+        "ttfb": 32.699999928474426,
+        "fcp": 154.79999995231628,
+        "loadTime": 121.5
+      }
+    },
+    {
+      "title": "Docs Performance",
+      "status": "passed",
+      "duration": 1451,
+      "metrics": {
+        "ttfb": 233.89999997615814,
+        "fcp": 0,
+        "loadTime": -207.5
+      }
+    },
+    {
+      "title": "Career Performance",
+      "status": "passed",
+      "duration": 1022,
+      "metrics": {
+        "ttfb": 36.39999997615814,
+        "fcp": 156.10000002384186,
+        "loadTime": 235.60000002384186
+      }
+    },
+    {
+      "title": "Get Started Performance",
+      "status": "passed",
+      "duration": 1077,
+      "metrics": {
+        "ttfb": 31.5,
+        "fcp": 128.5,
+        "loadTime": 117.19999992847443
+      }
+    },
+    {
+      "title": "Log in Performance",
+      "status": "passed",
+      "duration": 1251,
+      "metrics": {
+        "ttfb": 45.39999997615814,
+        "fcp": 182.39999997615814,
+        "loadTime": 173.29999995231628
+      }
+    },
+    {
+      "title": "Get Started Performance",
+      "status": "failed",
+      "duration": 1233,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > a:nth-child(1) > button",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Book Demo Performance",
+      "status": "failed",
+      "duration": 1219,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > a:nth-child(2) > button",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Start 30-day free trial -> Performance",
+      "status": "failed",
+      "duration": 1174,
+      "error": "Element not found: div:nth-child(1) > main > #howitworks > div:nth-child(3) > div > div > div:nth-child(1) > div:nth-child(4) > a > button",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Meet AI test runner -> Performance",
+      "status": "failed",
+      "duration": 2223,
+      "error": "Element not found: div:nth-child(1) > main > #howitworks > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(4) > a > button",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Try zero-flake testing -> Performance",
+      "status": "failed",
+      "duration": 1742,
+      "error": "Element not found: div:nth-child(1) > main > #howitworks > div:nth-child(5) > div > div > div:nth-child(1) > div:nth-child(4) > a > button",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Explore auto-maintenance -> Performance",
+      "status": "failed",
+      "duration": 1300,
+      "error": "Element not found: div:nth-child(1) > main > #howitworks > div:nth-child(6) > div > div > div:nth-child(1) > div:nth-child(4) > a > button",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "button Performance",
+      "status": "failed",
+      "duration": 1138,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(2) > button:nth-child(1)",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "button Performance",
+      "status": "failed",
+      "duration": 1836,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(2) > button:nth-child(2)",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "What is Stably? Performance",
+      "status": "failed",
+      "duration": 1302,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(6) > div > div > #mantine-q1vuaiuyq > div:nth-child(1) > #mantine-q1vuaiuyq-control-item-0",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "How does Stably work with Playwright / Selenium / Cypress? Performance",
+      "status": "failed",
+      "duration": 1409,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(6) > div > div > #mantine-q1vuaiuyq > div:nth-child(2) > #mantine-q1vuaiuyq-control-item-1",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "What kind of companies use Stably? Performance",
+      "status": "failed",
+      "duration": 1163,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(6) > div > div > #mantine-q1vuaiuyq > div:nth-child(3) > #mantine-q1vuaiuyq-control-item-2",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Who on my team should use Stably? Performance",
+      "status": "failed",
+      "duration": 2008,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(6) > div > div > #mantine-q1vuaiuyq > div:nth-child(4) > #mantine-q1vuaiuyq-control-item-3",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "What common bugs can I prevent with Stably? Performance",
+      "status": "failed",
+      "duration": 1133,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(6) > div > div > #mantine-q1vuaiuyq > div:nth-child(5) > #mantine-q1vuaiuyq-control-item-4",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "Start free trial Performance",
+      "status": "failed",
+      "duration": 1368,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(7) > div > div:nth-child(3) > a > button",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "input Performance",
+      "status": "failed",
+      "duration": 1217,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div > div > #mantine-gs6ppfdlo",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "input Performance",
+      "status": "failed",
+      "duration": 1307,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > div > div > #mantine-oihd18aez",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "input Performance",
+      "status": "failed",
+      "duration": 1230,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(1) > div > #mantine-txfs4shed",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    },
+    {
+      "title": "input Performance",
+      "status": "failed",
+      "duration": 1247,
+      "error": "Element not found: div:nth-child(1) > main > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(2) > div > #mantine-mnwjsv9bk",
+      "metrics": {
+        "ttfb": 0,
+        "fcp": 0,
+        "loadTime": 0
+      }
+    }
+  ],
+  "metrics": {
+    "mainSite": {
+      "timing": {
+        "ttfb": {
+          "average": 94.26874997466803,
+          "min": 26.59999990463257,
+          "max": 609.6999999284744
+        },
+        "fcp": {
+          "average": 160.9125000089407,
+          "min": 0,
+          "max": 442.8000000715256
+        },
+        "loadTime": {
+          "average": 188.84999998978205,
+          "min": 107.19999992847443,
+          "max": 709.1000000238419
+        }
+      }
+    }
+  }
+}

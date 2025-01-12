@@ -1,0 +1,482 @@
+:root {
+  --primary: #1a73e8;
+  --success: #4CAF50;
+  --warning: #FFC107;
+  --error: #F44336;
+  --gray: #9E9E9E;
+  --background: #f8f9fa;
+  --text: #202124;
+  --border: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--gray);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.metric-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--primary);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.metric-card h3 {
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.metric-range {
+  font-size: 0.875rem;
+  color: var(--gray);
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.metric-range span {
+  display: block;
+  text-align: center;
+}
+
+.chart-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+}
+
+.chart-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.chart-placeholder {
+  text-align: center;
+  padding: 3rem;
+  color: var(--gray);
+}
+
+.issues-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+}
+
+.issues-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.issues-placeholder {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray);
+}
+
+.issue-item {
+  padding: 1rem;
+  border-left: 4px solid var(--gray);
+  margin-bottom: 1rem;
+  background: var(--background);
+  border-radius: 4px;
+}
+
+.issue-item.critical {
+  border-left-color: var(--error);
+}
+
+.issue-item.warning {
+  border-left-color: var(--warning);
+}
+
+.issue-item .severity {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.issue-item.critical .severity {
+  background: var(--error);
+  color: white;
+}
+
+.issue-item.warning .severity {
+  background: var(--warning);
+  color: black;
+}
+
+.issue-item .message {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.issue-item .recommendation {
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+.insights-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+}
+
+.insights-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.insights-section ul {
+  list-style-type: none;
+}
+
+.insights-section li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.insights-section li:last-child {
+  border-bottom: none;
+}
+
+footer {
+  text-align: center;
+  color: var(--gray);
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  color: var(--gray);
+}
+
+.empty-state p {
+  margin-bottom: 0.5rem;
+}
+
+.empty-state .hint {
+  font-size: 0.875rem;
+  color: var(--primary);
+  font-family: monospace;
+  padding: 0.25rem 0.5rem;
+  background: var(--background);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: var(--error);
+  background: white;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.test-results-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+}
+
+.test-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.summary-item {
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--background);
+}
+
+.summary-item.passed {
+  border-left: 4px solid var(--success);
+}
+
+.summary-item.failed {
+  border-left: 4px solid var(--error);
+}
+
+.summary-item.total {
+  border-left: 4px solid var(--primary);
+}
+
+.summary-item .count {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.summary-item .label {
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+.test-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.test-item {
+  padding: 1rem;
+  border-radius: 4px;
+  background: var(--background);
+  border-left: 4px solid var(--gray);
+}
+
+.test-item.passed {
+  border-left-color: var(--success);
+}
+
+.test-item.failed {
+  border-left-color: var(--error);
+}
+
+.test-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.status-badge.passed {
+  background: var(--success);
+}
+
+.status-badge.failed {
+  background: var(--error);
+}
+
+.test-title {
+  font-weight: 500;
+}
+
+.test-error {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(244, 67, 54, 0.1);
+  border-radius: 4px;
+  color: var(--error);
+  font-size: 0.875rem;
+}
+
+.test-metrics {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--gray);
+}
+
+.test-metrics span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.test-metrics span::before {
+  content: "⏱";
+  margin-right: 0.25rem;
+}
+
+.issue-item .suggestion {
+  color: var(--gray);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .test-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .test-metrics {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.history-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.history-section h2 {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.history-item {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--background);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.history-item:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.viewing-timestamp {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: var(--background);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.back-to-current {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background: white;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-to-current:hover {
+  background: var(--primary);
+  color: white;
+} 

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-01-09T20:12:23.797Z",
+  "tests": [],
+  "metrics": {
+    "mainSite": {
+      "timing": {
+        "ttfb": {
+          "average": 0,
+          "min": 0,
+          "max": 0
+        },
+        "fcp": {
+          "average": 0,
+          "min": 0,
+          "max": 0
+        },
+        "loadTime": {
+          "average": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    }
+  }
+}

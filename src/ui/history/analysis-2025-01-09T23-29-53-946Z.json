@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-01-09T23:29:53.923Z",
+  "performance": {
+    "score": 100,
+    "metrics": {
+      "average_response_time": 0,
+      "pass_rate": 100,
+      "total_duration": 7633
+    }
+  },
+  "issues": [],
+  "ai_insights": {
+    "patterns": [],
+    "recommendations": []
+  }
+}
