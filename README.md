@@ -1,15 +1,17 @@
 # WebFormance Guardian
 
-[Demo](https://pmatheusvinhas.github.io/webformance-guardian/)
-
 A continuous web performance monitoring project developed as part of the application process for Stably AI.
 
-## 🎯 Project Status
+## 🎯 Live Demo & Status
+
+### [View Demo](https://pmatheusvinhas.github.io/webformance-guardian/)
 
 [![CI/CD](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/main.yml/badge.svg)](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/main.yml)
 [![Performance Tests](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml/badge.svg)](https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/performance.yml)
 
-## 📝 Objective
+> The demo is automatically updated every 5 hours with new performance data and AI analysis.
+
+## 🎯 Objective
 
 Demonstrate the capability to create a complete web performance monitoring solution that:
 - Executes automated tests periodically
