@@ -45,9 +45,10 @@ interface TestData {
 
 export interface TestResultsProps {
   data?: TestData;
+  siteUrl?: string;
 }
 
-export function TestResults({ data }: TestResultsProps) {
+export function TestResults({ data, siteUrl = 'https://stably.ai' }: TestResultsProps) {
   if (!data) {
     return <div>No test results available</div>;
   }
@@ -113,7 +114,14 @@ export function TestResults({ data }: TestResultsProps) {
     <div className="container mx-auto px-4 py-8">
       {/* Header with GitHub Actions Status */}
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">Performance Test Results</h1>
+        <div>
+          <h1 className="text-3xl font-bold">Performance Test Results</h1>
+          <p className="text-gray-600 mt-2">
+            Testing site: <a href={siteUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              {siteUrl}
+            </a>
+          </p>
+        </div>
         <div className="flex gap-4">
           <a
             href="https://github.com/pmatheusvinhas/webformance-guardian/actions/workflows/main.yml"

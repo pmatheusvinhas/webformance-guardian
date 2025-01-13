@@ -19,9 +19,10 @@ interface TestData {
 interface HomeProps {
   data?: TestData;
   error?: string;
+  siteUrl?: string;
 }
 
-export default function Home({ data, error }: HomeProps) {
+export default function Home({ data, error, siteUrl }: HomeProps) {
   if (error) {
     return (
       <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
@@ -40,7 +41,7 @@ export default function Home({ data, error }: HomeProps) {
     );
   }
 
-  return <TestResults data={data} />;
+  return <TestResults data={data} siteUrl={siteUrl} />;
 }
 
 export async function getStaticProps() {
@@ -62,7 +63,8 @@ export async function getStaticProps() {
         data: {
           results,
           analysis
-        }
+        },
+        siteUrl: process.env.SITE_URL || 'https://stably.ai'
       }
     };
   } catch (error) {
