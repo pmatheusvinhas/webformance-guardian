@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-01-13T15:18:19.531Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1255,
+      "metrics": {
+        "loadTime": 449.1999999999971,
+        "ttfb": 49.39999999999418,
+        "fcp": 395.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 943,
+      "metrics": {
+        "loadTime": 198,
+        "ttfb": 50.39999999999418,
+        "fcp": 205.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 979,
+      "metrics": {
+        "loadTime": 279.6999999999971,
+        "ttfb": 43,
+        "fcp": 168.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 940
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: It is crucial to investigate the cause of the failure and optimize the page to improve its performance.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "\"How It Works\" page failed the test",
+        "recommendation": "It is crucial to investigate the cause of the failure and optimize the page to improve its performance."
+      },
+      {
+        "severity": "info",
+        "message": "Homepage load time is relatively high",
+        "recommendation": "Consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching to reduce the load time."
+      },
+      {
+        "severity": "info",
+        "message": "TTFB (Time to First Byte) is reasonable for all pages",
+        "recommendation": "TTFB measures the time it takes for the server to respond to the user's request. A TTFB below 600ms is considered good."
+      },
+      {
+        "severity": "info",
+        "message": "FCP (First Contentful Paint) is reasonable for all pages",
+        "recommendation": "FCP measures the time it takes for the browser to render the first piece of content on the page. A FCP below 3000ms is considered good."
+      }
+    ],
+    "insights": [
+      "The Blog Page has the fastest load time, TTFB, and FCP, indicating that it is well-optimized. Analyzing the Blog Page's code and structure can provide insights into optimizing the other pages.",
+      "The Pricing Page has a longer TTFB than the Blog Page, suggesting that the server may take longer to respond to requests for this page. Investigating the server configuration and optimizing it can improve the TTFB.",
+      "The Homepage has the longest load time and FCP, indicating that there may be issues with the page's code or structure. Optimizing the Homepage can significantly improve the overall performance of the website.",
+      "Although all pages passed the test, reducing the load time, TTFB, and FCP can improve user experience and search engine rankings. Continuously monitoring and optimizing web performance is essential for a successful website."
+    ]
+  }
+}
