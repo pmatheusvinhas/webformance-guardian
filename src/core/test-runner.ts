@@ -5,7 +5,7 @@ export class TestRunner {
   private baseUrl: string;
 
   constructor(site: string) {
-    this.baseUrl = site === 'stably' ? 'https://stably.ai' : `https://${site}`;
+    this.baseUrl = process.env.SITE_URL || (site === 'stably' ? 'https://stably.ai' : `https://${site}`);
   }
 
   async runTests(): Promise<TestResult[]> {
@@ -14,11 +14,19 @@ export class TestRunner {
       const results: TestResult[] = [];
 
       // Test main page load
-      results.push(await this.testPageLoad(browser, '/', 'Main Page Load'));
+      results.push(await this.testPageLoad(browser, '/', 'Homepage Load'));
 
-      // Test navigation performance
-      results.push(await this.testPageLoad(browser, '/about', 'About Page Load'));
-      results.push(await this.testPageLoad(browser, '/contact', 'Contact Page Load'));
+      // Test key pages based on site
+      if (this.baseUrl.includes('stably')) {
+        // Stably-specific routes
+        results.push(await this.testPageLoad(browser, '/pricing', 'Pricing Page'));
+        results.push(await this.testPageLoad(browser, '/blog', 'Blog Page'));
+        results.push(await this.testPageLoad(browser, '/docs', 'Documentation Page'));
+      } else {
+        // Generic routes for other sites
+        results.push(await this.testPageLoad(browser, '/features', 'Features Page'));
+        results.push(await this.testPageLoad(browser, '/products', 'Products Page'));
+      }
 
       return results;
     } finally {
