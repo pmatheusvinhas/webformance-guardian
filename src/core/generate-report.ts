@@ -4,6 +4,7 @@ import { TestResult } from './types';
 import fs from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
+import { ReportGenerator } from './report-generator';
 
 dotenv.config();
 
@@ -33,61 +34,14 @@ export async function generateReport({ site, outputDir = './public/data', apiKey
     console.log('Analyzing test results...');
     const analysis = await analyzer.analyzeResults(results);
 
-    // Ensure output directory exists
-    await fs.mkdir(outputDir, { recursive: true });
-
-    // Save results
-    const timestamp = new Date().toISOString();
-    const report = {
-      timestamp,
-      site,
-      results,
-      analysis
-    };
-
-    await fs.writeFile(
-      path.join(outputDir, 'results.json'),
-      JSON.stringify(results, null, 2)
-    );
-
-    await fs.writeFile(
-      path.join(outputDir, 'analysis.json'),
-      JSON.stringify(analysis, null, 2)
-    );
-
-    // Update history
-    const historyFile = path.join(outputDir, 'history-index.json');
-    let history: Array<{ timestamp: string; site: string; summary: string }> = [];
-
-    try {
-      const historyData = await fs.readFile(historyFile, 'utf-8');
-      history = JSON.parse(historyData);
-    } catch (error) {
-      console.log('Starting new history file');
-    }
-
-    history.push({
-      timestamp,
-      site,
-      summary: analysis.summary
+    // Generate report
+    const reporter = new ReportGenerator({
+      apiKey: groqApiKey,
+      outputDir,
+      useMock: false
     });
 
-    // Keep only last 6 days of history
-    const sixDaysAgo = new Date();
-    sixDaysAgo.setDate(sixDaysAgo.getDate() - 6);
-    history = history.filter(entry => new Date(entry.timestamp) > sixDaysAgo);
-
-    await fs.writeFile(historyFile, JSON.stringify(history, null, 2));
-
-    // Save detailed report
-    const historyDir = path.join(outputDir, 'history');
-    await fs.mkdir(historyDir, { recursive: true });
-
-    await fs.writeFile(
-      path.join(historyDir, `report-${timestamp.replace(/[:.]/g, '-')}.json`),
-      JSON.stringify(report, null, 2)
-    );
-
+    await reporter.generateReport(results);
     console.log('Report generated successfully');
   } catch (error) {
     console.error('Failed to generate report:', error);

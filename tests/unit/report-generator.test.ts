@@ -13,7 +13,11 @@ describe('ReportGenerator', () => {
   const mockOutputDir = './test-reports';
 
   beforeEach(() => {
-    generator = new ReportGenerator('test-token', mockOutputDir, true);
+    generator = new ReportGenerator({
+      apiKey: 'test-token',
+      outputDir: mockOutputDir,
+      useMock: true
+    });
     jest.clearAllMocks();
   });
 

@@ -1,106 +1,119 @@
-import { PerformanceAnalyzer, PerformanceMetrics, PerformanceAnalysis } from './performance-analyzer';
-import * as fs from 'fs';
-import * as path from 'path';
+import { TestResult, PerformanceAnalysis } from './types';
+import { PerformanceAnalyzer } from './performance-analyzer';
+import fs from 'fs/promises';
+import path from 'path';
 
-interface Report {
-  timestamp: string;
-  metrics: PerformanceMetrics;
-  analysis: PerformanceAnalysis;
+export interface ReportGeneratorOptions {
+  apiKey: string;
+  outputDir?: string;
+  useMock?: boolean;
 }
 
 export class ReportGenerator {
-  private readonly outputDir: string;
-  private readonly analyzer: PerformanceAnalyzer;
+  private analyzer: PerformanceAnalyzer;
+  private outputDir: string;
 
-  constructor(apiToken: string, outputDir: string = 'reports') {
+  constructor(options: ReportGeneratorOptions) {
+    const { apiKey, outputDir = './public/data', useMock = false } = options;
+    this.analyzer = new PerformanceAnalyzer(apiKey, useMock);
     this.outputDir = outputDir;
-    this.analyzer = new PerformanceAnalyzer(apiToken);
-    this.ensureDirectoryExists();
   }
 
-  private ensureDirectoryExists(): void {
-    if (!fs.existsSync(this.outputDir)) {
-      fs.mkdirSync(this.outputDir, { recursive: true });
-    }
-  }
-
-  async generateReport(metrics: PerformanceMetrics): Promise<void> {
+  async generateReport(results: TestResult[]): Promise<void> {
     try {
-      console.log('Analyzing performance metrics...');
-      const analysis = await this.analyzer.analyzePerformance(metrics);
-
-      const report: Report = {
+      const analysis = await this.analyzer.analyzePerformance(results);
+      const report = {
         timestamp: new Date().toISOString(),
-        metrics,
+        results,
         analysis
       };
 
-      // Save full report as JSON
-      const jsonPath = path.join(this.outputDir, 'performance-report.json');
-      fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
-      console.log(`Full report saved to: ${jsonPath}`);
-
-      // Generate markdown report
-      const markdown = this.generateMarkdown(report);
-      const mdPath = path.join(this.outputDir, 'performance-report.md');
-      fs.writeFileSync(mdPath, markdown);
-      console.log(`Markdown report saved to: ${mdPath}`);
-
-      // Log summary to console
-      console.log('\nPerformance Analysis Summary:');
-      console.log('-'.repeat(50));
-      console.log(analysis.summary);
-      console.log('\nKey Issues:');
-      analysis.issues.forEach(issue => {
-        console.log(`${issue.severity.toUpperCase()}: ${issue.message}`);
-      });
+      await this.saveReport(report);
+      await this.updateHistory(report);
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Failed to generate report';
-      throw new Error(errorMessage);
+      console.error('Error generating report:', error);
+      throw error;
     }
   }
 
-  private generateMarkdown(report: Report): string {
-    return `# Performance Analysis Report
+  private async saveReport(report: { timestamp: string; results: TestResult[]; analysis: PerformanceAnalysis }): Promise<void> {
+    await fs.mkdir(this.outputDir, { recursive: true });
+
+    // Save results and analysis separately
+    await fs.writeFile(
+      path.join(this.outputDir, 'results.json'),
+      JSON.stringify(report.results, null, 2)
+    );
+
+    await fs.writeFile(
+      path.join(this.outputDir, 'analysis.json'),
+      JSON.stringify(report.analysis, null, 2)
+    );
+  }
+
+  private async updateHistory(report: { timestamp: string; results: TestResult[]; analysis: PerformanceAnalysis }): Promise<void> {
+    const historyFile = path.join(this.outputDir, 'history-index.json');
+    let history: Array<{ timestamp: string; summary: string }> = [];
+
+    try {
+      const historyData = await fs.readFile(historyFile, 'utf-8');
+      history = JSON.parse(historyData);
+    } catch (error) {
+      // If file doesn't exist or is invalid, start with empty history
+      console.log('Starting new history file');
+    }
+
+    // Add new entry
+    history.push({
+      timestamp: report.timestamp,
+      summary: report.analysis.summary
+    });
+
+    // Keep only last 6 days of history
+    const sixDaysAgo = new Date();
+    sixDaysAgo.setDate(sixDaysAgo.getDate() - 6);
+    history = history.filter(entry => new Date(entry.timestamp) > sixDaysAgo);
+
+    // Save updated history
+    await fs.writeFile(historyFile, JSON.stringify(history, null, 2));
+
+    // Save detailed report in history folder
+    const historyDir = path.join(this.outputDir, 'history');
+    await fs.mkdir(historyDir, { recursive: true });
+
+    const reportFile = path.join(
+      historyDir,
+      `report-${report.timestamp.replace(/[:.]/g, '-')}.json`
+    );
+
+    await fs.writeFile(reportFile, JSON.stringify(report, null, 2));
+  }
+
+  async generateMarkdownReport(report: { timestamp: string; results: TestResult[]; analysis: PerformanceAnalysis }): Promise<string> {
+    const markdown = `# Performance Test Report
 Generated: ${new Date(report.timestamp).toLocaleString()}
 
 ## Summary
 ${report.analysis.summary}
 
-## Performance Metrics
-
-### Main Site
-- TTFB: ${report.metrics.mainSite.timing.ttfb}ms
-- FCP: ${report.metrics.mainSite.timing.fcp}ms
-- LCP: ${report.metrics.mainSite.timing.lcp}ms
-- Total Time: ${report.metrics.mainSite.totalTime}ms
-
-### App Redirect
-- TTFB: ${report.metrics.appRedirect.timing.ttfb}ms
-- FCP: ${report.metrics.appRedirect.timing.fcp}ms
-- LCP: ${report.metrics.appRedirect.timing.lcp}ms
-- Total Time: ${report.metrics.appRedirect.totalTime}ms
-
-### Auth Page
-- TTFB: ${report.metrics.authPage.timing.ttfb}ms
-- FCP: ${report.metrics.authPage.timing.fcp}ms
-- LCP: ${report.metrics.authPage.timing.lcp}ms
-- Total Time: ${report.metrics.authPage.totalTime}ms
-
-#### Form Interaction Times
-- Email Input: ${report.metrics.authPage.formTiming.emailInputTime}ms
-- Password Input: ${report.metrics.authPage.formTiming.passwordInputTime}ms
-- Submit Button: ${report.metrics.authPage.formTiming.buttonTime}ms
-
-## Issues
-
+## Performance Issues
 ${report.analysis.issues.map(issue => `### ${issue.severity.toUpperCase()}
-**${issue.message}**
-${issue.recommendation}
+- **Issue**: ${issue.message}
+- **Recommendation**: ${issue.recommendation}
 `).join('\n')}
 
 ## Insights
 ${report.analysis.insights.map(insight => `- ${insight}`).join('\n')}
-`;
+
+## Test Results
+${report.results.map(test => `### ${test.title}
+- Status: ${test.passed ? '✅ Passed' : '❌ Failed'}
+- Duration: ${test.duration}ms
+${test.metrics ? `- Load Time: ${test.metrics.loadTime}ms
+- TTFB: ${test.metrics.ttfb}ms
+- FCP: ${test.metrics.fcp}ms` : '- No metrics available'}
+`).join('\n')}`;
+
+    return markdown;
   }
 } 
