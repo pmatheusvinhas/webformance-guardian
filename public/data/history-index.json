@@ -2,5 +2,9 @@
   {
     "timestamp": "2025-01-13T01:43:21.682Z",
     "summary": "ISSUES\nCritical:\n- The How It Works page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page for better performance."
+  },
+  {
+    "timestamp": "2025-01-13T05:16:30.245Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page's performance."
   }
 ]

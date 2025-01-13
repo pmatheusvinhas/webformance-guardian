@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-13T05:16:30.245Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1549,
+      "metrics": {
+        "loadTime": 482.5,
+        "ttfb": 66.39999999999418,
+        "fcp": 625.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 974,
+      "metrics": {
+        "loadTime": 193.90000000000873,
+        "ttfb": 54.90000000000873,
+        "fcp": 207.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1085,
+      "metrics": {
+        "loadTime": 196.3000000000029,
+        "ttfb": 60.80000000000291,
+        "fcp": 187
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 936
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page's performance.",
+    "issues": [],
+    "insights": [
+      "The pricing and blog pages have similar load times, suggesting that they have been optimized well. It is recommended to use these pages as a benchmark for optimizing the other pages.",
+      "The TTFB for all pages is low, indicating that the server response time is fast. This is a positive sign, as it suggests that the server is configured correctly and is able to handle requests efficiently.",
+      "The FCP for all pages is relatively fast, indicating that the pages are rendering quickly. This is an important metric, as it affects user experience and engagement. It is recommended to monitor this metric regularly and optimize it if necessary."
+    ]
+  }
+}
