@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page's performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the cause of the failure and address it to ensure proper page load performance.",
   "issues": [],
   "insights": [
-    "The pricing and blog pages have similar load times, suggesting that they have been optimized well. It is recommended to use these pages as a benchmark for optimizing the other pages.",
-    "The TTFB for all pages is low, indicating that the server response time is fast. This is a positive sign, as it suggests that the server is configured correctly and is able to handle requests efficiently.",
-    "The FCP for all pages is relatively fast, indicating that the pages are rendering quickly. This is an important metric, as it affects user experience and engagement. It is recommended to monitor this metric regularly and optimize it if necessary."
+    "Page load times for the pricing and blog pages are quite fast, which is positive for user experience.",
+    "Optimizing TTFB and FCP can further improve page load performance, ensuring a smoother user experience.",
+    "Investigating and addressing the \"How It Works\" page failure is crucial to maintain consistent performance across all pages."
   ]
 }

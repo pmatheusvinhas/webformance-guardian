@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-13T10:18:25.857Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1340,
+      "metrics": {
+        "loadTime": 460.9000000000233,
+        "ttfb": 38.5,
+        "fcp": 296.70000000001164
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 933,
+      "metrics": {
+        "loadTime": 205.10000000003492,
+        "ttfb": 48.800000000046566,
+        "fcp": 201.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 951,
+      "metrics": {
+        "loadTime": 209.19999999995343,
+        "ttfb": 45.09999999997672,
+        "fcp": 160.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 866
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the cause of the failure and address it to ensure proper page load performance.",
+    "issues": [],
+    "insights": [
+      "Page load times for the pricing and blog pages are quite fast, which is positive for user experience.",
+      "Optimizing TTFB and FCP can further improve page load performance, ensuring a smoother user experience.",
+      "Investigating and addressing the \"How It Works\" page failure is crucial to maintain consistent performance across all pages."
+    ]
+  }
+}
