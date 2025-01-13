@@ -9,21 +9,15 @@ export interface TestMetrics {
 export interface TestResult {
   title: string;
   passed: boolean;
-  duration?: number;
-  metrics?: {
-    loadTime: number;
-    ttfb: number;
-    fcp: number;
-  };
-  error?: string;
+  duration: number;
+  metrics?: PerformanceMetrics;
 }
 
 export interface PerformanceMetrics {
-  mainSite: PageMetrics;
-  appRedirect: PageMetrics;
-  authPage: PageMetrics & {
-    formTiming: FormTiming;
-  };
+  loadTime: number;
+  ttfb: number;
+  fcp: number;
+  count?: number;
 }
 
 export interface PageMetrics {
@@ -43,11 +37,7 @@ export interface FormTiming {
 
 export interface PerformanceAnalysis {
   summary: string;
-  issues: Array<{
-    severity: 'critical' | 'warning' | 'info';
-    message: string;
-    recommendation: string;
-  }>;
+  issues: PerformanceIssue[];
   insights: string[];
 }
 
@@ -72,4 +62,10 @@ export interface TestAnalysis {
     score: number;
     insights: string[];
   };
+}
+
+export interface PerformanceIssue {
+  severity: 'critical' | 'warning' | 'info';
+  message: string;
+  recommendation: string;
 } 

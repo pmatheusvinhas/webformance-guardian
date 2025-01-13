@@ -1,158 +1,101 @@
-import { Groq } from "groq-sdk";
-import { TestResult, PerformanceMetrics } from './types';
+import { TestResult } from './types';
+import Groq from 'groq-sdk';
 
-export interface AnalysisResult {
+export interface AIAnalysisResult {
   summary: string;
-  issues: Array<{
-    severity: 'critical' | 'warning' | 'info';
-    message: string;
-    recommendation: string;
-  }>;
-  insights: string[];
+  recommendations: string[];
 }
 
 export class AIAnalyzer {
-  private groq: Groq;
-  private model = 'llama-3.3-70b-versatile';
+  private client: Groq;
+  private isMock: boolean;
 
-  constructor(apiKey: string) {
-    this.groq = new Groq({ apiKey });
+  constructor(apiKey: string, isMock: boolean = false) {
+    this.client = new Groq({ apiKey });
+    this.isMock = isMock;
   }
 
-  async analyzePerformance(results: TestResult[]): Promise<AnalysisResult> {
+  async analyzeResults(results: TestResult[]): Promise<AIAnalysisResult> {
     try {
-      const prompt = this.generateAnalysisPrompt(results);
-      const completion = await this.groq.chat.completions.create({
-        messages: [
-          {
-            role: "system",
-            content: "You are a web performance expert. Analyze the test results and provide actionable insights."
-          },
-          {
-            role: "user",
-            content: prompt
-          }
-        ],
-        model: this.model,
+      if (this.isMock) {
+        return this.getMockAnalysis(results);
+      }
+
+      const prompt = this.generatePrompt(results);
+      const completion = await this.client.chat.completions.create({
+        messages: [{ role: 'user', content: prompt }],
+        model: 'mixtral-8x7b-32768',
         temperature: 0.3,
         max_tokens: 1000,
       });
 
       return this.parseAnalysis(completion.choices[0]?.message?.content || '');
     } catch (error) {
-      console.error('Error analyzing performance:', error);
-      return this.getDefaultAnalysis('Analysis failed due to an error');
+      console.error('Error analyzing results:', error);
+      if (this.isMock) {
+        return this.getMockAnalysis(results);
+      }
+      throw new Error('Failed to analyze test results');
     }
   }
 
-  private generateAnalysisPrompt(results: TestResult[]): string {
-    const metrics = this.calculateAverageMetrics(results);
-    const passedTests = results.filter(r => r.passed).length;
-    const failedTests = results.length - passedTests;
+  private getMockAnalysis(results: TestResult[]): AIAnalysisResult {
+    const failedTests = results.filter(r => !r.passed);
+    const slowTests = results.filter(r => r.duration > 5000);
+    
+    const recommendations = [];
+    if (failedTests.length > 0) {
+      recommendations.push('Fix failing tests to ensure application stability');
+    }
+    if (slowTests.length > 0) {
+      recommendations.push('Optimize slow tests to improve performance');
+    }
 
-    return `Analyze these web performance test results and provide insights:
+    return {
+      summary: 'Mock analysis for testing purposes',
+      recommendations: recommendations.length > 0 ? recommendations : ['All tests are performing well']
+    };
+  }
 
-Test Results Summary:
-- Total Tests: ${results.length}
-- Passed Tests: ${passedTests}
-- Failed Tests: ${failedTests}
-- Average Load Time: ${metrics.loadTime}ms
-- Average TTFB: ${metrics.ttfb}ms
-- Average FCP: ${metrics.fcp}ms
+  private generatePrompt(results: TestResult[]): string {
+    return `Analyze these test results and provide insights:
+${JSON.stringify(results, null, 2)}
 
-Failed Tests:
-${results.filter(r => !r.passed).map(t => `- ${t.title}: ${t.error || 'Unknown error'}`).join('\n')}
-
-Please provide analysis in this format:
-
+Format your response exactly like this:
 SUMMARY
-[Provide a concise summary of the overall performance]
+[One paragraph summary of test results]
 
-ISSUES
-Critical:
-- [List critical performance issues]
-Recommendation: [How to fix]
-
-Warning:
-- [List warning level issues]
-Recommendation: [How to fix]
-
-Info:
-- [List informational points]
-Recommendation: [Suggestions for improvement]
-
-INSIGHTS
-- [Key performance insights]
-- [Patterns or trends]
-- [Recommendations for improvement]`;
+RECOMMENDATIONS
+- [Recommendation 1]
+- [Recommendation 2]
+- [Recommendation 3]`;
   }
 
-  private calculateAverageMetrics(results: TestResult[]): PerformanceMetrics {
-    const metrics = results.reduce((acc, r) => {
-      if (r.metrics) {
-        acc.loadTime += r.metrics.loadTime || 0;
-        acc.ttfb += r.metrics.ttfb || 0;
-        acc.fcp += r.metrics.fcp || 0;
-        acc.count++;
-      }
-      return acc;
-    }, { loadTime: 0, ttfb: 0, fcp: 0, count: 0 });
-
-    return {
-      loadTime: metrics.count ? Math.round(metrics.loadTime / metrics.count) : 0,
-      ttfb: metrics.count ? Math.round(metrics.ttfb / metrics.count) : 0,
-      fcp: metrics.count ? Math.round(metrics.fcp / metrics.count) : 0
-    };
-  }
-
-  private parseAnalysis(text: string): AnalysisResult {
+  private parseAnalysis(response: string): AIAnalysisResult {
     try {
-      const summary = text.match(/SUMMARY\n([\s\S]*?)(?=\n\n|$)/)?.[1]?.trim() || 'No analysis available';
-      const issues: AnalysisResult['issues'] = [];
-      const insights: string[] = [];
+      const sections = response.split('\n\n');
+      const summary = sections[1]?.trim() || '';
+      const recommendations: string[] = [];
 
-      // Parse issues
-      const issuesMatch = text.match(/ISSUES\n([\s\S]*?)(?=\n\nINSIGHTS|$)/);
-      if (issuesMatch) {
-        const issuesText = issuesMatch[1];
-        
-        ['Critical:', 'Warning:', 'Info:'].forEach(severity => {
-          const severityMatch = new RegExp(`${severity}\\n([\\s\\S]*?)(?=\\n\\n|$)`).exec(issuesText);
-          if (severityMatch) {
-            const items = severityMatch[1].split('\n-').filter(Boolean);
-            items.forEach(item => {
-              const [message, recommendation] = item.split('Recommendation:').map(s => s.trim());
-              if (message) {
-                issues.push({
-                  severity: severity.toLowerCase().replace(':', '') as 'critical' | 'warning' | 'info',
-                  message,
-                  recommendation: recommendation || 'No recommendation provided'
-                });
-              }
-            });
-          }
-        });
+      let isRecommendations = false;
+      for (const line of response.split('\n')) {
+        if (line.startsWith('RECOMMENDATIONS')) {
+          isRecommendations = true;
+        } else if (isRecommendations && line.trim().startsWith('-')) {
+          recommendations.push(line.replace('-', '').trim());
+        }
       }
 
-      // Parse insights
-      const insightsMatch = text.match(/INSIGHTS\n([\s\S]*?)(?=\n\n|$)/);
-      if (insightsMatch) {
-        insights.push(...insightsMatch[1].split('\n-')
-          .map(s => s.trim())
-          .filter(Boolean));
-      }
-
-      return { summary, issues, insights };
+      return {
+        summary,
+        recommendations
+      };
     } catch (error) {
-      return this.getDefaultAnalysis('Failed to parse analysis');
+      console.error('Error parsing analysis:', error);
+      return {
+        summary: '',
+        recommendations: []
+      };
     }
-  }
-
-  private getDefaultAnalysis(summary: string): AnalysisResult {
-    return {
-      summary,
-      issues: [],
-      insights: []
-    };
   }
 } 

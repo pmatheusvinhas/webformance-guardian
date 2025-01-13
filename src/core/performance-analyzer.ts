@@ -1,168 +1,129 @@
-import fetch from 'node-fetch';
-import { TestResult } from './types';
-
-export interface PerformanceAnalysis {
-  summary: string;
-  issues: Array<{
-    severity: 'critical' | 'warning' | 'info';
-    message: string;
-    recommendation: string;
-  }>;
-  insights: string[];
-}
+import { TestResult, PerformanceAnalysis } from './types';
+import Groq from 'groq-sdk';
 
 export class PerformanceAnalyzer {
-  private readonly HUGGINGFACE_API = 'https://api-inference.huggingface.co/models';
-  private readonly MODEL = 'google/flan-t5-large';
+  private client: Groq;
+  private isMock: boolean;
 
-  constructor(private readonly apiToken: string) {}
-
-  private async query(input: string): Promise<string> {
-    console.log('Sending request to Hugging Face API...');
-    
-    try {
-      const response = await fetch(`${this.HUGGINGFACE_API}/${this.MODEL}`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.apiToken}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          inputs: input,
-          parameters: {
-            max_new_tokens: 250,
-            temperature: 0.3,
-            top_p: 0.95,
-            do_sample: true,
-            return_full_text: false
-          }
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error(`Hugging Face API error: ${response.statusText} (${response.status})`);
-      }
-
-      const result = await response.json();
-      console.log('Raw API Response:', JSON.stringify(result, null, 2));
-
-      if (!Array.isArray(result)) {
-        throw new Error('Invalid response from Hugging Face API');
-      }
-
-      return result[0].generated_text || 'No analysis generated';
-    } catch (error) {
-      console.error('Error querying Hugging Face API:', error);
-      throw error;
-    }
+  constructor(apiKey: string, isMock: boolean = false) {
+    this.client = new Groq({ apiKey });
+    this.isMock = isMock;
   }
 
   async analyzePerformance(results: TestResult[]): Promise<PerformanceAnalysis> {
-    console.log('Generating analysis prompt...');
-    const prompt = this.generateAnalysisPrompt(results);
-    console.log('Analysis Prompt:', prompt);
-
     try {
-      const response = await this.query(prompt);
-      console.log('Parsing analysis response...');
-      return this.parseAnalysis(response);
+      if (this.isMock) {
+        return this.getMockAnalysis(results);
+      }
+
+      const prompt = this.generatePrompt(results);
+      const completion = await this.client.chat.completions.create({
+        messages: [{ role: 'user', content: prompt }],
+        model: 'mixtral-8x7b-32768',
+        temperature: 0.3,
+        max_tokens: 1000,
+      });
+
+      return this.parseAnalysis(completion.choices[0]?.message?.content || '');
     } catch (error) {
       console.error('Error analyzing performance:', error);
+      if (this.isMock) {
+        return this.getMockAnalysis(results);
+      }
+      throw new Error('Failed to analyze performance metrics');
+    }
+  }
+
+  private getMockAnalysis(results: TestResult[]): PerformanceAnalysis {
+    const hasSlowTests = results.some(r => r.duration > 5000);
+    
+    return {
+      summary: 'Mock analysis for testing purposes',
+      issues: hasSlowTests ? [{
+        severity: 'warning',
+        message: 'Slow page load detected',
+        recommendation: 'Optimize page load performance'
+      }] : [],
+      insights: [
+        'Test mock insight 1',
+        'Test mock insight 2'
+      ]
+    };
+  }
+
+  private generatePrompt(results: TestResult[]): string {
+    return `Analyze these web performance test results and provide insights:
+${JSON.stringify(results, null, 2)}
+
+Format your response exactly like this:
+SUMMARY
+[One paragraph summary of overall performance]
+
+ISSUES
+Critical:
+- [Issue]: [Recommendation]
+
+Warning:
+- [Issue]: [Recommendation]
+
+Info:
+- [Issue]: [Recommendation]
+
+INSIGHTS
+- [Key insight 1]
+- [Key insight 2]
+- [Key insight 3]`;
+  }
+
+  private parseAnalysis(response: string): PerformanceAnalysis {
+    try {
+      const sections = response.split('\n\n');
+      const summary = sections[1]?.trim() || '';
+      
+      const issues: PerformanceAnalysis['issues'] = [];
+      const insights: string[] = [];
+
+      let currentSection = '';
+      for (const line of response.split('\n')) {
+        if (line.startsWith('SUMMARY')) {
+          currentSection = 'summary';
+        } else if (line.startsWith('ISSUES')) {
+          currentSection = 'issues';
+        } else if (line.startsWith('INSIGHTS')) {
+          currentSection = 'insights';
+        } else if (line.trim().startsWith('-')) {
+          const content = line.replace('-', '').trim();
+          if (currentSection === 'insights') {
+            insights.push(content);
+          } else if (currentSection === 'issues') {
+            const [message, recommendation] = content.split(':').map(s => s.trim());
+            const severity = this.determineSeverity(line);
+            if (message && recommendation) {
+              issues.push({ severity, message, recommendation });
+            }
+          }
+        }
+      }
+
       return {
-        summary: 'Failed to generate analysis due to an error.',
-        issues: [{
-          severity: 'critical',
-          message: 'Analysis generation failed',
-          recommendation: 'Please check the API token and try again.'
-        }],
+        summary,
+        issues,
+        insights
+      };
+    } catch (error) {
+      console.error('Error parsing analysis:', error);
+      return {
+        summary: '',
+        issues: [],
         insights: []
       };
     }
   }
 
-  private generateAnalysisPrompt(results: TestResult[]): string {
-    const passedTests = results.filter(r => r.passed);
-    const failedTests = results.filter(r => !r.passed);
-    
-    const avgMetrics = results.reduce((acc, r) => {
-      if (r.metrics) {
-        acc.loadTime += r.metrics.loadTime || 0;
-        acc.ttfb += r.metrics.ttfb || 0;
-        acc.fcp += r.metrics.fcp || 0;
-        acc.count++;
-      }
-      return acc;
-    }, { loadTime: 0, ttfb: 0, fcp: 0, count: 0 });
-
-    return `You are a performance analysis expert. Analyze these web performance test results and provide a detailed analysis following the exact format below. Be specific and technical in your analysis.
-
-Test Results:
-- Success Rate: ${((passedTests.length/results.length)*100).toFixed(1)}% (${passedTests.length}/${results.length})
-- Average TTFB: ${avgMetrics.count ? Math.round(avgMetrics.ttfb / avgMetrics.count) : 0}ms
-- Average FCP: ${avgMetrics.count ? Math.round(avgMetrics.fcp / avgMetrics.count) : 0}ms
-- Average Load Time: ${avgMetrics.count ? Math.round(avgMetrics.loadTime / avgMetrics.count) : 0}ms
-${failedTests.length > 0 ? `\nFailed Tests:\n${failedTests.map(t => `- ${t.title}`).join('\n')}` : ''}
-
-Required Response Format:
-
-SUMMARY
-The website demonstrates [overall performance assessment]. TTFB averages at [X]ms which is [evaluation]. FCP at [X]ms indicates [implication]. Load times averaging [X]ms suggest [conclusion].
-
-ISSUES
-Critical:
-- [Specific critical issue found]: [Concrete recommendation]
-
-Warning:
-- [Specific warning level issue]: [Actionable recommendation]
-
-Info:
-- [Specific informational point]: [Helpful recommendation]
-
-INSIGHTS
-- [Specific insight about performance metrics]
-- [Specific observation about test results]
-- [Specific pattern or trend identified]
-
-Note: Replace all text in brackets with specific analysis based on the test results. Be technical and precise.`;
-  }
-
-  private parseAnalysis(text: string): PerformanceAnalysis {
-    const sections = text.split('\n\n');
-    const summary = sections.find(s => s.startsWith('SUMMARY'))?.replace('SUMMARY\n', '') || '';
-    
-    const issues: PerformanceAnalysis['issues'] = [];
-    const issuesSection = sections.find(s => s.startsWith('ISSUES'));
-    if (issuesSection) {
-      let currentSeverity: 'critical' | 'warning' | 'info' | null = null;
-      const lines = issuesSection.split('\n').map(line => line.trim());
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        if (line === 'ISSUES') continue;
-        
-        if (line === 'Critical:') {
-          currentSeverity = 'critical';
-        } else if (line === 'Warning:') {
-          currentSeverity = 'warning';
-        } else if (line === 'Info:') {
-          currentSeverity = 'info';
-        } else if (currentSeverity && line.startsWith('- ')) {
-          const [message, recommendation] = line.slice(2).split(': ').map(s => s.trim());
-          if (message && recommendation) {
-            issues.push({ severity: currentSeverity, message, recommendation });
-          }
-        }
-      }
-    }
-
-    const insightsSection = sections.find(s => s.startsWith('INSIGHTS'));
-    const insights = insightsSection
-      ? insightsSection
-          .split('\n')
-          .filter(line => line.trim().startsWith('- '))
-          .map(line => line.trim().slice(2))
-      : [];
-
-    return { summary: summary.trim(), issues, insights };
+  private determineSeverity(line: string): 'critical' | 'warning' | 'info' {
+    const lowerLine = line.toLowerCase();
+    if (lowerLine.includes('critical')) return 'critical';
+    if (lowerLine.includes('warning')) return 'warning';
+    return 'info';
   }
 } 

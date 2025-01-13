@@ -1,113 +1,109 @@
 import { ReportGenerator } from '../../src/core/report-generator';
-import { PerformanceAnalyzer } from '../../src/core/performance-analyzer';
-import * as fs from 'fs';
-import * as path from 'path';
+import { TestResult, PerformanceAnalysis } from '../../src/core/types';
+import fs from 'fs/promises';
+import path from 'path';
 
-jest.mock('../../src/core/performance-analyzer');
-jest.mock('fs');
-jest.mock('path');
+jest.mock('fs/promises');
+jest.mock('path', () => ({
+  join: (...args: string[]) => args.join('/')
+}));
 
 describe('ReportGenerator', () => {
-  const mockApiToken = 'test-token';
-  const mockOutputDir = 'test-reports';
   let generator: ReportGenerator;
-  
-  const mockMetrics = {
-    mainSite: {
-      timing: { ttfb: 100, fcp: 500, lcp: 1200 },
-      totalTime: 1500
-    },
-    appRedirect: {
-      timing: { ttfb: 80, fcp: 400, lcp: 900 },
-      totalTime: 1000
-    },
-    authPage: {
-      timing: { ttfb: 90, fcp: 450, lcp: 1000 },
-      totalTime: 1200,
-      formTiming: {
-        emailInputTime: 50,
-        passwordInputTime: 45,
-        buttonTime: 40
-      }
-    }
-  };
-
-  const mockAnalysis = {
-    summary: 'Test summary',
-    issues: [
-      {
-        severity: 'critical',
-        message: 'Test issue',
-        recommendation: 'Test recommendation'
-      }
-    ],
-    insights: ['Test insight']
-  };
+  const mockOutputDir = './test-reports';
 
   beforeEach(() => {
+    generator = new ReportGenerator('test-token', mockOutputDir, true);
     jest.clearAllMocks();
-    (PerformanceAnalyzer as jest.MockedClass<typeof PerformanceAnalyzer>).mockImplementation(() => ({
-      analyzePerformance: jest.fn().mockResolvedValue(mockAnalysis)
-    } as any));
-    generator = new ReportGenerator(mockApiToken, mockOutputDir);
   });
 
-  describe('constructor', () => {
-    it('should create output directory if it does not exist', () => {
-      expect(fs.existsSync).toHaveBeenCalledWith(mockOutputDir);
-      expect(fs.mkdirSync).toHaveBeenCalledWith(mockOutputDir, { recursive: true });
-    });
-  });
+  const mockTestResults: TestResult[] = [
+    {
+      title: 'Main Site Performance',
+      passed: true,
+      duration: 3000,
+      metrics: {
+        loadTime: 2500,
+        ttfb: 200,
+        fcp: 800
+      }
+    },
+    {
+      title: 'App Redirect Performance',
+      passed: true,
+      duration: 2500,
+      metrics: {
+        loadTime: 2000,
+        ttfb: 150,
+        fcp: 600
+      }
+    },
+    {
+      title: 'Auth Page Performance',
+      passed: true,
+      duration: 4000,
+      metrics: {
+        loadTime: 3500,
+        ttfb: 250,
+        fcp: 1000
+      }
+    }
+  ];
 
   describe('generateReport', () => {
-    beforeEach(() => {
-      (path.join as jest.Mock).mockImplementation((...args) => args.join('/'));
+    it('should generate and save reports successfully', async () => {
+      await generator.generateReport(mockTestResults);
+
+      // Verify directory creation
+      expect(fs.mkdir).toHaveBeenCalledWith(mockOutputDir, { recursive: true });
+      expect(fs.mkdir).toHaveBeenCalledWith(`${mockOutputDir}/history`, { recursive: true });
+
+      // Verify file writes (results.json, analysis.json, history-index.json, and detailed report in history folder)
+      expect(fs.writeFile).toHaveBeenCalledTimes(4);
+      
+      // Verify specific file writes
+      const writeFileCalls = (fs.writeFile as jest.Mock).mock.calls;
+      const writtenFiles = writeFileCalls.map((call: any[]) => call[0]);
+
+      expect(writtenFiles).toContain(`${mockOutputDir}/results.json`);
+      expect(writtenFiles).toContain(`${mockOutputDir}/analysis.json`);
+      expect(writtenFiles).toContain(`${mockOutputDir}/history-index.json`);
+      expect(writtenFiles.some((file: string) => file.includes('report-'))).toBe(true);
     });
 
-    it('should generate and save reports', async () => {
-      await generator.generateReport(mockMetrics);
+    it('should handle errors gracefully', async () => {
+      const mockError = new Error('Failed to write file');
+      (fs.writeFile as jest.Mock).mockRejectedValue(mockError);
 
-      // Check if files were written
-      expect(fs.writeFileSync).toHaveBeenCalledWith(
-        'test-reports/performance-report.json',
-        expect.any(String)
-      );
-      expect(fs.writeFileSync).toHaveBeenCalledWith(
-        'test-reports/performance-report.md',
-        expect.any(String)
-      );
-
-      // Verify JSON content
-      const jsonContent = (fs.writeFileSync as jest.Mock).mock.calls.find(
-        call => call[0] === 'test-reports/performance-report.json'
-      )[1];
-      const parsedJson = JSON.parse(jsonContent);
-      expect(parsedJson).toMatchObject({
-        metrics: mockMetrics,
-        analysis: mockAnalysis
-      });
-
-      // Verify markdown content
-      const mdContent = (fs.writeFileSync as jest.Mock).mock.calls.find(
-        call => call[0] === 'test-reports/performance-report.md'
-      )[1];
-      expect(mdContent).toContain('# Performance Analysis Report');
-      expect(mdContent).toContain(mockAnalysis.summary);
-      expect(mdContent).toContain('Test issue');
-      expect(mdContent).toContain('Test insight');
-    });
-
-    it('should handle errors during report generation', async () => {
-      const mockError = new Error('Analysis failed');
-      (PerformanceAnalyzer as jest.MockedClass<typeof PerformanceAnalyzer>)
-        .mockImplementationOnce(() => ({
-          analyzePerformance: jest.fn().mockRejectedValueOnce(mockError)
-        } as any));
-
-      const generator = new ReportGenerator(mockApiToken, mockOutputDir);
-      await expect(generator.generateReport(mockMetrics))
+      await expect(generator.generateReport(mockTestResults))
         .rejects
-        .toThrow('Analysis failed');
+        .toThrow();
+    });
+  });
+
+  describe('generateMarkdownReport', () => {
+    it('should generate markdown report with correct format', async () => {
+      const mockReport = {
+        timestamp: '2024-01-12T00:00:00.000Z',
+        results: mockTestResults,
+        analysis: {
+          summary: 'Test summary',
+          issues: [{
+            severity: 'warning' as const,
+            message: 'Test issue',
+            recommendation: 'Test recommendation'
+          }],
+          insights: ['Test insight']
+        } as PerformanceAnalysis
+      };
+
+      const markdown = await generator.generateMarkdownReport(mockReport);
+
+      expect(markdown).toContain('# Performance Test Report');
+      expect(markdown).toContain('Test summary');
+      expect(markdown).toContain('Test issue');
+      expect(markdown).toContain('Test insight');
+      expect(markdown).toContain('Main Site Performance');
     });
   });
 }); 

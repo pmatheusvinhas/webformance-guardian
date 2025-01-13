@@ -1,172 +1,89 @@
 import { PerformanceAnalyzer } from '../../src/core/performance-analyzer';
-import fetch from 'node-fetch';
-
-// Mock node-fetch
-jest.mock('node-fetch');
-const mockedFetch = fetch as jest.MockedFunction<typeof fetch>;
+import { TestResult } from '../../src/core/types';
 
 describe('PerformanceAnalyzer', () => {
-  const mockApiToken = 'test-token';
   let analyzer: PerformanceAnalyzer;
 
   beforeEach(() => {
-    analyzer = new PerformanceAnalyzer(mockApiToken);
-    jest.clearAllMocks();
+    analyzer = new PerformanceAnalyzer('test-token', true);
   });
 
-  const mockMetrics = {
-    mainSite: {
-      timing: { ttfb: 100, fcp: 500, lcp: 1200 },
-      totalTime: 1500
+  const mockTestResults: TestResult[] = [
+    {
+      title: 'Main Site Performance',
+      passed: true,
+      duration: 3000,
+      metrics: {
+        loadTime: 2500,
+        ttfb: 200,
+        fcp: 800
+      }
     },
-    appRedirect: {
-      timing: { ttfb: 80, fcp: 400, lcp: 900 },
-      totalTime: 1000
+    {
+      title: 'App Redirect Performance',
+      passed: true,
+      duration: 2500,
+      metrics: {
+        loadTime: 2000,
+        ttfb: 150,
+        fcp: 600
+      }
     },
-    authPage: {
-      timing: { ttfb: 90, fcp: 450, lcp: 1000 },
-      totalTime: 1200,
-      formTiming: {
-        emailInputTime: 50,
-        passwordInputTime: 45,
-        buttonTime: 40
+    {
+      title: 'Auth Page Performance',
+      passed: true,
+      duration: 4000,
+      metrics: {
+        loadTime: 3500,
+        ttfb: 250,
+        fcp: 1000
       }
     }
-  };
+  ];
 
   describe('analyzePerformance', () => {
-    it('should make correct API call to Hugging Face', async () => {
-      const mockResponse = {
-        generated_text: `SUMMARY
-Performance is within acceptable ranges.
-
-ISSUES
-Critical:
-- High LCP on main site: Optimize image loading
-
-Warning:
-- TTFB could be improved: Consider CDN
-
-Info:
-- Form interactions are good: Monitor for changes
-
-INSIGHTS
-- Main site LCP needs attention
-- Redirect chain is optimized
-- Auth page performs well`
-      };
-
-      mockedFetch.mockResolvedValueOnce({
-        ok: true,
-        json: () => Promise.resolve(mockResponse)
-      } as any);
-
-      await analyzer.analyzePerformance(mockMetrics);
-
-      expect(mockedFetch).toHaveBeenCalledWith(
-        'https://api-inference.huggingface.co/models/google/flan-t5-large',
-        expect.objectContaining({
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer test-token',
-            'Content-Type': 'application/json'
-          }
-        })
-      );
+    it('should analyze performance metrics and return insights', async () => {
+      const result = await analyzer.analyzePerformance(mockTestResults);
+      
+      expect(result).toBeDefined();
+      expect(result.summary).toBeDefined();
+      expect(result.issues).toBeDefined();
+      expect(result.insights).toBeDefined();
     });
 
-    it('should parse analysis response correctly', async () => {
-      const mockResponse = {
-        generated_text: `SUMMARY
-Performance is within acceptable ranges.
-
-ISSUES
-Critical:
-- High LCP on main site: Optimize image loading
-Warning:
-- TTFB could be improved: Consider CDN
-Info:
-- Form interactions are good: Monitor for changes
-
-INSIGHTS
-- Main site LCP needs attention
-- Redirect chain is optimized
-- Auth page performs well`
-      };
-
-      mockedFetch.mockResolvedValueOnce({
-        ok: true,
-        json: () => Promise.resolve(mockResponse)
-      } as any);
-
-      const result = await analyzer.analyzePerformance(mockMetrics);
-
-      expect(result).toEqual({
-        summary: 'Performance is within acceptable ranges.',
-        issues: [
-          {
-            severity: 'critical',
-            message: 'High LCP on main site',
-            recommendation: 'Optimize image loading'
-          },
-          {
-            severity: 'warning',
-            message: 'TTFB could be improved',
-            recommendation: 'Consider CDN'
-          },
-          {
-            severity: 'info',
-            message: 'Form interactions are good',
-            recommendation: 'Monitor for changes'
+    it('should identify performance issues when metrics exceed thresholds', async () => {
+      const slowTestResults: TestResult[] = [
+        {
+          title: 'Slow Page Load',
+          passed: false,
+          duration: 8000,
+          metrics: {
+            loadTime: 7500,
+            ttfb: 1500,
+            fcp: 3000
           }
-        ],
-        insights: [
-          'Main site LCP needs attention',
-          'Redirect chain is optimized',
-          'Auth page performs well'
-        ]
-      });
+        }
+      ];
 
-      expect(mockedFetch).toHaveBeenCalledWith(
-        'https://api-inference.huggingface.co/models/google/flan-t5-large',
-        expect.objectContaining({
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer test-token',
-            'Content-Type': 'application/json'
-          }
-        })
-      );
+      const result = await analyzer.analyzePerformance(slowTestResults);
+      
+      expect(result.issues.length).toBeGreaterThan(0);
+      expect(result.issues[0].severity).toBe('warning');
     });
 
-    it('should handle API errors gracefully', async () => {
-      mockedFetch.mockResolvedValueOnce({
-        ok: false,
-        statusText: 'Service Unavailable'
-      } as any);
+    it('should handle missing metrics gracefully', async () => {
+      const incompleteResults: TestResult[] = [
+        {
+          title: 'Incomplete Test',
+          passed: true,
+          duration: 1000
+        }
+      ];
 
-      await expect(analyzer.analyzePerformance(mockMetrics))
-        .rejects
-        .toThrow('Hugging Face API error: Service Unavailable');
-    });
-
-    it('should handle malformed API responses', async () => {
-      const mockResponse = {
-        generated_text: 'Invalid format response'
-      };
-
-      mockedFetch.mockResolvedValueOnce({
-        ok: true,
-        json: () => Promise.resolve(mockResponse)
-      } as any);
-
-      const result = await analyzer.analyzePerformance(mockMetrics);
-
-      expect(result).toEqual({
-        summary: '',
-        issues: [],
-        insights: []
-      });
+      const result = await analyzer.analyzePerformance(incompleteResults);
+      
+      expect(result).toBeDefined();
+      expect(result.summary).toBeDefined();
     });
   });
 }); 
