@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-13T20:16:53.576Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1177,
+      "metrics": {
+        "loadTime": 505,
+        "ttfb": 57.69999999999709,
+        "fcp": 331.40000000000873
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1004,
+      "metrics": {
+        "loadTime": 287.40000000000873,
+        "ttfb": 79.80000000000291,
+        "fcp": 211
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 971,
+      "metrics": {
+        "loadTime": 277.70000000001164,
+        "ttfb": 41.80000000000291,
+        "fcp": 195.39999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 884
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+    "issues": [],
+    "insights": [
+      "The TTFB is low across all pages, indicating efficient server configuration and resource handling.",
+      "FCP is reasonable, meaning users see content on the page quickly, enhancing user experience.",
+      "The blog page has the shortest TTFB, suggesting that its resources may be optimized compared to other pages. This could serve as a benchmark for optimizing other pages' performance."
+    ]
+  }
+}
