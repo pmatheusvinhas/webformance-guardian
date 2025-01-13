@@ -1,25 +1,14 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
-import fs from 'fs';
-import path from 'path';
 import { TestResults } from '../components/TestResults';
+import fs from 'fs/promises';
+import path from 'path';
 
 interface TestData {
-  results: Array<{
-    title: string;
-    passed: boolean;
-    duration: number;
-    metrics?: {
-      loadTime: number;
-      ttfb: number;
-      fcp: number;
-    };
-    error?: string;
-  }>;
+  results: any[];
   analysis: {
     summary: string;
     issues: Array<{
-      severity: 'critical' | 'warning' | 'info';
+      severity: 'warning' | 'critical' | 'info';
       message: string;
       recommendation: string;
     }>;
@@ -27,36 +16,12 @@ interface TestData {
   };
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  try {
-    const resultsPath = path.join(process.cwd(), 'public/data/results.json');
-    const analysisPath = path.join(process.cwd(), 'public/data/analysis.json');
-
-    const resultsData = JSON.parse(fs.readFileSync(resultsPath, 'utf8'));
-    const analysisData = JSON.parse(fs.readFileSync(analysisPath, 'utf8'));
-
-    return {
-      props: {
-        results: resultsData,
-        analysis: analysisData,
-      },
-      revalidate: 300, // Revalidate every 5 minutes
-    };
-  } catch (error) {
-    console.error('Error loading test data:', error);
-    return {
-      props: {
-        error: 'Failed to load test data',
-      },
-    };
-  }
+interface HomeProps {
+  data?: TestData;
+  error?: string;
 }
 
-const Home: React.FC<{ results?: any; analysis?: any; error?: string }> = ({
-  results,
-  analysis,
-  error,
-}) => {
+export default function Home({ data, error }: HomeProps) {
   if (error) {
     return (
       <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
@@ -65,7 +30,7 @@ const Home: React.FC<{ results?: any; analysis?: any; error?: string }> = ({
             <div className="max-w-md mx-auto">
               <div className="divide-y divide-gray-200">
                 <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                  <p className="text-red-600">{error}</p>
+                  <p className="text-red-600">Error loading test results: {error}</p>
                 </div>
               </div>
             </div>
@@ -75,11 +40,37 @@ const Home: React.FC<{ results?: any; analysis?: any; error?: string }> = ({
     );
   }
 
-  return (
-    <div className="min-h-screen bg-gray-100">
-      <TestResults results={results} analysis={analysis} />
-    </div>
-  );
-};
+  return <TestResults data={data} />;
+}
 
-export default Home; 
+export async function getStaticProps() {
+  try {
+    const dataDir = path.join(process.cwd(), 'public', 'data');
+    const resultsPath = path.join(dataDir, 'results.json');
+    const analysisPath = path.join(dataDir, 'analysis.json');
+
+    const [resultsData, analysisData] = await Promise.all([
+      fs.readFile(resultsPath, 'utf8'),
+      fs.readFile(analysisPath, 'utf8')
+    ]);
+
+    const results = JSON.parse(resultsData);
+    const analysis = JSON.parse(analysisData);
+
+    return {
+      props: {
+        data: {
+          results,
+          analysis
+        }
+      }
+    };
+  } catch (error) {
+    console.error('Error loading data:', error);
+    return {
+      props: {
+        error: 'Failed to load test results. Please try again later.'
+      }
+    };
+  }
+} 
