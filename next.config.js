@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: 'export',
   images: {
     unoptimized: true,
   },
-  experimental: {
-    appDir: false,
-  },
+  basePath: process.env.NODE_ENV === 'production' ? '/webformance-guardian' : '',
 }
 
 module.exports = nextConfig 
