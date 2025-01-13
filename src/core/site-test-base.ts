@@ -1,114 +1,67 @@
-import { Page } from '@playwright/test';
+import { Page } from 'playwright';
 import { PerformanceBase } from '../helpers/performance-base';
 
 export interface LinkValidationResult {
   url: string;
-  status: number;
-  loadTime: number;
-  isExternal: boolean;
+  valid: boolean;
+  error?: string;
 }
 
-export interface ElementValidationResult {
-  selector: string;
-  visible: boolean;
-  interactive: boolean;
-  loadTime: number;
-}
-
-export class SiteTestBase extends PerformanceBase {
-  constructor(
-    protected page: Page,
-    protected baseUrl: string,
-    protected options: {
-      ignorePaths?: string[];
-      maxDepth?: number;
-      includeExternal?: boolean;
-    } = {}
-  ) {
-    super(page);
+export abstract class SiteTestBase extends PerformanceBase {
+  constructor(protected readonly page: Page) {
+    super();
   }
 
-  async getAllLinks(): Promise<string[]> {
-    return await this.page.evaluate(() => {
-      return Array.from(document.querySelectorAll('a'))
-        .map(a => a.href)
-        .filter(href => href && !href.startsWith('javascript:') && !href.startsWith('#'));
-    });
-  }
+  abstract runTests(): Promise<void>;
 
-  async validateLink(url: string): Promise<LinkValidationResult> {
-    const startTime = Date.now();
-    const response = await this.page.request.get(url).catch(() => null);
-    const loadTime = Date.now() - startTime;
-
-    return {
-      url,
-      status: response?.status() ?? 0,
-      loadTime,
-      isExternal: !url.startsWith(this.baseUrl)
-    };
-  }
-
-  async validateElement(selector: string): Promise<ElementValidationResult> {
-    const startTime = Date.now();
-    const element = this.page.locator(selector);
-    
-    const visible = await element.isVisible().catch(() => false);
-    const enabled = await element.isEnabled().catch(() => false);
-    
-    return {
-      selector,
-      visible,
-      interactive: visible && enabled,
-      loadTime: Date.now() - startTime
-    };
-  }
-
-  async crawlSite(startUrl: string = this.baseUrl): Promise<LinkValidationResult[]> {
-    const visited = new Set<string>();
+  protected async validateLinks(selector: string): Promise<LinkValidationResult[]> {
     const results: LinkValidationResult[] = [];
-    const queue: { url: string; depth: number }[] = [{ url: startUrl, depth: 0 }];
+    const links = await this.page.$$(selector);
 
-    while (queue.length > 0) {
-      const { url, depth } = queue.shift()!;
-      
-      if (visited.has(url) || 
-          (this.options.maxDepth && depth > this.options.maxDepth) ||
-          (!this.options.includeExternal && !url.startsWith(this.baseUrl))) {
-        continue;
-      }
+    for (const link of links) {
+      const href = await link.getAttribute('href');
+      if (!href) continue;
 
-      visited.add(url);
-      const result = await this.validateLink(url);
-      results.push(result);
-
-      if (result.status === 200 && !result.isExternal) {
-        await this.page.goto(url);
-        const newLinks = await this.getAllLinks();
-        
-        for (const link of newLinks) {
-          if (!visited.has(link)) {
-            queue.push({ url: link, depth: depth + 1 });
-          }
-        }
+      try {
+        const response = await fetch(href);
+        results.push({
+          url: href,
+          valid: response.ok
+        });
+      } catch (error) {
+        results.push({
+          url: href,
+          valid: false,
+          error: error instanceof Error ? error.message : 'Unknown error'
+        });
       }
     }
 
     return results;
   }
 
-  async validateAllElements(selectors: string[]): Promise<ElementValidationResult[]> {
-    const results: ElementValidationResult[] = [];
-    
-    for (const selector of selectors) {
-      const result = await this.validateElement(selector);
-      results.push(result);
-    }
-
-    return results;
+  protected async measureInteraction(selector: string): Promise<number> {
+    return this.measureInteractionTime(this.page, selector);
   }
 
-  async captureScreenshot(path: string): Promise<void> {
-    await this.page.screenshot({ path, fullPage: true });
+  protected async measureFormInteraction(formSelector: string, submitSelector: string): Promise<number> {
+    const startTime = Date.now();
+    await this.page.fill(`${formSelector} input[type="email"]`, 'test@example.com');
+    await this.page.fill(`${formSelector} input[type="password"]`, 'password123');
+    await this.page.click(submitSelector);
+    return Date.now() - startTime;
+  }
+
+  protected async getPerformanceMetrics() {
+    const loadMetrics = await this.measurePageLoad(this.page);
+    const networkMetrics = await this.measureNetworkRequests(this.page);
+    const memoryUsage = await this.measureMemoryUsage(this.page);
+
+    return {
+      ...loadMetrics,
+      networkRequests: networkMetrics.count,
+      networkSize: networkMetrics.totalSize,
+      memoryUsage
+    };
   }
 } 
