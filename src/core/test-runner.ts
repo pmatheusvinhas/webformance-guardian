@@ -21,7 +21,7 @@ export class TestRunner {
         // Stably-specific routes
         results.push(await this.testPageLoad(browser, '/pricing', 'Pricing Page'));
         results.push(await this.testPageLoad(browser, '/blog', 'Blog Page'));
-        results.push(await this.testPageLoad(browser, '/docs', 'Documentation Page'));
+        results.push(await this.testPageLoad(browser, '/how-it-works', 'How It Works Page'));
       } else {
         // Generic routes for other sites
         results.push(await this.testPageLoad(browser, '/features', 'Features Page'));
