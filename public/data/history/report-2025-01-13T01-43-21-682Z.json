@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-13T01:43:21.682Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1305,
+      "metrics": {
+        "loadTime": 507.1999999999971,
+        "ttfb": 82.39999999999418,
+        "fcp": 434.59999999999127
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 954,
+      "metrics": {
+        "loadTime": 238,
+        "ttfb": 85.09999999999127,
+        "fcp": 214.59999999999127
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 870,
+      "metrics": {
+        "loadTime": 165.1999999999971,
+        "ttfb": 20.40000000000873,
+        "fcp": 135.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 867
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The How It Works page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page for better performance.",
+    "issues": [],
+    "insights": [
+      "The blog page has the best performance, with the shortest load time (165.2ms), TTFB (20.4ms), and FCP (135.3ms). This indicates that the blog page is optimized for fast loading and user experience.",
+      "The pricing page has a good balance between load time (238ms), TTFB (85.1ms), and FCP (214.6ms), making it a good benchmark for optimizing other pages.",
+      "The homepage has potential for optimization, with a longer load time (507.2ms) and FCP (434.6ms) compared to other pages. It is recommended to prioritize optimizing the homepage for better user experience."
+    ]
+  }
+}

@@ -1,26 +1,9 @@
 {
-  "summary": "The web performance test results indicate a mixed performance, with 3 out of 5 tests passing and an average load time of 212ms. However, two critical tests failed due to timeouts, and the average First Contentful Paint (FCP) time is 794ms, which is higher than the recommended 1-2 seconds.",
-  "issues": [
-    {
-      "severity": "critical",
-      "message": "- The CTA Button Click and Contact Form Interaction tests failed due to timeouts, indicating that the page is taking too long to render the button and form elements.",
-      "recommendation": "Investigate the rendering of these elements and optimize the page's JavaScript and CSS to ensure that they are loaded and rendered within the expected timeframe. Consider using lazy loading, code splitting, or optimizing the critical rendering path to improve performance."
-    },
-    {
-      "severity": "warning",
-      "message": "- The average FCP time of 794ms is higher than the recommended 1-2 seconds, which may impact user experience.",
-      "recommendation": "Optimize the page's content and layout to reduce the FCP time. Consider using techniques such as server-side rendering, caching, or optimizing images to improve performance."
-    },
-    {
-      "severity": "info",
-      "message": "- The average load time of 212ms and Time To First Byte (TTFB) of 22ms are relatively good, indicating that the server is responding quickly to requests.",
-      "recommendation": "Continue to monitor and optimize server performance to ensure that it remains responsive and efficient."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The How It Works page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page for better performance.",
+  "issues": [],
   "insights": [
-    "- The test results suggest that the page is experiencing issues with rendering and loading certain elements, which is impacting user experience.",
-    "The high FCP time and failed tests indicate that the page may be experiencing issues with JavaScript and CSS rendering, which is a common pattern in web performance issues.",
-    "To improve performance, it is recommended to focus on optimizing the critical rendering path, reducing JavaScript and CSS payload, and leveraging techniques such as lazy loading and code splitting to improve page load times and user experience.",
-    "Additionally, consider using web performance monitoring tools to identify and address performance issues in real-time, and to track the impact of optimizations on user experience and business metrics."
+    "The blog page has the best performance, with the shortest load time (165.2ms), TTFB (20.4ms), and FCP (135.3ms). This indicates that the blog page is optimized for fast loading and user experience.",
+    "The pricing page has a good balance between load time (238ms), TTFB (85.1ms), and FCP (214.6ms), making it a good benchmark for optimizing other pages.",
+    "The homepage has potential for optimization, with a longer load time (507.2ms) and FCP (434.6ms) compared to other pages. It is recommended to prioritize optimizing the homepage for better user experience."
   ]
 }
