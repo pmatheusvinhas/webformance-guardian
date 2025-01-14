@@ -18,5 +18,9 @@
   {
     "timestamp": "2025-01-13T20:16:53.576Z",
     "summary": "ISSUES\nCritical:\n- None identified in this dataset."
+  },
+  {
+    "timestamp": "2025-01-14T01:11:01.378Z",
+    "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate and optimize the page's performance to reduce its duration below the recommended 3000ms."
   }
 ]

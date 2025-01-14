@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-14T01:11:01.378Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1777,
+      "metrics": {
+        "loadTime": 621.9000000000233,
+        "ttfb": 131.10000000000582,
+        "fcp": 573.3000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1360,
+      "metrics": {
+        "loadTime": 300.70000000001164,
+        "ttfb": 153.60000000000582,
+        "fcp": 288.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1319,
+      "metrics": {
+        "loadTime": 288.29999999998836,
+        "ttfb": 139.5,
+        "fcp": 241.10000000000582
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1211
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate and optimize the page's performance to reduce its duration below the recommended 3000ms.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "\"How It Works\" page failed the test",
+        "recommendation": "Investigate and optimize the page's performance to reduce its duration below the recommended 3000ms."
+      },
+      {
+        "severity": "info",
+        "message": "Homepage load time is longer than other pages",
+        "recommendation": "Consider optimizing images, minifying CSS/JavaScript, and reducing HTTP requests to improve homepage load time."
+      }
+    ],
+    "insights": [
+      "The load times for all pages are relatively low, indicating a well-optimized website.",
+      "Time to First Byte (TTFB) is consistently below 200ms, suggesting efficient server response times.",
+      "First Contentful Paint (FCP) is also low, indicating that the pages are rendering quickly and providing a good user experience."
+    ]
+  }
+}

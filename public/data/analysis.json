@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate and optimize the page's performance to reduce its duration below the recommended 3000ms.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "\"How It Works\" page failed the test",
+      "recommendation": "Investigate and optimize the page's performance to reduce its duration below the recommended 3000ms."
+    },
+    {
+      "severity": "info",
+      "message": "Homepage load time is longer than other pages",
+      "recommendation": "Consider optimizing images, minifying CSS/JavaScript, and reducing HTTP requests to improve homepage load time."
+    }
+  ],
   "insights": [
-    "The TTFB is low across all pages, indicating efficient server configuration and resource handling.",
-    "FCP is reasonable, meaning users see content on the page quickly, enhancing user experience.",
-    "The blog page has the shortest TTFB, suggesting that its resources may be optimized compared to other pages. This could serve as a benchmark for optimizing other pages' performance."
+    "The load times for all pages are relatively low, indicating a well-optimized website.",
+    "Time to First Byte (TTFB) is consistently below 200ms, suggesting efficient server response times.",
+    "First Contentful Paint (FCP) is also low, indicating that the pages are rendering quickly and providing a good user experience."
   ]
 }
