@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-01-14T15:16:27.179Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1865,
+      "metrics": {
+        "loadTime": 727.9000000000087,
+        "ttfb": 199.40000000000873,
+        "fcp": 636.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1592,
+      "metrics": {
+        "loadTime": 487.8000000000029,
+        "ttfb": 340.8999999999942,
+        "fcp": 509.09999999999127
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1954,
+      "metrics": {
+        "loadTime": 672,
+        "ttfb": 429.6999999999971,
+        "fcp": 549.8999999999942
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1299
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant performance bottlenecks. It is essential to investigate this issue further by analyzing detailed performance reports, checking for JavaScript errors, and optimizing resources on this specific page.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (727.9ms) and FCP (636.1ms) among the passing pages. This suggests that there is room for improvement in optimizing the homepage's resources.",
+      "The pricing page has the longest TTFB (340.9ms) among the passing pages. This indicates that the server might take longer to respond on the pricing page, which could be improved by optimizing server-side rendering or caching strategies.",
+      "The blog page has the shortest load time (672ms) and TTFB (429.7ms) among the passing pages. This could serve as a benchmark for optimizing the other pages' performance.",
+      "It is crucial to address the performance issues on the \"How It Works\" page, as its failure in the test might negatively impact user experience and engagement."
+    ]
+  }
+}

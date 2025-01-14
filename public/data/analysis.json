@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating that there might be significant issues affecting its performance. It is recommended to investigate this page further to identify and resolve the problems.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant performance bottlenecks. It is essential to investigate this issue further by analyzing detailed performance reports, checking for JavaScript errors, and optimizing resources on this specific page.",
   "issues": [],
   "insights": [
-    "The Time To First Byte (TTFB) metric is relatively low across all pages, indicating that the server response time is fast. This is a positive sign for web performance.",
-    "The First Contentful Paint (FCP) metric, which measures when the first piece of content is rendered on the page, is also within an acceptable range for all pages. This indicates that the pages are visually loading quickly for users.",
-    "Despite having the longest load time, the homepage still loads within 1 second, which is considered a good user experience. However, optimizing its load time can still provide additional performance benefits."
+    "The homepage has the longest load time (727.9ms) and FCP (636.1ms) among the passing pages. This suggests that there is room for improvement in optimizing the homepage's resources.",
+    "The pricing page has the longest TTFB (340.9ms) among the passing pages. This indicates that the server might take longer to respond on the pricing page, which could be improved by optimizing server-side rendering or caching strategies.",
+    "The blog page has the shortest load time (672ms) and TTFB (429.7ms) among the passing pages. This could serve as a benchmark for optimizing the other pages' performance.",
+    "It is crucial to address the performance issues on the \"How It Works\" page, as its failure in the test might negatively impact user experience and engagement."
   ]
 }
