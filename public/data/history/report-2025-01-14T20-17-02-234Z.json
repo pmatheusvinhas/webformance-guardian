@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-14T20:17:02.234Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1721,
+      "metrics": {
+        "loadTime": 603.9000000000087,
+        "ttfb": 77.90000000000873,
+        "fcp": 598.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1465,
+      "metrics": {
+        "loadTime": 509.09999999999127,
+        "ttfb": 243.59999999999127,
+        "fcp": 484
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1338,
+      "metrics": {
+        "loadTime": 420.3999999999942,
+        "ttfb": 156.79999999998836,
+        "fcp": 329.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1445
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated. It is recommended to check for any large resources, slow scripts, or network issues that may be causing the delay in page load time.",
+    "issues": [],
+    "insights": [
+      "The load times for all pages are relatively low, indicating that the website is performing well. However, there is still room for improvement to enhance user experience and reduce bounce rates.",
+      "The Time to First Contentful Paint (FCP) for all pages is relatively low, indicating that the website is rendering the visible content quickly. This is a good sign as it improves user engagement and satisfaction.",
+      "The duration for all pages is relatively low, indicating that the website is loading quickly. This is a good sign as it reduces user wait time and improves user experience."
+    ]
+  }
+}
