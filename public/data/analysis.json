@@ -1,25 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- Issue: The \"How It Works\" page failed the web performance test.\n  Recommendation: Investigate the page to identify the cause of the failure. Analyze server logs, network requests, and resource usage to pinpoint bottlenecks and optimize the page accordingly.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Issue",
-      "recommendation": "The \"How It Works\" page failed the web performance test."
-    },
-    {
-      "severity": "info",
-      "message": "Issue",
-      "recommendation": "The Time to First Byte (TTFB) for all pages is relatively high (above 180ms)."
-    },
-    {
-      "severity": "info",
-      "message": "Issue",
-      "recommendation": "First Contentful Paint (FCP) is slower than recommended best practices for the homepage."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating that there might be significant issues affecting its performance. It is recommended to investigate this page further to identify and resolve the problems.",
+  "issues": [],
   "insights": [
-    "Key insight 1: The homepage has the longest load time (678.5ms) among the passed pages. Although it passed the test, there is room for improvement. Consider optimizing images, minifying CSS and JavaScript, and leveraging browser caching to enhance homepage performance.",
-    "Key insight 2: The blog page has the best TTFB (182.1ms) and FCP (304.4ms) among all pages. Analyze the blog page's configuration and apply similar optimizations to other pages to improve their performance.",
-    "Key insight 3: The duration of all pages is within an acceptable range (less than 1.5 seconds). However, maintaining a high level of performance is crucial for user experience and search engine rankings. Regularly monitor and optimize web performance to ensure a smooth user experience."
+    "The Time To First Byte (TTFB) metric is relatively low across all pages, indicating that the server response time is fast. This is a positive sign for web performance.",
+    "The First Contentful Paint (FCP) metric, which measures when the first piece of content is rendered on the page, is also within an acceptable range for all pages. This indicates that the pages are visually loading quickly for users.",
+    "Despite having the longest load time, the homepage still loads within 1 second, which is considered a good user experience. However, optimizing its load time can still provide additional performance benefits."
   ]
 }
