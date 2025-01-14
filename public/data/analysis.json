@@ -1,20 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate and optimize the page's performance to reduce its duration below the recommended 3000ms.",
+  "summary": "ISSUES\nCritical:\n- Issue: The \"How It Works\" page failed the web performance test.\n  Recommendation: Investigate the page to identify the cause of the failure. Analyze server logs, network requests, and resource usage to pinpoint bottlenecks and optimize the page accordingly.",
   "issues": [
     {
       "severity": "info",
-      "message": "\"How It Works\" page failed the test",
-      "recommendation": "Investigate and optimize the page's performance to reduce its duration below the recommended 3000ms."
+      "message": "Issue",
+      "recommendation": "The \"How It Works\" page failed the web performance test."
     },
     {
       "severity": "info",
-      "message": "Homepage load time is longer than other pages",
-      "recommendation": "Consider optimizing images, minifying CSS/JavaScript, and reducing HTTP requests to improve homepage load time."
+      "message": "Issue",
+      "recommendation": "The Time to First Byte (TTFB) for all pages is relatively high (above 180ms)."
+    },
+    {
+      "severity": "info",
+      "message": "Issue",
+      "recommendation": "First Contentful Paint (FCP) is slower than recommended best practices for the homepage."
     }
   ],
   "insights": [
-    "The load times for all pages are relatively low, indicating a well-optimized website.",
-    "Time to First Byte (TTFB) is consistently below 200ms, suggesting efficient server response times.",
-    "First Contentful Paint (FCP) is also low, indicating that the pages are rendering quickly and providing a good user experience."
+    "Key insight 1: The homepage has the longest load time (678.5ms) among the passed pages. Although it passed the test, there is room for improvement. Consider optimizing images, minifying CSS and JavaScript, and leveraging browser caching to enhance homepage performance.",
+    "Key insight 2: The blog page has the best TTFB (182.1ms) and FCP (304.4ms) among all pages. Analyze the blog page's configuration and apply similar optimizations to other pages to improve their performance.",
+    "Key insight 3: The duration of all pages is within an acceptable range (less than 1.5 seconds). However, maintaining a high level of performance is crucial for user experience and search engine rankings. Regularly monitor and optimize web performance to ensure a smooth user experience."
   ]
 }
