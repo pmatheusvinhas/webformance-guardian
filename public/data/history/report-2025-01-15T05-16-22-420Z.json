@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-15T05:16:22.420Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1563,
+      "metrics": {
+        "loadTime": 582.2000000000116,
+        "ttfb": 105.10000000000582,
+        "fcp": 343
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1242,
+      "metrics": {
+        "loadTime": 184.89999999999418,
+        "ttfb": 38,
+        "fcp": 163.30000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1205,
+      "metrics": {
+        "loadTime": 246.10000000000582,
+        "ttfb": 34.60000000000582,
+        "fcp": 163.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1315
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating a possible critical issue that needs immediate attention. Investigate and resolve the issue to ensure proper page loading.",
+    "issues": [],
+    "insights": [
+      "Prioritizing performance optimization on the homepage can significantly improve user experience and reduce bounce rates.",
+      "Implementing a content delivery network (CDN) can help distribute content closer to users, reducing load times for all pages.",
+      "Regularly monitoring and addressing performance issues can maintain a high-quality user experience and contribute to better search engine rankings."
+    ]
+  }
+}
