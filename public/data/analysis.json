@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated. It is recommended to check for any large resources, slow scripts, or network issues that may be causing the delay in page load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. It's unclear what caused this failure as there are no associated metrics provided. It is recommended to investigate this issue immediately as it could be affecting user experience significantly.",
   "issues": [],
   "insights": [
-    "The load times for all pages are relatively low, indicating that the website is performing well. However, there is still room for improvement to enhance user experience and reduce bounce rates.",
-    "The Time to First Contentful Paint (FCP) for all pages is relatively low, indicating that the website is rendering the visible content quickly. This is a good sign as it improves user engagement and satisfaction.",
-    "The duration for all pages is relatively low, indicating that the website is loading quickly. This is a good sign as it reduces user wait time and improves user experience."
+    "The load times for the homepage, pricing page, and blog page are all very good, indicating efficient coding and optimization.",
+    "The TTFB (Time To First Byte) across all pages is low, suggesting that the server is responding quickly.",
+    "The failed test on the \"How It Works\" page is concerning and requires further investigation."
   ]
 }
