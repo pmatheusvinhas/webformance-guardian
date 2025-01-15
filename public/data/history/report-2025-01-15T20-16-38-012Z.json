@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-15T20:16:38.012Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1238,
+      "metrics": {
+        "loadTime": 475,
+        "ttfb": 56,
+        "fcp": 313.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 989,
+      "metrics": {
+        "loadTime": 210.40000000002328,
+        "ttfb": 52.5,
+        "fcp": 238.40000000002328
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 962,
+      "metrics": {
+        "loadTime": 225.60000000000582,
+        "ttfb": 44.30000000001746,
+        "fcp": 174.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1024
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate why the metrics are missing for this page and address any issues found to ensure proper monitoring and performance.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "\"How It Works\" page failed the test",
+        "recommendation": "Investigate why the metrics are missing for this page and address any issues found to ensure proper monitoring and performance."
+      },
+      {
+        "severity": "info",
+        "message": "Homepage load time is longest",
+        "recommendation": "Consider optimizing images, minifying CSS/JavaScript, and reducing HTTP requests to improve homepage load time."
+      }
+    ],
+    "insights": [
+      "The TTFB (Time to First Byte) is consistently low across all pages, indicating that the server is responding quickly.",
+      "FCP (First Contentful Paint) is relatively high on the homepage, suggesting that content is taking longer to appear on the page.",
+      "The Blog and Pricing pages have the shortest load times, providing a good user experience. Focusing on optimizing the homepage can help improve the overall user experience and ensure consistent performance across all pages."
+    ]
+  }
+}

@@ -1,25 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- \"How It Works\" Page Failed: Investigate why the \"How It Works\" page failed the test and ensure that the duration metric is being recorded.",
+  "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate why the metrics are missing for this page and address any issues found to ensure proper monitoring and performance.",
   "issues": [
     {
       "severity": "info",
-      "message": "\"How It Works\" Page Failed",
-      "recommendation": "Investigate why the \"How It Works\" page failed the test and ensure that the duration metric is being recorded."
+      "message": "\"How It Works\" page failed the test",
+      "recommendation": "Investigate why the metrics are missing for this page and address any issues found to ensure proper monitoring and performance."
     },
     {
       "severity": "info",
-      "message": "Homepage Load Time",
-      "recommendation": "The homepage has a longer load time compared to other pages, consider optimizing images or removing unnecessary elements to improve load time."
-    },
-    {
-      "severity": "info",
-      "message": "TTFB (Time to First Byte) is relatively high for all pages",
-      "recommendation": "TTFB measures the time it takes for the server to respond to the client's request. Consider optimizing server-side rendering or caching to reduce TTFB."
+      "message": "Homepage load time is longest",
+      "recommendation": "Consider optimizing images, minifying CSS/JavaScript, and reducing HTTP requests to improve homepage load time."
     }
   ],
   "insights": [
-    "The pages are loading relatively quickly, with an average load time of 320ms.",
-    "The FCP (First Contentful Paint) metric is consistently low, indicating that the pages are rendering quickly and providing a good user experience.",
-    "The duration metric for the \"How It Works\" page is missing, which could indicate a potential issue with the page. It is important to investigate and resolve this issue to ensure consistent performance across all pages."
+    "The TTFB (Time to First Byte) is consistently low across all pages, indicating that the server is responding quickly.",
+    "FCP (First Contentful Paint) is relatively high on the homepage, suggesting that content is taking longer to appear on the page.",
+    "The Blog and Pricing pages have the shortest load times, providing a good user experience. Focusing on optimizing the homepage can help improve the overall user experience and ensure consistent performance across all pages."
   ]
 }
