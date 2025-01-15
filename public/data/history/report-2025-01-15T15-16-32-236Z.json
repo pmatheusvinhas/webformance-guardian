@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-01-15T15:16:32.236Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1121,
+      "metrics": {
+        "loadTime": 465,
+        "ttfb": 47.19999999999709,
+        "fcp": 275.3000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 958,
+      "metrics": {
+        "loadTime": 223.60000000000582,
+        "ttfb": 67.89999999999418,
+        "fcp": 246.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1007,
+      "metrics": {
+        "loadTime": 320.29999999998836,
+        "ttfb": 82,
+        "fcp": 190.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1086
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- \"How It Works\" Page Failed: Investigate why the \"How It Works\" page failed the test and ensure that the duration metric is being recorded.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "\"How It Works\" Page Failed",
+        "recommendation": "Investigate why the \"How It Works\" page failed the test and ensure that the duration metric is being recorded."
+      },
+      {
+        "severity": "info",
+        "message": "Homepage Load Time",
+        "recommendation": "The homepage has a longer load time compared to other pages, consider optimizing images or removing unnecessary elements to improve load time."
+      },
+      {
+        "severity": "info",
+        "message": "TTFB (Time to First Byte) is relatively high for all pages",
+        "recommendation": "TTFB measures the time it takes for the server to respond to the client's request. Consider optimizing server-side rendering or caching to reduce TTFB."
+      }
+    ],
+    "insights": [
+      "The pages are loading relatively quickly, with an average load time of 320ms.",
+      "The FCP (First Contentful Paint) metric is consistently low, indicating that the pages are rendering quickly and providing a good user experience.",
+      "The duration metric for the \"How It Works\" page is missing, which could indicate a potential issue with the page. It is important to investigate and resolve this issue to ensure consistent performance across all pages."
+    ]
+  }
+}

@@ -1,30 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- Issue: The \"How It Works\" page failed the web performance test.\n  Recommendation: Investigate the cause of the failure and optimize the page to improve load times, TTFB, and FCP.",
+  "summary": "ISSUES\nCritical:\n- \"How It Works\" Page Failed: Investigate why the \"How It Works\" page failed the test and ensure that the duration metric is being recorded.",
   "issues": [
     {
       "severity": "info",
-      "message": "Issue",
-      "recommendation": "The \"How It Works\" page failed the web performance test."
+      "message": "\"How It Works\" Page Failed",
+      "recommendation": "Investigate why the \"How It Works\" page failed the test and ensure that the duration metric is being recorded."
     },
     {
       "severity": "info",
-      "message": "Issue",
-      "recommendation": "The homepage has a higher load time (592 ms) compared to the pricing page (317 ms) and blog page (553 ms)."
+      "message": "Homepage Load Time",
+      "recommendation": "The homepage has a longer load time compared to other pages, consider optimizing images or removing unnecessary elements to improve load time."
     },
     {
       "severity": "info",
-      "message": "Issue",
-      "recommendation": "TTFB for the \"How It Works\" page is not available due to the test failure."
-    },
-    {
-      "severity": "info",
-      "message": "Issue",
-      "recommendation": "FCP for the pricing page (244.8 ms) is higher than the blog page (364.4 ms), although the overall load time for the pricing page is lower."
+      "message": "TTFB (Time to First Byte) is relatively high for all pages",
+      "recommendation": "TTFB measures the time it takes for the server to respond to the client's request. Consider optimizing server-side rendering or caching to reduce TTFB."
     }
   ],
   "insights": [
-    "Key insight 1: The passed tests for the homepage, pricing page, and blog page indicate good performance and optimization.",
-    "Key insight 2: The failed test for the \"How It Works\" page highlights the need for further investigation and optimization.",
-    "Key insight 3: Comparing TTFB, load time, and FCP across pages can help prioritize optimization efforts and identify areas for improvement."
+    "The pages are loading relatively quickly, with an average load time of 320ms.",
+    "The FCP (First Contentful Paint) metric is consistently low, indicating that the pages are rendering quickly and providing a good user experience.",
+    "The duration metric for the \"How It Works\" page is missing, which could indicate a potential issue with the page. It is important to investigate and resolve this issue to ensure consistent performance across all pages."
   ]
 }
