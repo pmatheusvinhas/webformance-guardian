@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- None identified.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues with page resources, script execution, or server-side processing. To address this, review server logs, network requests, and console errors to identify and fix the root cause.",
   "issues": [],
   "insights": [
-    "The pages have fast load times, with all pages passing the test and durations below 1500ms.",
-    "The TTFB and FCP times vary across pages, indicating differences in server response times and content rendering.",
-    "The \"How It Works\" page failed the test due to a longer duration, indicating a need for optimization."
+    "The TTFB metrics for all pages are within an acceptable range (less than 200ms for ideal performance), indicating that the server is responding quickly to requests.",
+    "The FCP metrics show that the pages are visually loading fast, providing a good user experience.",
+    "To further improve performance, consider implementing a Content Delivery Network (CDN) for faster content delivery, enabling browser caching, and optimizing database queries for dynamic pages."
   ]
 }

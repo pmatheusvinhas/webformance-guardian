@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-16T15:16:28.730Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1694,
+      "metrics": {
+        "loadTime": 598.5,
+        "ttfb": 77.5,
+        "fcp": 455.40000000000873
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1333,
+      "metrics": {
+        "loadTime": 404.40000000000873,
+        "ttfb": 153.40000000000873,
+        "fcp": 315.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1416,
+      "metrics": {
+        "loadTime": 444.1999999999971,
+        "ttfb": 183.5,
+        "fcp": 381.1999999999971
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1294
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues with page resources, script execution, or server-side processing. To address this, review server logs, network requests, and console errors to identify and fix the root cause.",
+    "issues": [],
+    "insights": [
+      "The TTFB metrics for all pages are within an acceptable range (less than 200ms for ideal performance), indicating that the server is responding quickly to requests.",
+      "The FCP metrics show that the pages are visually loading fast, providing a good user experience.",
+      "To further improve performance, consider implementing a Content Delivery Network (CDN) for faster content delivery, enabling browser caching, and optimizing database queries for dynamic pages."
+    ]
+  }
+}
