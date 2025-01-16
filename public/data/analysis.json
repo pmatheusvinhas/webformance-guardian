@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- None identified in the provided data.",
+  "summary": "ISSUES\nCritical:\n- None identified.",
   "issues": [],
   "insights": [
-    "The passed tests with relatively low load times indicate that the website's performance is generally good.",
-    "The \"How It Works\" page failed the test, suggesting potential issues with resources, scripts, or server configuration specific to this page. Investigate and optimize as needed.",
-    "Focusing on optimizing the homepage load time can further improve user experience, as it is the first page visitors see."
+    "The pages have fast load times, with all pages passing the test and durations below 1500ms.",
+    "The TTFB and FCP times vary across pages, indicating differences in server response times and content rendering.",
+    "The \"How It Works\" page failed the test due to a longer duration, indicating a need for optimization."
   ]
 }

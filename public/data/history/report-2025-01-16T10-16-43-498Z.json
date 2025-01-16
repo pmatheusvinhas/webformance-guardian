@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-16T10:16:43.498Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1450,
+      "metrics": {
+        "loadTime": 519.1000000000058,
+        "ttfb": 68.90000000000873,
+        "fcp": 544.3000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1050,
+      "metrics": {
+        "loadTime": 282.3999999999942,
+        "ttfb": 148.8000000000029,
+        "fcp": 298.1999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1135,
+      "metrics": {
+        "loadTime": 216.10000000000582,
+        "ttfb": 56.90000000000873,
+        "fcp": 208.90000000000873
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 934
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None identified.",
+    "issues": [],
+    "insights": [
+      "The pages have fast load times, with all pages passing the test and durations below 1500ms.",
+      "The TTFB and FCP times vary across pages, indicating differences in server response times and content rendering.",
+      "The \"How It Works\" page failed the test due to a longer duration, indicating a need for optimization."
+    ]
+  }
+}
