@@ -1,20 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate why the metrics are missing for this page and address any issues found to ensure proper monitoring and performance.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "\"How It Works\" page failed the test",
-      "recommendation": "Investigate why the metrics are missing for this page and address any issues found to ensure proper monitoring and performance."
-    },
-    {
-      "severity": "info",
-      "message": "Homepage load time is longest",
-      "recommendation": "Consider optimizing images, minifying CSS/JavaScript, and reducing HTTP requests to improve homepage load time."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The How It Works page failed the test, which needs immediate attention. Investigate the cause of the failure and resolve it to ensure proper page loading.",
+  "issues": [],
   "insights": [
-    "The TTFB (Time to First Byte) is consistently low across all pages, indicating that the server is responding quickly.",
-    "FCP (First Contentful Paint) is relatively high on the homepage, suggesting that content is taking longer to appear on the page.",
-    "The Blog and Pricing pages have the shortest load times, providing a good user experience. Focusing on optimizing the homepage can help improve the overall user experience and ensure consistent performance across all pages."
+    "The blog page has the best performance with a load time of 294.1 ms, TTFB of 140.8 ms, and FCP (First Contentful Paint) of 244.9 ms. This indicates that the blog page is well optimized and provides a good user experience.",
+    "The pricing page has a slightly longer load time (343.2 ms) than the blog page, but the TTFB (179.3 ms) and FCP (313.6 ms) are still reasonable. Consider optimizing images and minifying files to further improve the pricing page performance.",
+    "The homepage load time (642.6 ms) is longer than the other pages. Investigate the cause of the longer load time and optimize the homepage by reducing HTTP requests, optimizing images, and minifying CSS and JavaScript files.",
+    "The How It Works page failed the test, which needs immediate attention. Investigate the cause of the failure and resolve it to ensure proper page loading. Potential issues could be server errors, script errors, or large resource requests."
   ]
 }

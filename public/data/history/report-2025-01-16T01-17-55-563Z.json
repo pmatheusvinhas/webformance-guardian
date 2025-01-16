@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-01-16T01:17:55.563Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1768,
+      "metrics": {
+        "loadTime": 642.5999999999767,
+        "ttfb": 101.69999999995343,
+        "fcp": 570.9000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1397,
+      "metrics": {
+        "loadTime": 343.20000000006985,
+        "ttfb": 179.30000000004657,
+        "fcp": 313.5999999999767
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1321,
+      "metrics": {
+        "loadTime": 294.0999999999767,
+        "ttfb": 140.80000000004657,
+        "fcp": 244.90000000002328
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1473
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The How It Works page failed the test, which needs immediate attention. Investigate the cause of the failure and resolve it to ensure proper page loading.",
+    "issues": [],
+    "insights": [
+      "The blog page has the best performance with a load time of 294.1 ms, TTFB of 140.8 ms, and FCP (First Contentful Paint) of 244.9 ms. This indicates that the blog page is well optimized and provides a good user experience.",
+      "The pricing page has a slightly longer load time (343.2 ms) than the blog page, but the TTFB (179.3 ms) and FCP (313.6 ms) are still reasonable. Consider optimizing images and minifying files to further improve the pricing page performance.",
+      "The homepage load time (642.6 ms) is longer than the other pages. Investigate the cause of the longer load time and optimize the homepage by reducing HTTP requests, optimizing images, and minifying CSS and JavaScript files.",
+      "The How It Works page failed the test, which needs immediate attention. Investigate the cause of the failure and resolve it to ensure proper page loading. Potential issues could be server errors, script errors, or large resource requests."
+    ]
+  }
+}
