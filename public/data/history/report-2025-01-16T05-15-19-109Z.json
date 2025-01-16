@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-16T05:15:19.109Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1497,
+      "metrics": {
+        "loadTime": 529.1999999999971,
+        "ttfb": 53.80000000000291,
+        "fcp": 601.3000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 943,
+      "metrics": {
+        "loadTime": 220,
+        "ttfb": 70.40000000000873,
+        "fcp": 186.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1037,
+      "metrics": {
+        "loadTime": 259,
+        "ttfb": 95.39999999999418,
+        "fcp": 226.1999999999971
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1086
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None identified in the provided data.",
+    "issues": [],
+    "insights": [
+      "The passed tests with relatively low load times indicate that the website's performance is generally good.",
+      "The \"How It Works\" page failed the test, suggesting potential issues with resources, scripts, or server configuration specific to this page. Investigate and optimize as needed.",
+      "Focusing on optimizing the homepage load time can further improve user experience, as it is the first page visitors see."
+    ]
+  }
+}
