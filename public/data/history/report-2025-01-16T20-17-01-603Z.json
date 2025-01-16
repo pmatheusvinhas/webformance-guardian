@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-16T20:17:01.603Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2050,
+      "metrics": {
+        "loadTime": 700,
+        "ttfb": 189.29999999998836,
+        "fcp": 802.4000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1388,
+      "metrics": {
+        "loadTime": 324.1000000000058,
+        "ttfb": 178.60000000000582,
+        "fcp": 305.3999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1257,
+      "metrics": {
+        "loadTime": 203.10000000000582,
+        "ttfb": 41,
+        "fcp": 155.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1200
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed to load within the specified time limit. It is recommended to investigate this issue urgently to determine the cause and implement necessary optimizations.",
+    "issues": [],
+    "insights": [
+      "The blog page demonstrates the best performance, likely due to its simpler layout and fewer resources to load compared to the other pages. This could serve as a model for optimizing the other pages.",
+      "Despite having the most content and resources to load, the homepage's TTFB is not significantly higher than the other pages, indicating that server configuration is likely adequate. The focus should be on optimizing content rendering and reducing the number of resources loaded.",
+      "Implementing lazy loading or conditional loading strategies could help reduce the load time of the homepage and pricing page by only loading necessary resources initially and deferring others until they are needed."
+    ]
+  }
+}
