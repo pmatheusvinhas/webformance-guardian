@@ -1,20 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation: Analyze the page using browser developer tools to identify and address any performance bottlenecks.)",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation",
-      "recommendation": "Analyze the page using browser developer tools to identify and address any performance bottlenecks.)"
-    },
-    {
-      "severity": "critical",
-      "message": "The FCP (First Contentful Paint) for the Homepage is relatively high compared to the other pages. Although it has passed the test, it could be improved to provide a better user experience. (Recommendation",
-      "recommendation": "Optimize the critical rendering path by loading essential resources first and deferring non-essential ones.)"
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential performance issues that need to be addressed urgently. It is recommended to investigate the causes of the failure and optimize the page's performance.",
+  "issues": [],
   "insights": [
-    "The Pricing Page has the best performance among all pages, with the lowest load time, TTFB (Time to First Byte), and FCP. This indicates that the page is well-optimized and loads quickly, which is crucial for converting visitors into customers.",
-    "The Blog Page has a higher TTFB than the Pricing Page, which might be due to the server taking longer to respond or network latency. Consider optimizing the server-side rendering or caching to improve this metric.",
-    "The Homepage has a significantly higher load time than the Pricing and Blog pages, mainly due to the higher FCP. Investigate the cause of this delay in rendering the first contentful paint and optimize the page accordingly."
+    "The pricing page has the best performance, with the shortest load time and TTFB. This suggests that the page's design and optimization are effective and could be applied to other pages to improve their performance.",
+    "The homepage has the longest load time, which could be due to several factors such as large images, excessive scripts, or poor server response times. It is recommended to investigate these factors and optimize the page's performance.",
+    "The how it works page failed the test, indicating potential issues such as large files, excessive scripts, or poor server response times. It is recommended to investigate these factors and optimize the page's performance."
   ]
 }

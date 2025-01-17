@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-17T20:17:50.580Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1868,
+      "metrics": {
+        "loadTime": 799.3999999999942,
+        "ttfb": 261.6000000000058,
+        "fcp": 607.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1239,
+      "metrics": {
+        "loadTime": 200.59999999997672,
+        "ttfb": 30.29999999998836,
+        "fcp": 181.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1340,
+      "metrics": {
+        "loadTime": 290.79999999998836,
+        "ttfb": 127.10000000000582,
+        "fcp": 245.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1195
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential performance issues that need to be addressed urgently. It is recommended to investigate the causes of the failure and optimize the page's performance.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the best performance, with the shortest load time and TTFB. This suggests that the page's design and optimization are effective and could be applied to other pages to improve their performance.",
+      "The homepage has the longest load time, which could be due to several factors such as large images, excessive scripts, or poor server response times. It is recommended to investigate these factors and optimize the page's performance.",
+      "The how it works page failed the test, indicating potential issues such as large files, excessive scripts, or poor server response times. It is recommended to investigate these factors and optimize the page's performance."
+    ]
+  }
+}

@@ -94,5 +94,9 @@
   {
     "timestamp": "2025-01-17T15:19:51.682Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation: Analyze the page using browser developer tools to identify and address any performance bottlenecks.)"
+  },
+  {
+    "timestamp": "2025-01-17T20:17:50.580Z",
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential performance issues that need to be addressed urgently. It is recommended to investigate the causes of the failure and optimize the page's performance."
   }
 ]
