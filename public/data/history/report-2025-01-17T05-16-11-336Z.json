@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-17T05:16:11.336Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1481,
+      "metrics": {
+        "loadTime": 555.8999999999942,
+        "ttfb": 66.70000000001164,
+        "fcp": 481.20000000001164
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 951,
+      "metrics": {
+        "loadTime": 171.10000000000582,
+        "ttfb": 29.800000000017462,
+        "fcp": 180.19999999998254
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1013,
+      "metrics": {
+        "loadTime": 218.29999999998836,
+        "ttfb": 60.39999999999418,
+        "fcp": 207.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 956
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the test. Investigate the cause and address it immediately to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the shortest load time, suggesting that its design and content may be simpler than other pages. Use this as a benchmark for optimizing the other pages.",
+      "Although TTFB is low, load times can still be improved by optimizing content and reducing the number of requests.",
+      "Implementing a Content Delivery Network (CDN) may help reduce load times by serving content from a server closer to the user."
+    ]
+  }
+}

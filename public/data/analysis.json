@@ -1,25 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- Issue: The \"How It Works\" page failed the web performance test.\n  Recommendation: Investigate the causes of the failure, such as large resource requests, slow server response time, or render-blocking resources. Optimize these issues to improve the page's performance.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Issue",
-      "recommendation": "The \"How It Works\" page failed the web performance test."
-    },
-    {
-      "severity": "info",
-      "message": "Issue",
-      "recommendation": "The First Contentful Paint (FCP) on the homepage is relatively high (409.69 ms)."
-    },
-    {
-      "severity": "info",
-      "message": "Issue",
-      "recommendation": "The Time to First Byte (TTFB) on the pricing page is slightly higher (38.79 ms) than on the other pages."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The how it works page failed the test. Investigate the cause and address it immediately to ensure optimal user experience.",
+  "issues": [],
   "insights": [
-    "Key insight 1: The homepage has the longest load time (494.6 ms) among the passed tests, suggesting that there is room for optimization.",
-    "Key insight 2: The blog page has the lowest TTFB (71.6 ms) and FCP (213 ms), indicating efficient server response and content rendering.",
-    "Key insight 3: The pricing page has a significantly lower FCP (184.39 ms) than the homepage (409.69 ms), highlighting the importance of optimizing above-the-fold content for better user experience."
+    "The pricing page has the shortest load time, suggesting that its design and content may be simpler than other pages. Use this as a benchmark for optimizing the other pages.",
+    "Although TTFB is low, load times can still be improved by optimizing content and reducing the number of requests.",
+    "Implementing a Content Delivery Network (CDN) may help reduce load times by serving content from a server closer to the user."
   ]
 }
