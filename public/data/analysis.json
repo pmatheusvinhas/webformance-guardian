@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The how it works page failed the test. Investigate the cause and address it immediately to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate and address these issues to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The pricing page has the shortest load time, suggesting that its design and content may be simpler than other pages. Use this as a benchmark for optimizing the other pages.",
-    "Although TTFB is low, load times can still be improved by optimizing content and reducing the number of requests.",
-    "Implementing a Content Delivery Network (CDN) may help reduce load times by serving content from a server closer to the user."
+    "The homepage has the longest load time of all pages, indicating that there may be opportunities to optimize and reduce file sizes.",
+    "The pricing page has the shortest TTFB, indicating that the server response time for this page is particularly fast.",
+    "The blog page has the shortest FCP, indicating that the first piece of content is displayed quickly on this page. This could be due to efficient rendering or smaller file sizes for initial content."
   ]
 }

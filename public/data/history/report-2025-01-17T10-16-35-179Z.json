@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-17T10:16:35.179Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1703,
+      "metrics": {
+        "loadTime": 615.3999999999942,
+        "ttfb": 188.10000000000582,
+        "fcp": 410.19999999998254
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1357,
+      "metrics": {
+        "loadTime": 323.5,
+        "ttfb": 176.10000000000582,
+        "fcp": 301.8999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1403,
+      "metrics": {
+        "loadTime": 458.79999999998836,
+        "ttfb": 180.5,
+        "fcp": 308.9000000000233
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1186
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate and address these issues to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time of all pages, indicating that there may be opportunities to optimize and reduce file sizes.",
+      "The pricing page has the shortest TTFB, indicating that the server response time for this page is particularly fast.",
+      "The blog page has the shortest FCP, indicating that the first piece of content is displayed quickly on this page. This could be due to efficient rendering or smaller file sizes for initial content."
+    ]
+  }
+}
