@@ -78,5 +78,9 @@
   {
     "timestamp": "2025-01-16T20:17:01.603Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed to load within the specified time limit. It is recommended to investigate this issue urgently to determine the cause and implement necessary optimizations."
+  },
+  {
+    "timestamp": "2025-01-17T01:10:46.704Z",
+    "summary": "ISSUES\nCritical:\n- Issue: The \"How It Works\" page failed the web performance test.\n  Recommendation: Investigate the causes of the failure, such as large resource requests, slow server response time, or render-blocking resources. Optimize these issues to improve the page's performance."
   }
 ]

@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-01-17T01:10:46.704Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1343,
+      "metrics": {
+        "loadTime": 494.6000000000058,
+        "ttfb": 57.20000000001164,
+        "fcp": 409.69999999998254
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 932,
+      "metrics": {
+        "loadTime": 294.79999999998836,
+        "ttfb": 38.79999999998836,
+        "fcp": 184.39999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1133,
+      "metrics": {
+        "loadTime": 249.20000000001164,
+        "ttfb": 71.60000000000582,
+        "fcp": 213
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 910
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- Issue: The \"How It Works\" page failed the web performance test.\n  Recommendation: Investigate the causes of the failure, such as large resource requests, slow server response time, or render-blocking resources. Optimize these issues to improve the page's performance.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Issue",
+        "recommendation": "The \"How It Works\" page failed the web performance test."
+      },
+      {
+        "severity": "info",
+        "message": "Issue",
+        "recommendation": "The First Contentful Paint (FCP) on the homepage is relatively high (409.69 ms)."
+      },
+      {
+        "severity": "info",
+        "message": "Issue",
+        "recommendation": "The Time to First Byte (TTFB) on the pricing page is slightly higher (38.79 ms) than on the other pages."
+      }
+    ],
+    "insights": [
+      "Key insight 1: The homepage has the longest load time (494.6 ms) among the passed tests, suggesting that there is room for optimization.",
+      "Key insight 2: The blog page has the lowest TTFB (71.6 ms) and FCP (213 ms), indicating efficient server response and content rendering.",
+      "Key insight 3: The pricing page has a significantly lower FCP (184.39 ms) than the homepage (409.69 ms), highlighting the importance of optimizing above-the-fold content for better user experience."
+    ]
+  }
+}
