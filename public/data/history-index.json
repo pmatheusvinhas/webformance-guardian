@@ -90,5 +90,9 @@
   {
     "timestamp": "2025-01-17T10:16:35.179Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate and address these issues to ensure optimal user experience."
+  },
+  {
+    "timestamp": "2025-01-17T15:19:51.682Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation: Analyze the page using browser developer tools to identify and address any performance bottlenecks.)"
   }
 ]

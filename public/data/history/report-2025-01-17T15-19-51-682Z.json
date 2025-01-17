@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-17T15:19:51.682Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1788,
+      "metrics": {
+        "loadTime": 739.2000000000116,
+        "ttfb": 54.600000000034925,
+        "fcp": 887.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 952,
+      "metrics": {
+        "loadTime": 212.09999999997672,
+        "ttfb": 23.29999999998836,
+        "fcp": 158.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1138,
+      "metrics": {
+        "loadTime": 275.8999999999651,
+        "ttfb": 111.29999999998836,
+        "fcp": 325.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1033
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation: Analyze the page using browser developer tools to identify and address any performance bottlenecks.)",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation",
+        "recommendation": "Analyze the page using browser developer tools to identify and address any performance bottlenecks.)"
+      },
+      {
+        "severity": "critical",
+        "message": "The FCP (First Contentful Paint) for the Homepage is relatively high compared to the other pages. Although it has passed the test, it could be improved to provide a better user experience. (Recommendation",
+        "recommendation": "Optimize the critical rendering path by loading essential resources first and deferring non-essential ones.)"
+      }
+    ],
+    "insights": [
+      "The Pricing Page has the best performance among all pages, with the lowest load time, TTFB (Time to First Byte), and FCP. This indicates that the page is well-optimized and loads quickly, which is crucial for converting visitors into customers.",
+      "The Blog Page has a higher TTFB than the Pricing Page, which might be due to the server taking longer to respond or network latency. Consider optimizing the server-side rendering or caching to improve this metric.",
+      "The Homepage has a significantly higher load time than the Pricing and Blog pages, mainly due to the higher FCP. Investigate the cause of this delay in rendering the first contentful paint and optimize the page accordingly."
+    ]
+  }
+}

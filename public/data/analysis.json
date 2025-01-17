@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate and address these issues to ensure optimal user experience.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation: Analyze the page using browser developer tools to identify and address any performance bottlenecks.)",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation",
+      "recommendation": "Analyze the page using browser developer tools to identify and address any performance bottlenecks.)"
+    },
+    {
+      "severity": "critical",
+      "message": "The FCP (First Contentful Paint) for the Homepage is relatively high compared to the other pages. Although it has passed the test, it could be improved to provide a better user experience. (Recommendation",
+      "recommendation": "Optimize the critical rendering path by loading essential resources first and deferring non-essential ones.)"
+    }
+  ],
   "insights": [
-    "The homepage has the longest load time of all pages, indicating that there may be opportunities to optimize and reduce file sizes.",
-    "The pricing page has the shortest TTFB, indicating that the server response time for this page is particularly fast.",
-    "The blog page has the shortest FCP, indicating that the first piece of content is displayed quickly on this page. This could be due to efficient rendering or smaller file sizes for initial content."
+    "The Pricing Page has the best performance among all pages, with the lowest load time, TTFB (Time to First Byte), and FCP. This indicates that the page is well-optimized and loads quickly, which is crucial for converting visitors into customers.",
+    "The Blog Page has a higher TTFB than the Pricing Page, which might be due to the server taking longer to respond or network latency. Consider optimizing the server-side rendering or caching to improve this metric.",
+    "The Homepage has a significantly higher load time than the Pricing and Blog pages, mainly due to the higher FCP. Investigate the cause of this delay in rendering the first contentful paint and optimize the page accordingly."
   ]
 }
