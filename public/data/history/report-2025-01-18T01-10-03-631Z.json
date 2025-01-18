@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-01-18T01:10:03.631Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1927,
+      "metrics": {
+        "loadTime": 623.3999999999942,
+        "ttfb": 200.29999999998836,
+        "fcp": 660.0999999999767
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1403,
+      "metrics": {
+        "loadTime": 546.3999999999942,
+        "ttfb": 227.79999999998836,
+        "fcp": 366.1000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1477,
+      "metrics": {
+        "loadTime": 433.8999999999942,
+        "ttfb": 283.30000000001746,
+        "fcp": 410.1000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1286
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be severe performance bottlenecks. It is essential to investigate and address these issues promptly to ensure a smooth user experience.\n  - Recommendation: Analyze the waterfall chart, server logs, and browser console to identify the root cause of the performance degradation. Common issues include heavy JavaScript files, unoptimized images, render-blocking CSS, and slow server response times.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the waterfall chart, server logs, and browser console to identify the root cause of the performance degradation. Common issues include heavy JavaScript files, unoptimized images, render-blocking CSS, and slow server response times."
+      }
+    ],
+    "insights": []
+  }
+}

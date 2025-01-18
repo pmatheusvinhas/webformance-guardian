@@ -1,9 +1,11 @@
 {
-  "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential performance issues that need to be addressed urgently. It is recommended to investigate the causes of the failure and optimize the page's performance.",
-  "issues": [],
-  "insights": [
-    "The pricing page has the best performance, with the shortest load time and TTFB. This suggests that the page's design and optimization are effective and could be applied to other pages to improve their performance.",
-    "The homepage has the longest load time, which could be due to several factors such as large images, excessive scripts, or poor server response times. It is recommended to investigate these factors and optimize the page's performance.",
-    "The how it works page failed the test, indicating potential issues such as large files, excessive scripts, or poor server response times. It is recommended to investigate these factors and optimize the page's performance."
-  ]
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be severe performance bottlenecks. It is essential to investigate and address these issues promptly to ensure a smooth user experience.\n  - Recommendation: Analyze the waterfall chart, server logs, and browser console to identify the root cause of the performance degradation. Common issues include heavy JavaScript files, unoptimized images, render-blocking CSS, and slow server response times.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Analyze the waterfall chart, server logs, and browser console to identify the root cause of the performance degradation. Common issues include heavy JavaScript files, unoptimized images, render-blocking CSS, and slow server response times."
+    }
+  ],
+  "insights": []
 }
