@@ -1,11 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be severe performance bottlenecks. It is essential to investigate and address these issues promptly to ensure a smooth user experience.\n  - Recommendation: Analyze the waterfall chart, server logs, and browser console to identify the root cause of the performance degradation. Common issues include heavy JavaScript files, unoptimized images, render-blocking CSS, and slow server response times.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the waterfall chart, server logs, and browser console to identify the root cause of the performance degradation. Common issues include heavy JavaScript files, unoptimized images, render-blocking CSS, and slow server response times."
-    }
-  ],
-  "insights": []
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, which may be due to various issues such as large page size, unoptimized images, excessive HTTP requests, or slow server response time. It is recommended to investigate these potential issues and optimize the page for better performance.",
+  "issues": [],
+  "insights": [
+    "The pricing page is the fastest-loading page, with a load time of 193 ms. Analyzing the factors contributing to its speed can help optimize other pages on the website.",
+    "Although the blog page has a longer load time than the pricing page, its FCP time is relatively low, indicating that content is being rendered quickly. This may suggest that optimizing the rendering of non-critical content can further improve the user experience.",
+    "The homepage, despite having the longest load time, passes the test, indicating that the performance is still within acceptable limits. However, optimizing the homepage can significantly enhance user experience and engagement."
+  ]
 }
