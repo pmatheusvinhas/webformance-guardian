@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-18T15:14:59.374Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1455,
+      "metrics": {
+        "loadTime": 511.30000000001746,
+        "ttfb": 49.10000000000582,
+        "fcp": 612.8000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 885,
+      "metrics": {
+        "loadTime": 160.20000000001164,
+        "ttfb": 27.900000000023283,
+        "fcp": 147.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 992,
+      "metrics": {
+        "loadTime": 203.70000000001164,
+        "ttfb": 50.80000000001746,
+        "fcp": 187.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 869
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The How It Works page failed the test. Investigate and resolve the issues causing the failure to ensure proper page loading and performance.",
+    "issues": [],
+    "insights": [
+      "The TTFB for all pages is low, indicating that the server is responding quickly. This is a positive sign, as it means users are not waiting long for the initial response from the server.",
+      "The blog page has the shortest load time, suggesting that its content and structure may be optimized for faster loading. Analyze the blog page's code and assets to identify best practices that can be applied to other pages.",
+      "Although the load times for the pricing and blog pages are within acceptable ranges, further optimization can still be done to improve user experience. Implementing performance optimization techniques, such as lazy loading and code splitting, can help reduce load times and improve overall website performance."
+    ]
+  }
+}

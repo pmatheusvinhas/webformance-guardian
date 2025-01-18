@@ -110,5 +110,9 @@
   {
     "timestamp": "2025-01-18T10:14:31.814Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, with a duration of 929ms. It is essential to investigate and optimize this page to improve user experience and ensure it meets performance standards."
+  },
+  {
+    "timestamp": "2025-01-18T15:14:59.374Z",
+    "summary": "ISSUES\nCritical:\n- The How It Works page failed the test. Investigate and resolve the issues causing the failure to ensure proper page loading and performance."
   }
 ]
