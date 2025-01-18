@@ -106,5 +106,9 @@
   {
     "timestamp": "2025-01-18T05:14:55.637Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, which may be due to various issues such as large page size, unoptimized images, excessive HTTP requests, or slow server response time. It is recommended to investigate these potential issues and optimize the page for better performance."
+  },
+  {
+    "timestamp": "2025-01-18T10:14:31.814Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, with a duration of 929ms. It is essential to investigate and optimize this page to improve user experience and ensure it meets performance standards."
   }
 ]

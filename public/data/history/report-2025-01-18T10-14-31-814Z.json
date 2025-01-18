@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-18T10:14:31.814Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1273,
+      "metrics": {
+        "loadTime": 506,
+        "ttfb": 48.69999999999709,
+        "fcp": 402.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 900,
+      "metrics": {
+        "loadTime": 284.8000000000029,
+        "ttfb": 51.19999999999709,
+        "fcp": 163.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 889,
+      "metrics": {
+        "loadTime": 269.09999999999127,
+        "ttfb": 31.5,
+        "fcp": 143.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 929
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, with a duration of 929ms. It is essential to investigate and optimize this page to improve user experience and ensure it meets performance standards.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good load times, indicating effective optimization and performance practices.",
+      "The \"How It Works\" page requires immediate attention and optimization to meet performance standards.",
+      "Regular monitoring of web performance metrics can help identify potential issues early, ensuring consistent user experience and performance across all pages."
+    ]
+  }
+}
