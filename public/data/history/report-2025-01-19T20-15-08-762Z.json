@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-19T20:15:08.762Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1524,
+      "metrics": {
+        "loadTime": 559.0999999999913,
+        "ttfb": 51.69999999999709,
+        "fcp": 691.1999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 928,
+      "metrics": {
+        "loadTime": 202.1999999999971,
+        "ttfb": 45.89999999999418,
+        "fcp": 183.6999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 894,
+      "metrics": {
+        "loadTime": 185,
+        "ttfb": 27.59999999999127,
+        "fcp": 160.39999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 948
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting significant performance problems. It is crucial to investigate and optimize this page's resources, possibly by reducing image sizes, minifying CSS and JavaScript, or leveraging browser caching.",
+    "issues": [],
+    "insights": [
+      "The blog page demonstrates the best performance, with a load time of 185ms. Analyze the blog page's structure, assets, and resource loading strategy to apply best practices to other pages, particularly the \"How It Works\" page.",
+      "First Contentful Paint (FCP) is generally close to the overall load time, indicating that content is being rendered quickly. However, there is still room for improvement on the homepage and pricing page, as FCP is significantly higher than the load time on the blog page.",
+      "Testing and optimizing the \"How It Works\" page should be prioritized to ensure consistent performance across all pages and to provide a positive user experience."
+    ]
+  }
+}

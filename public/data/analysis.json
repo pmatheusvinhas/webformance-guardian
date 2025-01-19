@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works Page\" failed the test, indicating that there might be severe issues affecting its performance. It is recommended to investigate this page thoroughly to identify and resolve any bottlenecks.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting significant performance problems. It is crucial to investigate and optimize this page's resources, possibly by reducing image sizes, minifying CSS and JavaScript, or leveraging browser caching.",
   "issues": [],
   "insights": [
-    "The pricing and blog pages have better performance metrics than the homepage, indicating that they might have been optimized more.",
-    "Reducing payload size, optimizing images, minifying CSS and JavaScript, and prioritizing content can help improve load time, TTFB, and FCP.",
-    "It is essential to investigate why the \"How It Works Page\" failed the test and address any critical issues affecting its performance."
+    "The blog page demonstrates the best performance, with a load time of 185ms. Analyze the blog page's structure, assets, and resource loading strategy to apply best practices to other pages, particularly the \"How It Works\" page.",
+    "First Contentful Paint (FCP) is generally close to the overall load time, indicating that content is being rendered quickly. However, there is still room for improvement on the homepage and pricing page, as FCP is significantly higher than the load time on the blog page.",
+    "Testing and optimizing the \"How It Works\" page should be prioritized to ensure consistent performance across all pages and to provide a positive user experience."
   ]
 }
