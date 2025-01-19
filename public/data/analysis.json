@@ -1,25 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- How It Works Page Failed: It is critical to determine the cause of the failure for the how it works page. Check for any errors in the console, network tab, or server logs to identify the issue.",
-  "issues": [
-    {
-      "severity": "critical",
-      "message": "How It Works Page Failed",
-      "recommendation": "It is critical to determine the cause of the failure for the how it works page. Check for any errors in the console, network tab, or server logs to identify the issue."
-    },
-    {
-      "severity": "info",
-      "message": "Homepage Load Time",
-      "recommendation": "Although the homepage passed the test, it has the longest load time of all pages at 979.2ms. Consider optimizing images, minifying CSS and JavaScript, and reducing HTTP requests to improve load time."
-    },
-    {
-      "severity": "info",
-      "message": "Pricing and Blog Page Load Time",
-      "recommendation": "Both the pricing and blog pages have fast load times of 407.8ms and 475.3ms respectively. However, there is still room for improvement, and the same optimization techniques as mentioned for the homepage can be applied."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the page's resources and scripts to ensure they are loading correctly. Check for any broken links, missing images, or unoptimized files that could be causing the page to fail the test.",
+  "issues": [],
   "insights": [
-    "Page Load Times: All pages have load times under 1 second, which is a good indication of fast page loading. However, optimizing load times further can improve user experience and SEO rankings.",
-    "TTFB and FCP: TTFB (Time to First Byte) and FCP (First Contentful Paint) are important metrics for measuring user experience. The pricing and blog pages have fast TTFB and FCP times, indicating that content is being delivered quickly to the user.",
-    "How It Works Page: It is crucial to determine the cause of the failure for the how it works page. This could be due to server issues, database queries, or script errors. Addressing this issue can improve user experience and prevent potential loss of users."
+    "The blog page has the lowest load time, TTFB, and FCP among all the pages. This indicates that the blog page is well-optimized and could serve as a benchmark for optimizing the other pages.",
+    "The homepage load time is within an acceptable range, but there is still room for improvement. Consider optimizing the homepage further to provide a faster user experience.",
+    "The duration for the \"How It Works\" page is significantly lower than the other pages, indicating that the page might be missing critical resources or scripts. Investigate the page's resources and ensure that they are loading correctly."
   ]
 }

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-19T01:16:21.016Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1701,
+      "metrics": {
+        "loadTime": 412.3000000000029,
+        "ttfb": 43.19999999999709,
+        "fcp": 437.20000000001164
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1508,
+      "metrics": {
+        "loadTime": 474.1999999999971,
+        "ttfb": 324.90000000000873,
+        "fcp": 452.3999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1401,
+      "metrics": {
+        "loadTime": 342,
+        "ttfb": 184.59999999999127,
+        "fcp": 305.90000000000873
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1209
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the page's resources and scripts to ensure they are loading correctly. Check for any broken links, missing images, or unoptimized files that could be causing the page to fail the test.",
+    "issues": [],
+    "insights": [
+      "The blog page has the lowest load time, TTFB, and FCP among all the pages. This indicates that the blog page is well-optimized and could serve as a benchmark for optimizing the other pages.",
+      "The homepage load time is within an acceptable range, but there is still room for improvement. Consider optimizing the homepage further to provide a faster user experience.",
+      "The duration for the \"How It Works\" page is significantly lower than the other pages, indicating that the page might be missing critical resources or scripts. Investigate the page's resources and ensure that they are loading correctly."
+    ]
+  }
+}
