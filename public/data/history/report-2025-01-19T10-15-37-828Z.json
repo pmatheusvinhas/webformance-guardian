@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-19T10:15:37.828Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1258,
+      "metrics": {
+        "loadTime": 459.3000000000029,
+        "ttfb": 60.40000000000873,
+        "fcp": 295.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 970,
+      "metrics": {
+        "loadTime": 213.6999999999971,
+        "ttfb": 59.69999999999709,
+        "fcp": 200.6999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1128,
+      "metrics": {
+        "loadTime": 217.60000000000582,
+        "ttfb": 59.90000000000873,
+        "fcp": 214
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 912
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- Homepage Load Time: The homepage load time is considerably higher than the other pages. To improve this, consider optimizing images, minifying CSS and JavaScript, and leveraging browser caching.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Homepage Load Time",
+        "recommendation": "The homepage load time is considerably higher than the other pages. To improve this, consider optimizing images, minifying CSS and JavaScript, and leveraging browser caching."
+      },
+      {
+        "severity": "info",
+        "message": "TTFB",
+        "recommendation": "All pages have a consistent TTFB of around 60ms, which is good. However, it's essential to maintain this performance as the user base or content grows."
+      }
+    ],
+    "insights": [
+      "The pricing and blog pages have similar and faster load times than the homepage, suggesting that their content and resource requirements are more optimized.",
+      "The failed \"How It Works\" page might have issues with its content or resources, causing the test to fail. Investigate this page further to identify and resolve the issue.",
+      "Overall, the web performance test results indicate that the website has good server response times but could benefit from optimizing load times for an enhanced user experience."
+    ]
+  }
+}

@@ -1,9 +1,5 @@
 [
   {
-    "timestamp": "2025-01-13T05:16:30.245Z",
-    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page's performance."
-  },
-  {
     "timestamp": "2025-01-13T10:18:25.857Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the cause of the failure and address it to ensure proper page load performance."
   },
@@ -122,5 +118,9 @@
   {
     "timestamp": "2025-01-19T05:15:09.948Z",
     "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate the issue causing the failure and optimize the page to improve its performance."
+  },
+  {
+    "timestamp": "2025-01-19T10:15:37.828Z",
+    "summary": "ISSUES\nCritical:\n- Homepage Load Time: The homepage load time is considerably higher than the other pages. To improve this, consider optimizing images, minifying CSS and JavaScript, and leveraging browser caching."
   }
 ]
