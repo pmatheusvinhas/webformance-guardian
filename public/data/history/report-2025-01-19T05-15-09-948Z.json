@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-19T05:15:09.948Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1730,
+      "metrics": {
+        "loadTime": 670,
+        "ttfb": 84.60000000000582,
+        "fcp": 498.20000000001164
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1248,
+      "metrics": {
+        "loadTime": 329.9000000000233,
+        "ttfb": 57.90000000002328,
+        "fcp": 239.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1228,
+      "metrics": {
+        "loadTime": 387.6000000000058,
+        "ttfb": 58.5,
+        "fcp": 241.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1242
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate the issue causing the failure and optimize the page to improve its performance.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "\"How It Works\" page failed the test",
+        "recommendation": "Investigate the issue causing the failure and optimize the page to improve its performance."
+      },
+      {
+        "severity": "info",
+        "message": "Homepage load time is longer than other pages",
+        "recommendation": "Consider optimizing images, minifying CSS and JavaScript, and reducing HTTP requests to improve homepage load time."
+      }
+    ],
+    "insights": [
+      "Pricing and blog pages have good performance, with load times under 400ms and TTFB under 60ms, indicating efficient server response and resource loading.",
+      "FCP for all pages is under 500ms, ensuring users perceive the page as visually loaded quickly, enhancing user experience.",
+      "The lack of specific metrics for the failed \"How It Works\" page makes it challenging to provide targeted optimization recommendations. It is essential to investigate and address the cause of the failure to ensure consistent performance across all pages."
+    ]
+  }
+}
