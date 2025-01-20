@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-01-20T10:17:18.877Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1542,
+      "metrics": {
+        "loadTime": 560.3999999999942,
+        "ttfb": 45.39999999999418,
+        "fcp": 305.29999999998836
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1283,
+      "metrics": {
+        "loadTime": 266.5,
+        "ttfb": 117.60000000000582,
+        "fcp": 216
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1465,
+      "metrics": {
+        "loadTime": 438.69999999998254,
+        "ttfb": 287.79999999998836,
+        "fcp": 395.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1191
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate the missing duration metric and address any underlying issues to ensure proper testing and user experience.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "\"How It Works\" page failed the test",
+        "recommendation": "Investigate the missing duration metric and address any underlying issues to ensure proper testing and user experience."
+      },
+      {
+        "severity": "info",
+        "message": "Homepage has the longest load time",
+        "recommendation": "Although it's within acceptable limits, optimizing the homepage load time can improve user experience. Consider techniques such as lazy loading, code minification, and image optimization."
+      }
+    ],
+    "insights": [
+      "Good server response times: TTFB is low across all pages, indicating quick server response times.",
+      "Quick initial rendering: FCP is low across all pages, suggesting that content is being displayed quickly for users.",
+      "Inconsistent duration times: The duration times vary between pages, which might be due to differences in page complexity or content. Investigate the reasons for these differences and optimize as needed.",
+      "Ensure consistent testing: Make sure all pages are consistently tested with complete metrics to accurately assess and improve performance."
+    ]
+  }
+}

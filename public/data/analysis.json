@@ -1,9 +1,21 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues that need immediate attention. It is recommended to investigate the page's resources, scripts, and content to identify the cause of the slow performance.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate the missing duration metric and address any underlying issues to ensure proper testing and user experience.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "\"How It Works\" page failed the test",
+      "recommendation": "Investigate the missing duration metric and address any underlying issues to ensure proper testing and user experience."
+    },
+    {
+      "severity": "info",
+      "message": "Homepage has the longest load time",
+      "recommendation": "Although it's within acceptable limits, optimizing the homepage load time can improve user experience. Consider techniques such as lazy loading, code minification, and image optimization."
+    }
+  ],
   "insights": [
-    "The pricing page has the fastest load time, indicating effective optimization of resources and content.",
-    "The blog page has a fast load time, with a TTFB (Time to First Byte) of only 22.9 ms, suggesting efficient server response times.",
-    "The FCP (First Contentful Paint) metric, which measures the time it takes for the first piece of content to be displayed on the page, is consistently low across all pages, indicating quick rendering of visible content for users."
+    "Good server response times: TTFB is low across all pages, indicating quick server response times.",
+    "Quick initial rendering: FCP is low across all pages, suggesting that content is being displayed quickly for users.",
+    "Inconsistent duration times: The duration times vary between pages, which might be due to differences in page complexity or content. Investigate the reasons for these differences and optimize as needed.",
+    "Ensure consistent testing: Make sure all pages are consistently tested with complete metrics to accurately assess and improve performance."
   ]
 }
