@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, which may be due to various reasons such as heavy resources, unoptimized images, or slow server response time. Investigate and optimize this page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues that need immediate attention. It is recommended to investigate the page's resources, scripts, and content to identify the cause of the slow performance.",
   "issues": [],
   "insights": [
-    "Overall, the web performance test results are satisfactory, with most pages loading within acceptable timeframes. However, focusing on optimizing the \"How It Works\" page and further reducing TTFB and FCP for all pages can improve user experience and search engine rankings.",
-    "Regularly monitoring and optimizing web performance is essential to maintain a high-quality user experience and search engine visibility. Implementing a continuous integration/continuous deployment (CI/CD) pipeline with automated performance testing can help maintain optimal performance levels.",
-    "Analyzing individual resources and requests on each page can help identify bottlenecks and areas for optimization. Tools like Google Lighthouse or WebPageTest.org can provide detailed insights into specific performance issues and recommendations for improvement."
+    "The pricing page has the fastest load time, indicating effective optimization of resources and content.",
+    "The blog page has a fast load time, with a TTFB (Time to First Byte) of only 22.9 ms, suggesting efficient server response times.",
+    "The FCP (First Contentful Paint) metric, which measures the time it takes for the first piece of content to be displayed on the page, is consistently low across all pages, indicating quick rendering of visible content for users."
   ]
 }
