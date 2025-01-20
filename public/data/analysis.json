@@ -1,5 +1,9 @@
 {
   "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
   "issues": [],
-  "insights": []
+  "insights": [
+    "Pages with lower TTFB and FCP values generally provide a better user experience. Focus on improving these metrics for all pages.",
+    "The pricing page has the best performance, which is crucial for conversion rates. Ensure that this page remains optimized.",
+    "The failed \"How It Works Page\" test should be investigated and resolved to ensure consistent monitoring and optimization of all pages."
+  ]
 }

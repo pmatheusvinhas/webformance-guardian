@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-20T20:16:20.330Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1861,
+      "metrics": {
+        "loadTime": 664.5,
+        "ttfb": 219.5,
+        "fcp": 622.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1376,
+      "metrics": {
+        "loadTime": 313,
+        "ttfb": 167.39999999999418,
+        "fcp": 291.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1501,
+      "metrics": {
+        "loadTime": 434.29999999998836,
+        "ttfb": 282.69999999998254,
+        "fcp": 425.9000000000233
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1286
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+    "issues": [],
+    "insights": [
+      "Pages with lower TTFB and FCP values generally provide a better user experience. Focus on improving these metrics for all pages.",
+      "The pricing page has the best performance, which is crucial for conversion rates. Ensure that this page remains optimized.",
+      "The failed \"How It Works Page\" test should be investigated and resolved to ensure consistent monitoring and optimization of all pages."
+    ]
+  }
+}
