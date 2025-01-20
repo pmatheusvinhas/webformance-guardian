@@ -1,21 +1,5 @@
 {
-  "summary": "ISSUES\nCritical:\n- \"How It Works\" page failed the test: Investigate the missing duration metric and address any underlying issues to ensure proper testing and user experience.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "\"How It Works\" page failed the test",
-      "recommendation": "Investigate the missing duration metric and address any underlying issues to ensure proper testing and user experience."
-    },
-    {
-      "severity": "info",
-      "message": "Homepage has the longest load time",
-      "recommendation": "Although it's within acceptable limits, optimizing the homepage load time can improve user experience. Consider techniques such as lazy loading, code minification, and image optimization."
-    }
-  ],
-  "insights": [
-    "Good server response times: TTFB is low across all pages, indicating quick server response times.",
-    "Quick initial rendering: FCP is low across all pages, suggesting that content is being displayed quickly for users.",
-    "Inconsistent duration times: The duration times vary between pages, which might be due to differences in page complexity or content. Investigate the reasons for these differences and optimize as needed.",
-    "Ensure consistent testing: Make sure all pages are consistently tested with complete metrics to accurately assess and improve performance."
-  ]
+  "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+  "issues": [],
+  "insights": []
 }
