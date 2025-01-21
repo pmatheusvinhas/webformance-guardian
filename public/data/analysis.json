@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting possible performance bottlenecks. Investigate server configuration, database queries, and third-party resources to optimize TTFB and FCP.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating a critical issue that needs to be addressed immediately. It is recommended to review the page's code and resources to identify and fix the issue.",
   "issues": [],
   "insights": [
-    "The blog page has the best overall performance among the tested pages, providing a good baseline for optimization.",
-    "Load times for all pages are under 500ms, which is a good starting point. However, TTFB and FCP should be prioritized for improvement to deliver a faster perceived loading experience.",
-    "Ensure that third-party resources, such as ads, analytics, and social media embeds, are not causing performance issues on the \"How It Works\" page. If necessary, consider removing or optimizing these resources."
+    "The pricing and blog pages have significantly lower load times than the homepage, suggesting that they have been optimized for performance.",
+    "The TTFB for all pages is fast, indicating that the server is responding quickly to requests.",
+    "The FCP for all pages is reasonable, indicating that the pages' content is being rendered quickly. However, there is still room for improvement in reducing the load time of the homepage."
   ]
 }
