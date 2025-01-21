@@ -1,9 +1,30 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating a critical issue that needs to be addressed immediately. It is recommended to review the page's code and resources to identify and fix the issue.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Homepage Load Time",
+      "recommendation": "The load time for the homepage is 523.6999999999971ms, which is higher than the other pages. It is recommended to optimize images, minify CSS and JavaScript files, and leverage browser caching to improve the load time."
+    },
+    {
+      "severity": "info",
+      "message": "Pricing Page Load Time",
+      "recommendation": "The load time for the pricing page is 395.6999999999971ms, which is also higher than the blog page. Consider implementing the same optimization techniques as recommended for the homepage."
+    },
+    {
+      "severity": "info",
+      "message": "Blog Page Load Time",
+      "recommendation": "The blog page has the lowest load time of 221.6999999999971ms. This indicates that the current optimization techniques are working well for this page, and it can serve as a benchmark for optimizing the other pages."
+    },
+    {
+      "severity": "info",
+      "message": "TTFB (Time to First Byte) and FCP (First Contentful Paint)",
+      "recommendation": "These metrics are generally lower across all pages, indicating that the server response time and initial rendering of content are reasonably fast."
+    }
+  ],
   "insights": [
-    "The pricing and blog pages have significantly lower load times than the homepage, suggesting that they have been optimized for performance.",
-    "The TTFB for all pages is fast, indicating that the server is responding quickly to requests.",
-    "The FCP for all pages is reasonable, indicating that the pages' content is being rendered quickly. However, there is still room for improvement in reducing the load time of the homepage."
+    "The \"How It Works\" page failed the test, suggesting that there might be issues with the page's resources, such as large images, unoptimized scripts, or unnecessarily complex HTML structures. Investigating these factors and implementing optimization techniques can help improve the page's performance.",
+    "While the TTFB and FCP metrics are satisfactory, focusing on reducing the overall load time for the homepage and pricing page can significantly improve user experience, as faster loading pages tend to have lower bounce rates and higher user engagement.",
+    "Monitoring performance trends and conducting regular web performance tests can help maintain and improve the website's overall speed and user experience."
   ]
 }
