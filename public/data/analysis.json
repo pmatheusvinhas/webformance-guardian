@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. It is essential to investigate why this page failed and ensure that all critical resources are loaded correctly.",
   "issues": [],
   "insights": [
-    "Pages with lower TTFB and FCP values generally provide a better user experience. Focus on improving these metrics for all pages.",
-    "The pricing page has the best performance, which is crucial for conversion rates. Ensure that this page remains optimized.",
-    "The failed \"How It Works Page\" test should be investigated and resolved to ensure consistent monitoring and optimization of all pages."
+    "The Pricing Page has the best performance in terms of load time, TTFB, and FCP. It can serve as a benchmark for optimizing the other pages.",
+    "The Blog Page has a longer duration than the Pricing Page, but its load time and FCP are acceptable. It is recommended to optimize the Blog Page further to reduce its duration.",
+    "The Homepage has a longer load time than the Pricing Page and Blog Page. It is recommended to optimize the Homepage further to reduce the load time.",
+    "The \"How It Works\" page failed the test, and it is essential to investigate why this page failed and ensure that all critical resources are loaded correctly."
   ]
 }

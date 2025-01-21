@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-01-21T01:12:07.399Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1845,
+      "metrics": {
+        "loadTime": 731.1999999999825,
+        "ttfb": 188.09999999997672,
+        "fcp": 764.7999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 959,
+      "metrics": {
+        "loadTime": 225.79999999998836,
+        "ttfb": 45,
+        "fcp": 192.40000000002328
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1836,
+      "metrics": {
+        "loadTime": 674.7000000000116,
+        "ttfb": 406,
+        "fcp": 654.1999999999825
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 939
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. It is essential to investigate why this page failed and ensure that all critical resources are loaded correctly.",
+    "issues": [],
+    "insights": [
+      "The Pricing Page has the best performance in terms of load time, TTFB, and FCP. It can serve as a benchmark for optimizing the other pages.",
+      "The Blog Page has a longer duration than the Pricing Page, but its load time and FCP are acceptable. It is recommended to optimize the Blog Page further to reduce its duration.",
+      "The Homepage has a longer load time than the Pricing Page and Blog Page. It is recommended to optimize the Homepage further to reduce the load time.",
+      "The \"How It Works\" page failed the test, and it is essential to investigate why this page failed and ensure that all critical resources are loaded correctly."
+    ]
+  }
+}

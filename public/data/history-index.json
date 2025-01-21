@@ -1,9 +1,5 @@
 [
   {
-    "timestamp": "2025-01-14T20:17:02.234Z",
-    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated. It is recommended to check for any large resources, slow scripts, or network issues that may be causing the delay in page load time."
-  },
-  {
     "timestamp": "2025-01-15T01:12:22.866Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. It's unclear what caused this failure as there are no associated metrics provided. It is recommended to investigate this issue immediately as it could be affecting user experience significantly."
   },
@@ -122,5 +118,9 @@
   {
     "timestamp": "2025-01-20T20:16:20.330Z",
     "summary": "ISSUES\nCritical:\n- None identified in this dataset."
+  },
+  {
+    "timestamp": "2025-01-21T01:12:07.399Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. It is essential to investigate why this page failed and ensure that all critical resources are loaded correctly."
   }
 ]
