@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-21T05:15:14.734Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1385,
+      "metrics": {
+        "loadTime": 502.1999999999971,
+        "ttfb": 41.5,
+        "fcp": 549
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 917,
+      "metrics": {
+        "loadTime": 282.8000000000029,
+        "ttfb": 37.30000000000291,
+        "fcp": 167.1999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1039,
+      "metrics": {
+        "loadTime": 205.60000000000582,
+        "ttfb": 41.40000000000873,
+        "fcp": 223.90000000000873
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 883
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "\"How It Works\" page failed the test",
+        "recommendation": "Investigate why the duration metric is missing. It could be a data collection issue or a sign of a performance problem."
+      },
+      {
+        "severity": "info",
+        "message": "Homepage Load Time is longest (502ms)",
+        "recommendation": "Consider optimizing assets or code on the homepage to reduce load time."
+      }
+    ],
+    "insights": [
+      "The website has good TTFB and FCP metrics, indicating fast server response times and quick rendering of the first piece of content.",
+      "The duration metric for the \"How It Works\" page is missing, which should be investigated.",
+      "The homepage has the longest load time (502ms), suggesting that there may be room for optimization on this page. However, the load time is still relatively fast, so improvements may have a minimal impact on user experience."
+    ]
+  }
+}

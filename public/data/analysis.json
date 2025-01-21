@@ -1,10 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. It is essential to investigate why this page failed and ensure that all critical resources are loaded correctly.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "\"How It Works\" page failed the test",
+      "recommendation": "Investigate why the duration metric is missing. It could be a data collection issue or a sign of a performance problem."
+    },
+    {
+      "severity": "info",
+      "message": "Homepage Load Time is longest (502ms)",
+      "recommendation": "Consider optimizing assets or code on the homepage to reduce load time."
+    }
+  ],
   "insights": [
-    "The Pricing Page has the best performance in terms of load time, TTFB, and FCP. It can serve as a benchmark for optimizing the other pages.",
-    "The Blog Page has a longer duration than the Pricing Page, but its load time and FCP are acceptable. It is recommended to optimize the Blog Page further to reduce its duration.",
-    "The Homepage has a longer load time than the Pricing Page and Blog Page. It is recommended to optimize the Homepage further to reduce the load time.",
-    "The \"How It Works\" page failed the test, and it is essential to investigate why this page failed and ensure that all critical resources are loaded correctly."
+    "The website has good TTFB and FCP metrics, indicating fast server response times and quick rendering of the first piece of content.",
+    "The duration metric for the \"How It Works\" page is missing, which should be investigated.",
+    "The homepage has the longest load time (502ms), suggesting that there may be room for optimization on this page. However, the load time is still relatively fast, so improvements may have a minimal impact on user experience."
   ]
 }
