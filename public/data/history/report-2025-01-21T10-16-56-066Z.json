@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-21T10:16:56.066Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1402,
+      "metrics": {
+        "loadTime": 487.5,
+        "ttfb": 45.5,
+        "fcp": 388.80000000001746
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1082,
+      "metrics": {
+        "loadTime": 318.19999999998254,
+        "ttfb": 163,
+        "fcp": 292.19999999998254
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1287,
+      "metrics": {
+        "loadTime": 376.3999999999942,
+        "ttfb": 227,
+        "fcp": 352.30000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1016
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting possible performance bottlenecks. Investigate server configuration, database queries, and third-party resources to optimize TTFB and FCP.",
+    "issues": [],
+    "insights": [
+      "The blog page has the best overall performance among the tested pages, providing a good baseline for optimization.",
+      "Load times for all pages are under 500ms, which is a good starting point. However, TTFB and FCP should be prioritized for improvement to deliver a faster perceived loading experience.",
+      "Ensure that third-party resources, such as ads, analytics, and social media embeds, are not causing performance issues on the \"How It Works\" page. If necessary, consider removing or optimizing these resources."
+    ]
+  }
+}
