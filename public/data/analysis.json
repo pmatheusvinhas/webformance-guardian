@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- None identified from these results.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, which may be due to various reasons such as server issues, heavy resources, or script errors. It is recommended to investigate and optimize this page to improve its performance.",
   "issues": [],
   "insights": [
-    "The Homepage, Pricing Page, and Blog Page all have good load times, TTFB, and FCP, indicating efficient rendering and resource loading.",
-    "Despite passing the test, the Homepage has a higher load time compared to the other pages. This could be due to more resources being loaded or complex scripts running on this page. It would be beneficial to analyze why this page takes longer to load than the others.",
-    "The \"How It Works\" page's failure needs immediate attention. Investigating server logs, console errors, and network requests during this test could help identify the cause of the failure."
+    "The homepage has the longest load time compared to the other pages, even though it has a similar TTFB. This could be due to heavier resources or scripts that need optimization.",
+    "The \"How It Works\" page has the shortest duration but still failed the test. This could be due to server issues or misconfigurations, as the duration is not an accurate indicator of page performance.",
+    "The blog page has the lowest load time and FCP, indicating efficient rendering and resource loading. It can serve as a benchmark for optimizing the other pages."
   ]
 }
