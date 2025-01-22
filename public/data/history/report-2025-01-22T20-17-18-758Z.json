@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-22T20:17:18.758Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1373,
+      "metrics": {
+        "loadTime": 577.4000000000087,
+        "ttfb": 51,
+        "fcp": 475.6999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1295,
+      "metrics": {
+        "loadTime": 357.1999999999971,
+        "ttfb": 117.09999999999127,
+        "fcp": 373.09999999999127
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1549,
+      "metrics": {
+        "loadTime": 350.90000000000873,
+        "ttfb": 135.90000000000873,
+        "fcp": 404.8000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1474
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant performance issues affecting user experience. It is recommended to investigate this page thoroughly to identify bottlenecks and optimize its performance.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (577.4 ms) among the passed tests, which could be improved. Although it is not a critical issue, optimizing the homepage load time can further enhance user experience.",
+      "The blog page has the fastest TTFB (135.9 ms) and FCP (404.8 ms) among all pages, suggesting that its content and resources are well optimized. This could serve as a benchmark for optimizing other pages, including the \"How It Works\" page.",
+      "The \"How It Works\" page's failure in the test highlights the importance of monitoring and optimizing all pages, not just the most visited ones. Neglecting less popular pages can lead to poor user experience and potential loss of users."
+    ]
+  }
+}

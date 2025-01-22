@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, which may be due to various reasons such as server issues, heavy resources, or script errors. It is recommended to investigate and optimize this page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant performance issues affecting user experience. It is recommended to investigate this page thoroughly to identify bottlenecks and optimize its performance.",
   "issues": [],
   "insights": [
-    "The homepage has the longest load time compared to the other pages, even though it has a similar TTFB. This could be due to heavier resources or scripts that need optimization.",
-    "The \"How It Works\" page has the shortest duration but still failed the test. This could be due to server issues or misconfigurations, as the duration is not an accurate indicator of page performance.",
-    "The blog page has the lowest load time and FCP, indicating efficient rendering and resource loading. It can serve as a benchmark for optimizing the other pages."
+    "The homepage has the longest load time (577.4 ms) among the passed tests, which could be improved. Although it is not a critical issue, optimizing the homepage load time can further enhance user experience.",
+    "The blog page has the fastest TTFB (135.9 ms) and FCP (404.8 ms) among all pages, suggesting that its content and resources are well optimized. This could serve as a benchmark for optimizing other pages, including the \"How It Works\" page.",
+    "The \"How It Works\" page's failure in the test highlights the importance of monitoring and optimizing all pages, not just the most visited ones. Neglecting less popular pages can lead to poor user experience and potential loss of users."
   ]
 }
