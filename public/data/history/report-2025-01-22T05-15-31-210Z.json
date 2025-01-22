@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-22T05:15:31.210Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1951,
+      "metrics": {
+        "loadTime": 726,
+        "ttfb": 204.79999999998836,
+        "fcp": 709.7999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1256,
+      "metrics": {
+        "loadTime": 201.70000000001164,
+        "ttfb": 50.20000000001164,
+        "fcp": 189
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1397,
+      "metrics": {
+        "loadTime": 443.6000000000058,
+        "ttfb": 186.60000000000582,
+        "fcp": 301.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1222
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- Critical issue detected on the \"How It Works\" page. Investigate and resolve the issue to ensure proper page loading and functionality.",
+    "issues": [],
+    "insights": [
+      "The Time To First Byte (TTFB) is consistently low across all pages, indicating efficient server configuration and fast database query times.",
+      "First Contentful Paint (FCP) is within acceptable limits for all pages, suggesting that the pages are rendering quickly and users are not experiencing significant delays before seeing any content.",
+      "The Blog and Pricing pages have the best load times, which could be due to simpler layouts, fewer resources, or better optimization. Analyze these pages to identify best practices and apply them to other pages, including the homepage."
+    ]
+  }
+}

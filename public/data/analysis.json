@@ -1,11 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- Issue: The \"How It Works\" page failed the web performance test.\n  Recommendation: Investigate the page's content, resources, and scripts to identify bottlenecks and optimize for faster load times.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Issue",
-      "recommendation": "The \"How It Works\" page failed the web performance test."
-    }
-  ],
-  "insights": []
+  "summary": "ISSUES\nCritical:\n- Critical issue detected on the \"How It Works\" page. Investigate and resolve the issue to ensure proper page loading and functionality.",
+  "issues": [],
+  "insights": [
+    "The Time To First Byte (TTFB) is consistently low across all pages, indicating efficient server configuration and fast database query times.",
+    "First Contentful Paint (FCP) is within acceptable limits for all pages, suggesting that the pages are rendering quickly and users are not experiencing significant delays before seeing any content.",
+    "The Blog and Pricing pages have the best load times, which could be due to simpler layouts, fewer resources, or better optimization. Analyze these pages to identify best practices and apply them to other pages, including the homepage."
+  ]
 }
