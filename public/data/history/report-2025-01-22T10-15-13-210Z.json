@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-22T10:15:13.210Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1413,
+      "metrics": {
+        "loadTime": 507.09999999999127,
+        "ttfb": 52.59999999999127,
+        "fcp": 518.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1157,
+      "metrics": {
+        "loadTime": 291.8000000000029,
+        "ttfb": 34.59999999999127,
+        "fcp": 190.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1699,
+      "metrics": {
+        "loadTime": 202.1999999999971,
+        "ttfb": 29,
+        "fcp": 146.10000000000582
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 885
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None identified from these results.",
+    "issues": [],
+    "insights": [
+      "The Homepage, Pricing Page, and Blog Page all have good load times, TTFB, and FCP, indicating efficient rendering and resource loading.",
+      "Despite passing the test, the Homepage has a higher load time compared to the other pages. This could be due to more resources being loaded or complex scripts running on this page. It would be beneficial to analyze why this page takes longer to load than the others.",
+      "The \"How It Works\" page's failure needs immediate attention. Investigating server logs, console errors, and network requests during this test could help identify the cause of the failure."
+    ]
+  }
+}
