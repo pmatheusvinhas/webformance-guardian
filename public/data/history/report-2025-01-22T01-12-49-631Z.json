@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-01-22T01:12:49.631Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1742,
+      "metrics": {
+        "loadTime": 578.6999999999971,
+        "ttfb": 86.30000000000291,
+        "fcp": 516.9000000000087
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1463,
+      "metrics": {
+        "loadTime": 581.1999999999971,
+        "ttfb": 315.6999999999971,
+        "fcp": 480.29999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1258,
+      "metrics": {
+        "loadTime": 338.6999999999971,
+        "ttfb": 71.09999999999127,
+        "fcp": 256.1000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1405
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- Issue: The \"How It Works\" page failed the web performance test.\n  Recommendation: Investigate the page's content, resources, and scripts to identify bottlenecks and optimize for faster load times.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Issue",
+        "recommendation": "The \"How It Works\" page failed the web performance test."
+      }
+    ],
+    "insights": []
+  }
+}
