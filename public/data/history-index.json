@@ -1,13 +1,5 @@
 [
   {
-    "timestamp": "2025-01-17T05:16:11.336Z",
-    "summary": "ISSUES\nCritical:\n- The how it works page failed the test. Investigate the cause and address it immediately to ensure optimal user experience."
-  },
-  {
-    "timestamp": "2025-01-17T10:16:35.179Z",
-    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate and address these issues to ensure optimal user experience."
-  },
-  {
     "timestamp": "2025-01-17T15:19:51.682Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test. Investigate the reasons for this failure, as it might be due to scripts blocking the first paint or other render-blocking resources. (Recommendation: Analyze the page using browser developer tools to identify and address any performance bottlenecks.)"
   },
@@ -122,5 +114,9 @@
   {
     "timestamp": "2025-01-23T05:15:38.474Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate this page's resources, such as images, scripts, or stylesheets, that may be causing the delay. A possible recommendation is to optimize these resources, use lazy loading, or consider code splitting to improve the page's performance."
+  },
+  {
+    "timestamp": "2025-01-23T10:17:52.076Z",
+    "summary": "ISSUES\nCritical:\n- None identified in this dataset."
   }
 ]

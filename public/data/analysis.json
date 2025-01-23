@@ -1,9 +1,5 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate this page's resources, such as images, scripts, or stylesheets, that may be causing the delay. A possible recommendation is to optimize these resources, use lazy loading, or consider code splitting to improve the page's performance.",
+  "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
   "issues": [],
-  "insights": [
-    "The pricing page has the best performance among the passed pages, with a load time of 311ms, TTFB of 159.1ms, and FCP of 283ms. This indicates that the page's resources are well-optimized and loaded efficiently.",
-    "The homepage has the highest load time of 672.7ms, but it is still within an acceptable range. However, optimizing the resources on this page could improve user experience and reduce server load.",
-    "The blog page has a TTFB of 292.5ms, which is slightly higher than the other passed pages. Investigating the server configuration or database queries related to this page could help reduce the TTFB and improve the overall performance."
-  ]
+  "insights": []
 }
