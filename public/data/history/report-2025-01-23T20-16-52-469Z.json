@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-23T20:16:52.469Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1562,
+      "metrics": {
+        "loadTime": 589.7999999999884,
+        "ttfb": 73.69999999998254,
+        "fcp": 619.8000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1031,
+      "metrics": {
+        "loadTime": 358.5,
+        "ttfb": 122.80000000001746,
+        "fcp": 276.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1060,
+      "metrics": {
+        "loadTime": 272.70000000001164,
+        "ttfb": 26.60000000000582,
+        "fcp": 165.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 974
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works Page\" failed the test, indicating potential issues that need to be addressed urgently. It is essential to investigate why this page took longer to load than the other pages. Recommendations include checking for large images, scripts, or stylesheets that may be causing delays in loading the page.",
+    "issues": [],
+    "insights": [
+      "The FCP times for all pages are relatively low, indicating that users can see the content quickly after navigating to the page. This is a positive sign, as it can help reduce bounce rates and improve user engagement.",
+      "The TTFB times for all pages are also low, indicating that the server is responding quickly to requests. This is a crucial factor in web performance, as it can significantly impact the user experience.",
+      "While the homepage load time is longer than the other pages, it is still within an acceptable range. However, optimizing the page further can help improve user experience and reduce bounce rates."
+    ]
+  }
+}
