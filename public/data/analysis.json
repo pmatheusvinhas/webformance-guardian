@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating that there may be significant issues with the page's performance. It is recommended to investigate and optimize this page as a priority.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate this page's resources, such as images, scripts, or stylesheets, that may be causing the delay. A possible recommendation is to optimize these resources, use lazy loading, or consider code splitting to improve the page's performance.",
   "issues": [],
   "insights": [
-    "The test results show that the page load times are relatively fast, indicating that the website's performance is generally good.",
-    "The FCP metric suggests that there may be issues with rendering the initial content of the pages, which could impact user experience.",
-    "The \"How It Works\" page failed the test, indicating that there may be significant issues with the page's performance. It is recommended to investigate and optimize this page as a priority.",
-    "The TTFB metric for the pricing page is higher than for the other pages, indicating that there may be issues with the server response time for this page. It is recommended to investigate and optimize the server response time for the pricing page."
+    "The pricing page has the best performance among the passed pages, with a load time of 311ms, TTFB of 159.1ms, and FCP of 283ms. This indicates that the page's resources are well-optimized and loaded efficiently.",
+    "The homepage has the highest load time of 672.7ms, but it is still within an acceptable range. However, optimizing the resources on this page could improve user experience and reduce server load.",
+    "The blog page has a TTFB of 292.5ms, which is slightly higher than the other passed pages. Investigating the server configuration or database queries related to this page could help reduce the TTFB and improve the overall performance."
   ]
 }

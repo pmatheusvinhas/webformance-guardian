@@ -118,5 +118,9 @@
   {
     "timestamp": "2025-01-23T01:11:26.199Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating that there may be significant issues with the page's performance. It is recommended to investigate and optimize this page as a priority."
+  },
+  {
+    "timestamp": "2025-01-23T05:15:38.474Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is essential to investigate this page's resources, such as images, scripts, or stylesheets, that may be causing the delay. A possible recommendation is to optimize these resources, use lazy loading, or consider code splitting to improve the page's performance."
   }
 ]
