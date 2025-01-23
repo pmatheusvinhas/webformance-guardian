@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-23T15:16:50.699Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1360,
+      "metrics": {
+        "loadTime": 539.1000000000058,
+        "ttfb": 61.60000000000582,
+        "fcp": 450.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 928,
+      "metrics": {
+        "loadTime": 185.20000000001164,
+        "ttfb": 49.70000000001164,
+        "fcp": 188.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 961,
+      "metrics": {
+        "loadTime": 239.89999999999418,
+        "ttfb": 70.09999999997672,
+        "fcp": 213.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 829
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant issues affecting its performance. It is recommended to investigate this page thoroughly, focusing on optimizing its resources, reducing requests, and improving server response times.",
+    "issues": [],
+    "insights": [
+      "The pricing and blog pages have shorter load times, indicating that their optimization strategies are more effective. Analyze these pages to identify best practices that can be applied to other pages, such as the homepage and \"How It Works\" page.",
+      "Although the load times for the pricing and blog pages are shorter, there is still room for improvement in their TTFB and FCP metrics. Focus on optimizing server responses and delivering critical content earlier to enhance user experience.",
+      "Implementing a consistent optimization strategy across all pages will help maintain high web performance standards and ensure a positive user experience. Regularly monitor and test web performance to identify and address any emerging issues promptly."
+    ]
+  }
+}
