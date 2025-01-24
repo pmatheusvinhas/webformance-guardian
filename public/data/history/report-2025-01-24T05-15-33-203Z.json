@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-24T05:15:33.203Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2534,
+      "metrics": {
+        "loadTime": 581,
+        "ttfb": 112.19999999999709,
+        "fcp": 757.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1807,
+      "metrics": {
+        "loadTime": 206.70000000001164,
+        "ttfb": 47.30000000000291,
+        "fcp": 214.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1929,
+      "metrics": {
+        "loadTime": 514.6999999999971,
+        "ttfb": 263,
+        "fcp": 380.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1765
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure indicates that further investigation and optimization are necessary. Possible causes could be large images, unoptimized scripts, or excessive HTTP requests.",
+      "To improve the homepage load time, consider optimizing images, minifying CSS and JavaScript files, and reducing HTTP requests.",
+      "Although the blog page load time is within an acceptable range, optimizing it can still enhance user experience. Evaluate the use of lazy loading, content delivery networks (CDNs), and caching to improve blog page performance."
+    ]
+  }
+}
