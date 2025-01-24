@@ -1,11 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- None",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, investigate the page's resources, optimize images, minify CSS and JavaScript, and leverage browser caching.",
   "issues": [],
   "insights": [
-    "The homepage load time is 533.6ms, which is within the recommended limit of under 3 seconds. However, there is still room for improvement, and optimizing the page further could enhance user experience.",
-    "The blog page has the lowest load time of 234.29ms, indicating that it is the most efficient page in terms of web performance. Analyzing the factors contributing to this efficiency could help improve the performance of other pages.",
-    "The Time To First Byte (TTFB) is within acceptable limits for all pages, indicating that the server response time is efficient. However, reducing the TTFB could further improve the user experience, especially for users with slower internet connections.",
-    "First Contentful Paint (FCP) is also satisfactory for all pages, meaning that the pages are visually loading quickly. However, optimizing the FCP could enhance user experience, as users tend to engage more with visually loaded pages.",
-    "It is crucial to investigate the cause of the \"How It Works\" page failure and address the issue promptly to ensure optimal web performance."
+    "The pricing page and blog page have the best performance, with load times around 200ms. This suggests that these pages have been optimized well and can serve as a benchmark for other pages.",
+    "TTFB is consistently low across all pages, indicating that the server response time is good. This is a positive sign for user experience.",
+    "FCP is generally high, especially on the homepage. This means that the initial rendering of the page takes some time. To improve this, consider optimizing critical render-blocking resources and using a Content Delivery Network (CDN) for faster content delivery."
   ]
 }

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-24T20:16:29.364Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1496,
+      "metrics": {
+        "loadTime": 561.8999999999942,
+        "ttfb": 74.39999999999418,
+        "fcp": 529
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 991,
+      "metrics": {
+        "loadTime": 195.09999999999127,
+        "ttfb": 62.19999999999709,
+        "fcp": 219.39999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1030,
+      "metrics": {
+        "loadTime": 209.5,
+        "ttfb": 60.39999999999418,
+        "fcp": 196.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1011
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, investigate the page's resources, optimize images, minify CSS and JavaScript, and leverage browser caching.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the best performance, with load times around 200ms. This suggests that these pages have been optimized well and can serve as a benchmark for other pages.",
+      "TTFB is consistently low across all pages, indicating that the server response time is good. This is a positive sign for user experience.",
+      "FCP is generally high, especially on the homepage. This means that the initial rendering of the page takes some time. To improve this, consider optimizing critical render-blocking resources and using a Content Delivery Network (CDN) for faster content delivery."
+    ]
+  }
+}
