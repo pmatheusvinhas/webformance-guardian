@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server configuration to identify the cause of the failure and improve its performance.",
   "issues": [],
   "insights": [
-    "The \"How It Works\" page's failure indicates that further investigation and optimization are necessary. Possible causes could be large images, unoptimized scripts, or excessive HTTP requests.",
-    "To improve the homepage load time, consider optimizing images, minifying CSS and JavaScript files, and reducing HTTP requests.",
-    "Although the blog page load time is within an acceptable range, optimizing it can still enhance user experience. Evaluate the use of lazy loading, content delivery networks (CDNs), and caching to improve blog page performance."
+    "The homepage, pricing page, and blog page have good to excellent load times, indicating that the website's performance is generally good.",
+    "The \"How It Works\" page failed the web performance test, indicating that there are potential issues that need to be addressed.",
+    "Continuous optimization of the website's resources, such as images, scripts, and stylesheets, can further improve the page's load times and overall performance."
   ]
 }
