@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-01-24T15:16:20.072Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1568,
+      "metrics": {
+        "loadTime": 533.6000000000058,
+        "ttfb": 76.39999999999418,
+        "fcp": 480.79999999998836
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1133,
+      "metrics": {
+        "loadTime": 404.1000000000058,
+        "ttfb": 191.39999999999418,
+        "fcp": 349.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1107,
+      "metrics": {
+        "loadTime": 234.29999999998836,
+        "ttfb": 65.89999999999418,
+        "fcp": 211.59999999997672
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1016
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None",
+    "issues": [],
+    "insights": [
+      "The homepage load time is 533.6ms, which is within the recommended limit of under 3 seconds. However, there is still room for improvement, and optimizing the page further could enhance user experience.",
+      "The blog page has the lowest load time of 234.29ms, indicating that it is the most efficient page in terms of web performance. Analyzing the factors contributing to this efficiency could help improve the performance of other pages.",
+      "The Time To First Byte (TTFB) is within acceptable limits for all pages, indicating that the server response time is efficient. However, reducing the TTFB could further improve the user experience, especially for users with slower internet connections.",
+      "First Contentful Paint (FCP) is also satisfactory for all pages, meaning that the pages are visually loading quickly. However, optimizing the FCP could enhance user experience, as users tend to engage more with visually loaded pages.",
+      "It is crucial to investigate the cause of the \"How It Works\" page failure and address the issue promptly to ensure optimal web performance."
+    ]
+  }
+}
