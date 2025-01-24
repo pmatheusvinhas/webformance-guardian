@@ -1,13 +1,5 @@
 [
   {
-    "timestamp": "2025-01-17T20:17:50.580Z",
-    "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential performance issues that need to be addressed urgently. It is recommended to investigate the causes of the failure and optimize the page's performance."
-  },
-  {
-    "timestamp": "2025-01-18T01:10:03.631Z",
-    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be severe performance bottlenecks. It is essential to investigate and address these issues promptly to ensure a smooth user experience.\n  - Recommendation: Analyze the waterfall chart, server logs, and browser console to identify the root cause of the performance degradation. Common issues include heavy JavaScript files, unoptimized images, render-blocking CSS, and slow server response times."
-  },
-  {
     "timestamp": "2025-01-18T05:14:55.637Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, which may be due to various issues such as large page size, unoptimized images, excessive HTTP requests, or slow server response time. It is recommended to investigate these potential issues and optimize the page for better performance."
   },
@@ -122,5 +114,9 @@
   {
     "timestamp": "2025-01-23T20:16:52.469Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works Page\" failed the test, indicating potential issues that need to be addressed urgently. It is essential to investigate why this page took longer to load than the other pages. Recommendations include checking for large images, scripts, or stylesheets that may be causing delays in loading the page."
+  },
+  {
+    "timestamp": "2025-01-24T01:11:43.867Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting possible performance bottlenecks. It is essential to investigate and optimize this page to improve its load time.\n  - Recommendation: Analyze the waterfall chart, identify slow-loading resources, and apply optimization techniques such as minification, compression, and lazy loading."
   }
 ]

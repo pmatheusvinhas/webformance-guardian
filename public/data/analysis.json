@@ -1,9 +1,11 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works Page\" failed the test, indicating potential issues that need to be addressed urgently. It is essential to investigate why this page took longer to load than the other pages. Recommendations include checking for large images, scripts, or stylesheets that may be causing delays in loading the page.",
-  "issues": [],
-  "insights": [
-    "The FCP times for all pages are relatively low, indicating that users can see the content quickly after navigating to the page. This is a positive sign, as it can help reduce bounce rates and improve user engagement.",
-    "The TTFB times for all pages are also low, indicating that the server is responding quickly to requests. This is a crucial factor in web performance, as it can significantly impact the user experience.",
-    "While the homepage load time is longer than the other pages, it is still within an acceptable range. However, optimizing the page further can help improve user experience and reduce bounce rates."
-  ]
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting possible performance bottlenecks. It is essential to investigate and optimize this page to improve its load time.\n  - Recommendation: Analyze the waterfall chart, identify slow-loading resources, and apply optimization techniques such as minification, compression, and lazy loading.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Analyze the waterfall chart, identify slow-loading resources, and apply optimization techniques such as minification, compression, and lazy loading."
+    }
+  ],
+  "insights": []
 }
