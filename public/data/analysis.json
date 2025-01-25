@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive HTTP requests, or slow server response times.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- How It Works Page Failed: Investigate and resolve the issues causing the failure of the How It Works page. Check for any broken links, server errors, or script issues that might be causing the page to fail.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "How It Works Page Failed",
+      "recommendation": "Investigate and resolve the issues causing the failure of the How It Works page. Check for any broken links, server errors, or script issues that might be causing the page to fail."
+    },
+    {
+      "severity": "critical",
+      "message": "Homepage Load Time",
+      "recommendation": "Consider optimizing the homepage load time to improve user experience. Although the load time is not critically high, reducing it can enhance user engagement."
+    }
+  ],
   "insights": [
-    "The pricing page and blog page have the fastest load times, suggesting that their optimization strategies are effective. Analyzing these pages can provide insights to improve the performance of other pages, such as the homepage and \"How It Works\" page.",
-    "Time to First Byte (TTFB) is relatively fast across all pages, indicating that the server response time is not a significant issue. Focus on optimizing other factors, such as render-blocking resources and large media files.",
-    "First Contentful Paint (FCP) is generally slower than load times, suggesting that there might be render-blocking resources preventing the browser from rendering content quickly. Investigate and address these resources to improve user experience."
+    "Pricing and Blog Pages Perform Well: Both the Pricing and Blog pages have good load times and TTFB/FCP metrics, indicating efficient page rendering and resource management.",
+    "TTFB and FCP Metrics: The TTFB and FCP metrics for all pages are within acceptable ranges, suggesting that the server response time and initial content rendering are performing well.",
+    "One Failed Page: The failure of the How It Works page is a significant issue that needs immediate attention. Investigate and resolve the underlying problems to ensure consistent performance across all pages."
   ]
 }
