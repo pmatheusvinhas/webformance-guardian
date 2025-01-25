@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-25T20:16:01.922Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1727,
+      "metrics": {
+        "loadTime": 624.8000000000175,
+        "ttfb": 68.60000000000582,
+        "fcp": 810.5999999999767
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1010,
+      "metrics": {
+        "loadTime": 250.60000000000582,
+        "ttfb": 95,
+        "fcp": 257.1000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1157,
+      "metrics": {
+        "loadTime": 282.6000000000058,
+        "ttfb": 123.29999999998836,
+        "fcp": 269.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1018
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The test results show that optimizing images, scripts, and stylesheets can significantly reduce a page's load time. Implementing lazy loading can further improve performance by deferring the loading of non-critical resources until they are needed.",
+      "Monitoring a page's performance over time can help identify potential issues and optimize the page further. Implementing a performance monitoring tool can assist in tracking a page's load time and identifying any areas for improvement.",
+      "The \"How It Works\" page's failure indicates a critical issue that needs to be addressed immediately. Investigating the cause of the failure and optimizing the page can significantly improve user experience and prevent potential user abandonment."
+    ]
+  }
+}
