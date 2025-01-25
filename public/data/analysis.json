@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, investigate the page's resources, optimize images, minify CSS and JavaScript, and leverage browser caching.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive HTTP requests, or slow server response times.",
   "issues": [],
   "insights": [
-    "The pricing page and blog page have the best performance, with load times around 200ms. This suggests that these pages have been optimized well and can serve as a benchmark for other pages.",
-    "TTFB is consistently low across all pages, indicating that the server response time is good. This is a positive sign for user experience.",
-    "FCP is generally high, especially on the homepage. This means that the initial rendering of the page takes some time. To improve this, consider optimizing critical render-blocking resources and using a Content Delivery Network (CDN) for faster content delivery."
+    "The pricing page and blog page have the fastest load times, suggesting that their optimization strategies are effective. Analyzing these pages can provide insights to improve the performance of other pages, such as the homepage and \"How It Works\" page.",
+    "Time to First Byte (TTFB) is relatively fast across all pages, indicating that the server response time is not a significant issue. Focus on optimizing other factors, such as render-blocking resources and large media files.",
+    "First Contentful Paint (FCP) is generally slower than load times, suggesting that there might be render-blocking resources preventing the browser from rendering content quickly. Investigate and address these resources to improve user experience."
   ]
 }

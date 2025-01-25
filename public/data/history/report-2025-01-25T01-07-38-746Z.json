@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-25T01:07:38.746Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1469,
+      "metrics": {
+        "loadTime": 502.90000000000873,
+        "ttfb": 58.69999999999709,
+        "fcp": 606.3000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 974,
+      "metrics": {
+        "loadTime": 177.59999999999127,
+        "ttfb": 42.30000000000291,
+        "fcp": 255.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1109,
+      "metrics": {
+        "loadTime": 253.39999999999418,
+        "ttfb": 103.30000000000291,
+        "fcp": 207.59999999999127
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 854
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive HTTP requests, or slow server response times.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, suggesting that their optimization strategies are effective. Analyzing these pages can provide insights to improve the performance of other pages, such as the homepage and \"How It Works\" page.",
+      "Time to First Byte (TTFB) is relatively fast across all pages, indicating that the server response time is not a significant issue. Focus on optimizing other factors, such as render-blocking resources and large media files.",
+      "First Contentful Paint (FCP) is generally slower than load times, suggesting that there might be render-blocking resources preventing the browser from rendering content quickly. Investigate and address these resources to improve user experience."
+    ]
+  }
+}

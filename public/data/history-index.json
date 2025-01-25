@@ -1,9 +1,5 @@
 [
   {
-    "timestamp": "2025-01-18T20:18:56.961Z",
-    "summary": "ISSUES\nCritical:\n- How It Works Page Failed: It is critical to determine the cause of the failure for the how it works page. Check for any errors in the console, network tab, or server logs to identify the issue."
-  },
-  {
     "timestamp": "2025-01-19T01:16:21.016Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the page's resources and scripts to ensure they are loading correctly. Check for any broken links, missing images, or unoptimized files that could be causing the page to fail the test."
   },
@@ -122,5 +118,9 @@
   {
     "timestamp": "2025-01-24T20:16:29.364Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, investigate the page's resources, optimize images, minify CSS and JavaScript, and leverage browser caching."
+  },
+  {
+    "timestamp": "2025-01-25T01:07:38.746Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive HTTP requests, or slow server response times."
   }
 ]
