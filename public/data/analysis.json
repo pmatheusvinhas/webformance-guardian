@@ -1,20 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- How It Works Page Failed: Investigate and resolve the issues causing the failure of the How It Works page. Check for any broken links, server errors, or script issues that might be causing the page to fail.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "How It Works Page Failed",
-      "recommendation": "Investigate and resolve the issues causing the failure of the How It Works page. Check for any broken links, server errors, or script issues that might be causing the page to fail."
-    },
-    {
-      "severity": "critical",
-      "message": "Homepage Load Time",
-      "recommendation": "Consider optimizing the homepage load time to improve user experience. Although the load time is not critically high, reducing it can enhance user engagement."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+  "issues": [],
   "insights": [
-    "Pricing and Blog Pages Perform Well: Both the Pricing and Blog pages have good load times and TTFB/FCP metrics, indicating efficient page rendering and resource management.",
-    "TTFB and FCP Metrics: The TTFB and FCP metrics for all pages are within acceptable ranges, suggesting that the server response time and initial content rendering are performing well.",
-    "One Failed Page: The failure of the How It Works page is a significant issue that needs immediate attention. Investigate and resolve the underlying problems to ensure consistent performance across all pages."
+    "The homepage, pricing page, and blog page have good load times, TTFB, and FCP, indicating that these pages are well-optimized.",
+    "The \"How It Works\" page has a duration of 1191 ms, but no metrics are provided. This suggests that there might be an issue with the page's resources or scripts, causing it to fail the test.",
+    "It is recommended to review the resources and scripts on the \"How It Works\" page to identify and resolve any issues that may be causing the page to fail the web performance test."
   ]
 }

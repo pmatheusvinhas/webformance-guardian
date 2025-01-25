@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-25T10:15:33.792Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1909,
+      "metrics": {
+        "loadTime": 623.8000000000175,
+        "ttfb": 75.70000000001164,
+        "fcp": 607.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1335,
+      "metrics": {
+        "loadTime": 415,
+        "ttfb": 190.79999999998836,
+        "fcp": 366.30000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1254,
+      "metrics": {
+        "loadTime": 318.3999999999942,
+        "ttfb": 57.70000000001164,
+        "fcp": 217.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1191
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good load times, TTFB, and FCP, indicating that these pages are well-optimized.",
+      "The \"How It Works\" page has a duration of 1191 ms, but no metrics are provided. This suggests that there might be an issue with the page's resources or scripts, causing it to fail the test.",
+      "It is recommended to review the resources and scripts on the \"How It Works\" page to identify and resolve any issues that may be causing the page to fail the web performance test."
+    ]
+  }
+}
