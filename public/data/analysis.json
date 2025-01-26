@@ -1,20 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate the cause of this failure and optimize the page to improve its load time.\n  - Recommendation: Analyze the page's resources, such as images, scripts, and stylesheets, to identify any elements that may be causing the slow load time. Consider optimizing these elements, implementing lazy loading, or using a content delivery network (CDN) to enhance performance.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the page's resources, such as images, scripts, and stylesheets, to identify any elements that may be causing the slow load time. Consider optimizing these elements, implementing lazy loading, or using a content delivery network (CDN) to enhance performance."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Continuously monitor and optimize the homepage to maintain or improve its performance."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+  "issues": [],
   "insights": [
-    "The pricing page and blog page have the fastest load times, at 333.60 ms and 445 ms, respectively. This indicates that the optimization strategies employed on these pages are effective and could potentially be applied to other pages, such as the \"How It Works\" page.",
-    "The Time to First Byte (TTFB) metric is relatively low across all pages, suggesting that the server response time is adequate. This is a positive sign, as it implies that the server is not a bottleneck in page load times.",
-    "The First Contentful Paint (FCP) metric, which measures when the first piece of content is displayed on the page, is also within acceptable ranges for all pages. This indicates that users are likely to perceive the pages as loading quickly."
+    "The homepage, pricing page, and blog page have good load times, with the blog page being the fastest. This indicates that the website's performance is generally satisfactory.",
+    "The \"How It Works\" page's failure suggests potential issues such as large file sizes, unoptimized images, excessive HTTP requests, or slow server response times. Investigating these areas will help identify the root cause and improve the page's performance.",
+    "Although the TTFB values for all pages are within acceptable ranges, there is still room for improvement. Optimizing server-side rendering, caching, and database queries can help reduce TTFB and enhance user experience."
   ]
 }

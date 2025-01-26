@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-26T05:15:59.820Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2049,
+      "metrics": {
+        "loadTime": 676.7000000000116,
+        "ttfb": 87,
+        "fcp": 863.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1354,
+      "metrics": {
+        "loadTime": 437.5,
+        "ttfb": 202.5,
+        "fcp": 402.80000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1292,
+      "metrics": {
+        "loadTime": 349.9000000000233,
+        "ttfb": 73.90000000002328,
+        "fcp": 249.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1187
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good load times, with the blog page being the fastest. This indicates that the website's performance is generally satisfactory.",
+      "The \"How It Works\" page's failure suggests potential issues such as large file sizes, unoptimized images, excessive HTTP requests, or slow server response times. Investigating these areas will help identify the root cause and improve the page's performance.",
+      "Although the TTFB values for all pages are within acceptable ranges, there is still room for improvement. Optimizing server-side rendering, caching, and database queries can help reduce TTFB and enhance user experience."
+    ]
+  }
+}
