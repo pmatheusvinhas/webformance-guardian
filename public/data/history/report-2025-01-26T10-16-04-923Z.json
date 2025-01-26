@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-26T10:16:04.923Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1313,
+      "metrics": {
+        "loadTime": 580.6000000000058,
+        "ttfb": 59.19999999998254,
+        "fcp": 432.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 922,
+      "metrics": {
+        "loadTime": 218.20000000001164,
+        "ttfb": 69.30000000001746,
+        "fcp": 186.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 958,
+      "metrics": {
+        "loadTime": 188.29999999998836,
+        "ttfb": 43.20000000001164,
+        "fcp": 164.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 875
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. To address this, it is recommended to investigate the causes of the failure, which could be due to various factors such as large media files, unoptimized scripts, or server-side rendering issues.",
+    "issues": [],
+    "insights": [
+      "The blog page has the best performance metrics, providing a good user experience. It can serve as a benchmark for optimizing the other pages.",
+      "The pricing page has better performance metrics than the homepage, suggesting that the pricing page might have fewer or smaller media files and/or optimized scripts.",
+      "The \"How It Works\" page has failed the test, indicating potential performance issues. Investigating and addressing these issues will improve user experience and ensure consistent performance across all pages."
+    ]
+  }
+}

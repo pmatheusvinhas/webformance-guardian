@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. To address this, it is recommended to investigate the causes of the failure, which could be due to various factors such as large media files, unoptimized scripts, or server-side rendering issues.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, with the blog page being the fastest. This indicates that the website's performance is generally satisfactory.",
-    "The \"How It Works\" page's failure suggests potential issues such as large file sizes, unoptimized images, excessive HTTP requests, or slow server response times. Investigating these areas will help identify the root cause and improve the page's performance.",
-    "Although the TTFB values for all pages are within acceptable ranges, there is still room for improvement. Optimizing server-side rendering, caching, and database queries can help reduce TTFB and enhance user experience."
+    "The blog page has the best performance metrics, providing a good user experience. It can serve as a benchmark for optimizing the other pages.",
+    "The pricing page has better performance metrics than the homepage, suggesting that the pricing page might have fewer or smaller media files and/or optimized scripts.",
+    "The \"How It Works\" page has failed the test, indicating potential performance issues. Investigating and addressing these issues will improve user experience and ensure consistent performance across all pages."
   ]
 }
