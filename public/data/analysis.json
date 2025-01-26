@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. To address this, it is recommended to investigate the causes of the failure, which could be due to various factors such as large media files, unoptimized scripts, or server-side rendering issues.",
+  "summary": "ISSUES\nCritical:\n- None",
   "issues": [],
   "insights": [
-    "The blog page has the best performance metrics, providing a good user experience. It can serve as a benchmark for optimizing the other pages.",
-    "The pricing page has better performance metrics than the homepage, suggesting that the pricing page might have fewer or smaller media files and/or optimized scripts.",
-    "The \"How It Works\" page has failed the test, indicating potential performance issues. Investigating and addressing these issues will improve user experience and ensure consistent performance across all pages."
+    "The homepage has the longest load time, but it is still within an acceptable range of less than 1 second. This indicates that the page is optimized for fast loading, but there may be room for further optimization.",
+    "The pricing page has a longer TTFB than the other pages, indicating that the server response time may be slower for this page. This may be due to heavier server-side processing or other factors that can be optimized for better performance.",
+    "The blog page has the fastest FCP, indicating that the initial content rendering is efficient for this page. This may be due to efficient use of above-the-fold content and other optimization techniques that can be applied to other pages as well.",
+    "The \"How It Works\" page failed the test, which may be due to missing resources, inefficient code, or other issues that prevent the page from loading completely. It is recommended to investigate this issue further and optimize the page for better performance. This may include optimizing images, minifying code, reducing HTTP requests, and other techniques that can improve page loading times."
   ]
 }
