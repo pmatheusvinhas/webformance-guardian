@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-26T01:13:34.778Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1948,
+      "metrics": {
+        "loadTime": 804.6999999999971,
+        "ttfb": 354.8999999999942,
+        "fcp": 678.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1350,
+      "metrics": {
+        "loadTime": 333.6000000000058,
+        "ttfb": 177.5,
+        "fcp": 310.8999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1463,
+      "metrics": {
+        "loadTime": 445,
+        "ttfb": 175.29999999998836,
+        "fcp": 284.59999999999127
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1221
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate the cause of this failure and optimize the page to improve its load time.\n  - Recommendation: Analyze the page's resources, such as images, scripts, and stylesheets, to identify any elements that may be causing the slow load time. Consider optimizing these elements, implementing lazy loading, or using a content delivery network (CDN) to enhance performance.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the page's resources, such as images, scripts, and stylesheets, to identify any elements that may be causing the slow load time. Consider optimizing these elements, implementing lazy loading, or using a content delivery network (CDN) to enhance performance."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Continuously monitor and optimize the homepage to maintain or improve its performance."
+      }
+    ],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, at 333.60 ms and 445 ms, respectively. This indicates that the optimization strategies employed on these pages are effective and could potentially be applied to other pages, such as the \"How It Works\" page.",
+      "The Time to First Byte (TTFB) metric is relatively low across all pages, suggesting that the server response time is adequate. This is a positive sign, as it implies that the server is not a bottleneck in page load times.",
+      "The First Contentful Paint (FCP) metric, which measures when the first piece of content is displayed on the page, is also within acceptable ranges for all pages. This indicates that users are likely to perceive the pages as loading quickly."
+    ]
+  }
+}
