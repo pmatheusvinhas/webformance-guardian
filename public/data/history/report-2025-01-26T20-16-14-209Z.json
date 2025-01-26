@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-26T20:16:14.209Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1385,
+      "metrics": {
+        "loadTime": 533.5,
+        "ttfb": 57.80000000001746,
+        "fcp": 490.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1355,
+      "metrics": {
+        "loadTime": 250.69999999998254,
+        "ttfb": 87.39999999999418,
+        "fcp": 260
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1048,
+      "metrics": {
+        "loadTime": 253.79999999998836,
+        "ttfb": 76.79999999998836,
+        "fcp": 222.69999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 895
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there may be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good load times, but there is still room for improvement in reducing the FCP and TTFB. This can be achieved through various optimization techniques such as minifying CSS and JavaScript, optimizing images, and leveraging browser caching.",
+      "The \"How It Works\" page failed the web performance test, indicating that there may be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance, as a slow-loading page can negatively impact user experience and conversion rates.",
+      "It is important to regularly monitor and test the performance of all pages on the website to ensure that they are loading quickly and efficiently. This can help to identify and address any issues before they become critical, and ensure that the website provides a positive user experience."
+    ]
+  }
+}

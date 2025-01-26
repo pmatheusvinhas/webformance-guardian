@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- None",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there may be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance.",
   "issues": [],
   "insights": [
-    "The homepage has the longest load time, but it is still within an acceptable range of less than 1 second. This indicates that the page is optimized for fast loading, but there may be room for further optimization.",
-    "The pricing page has a longer TTFB than the other pages, indicating that the server response time may be slower for this page. This may be due to heavier server-side processing or other factors that can be optimized for better performance.",
-    "The blog page has the fastest FCP, indicating that the initial content rendering is efficient for this page. This may be due to efficient use of above-the-fold content and other optimization techniques that can be applied to other pages as well.",
-    "The \"How It Works\" page failed the test, which may be due to missing resources, inefficient code, or other issues that prevent the page from loading completely. It is recommended to investigate this issue further and optimize the page for better performance. This may include optimizing images, minifying code, reducing HTTP requests, and other techniques that can improve page loading times."
+    "The homepage, pricing page, and blog page have good load times, but there is still room for improvement in reducing the FCP and TTFB. This can be achieved through various optimization techniques such as minifying CSS and JavaScript, optimizing images, and leveraging browser caching.",
+    "The \"How It Works\" page failed the web performance test, indicating that there may be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance, as a slow-loading page can negatively impact user experience and conversion rates.",
+    "It is important to regularly monitor and test the performance of all pages on the website to ensure that they are loading quickly and efficiently. This can help to identify and address any issues before they become critical, and ensure that the website provides a positive user experience."
   ]
 }
