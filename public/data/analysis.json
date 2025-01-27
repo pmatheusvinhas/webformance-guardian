@@ -1,10 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1364 milliseconds. To improve the page's performance, it is recommended to investigate the causes of the longer duration, such as large images, heavy scripts, or unoptimized CSS, and optimize them accordingly.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page's performance. [Recommendation: Analyze the waterfall chart, network requests, and server logs to identify bottlenecks and optimize the page accordingly.]",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page's performance. [Recommendation",
+      "recommendation": "Analyze the waterfall chart, network requests, and server logs to identify bottlenecks and optimize the page accordingly.]"
+    },
+    {
+      "severity": "info",
+      "message": "The TTFB for the homepage is relatively high (48.2 ms). This could indicate server-side delays or slow database queries. [Recommendation",
+      "recommendation": "Optimize server-side rendering, leverage caching, and consider using a content delivery network (CDN) to improve TTFB.]"
+    },
+    {
+      "severity": "critical",
+      "message": "The FCP for the homepage is higher than desired (407.1 ms). This could be due to slow-loading resources or render-blocking JavaScript. [Recommendation",
+      "recommendation": "Optimize images, minify CSS, and defer non-critical JavaScript to improve FCP.]"
+    }
+  ],
   "insights": [
-    "The homepage, pricing page, and blog page have fast load times, indicating that the website's performance is good.",
-    "The \"How It Works\" page needs optimization to improve its load time and pass the web performance test.",
-    "Investigating and optimizing heavy scripts, large images, and unoptimized CSS can significantly improve the website's performance.",
-    "Continuously monitoring and optimizing web performance can enhance user experience and improve website engagement."
+    "The pricing page and blog page have the best performance, with low load times, TTFB, and FCP. These pages can serve as a benchmark for optimizing other pages.",
+    "The blog page has the lowest TTFB (32.9 ms) and FCP (151.8 ms), indicating that its resources are well-optimized and load quickly.",
+    "The homepage has a longer load time (536.8 ms) compared to the pricing page and blog page, suggesting that there is room for optimization. Investigating and addressing the high TTFB and FCP could significantly improve the homepage's performance."
   ]
 }

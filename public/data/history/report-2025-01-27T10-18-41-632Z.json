@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-01-27T10:18:41.632Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1290,
+      "metrics": {
+        "loadTime": 536.7999999999884,
+        "ttfb": 48.19999999998254,
+        "fcp": 407.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 989,
+      "metrics": {
+        "loadTime": 281.1000000000058,
+        "ttfb": 133.60000000000582,
+        "fcp": 259.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 990,
+      "metrics": {
+        "loadTime": 181.90000000002328,
+        "ttfb": 32.90000000002328,
+        "fcp": 151.80000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1093
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page's performance. [Recommendation: Analyze the waterfall chart, network requests, and server logs to identify bottlenecks and optimize the page accordingly.]",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page's performance. [Recommendation",
+        "recommendation": "Analyze the waterfall chart, network requests, and server logs to identify bottlenecks and optimize the page accordingly.]"
+      },
+      {
+        "severity": "info",
+        "message": "The TTFB for the homepage is relatively high (48.2 ms). This could indicate server-side delays or slow database queries. [Recommendation",
+        "recommendation": "Optimize server-side rendering, leverage caching, and consider using a content delivery network (CDN) to improve TTFB.]"
+      },
+      {
+        "severity": "critical",
+        "message": "The FCP for the homepage is higher than desired (407.1 ms). This could be due to slow-loading resources or render-blocking JavaScript. [Recommendation",
+        "recommendation": "Optimize images, minify CSS, and defer non-critical JavaScript to improve FCP.]"
+      }
+    ],
+    "insights": [
+      "The pricing page and blog page have the best performance, with low load times, TTFB, and FCP. These pages can serve as a benchmark for optimizing other pages.",
+      "The blog page has the lowest TTFB (32.9 ms) and FCP (151.8 ms), indicating that its resources are well-optimized and load quickly.",
+      "The homepage has a longer load time (536.8 ms) compared to the pricing page and blog page, suggesting that there is room for optimization. Investigating and addressing the high TTFB and FCP could significantly improve the homepage's performance."
+    ]
+  }
+}
