@@ -1,10 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1364 milliseconds. To improve the page's performance, it is recommended to investigate the causes of the longer duration, such as large images, heavy scripts, or unoptimized CSS, and optimize them accordingly.",
   "issues": [],
   "insights": [
-    "The \"How It Works\" page has a longer duration than the other pages, indicating potential issues that need to be addressed. It is crucial to investigate and optimize this page to ensure it passes future performance tests.",
-    "The Time to First Byte (TTFB) for all pages is within an acceptable range, indicating that the server response time is good.",
-    "First Contentful Paint (FCP) is also within an acceptable range for all pages, meaning that the initial rendering of the page is fast, providing a good user experience.",
-    "To improve the web performance, it is recommended to optimize images, minify CSS and JavaScript, leverage browser caching, and consider using a Content Delivery Network (CDN) to distribute content closer to users, reducing latency and improving load times."
+    "The homepage, pricing page, and blog page have fast load times, indicating that the website's performance is good.",
+    "The \"How It Works\" page needs optimization to improve its load time and pass the web performance test.",
+    "Investigating and optimizing heavy scripts, large images, and unoptimized CSS can significantly improve the website's performance.",
+    "Continuously monitoring and optimizing web performance can enhance user experience and improve website engagement."
   ]
 }

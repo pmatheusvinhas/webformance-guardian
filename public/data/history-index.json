@@ -1,9 +1,5 @@
 [
   {
-    "timestamp": "2025-01-21T05:15:14.734Z",
-    "summary": "ISSUES\nCritical:\n- None identified in this dataset."
-  },
-  {
     "timestamp": "2025-01-21T10:16:56.066Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting possible performance bottlenecks. Investigate server configuration, database queries, and third-party resources to optimize TTFB and FCP."
   },
@@ -118,5 +114,9 @@
   {
     "timestamp": "2025-01-27T01:12:39.254Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience."
+  },
+  {
+    "timestamp": "2025-01-27T05:15:43.758Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1364 milliseconds. To improve the page's performance, it is recommended to investigate the causes of the longer duration, such as large images, heavy scripts, or unoptimized CSS, and optimize them accordingly."
   }
 ]

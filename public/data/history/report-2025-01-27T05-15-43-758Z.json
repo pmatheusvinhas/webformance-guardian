@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-01-27T05:15:43.758Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1944,
+      "metrics": {
+        "loadTime": 508.1000000000058,
+        "ttfb": 72.70000000001164,
+        "fcp": 461.3000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1453,
+      "metrics": {
+        "loadTime": 192.1999999999971,
+        "ttfb": 59.19999999999709,
+        "fcp": 208.6999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1407,
+      "metrics": {
+        "loadTime": 207.1999999999971,
+        "ttfb": 58.80000000000291,
+        "fcp": 206.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1364
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1364 milliseconds. To improve the page's performance, it is recommended to investigate the causes of the longer duration, such as large images, heavy scripts, or unoptimized CSS, and optimize them accordingly.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have fast load times, indicating that the website's performance is good.",
+      "The \"How It Works\" page needs optimization to improve its load time and pass the web performance test.",
+      "Investigating and optimizing heavy scripts, large images, and unoptimized CSS can significantly improve the website's performance.",
+      "Continuously monitoring and optimizing web performance can enhance user experience and improve website engagement."
+    ]
+  }
+}
