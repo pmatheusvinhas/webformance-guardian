@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-27T20:17:24.597Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2067,
+      "metrics": {
+        "loadTime": 800.5,
+        "ttfb": 303.20000000001164,
+        "fcp": 807.9000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1362,
+      "metrics": {
+        "loadTime": 309.1000000000058,
+        "ttfb": 166.30000000001746,
+        "fcp": 312.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1451,
+      "metrics": {
+        "loadTime": 422,
+        "ttfb": 234.29999999998836,
+        "fcp": 381.5999999999767
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1240
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server configuration to identify and fix the problem.",
+    "issues": [],
+    "insights": [
+      "The Pricing and Blog pages have the fastest load times, which could be due to fewer resources or optimized code. It is recommended to review these pages' code and resources to identify best practices and apply them to other pages.",
+      "The FCP (First Contentful Paint) metric for all pages is relatively close to the load time, indicating that the pages' content is loading quickly. However, it is still recommended to optimize the pages' resources to reduce the FCP and improve user experience.",
+      "The duration metric for all pages is relatively short, indicating that the tests were completed quickly. However, it is still recommended to monitor this metric and ensure that it remains low, as longer durations could indicate network or server issues."
+    ]
+  }
+}
