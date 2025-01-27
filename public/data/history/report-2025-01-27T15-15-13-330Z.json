@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-01-27T15:15:13.330Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1760,
+      "metrics": {
+        "loadTime": 569.2000000000116,
+        "ttfb": 54.60000000000582,
+        "fcp": 520.0999999999913
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1345,
+      "metrics": {
+        "loadTime": 291.5,
+        "ttfb": 38.89999999999418,
+        "fcp": 255.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1521,
+      "metrics": {
+        "loadTime": 501.5,
+        "ttfb": 338.6999999999971,
+        "fcp": 441.8000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1247
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test, which may indicate an issue with the page's content or functionality. It is recommended to investigate the page and identify the root cause of the failure.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have acceptable durations and metric values, indicating good web performance.",
+      "The \"How It Works\" page has failed the test, which may indicate an issue with the page's content or functionality.",
+      "It is recommended to optimize the homepage's content and resources to reduce the load time and improve web performance.",
+      "It is recommended to investigate the server configuration and optimize the blog page's resources to reduce the TTFB and improve web performance.",
+      "It is important to monitor web performance regularly and address any issues promptly to ensure a positive user experience."
+    ]
+  }
+}
