@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-01-27T01:12:39.254Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1253,
+      "metrics": {
+        "loadTime": 509.5,
+        "ttfb": 72.69999999999709,
+        "fcp": 342.8000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1038,
+      "metrics": {
+        "loadTime": 279.90000000000873,
+        "ttfb": 126.30000000000291,
+        "fcp": 282.6999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1116,
+      "metrics": {
+        "loadTime": 287.1999999999971,
+        "ttfb": 121.19999999999709,
+        "fcp": 266.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 977
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page has a longer duration than the other pages, indicating potential issues that need to be addressed. It is crucial to investigate and optimize this page to ensure it passes future performance tests.",
+      "The Time to First Byte (TTFB) for all pages is within an acceptable range, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) is also within an acceptable range for all pages, meaning that the initial rendering of the page is fast, providing a good user experience.",
+      "To improve the web performance, it is recommended to optimize images, minify CSS and JavaScript, leverage browser caching, and consider using a Content Delivery Network (CDN) to distribute content closer to users, reducing latency and improving load times."
+    ]
+  }
+}

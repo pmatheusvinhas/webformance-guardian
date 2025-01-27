@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there may be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, but there is still room for improvement in reducing the FCP and TTFB. This can be achieved through various optimization techniques such as minifying CSS and JavaScript, optimizing images, and leveraging browser caching.",
-    "The \"How It Works\" page failed the web performance test, indicating that there may be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance, as a slow-loading page can negatively impact user experience and conversion rates.",
-    "It is important to regularly monitor and test the performance of all pages on the website to ensure that they are loading quickly and efficiently. This can help to identify and address any issues before they become critical, and ensure that the website provides a positive user experience."
+    "The \"How It Works\" page has a longer duration than the other pages, indicating potential issues that need to be addressed. It is crucial to investigate and optimize this page to ensure it passes future performance tests.",
+    "The Time to First Byte (TTFB) for all pages is within an acceptable range, indicating that the server response time is good.",
+    "First Contentful Paint (FCP) is also within an acceptable range for all pages, meaning that the initial rendering of the page is fast, providing a good user experience.",
+    "To improve the web performance, it is recommended to optimize images, minify CSS and JavaScript, leverage browser caching, and consider using a Content Delivery Network (CDN) to distribute content closer to users, reducing latency and improving load times."
   ]
 }
