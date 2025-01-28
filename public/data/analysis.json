@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the issues causing this failure to ensure a smooth user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience.",
   "issues": [],
   "insights": [
-    "The homepage has the fastest load time (489 ms) among all pages, suggesting that its optimizations are effective. Use the homepage as a benchmark for optimizing other pages.",
-    "The pricing page has the longest TTFB (255.6 ms), which might be due to server-side processing or database queries. Investigating and optimizing these factors can significantly improve TTFB.",
-    "The blog page has a slightly higher FCP (388 ms) compared to the other pages. Consider optimizing above-the-fold content or lazy-loading images to further reduce FCP."
+    "The homepage has the longest load time of all pages, despite passing the test. This could be due to additional resources or heavier content that could be optimized.",
+    "The pricing and blog pages have similar performance metrics, suggesting consistent optimization efforts for these pages.",
+    "The failed \"How It Works\" page indicates a need for further investigation and optimization to ensure consistent performance across all pages."
   ]
 }
