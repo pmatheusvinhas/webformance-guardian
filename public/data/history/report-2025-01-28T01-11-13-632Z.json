@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-28T01:11:13.632Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1441,
+      "metrics": {
+        "loadTime": 549.8999999999942,
+        "ttfb": 60,
+        "fcp": 524.1999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 932,
+      "metrics": {
+        "loadTime": 300.3000000000029,
+        "ttfb": 58.69999999999709,
+        "fcp": 218.90000000000873
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1144,
+      "metrics": {
+        "loadTime": 217.8000000000029,
+        "ttfb": 47,
+        "fcp": 219.1999999999971
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 896
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration time to improve user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage has a load time of 549.9 ms, which is within an acceptable range. However, there is still room for improvement, especially for the \"How It Works\" page.",
+      "The Time to First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) is consistent across all pages, except for the \"How It Works\" page, suggesting that the initial rendering of content might be causing the delay. Investigating and optimizing the critical rendering path could help improve the performance of the \"How It Works\" page."
+    ]
+  }
+}
