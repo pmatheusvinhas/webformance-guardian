@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-28T15:17:06.718Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1992,
+      "metrics": {
+        "loadTime": 681.9000000000087,
+        "ttfb": 148,
+        "fcp": 577.5999999999913
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1198,
+      "metrics": {
+        "loadTime": 291.8999999999942,
+        "ttfb": 70.60000000000582,
+        "fcp": 243.1999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1324,
+      "metrics": {
+        "loadTime": 414,
+        "ttfb": 89.40000000000873,
+        "fcp": 287.1000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1375
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. Investigate the cause and optimize the page to improve its load time, TTFB, and FCP.",
+    "issues": [],
+    "insights": [
+      "Ensure that all pages, especially the \"How It Works\" page, are optimized for performance, including image compression, minification of CSS and JavaScript, and caching.",
+      "Monitor and analyze server response times to identify any potential bottlenecks or issues impacting TTFB.",
+      "Regularly test and evaluate web performance to maintain a positive user experience and address any emerging issues proactively."
+    ]
+  }
+}
