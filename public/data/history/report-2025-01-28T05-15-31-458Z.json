@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-28T05:15:31.458Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1579,
+      "metrics": {
+        "loadTime": 489,
+        "ttfb": 47.30000000000291,
+        "fcp": 388.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1429,
+      "metrics": {
+        "loadTime": 403.5,
+        "ttfb": 255.60000000000582,
+        "fcp": 378.6999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1545,
+      "metrics": {
+        "loadTime": 473.6000000000058,
+        "ttfb": 247.10000000000582,
+        "fcp": 378
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1246
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the issues causing this failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage has the fastest load time (489 ms) among all pages, suggesting that its optimizations are effective. Use the homepage as a benchmark for optimizing other pages.",
+      "The pricing page has the longest TTFB (255.6 ms), which might be due to server-side processing or database queries. Investigating and optimizing these factors can significantly improve TTFB.",
+      "The blog page has a slightly higher FCP (388 ms) compared to the other pages. Consider optimizing above-the-fold content or lazy-loading images to further reduce FCP."
+    ]
+  }
+}
