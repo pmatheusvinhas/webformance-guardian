@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-28T20:16:57.153Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1558,
+      "metrics": {
+        "loadTime": 520.8000000000029,
+        "ttfb": 50.70000000001164,
+        "fcp": 311.3000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1351,
+      "metrics": {
+        "loadTime": 280.8000000000029,
+        "ttfb": 131.59999999999127,
+        "fcp": 295.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1373,
+      "metrics": {
+        "loadTime": 335.3000000000029,
+        "ttfb": 158.8000000000029,
+        "fcp": 296.8000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1175
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time of all the pages tested, at 280.8 ms. This indicates that the optimization techniques used on this page are effective and could be applied to other pages to improve their performance.",
+      "The blog page has a slightly longer load time than the pricing page, at 335.3 ms. This could be due to the use of larger images or other media on the page, which can increase load times. It may be beneficial to optimize these elements to reduce the load time.",
+      "The \"How It Works\" page has the longest duration of all the pages tested, at 1175 ms. This suggests that there may be issues with the page's code or server response time that are causing the delay. It is crucial to investigate and address these issues to ensure a smooth user experience."
+    ]
+  }
+}
