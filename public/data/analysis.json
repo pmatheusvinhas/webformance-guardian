@@ -1,20 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the underlying issues to ensure a smooth user experience. Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize for faster loading times.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the underlying issues to ensure a smooth user experience. Recommendation",
-      "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize for faster loading times."
-    },
-    {
-      "severity": "info",
-      "message": "The homepage has a slightly longer load time (648.2 ms) compared to the pricing page (395.9 ms) and blog page (495.2 ms). This difference might be due to additional resources or scripts on the homepage. Recommendation",
-      "recommendation": "Continuously monitor and optimize the homepage to maintain a fast loading time."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there may be issues with the page's loading time or other performance metrics. It is recommended to investigate and address these issues to ensure a positive user experience.",
+  "issues": [],
   "insights": [
-    "The pricing page has the fastest load time, TTFB, and FCP among the tested pages, indicating efficient resource loading and server response times.",
-    "The blog page has a higher FCP (392 ms) than the pricing page, suggesting that there might be room for improvement in initial content rendering.",
-    "Investigating the failed \"How It Works\" page test result is a priority to ensure consistent performance across all pages."
+    "The homepage, pricing page, and blog page have good load times, indicating that the website's performance is generally good. However, there is still room for improvement in reducing load times and improving other performance metrics.",
+    "The \"How It Works\" page failed the web performance test, indicating that there may be issues with the page's loading time or other performance metrics. It is recommended to investigate and address these issues to ensure a positive user experience.",
+    "It is important to regularly monitor and test the website's performance to ensure that it remains optimal and provides a good user experience."
   ]
 }
