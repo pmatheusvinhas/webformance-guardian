@@ -1,9 +1,5 @@
 [
   {
-    "timestamp": "2025-01-23T10:17:52.076Z",
-    "summary": "ISSUES\nCritical:\n- None identified in this dataset."
-  },
-  {
     "timestamp": "2025-01-23T15:16:50.699Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant issues affecting its performance. It is recommended to investigate this page thoroughly, focusing on optimizing its resources, reducing requests, and improving server response times."
   },
@@ -122,5 +118,9 @@
   {
     "timestamp": "2025-01-29T10:17:34.068Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is crucial to investigate and resolve these problems to ensure the page's proper functioning and avoid user frustration.\n  - Recommendation: Analyze the waterfall chart and other diagnostic tools to identify bottlenecks and take necessary actions to optimize the page's performance."
+  },
+  {
+    "timestamp": "2025-01-29T15:16:30.382Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there may be issues with the page's loading time. It is recommended to investigate and optimize the page's resources, such as images, scripts, and stylesheets, to improve its loading time."
   }
 ]
