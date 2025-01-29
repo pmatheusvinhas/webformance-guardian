@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-29T20:18:30.344Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2174,
+      "metrics": {
+        "loadTime": 785.5999999999767,
+        "ttfb": 70.19999999995343,
+        "fcp": 905.5999999999767
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1471,
+      "metrics": {
+        "loadTime": 514.5,
+        "ttfb": 264,
+        "fcp": 404.0999999999767
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1361,
+      "metrics": {
+        "loadTime": 380.1000000000349,
+        "ttfb": 145.29999999998836,
+        "fcp": 258.9000000000233
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1251
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large file sizes, unoptimized images, or slow server response time. It is recommended to investigate and optimize these factors to improve the page's performance.",
+    "issues": [],
+    "insights": [
+      "The pricing page has a longer time to first byte (TTFB) of 264 ms compared to the other pages, indicating that the server response time may be slower for this page. It is recommended to investigate and optimize the server configuration to improve the page's performance.",
+      "The blog page has the shortest duration of 1361 ms, indicating that the page is well-optimized and performing well. It is recommended to maintain this level of performance for other pages as well.",
+      "The load times for all pages are within acceptable limits, but there is still room for improvement. It is recommended to continuously monitor and optimize the website's performance to provide a better user experience."
+    ]
+  }
+}
