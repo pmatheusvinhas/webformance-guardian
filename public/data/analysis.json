@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the underlying issues to ensure a smooth user experience. Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize for faster loading times.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the underlying issues to ensure a smooth user experience. Recommendation",
+      "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize for faster loading times."
+    },
+    {
+      "severity": "info",
+      "message": "The homepage has a slightly longer load time (648.2 ms) compared to the pricing page (395.9 ms) and blog page (495.2 ms). This difference might be due to additional resources or scripts on the homepage. Recommendation",
+      "recommendation": "Continuously monitor and optimize the homepage to maintain a fast loading time."
+    }
+  ],
   "insights": [
-    "The pricing page has the fastest load time of all the pages tested, at 280.8 ms. This indicates that the optimization techniques used on this page are effective and could be applied to other pages to improve their performance.",
-    "The blog page has a slightly longer load time than the pricing page, at 335.3 ms. This could be due to the use of larger images or other media on the page, which can increase load times. It may be beneficial to optimize these elements to reduce the load time.",
-    "The \"How It Works\" page has the longest duration of all the pages tested, at 1175 ms. This suggests that there may be issues with the page's code or server response time that are causing the delay. It is crucial to investigate and address these issues to ensure a smooth user experience."
+    "The pricing page has the fastest load time, TTFB, and FCP among the tested pages, indicating efficient resource loading and server response times.",
+    "The blog page has a higher FCP (392 ms) than the pricing page, suggesting that there might be room for improvement in initial content rendering.",
+    "Investigating the failed \"How It Works\" page test result is a priority to ensure consistent performance across all pages."
   ]
 }

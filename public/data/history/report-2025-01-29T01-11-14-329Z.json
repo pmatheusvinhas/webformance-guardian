@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-29T01:11:14.329Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2157,
+      "metrics": {
+        "loadTime": 648.2000000000116,
+        "ttfb": 101.89999999999418,
+        "fcp": 972.4000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1307,
+      "metrics": {
+        "loadTime": 395.8999999999942,
+        "ttfb": 80.39999999999418,
+        "fcp": 283.8999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1412,
+      "metrics": {
+        "loadTime": 495.19999999998254,
+        "ttfb": 194.29999999998836,
+        "fcp": 392
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1259
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the underlying issues to ensure a smooth user experience. Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize for faster loading times.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the underlying issues to ensure a smooth user experience. Recommendation",
+        "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize for faster loading times."
+      },
+      {
+        "severity": "info",
+        "message": "The homepage has a slightly longer load time (648.2 ms) compared to the pricing page (395.9 ms) and blog page (495.2 ms). This difference might be due to additional resources or scripts on the homepage. Recommendation",
+        "recommendation": "Continuously monitor and optimize the homepage to maintain a fast loading time."
+      }
+    ],
+    "insights": [
+      "The pricing page has the fastest load time, TTFB, and FCP among the tested pages, indicating efficient resource loading and server response times.",
+      "The blog page has a higher FCP (392 ms) than the pricing page, suggesting that there might be room for improvement in initial content rendering.",
+      "Investigating the failed \"How It Works\" page test result is a priority to ensure consistent performance across all pages."
+    ]
+  }
+}
