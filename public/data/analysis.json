@@ -1,9 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there may be issues with the page's loading time or other performance metrics. It is recommended to investigate and address these issues to ensure a positive user experience.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is crucial to investigate and resolve these problems to ensure the page's proper functioning and avoid user frustration.\n  - Recommendation: Analyze the waterfall chart and other diagnostic tools to identify bottlenecks and take necessary actions to optimize the page's performance.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Analyze the waterfall chart and other diagnostic tools to identify bottlenecks and take necessary actions to optimize the page's performance."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Identify and optimize heavy resources, such as images, videos, or third-party scripts, to reduce the overall load time."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Consider implementing server-side rendering or using a Content Delivery Network (CDN) to deliver content more efficiently."
+    }
+  ],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, indicating that the website's performance is generally good. However, there is still room for improvement in reducing load times and improving other performance metrics.",
-    "The \"How It Works\" page failed the web performance test, indicating that there may be issues with the page's loading time or other performance metrics. It is recommended to investigate and address these issues to ensure a positive user experience.",
-    "It is important to regularly monitor and test the website's performance to ensure that it remains optimal and provides a good user experience."
+    "The pricing page has the best performance, with the shortest load time and a low TTFB. This indicates that the page's resources are well-optimized and delivered efficiently. It can serve as a benchmark for optimizing other pages.",
+    "The blog page's FCP is relatively high, even though its load time is reasonable. This might indicate that the initial content is taking longer to load, which could be improved by focusing on delivering critical content more efficiently.",
+    "Reducing the load time for the homepage and addressing the issues on the \"How It Works\" page should be the top priorities for improving overall web performance."
   ]
 }

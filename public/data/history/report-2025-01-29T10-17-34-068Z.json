@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-01-29T10:17:34.068Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1397,
+      "metrics": {
+        "loadTime": 630.1000000000058,
+        "ttfb": 64.39999999999418,
+        "fcp": 457.80000000001746
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1084,
+      "metrics": {
+        "loadTime": 176.5,
+        "ttfb": 34.5,
+        "fcp": 180.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 979,
+      "metrics": {
+        "loadTime": 212.89999999999418,
+        "ttfb": 62.20000000001164,
+        "fcp": 219.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 954
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is crucial to investigate and resolve these problems to ensure the page's proper functioning and avoid user frustration.\n  - Recommendation: Analyze the waterfall chart and other diagnostic tools to identify bottlenecks and take necessary actions to optimize the page's performance.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the waterfall chart and other diagnostic tools to identify bottlenecks and take necessary actions to optimize the page's performance."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Identify and optimize heavy resources, such as images, videos, or third-party scripts, to reduce the overall load time."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Consider implementing server-side rendering or using a Content Delivery Network (CDN) to deliver content more efficiently."
+      }
+    ],
+    "insights": [
+      "The pricing page has the best performance, with the shortest load time and a low TTFB. This indicates that the page's resources are well-optimized and delivered efficiently. It can serve as a benchmark for optimizing other pages.",
+      "The blog page's FCP is relatively high, even though its load time is reasonable. This might indicate that the initial content is taking longer to load, which could be improved by focusing on delivering critical content more efficiently.",
+      "Reducing the load time for the homepage and addressing the issues on the \"How It Works\" page should be the top priorities for improving overall web performance."
+    ]
+  }
+}
