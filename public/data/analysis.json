@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, and its performance metrics are not available. It is recommended to investigate the cause of the failure and optimize the page's performance.",
   "issues": [],
   "insights": [
-    "The Time to First Byte (TTFB) metric is within an acceptable range for all pages, indicating that the server response time is adequate.",
-    "The blog page has the lowest load time (269.5 ms) among all pages, suggesting that it is well-optimized. Analyze its structure and apply similar optimizations to other pages.",
-    "The pricing page has a slightly higher TTFB (87.69 ms) than the other pages, which might be due to more complex server-side processing. Consider optimizing the server-side code or using a Content Delivery Network (CDN) to improve TTFB."
+    "The homepage, pricing page, and blog page have good performance metrics, indicating that the website's performance is optimized.",
+    "The TTFB for all pages is within acceptable limits, indicating that the server response time is good.",
+    "The FCP for all pages is also within acceptable limits, showing that the pages are rendering quickly.",
+    "The \"How It Works\" page failed the test, and its performance metrics are not available. It is recommended to investigate the cause of the failure and optimize the page's performance."
   ]
 }

@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-01-30T05:16:31.886Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1173,
+      "metrics": {
+        "loadTime": 499.8000000000029,
+        "ttfb": 46.90000000000873,
+        "fcp": 309.1999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 926,
+      "metrics": {
+        "loadTime": 217.60000000000582,
+        "ttfb": 71.89999999999418,
+        "fcp": 211.1999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 933,
+      "metrics": {
+        "loadTime": 207.6999999999971,
+        "ttfb": 38.19999999999709,
+        "fcp": 163.90000000000873
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 861
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, and its performance metrics are not available. It is recommended to investigate the cause of the failure and optimize the page's performance.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good performance metrics, indicating that the website's performance is optimized.",
+      "The TTFB for all pages is within acceptable limits, indicating that the server response time is good.",
+      "The FCP for all pages is also within acceptable limits, showing that the pages are rendering quickly.",
+      "The \"How It Works\" page failed the test, and its performance metrics are not available. It is recommended to investigate the cause of the failure and optimize the page's performance."
+    ]
+  }
+}
