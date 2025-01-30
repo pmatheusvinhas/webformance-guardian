@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate and resolve the issues causing this failure to ensure optimal user experience.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.\n  - Recommendation: Analyze the page's resources, such as images, scripts, and stylesheets, to identify any large files or bottlenecks that could be causing the slow load time. Optimize these resources by compressing images, minifying scripts and stylesheets, and leveraging browser caching.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Analyze the page's resources, such as images, scripts, and stylesheets, to identify any large files or bottlenecks that could be causing the slow load time. Optimize these resources by compressing images, minifying scripts and stylesheets, and leveraging browser caching."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Continue optimizing the homepage by addressing any issues identified during the analysis, such as large images or slow-loading scripts."
+    }
+  ],
   "insights": [
-    "The Time To First Byte (TTFB) is relatively low for all pages, indicating that the server response time is good.",
-    "First Contentful Paint (FCP) is reasonable for the pricing and blog pages (0.170 seconds and 0.177 seconds, respectively), but could be improved for the homepage (1.857 seconds). This suggests that the initial rendering of content on the homepage could be optimized.",
-    "The duration of the web performance tests is generally short, which is positive. However, the failed test for the \"How It Works\" page highlights the importance of monitoring and addressing any issues that arise."
+    "The pricing page and blog page have the fastest load times, indicating that their optimization strategies are effective. Analyze these pages to identify best practices that can be applied to other pages, such as the \"How It Works\" page.",
+    "Time to First Byte (TTFB) is relatively low across all pages, suggesting that the server response time is not a significant factor in the overall load time.",
+    "First Contentful Paint (FCP) is consistent across all pages, indicating that the initial rendering of the page's content is happening quickly. However, there are still opportunities to improve the load time by optimizing the resources that are loaded after the initial render."
   ]
 }
