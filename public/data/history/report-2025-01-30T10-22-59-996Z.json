@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-01-30T10:22:59.996Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2736,
+      "metrics": {
+        "loadTime": 1099.3000000000466,
+        "ttfb": 59.800000000046566,
+        "fcp": 1857.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 905,
+      "metrics": {
+        "loadTime": 199.30000000004657,
+        "ttfb": 31,
+        "fcp": 170.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 945,
+      "metrics": {
+        "loadTime": 220,
+        "ttfb": 39.899999999965075,
+        "fcp": 177
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 870
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The Time To First Byte (TTFB) is relatively low for all pages, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) is reasonable for the pricing and blog pages (0.170 seconds and 0.177 seconds, respectively), but could be improved for the homepage (1.857 seconds). This suggests that the initial rendering of content on the homepage could be optimized.",
+      "The duration of the web performance tests is generally short, which is positive. However, the failed test for the \"How It Works\" page highlights the importance of monitoring and addressing any issues that arise."
+    ]
+  }
+}

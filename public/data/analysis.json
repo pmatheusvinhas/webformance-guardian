@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, and its performance metrics are not available. It is recommended to investigate the cause of the failure and optimize the page's performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate and resolve the issues causing this failure to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good performance metrics, indicating that the website's performance is optimized.",
-    "The TTFB for all pages is within acceptable limits, indicating that the server response time is good.",
-    "The FCP for all pages is also within acceptable limits, showing that the pages are rendering quickly.",
-    "The \"How It Works\" page failed the test, and its performance metrics are not available. It is recommended to investigate the cause of the failure and optimize the page's performance."
+    "The Time To First Byte (TTFB) is relatively low for all pages, indicating that the server response time is good.",
+    "First Contentful Paint (FCP) is reasonable for the pricing and blog pages (0.170 seconds and 0.177 seconds, respectively), but could be improved for the homepage (1.857 seconds). This suggests that the initial rendering of content on the homepage could be optimized.",
+    "The duration of the web performance tests is generally short, which is positive. However, the failed test for the \"How It Works\" page highlights the importance of monitoring and addressing any issues that arise."
   ]
 }
