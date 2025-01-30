@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large file sizes, unoptimized images, or slow server response time. It is recommended to investigate and optimize these factors to improve the page's performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
   "issues": [],
   "insights": [
-    "The pricing page has a longer time to first byte (TTFB) of 264 ms compared to the other pages, indicating that the server response time may be slower for this page. It is recommended to investigate and optimize the server configuration to improve the page's performance.",
-    "The blog page has the shortest duration of 1361 ms, indicating that the page is well-optimized and performing well. It is recommended to maintain this level of performance for other pages as well.",
-    "The load times for all pages are within acceptable limits, but there is still room for improvement. It is recommended to continuously monitor and optimize the website's performance to provide a better user experience."
+    "The Time to First Byte (TTFB) metric is within an acceptable range for all pages, indicating that the server response time is adequate.",
+    "The blog page has the lowest load time (269.5 ms) among all pages, suggesting that it is well-optimized. Analyze its structure and apply similar optimizations to other pages.",
+    "The pricing page has a slightly higher TTFB (87.69 ms) than the other pages, which might be due to more complex server-side processing. Consider optimizing the server-side code or using a Content Delivery Network (CDN) to improve TTFB."
   ]
 }
