@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page did not pass the test, indicating a potential issue that needs immediate attention. It is recommended to investigate and resolve the issue to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The pricing page and blog page have the best performance, with load times under 300ms.",
-    "The time to first byte (TTFB) is generally low across all pages, indicating that the server response time is adequate.",
-    "The first contentful paint (FCP) is consistent across all pages, suggesting that the initial rendering of content is not significantly delayed."
+    "The pricing page has the shortest load time, indicating that the optimization efforts on this page have been successful. It can serve as a benchmark for optimizing other pages.",
+    "The time to first byte (TTFB) is consistent across all pages, suggesting that the server response time is not a significant factor in the overall load time.",
+    "The FCP on the homepage is shorter than the load time, indicating that the initial rendering of the page is relatively fast, but there are additional resources that take longer to load."
   ]
 }
