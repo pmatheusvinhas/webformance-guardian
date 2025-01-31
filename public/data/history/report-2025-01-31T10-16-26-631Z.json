@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-01-31T10:16:26.631Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1402,
+      "metrics": {
+        "loadTime": 540.3000000000029,
+        "ttfb": 79,
+        "fcp": 461.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1085,
+      "metrics": {
+        "loadTime": 312.1999999999971,
+        "ttfb": 158.39999999999418,
+        "fcp": 323.6999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1175,
+      "metrics": {
+        "loadTime": 294.1999999999971,
+        "ttfb": 137.39999999999418,
+        "fcp": 282.8000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1022
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the root cause and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The Time to First Byte (TTFB) is relatively low for all pages, indicating that the server response time is adequate.",
+      "First Contentful Paint (FCP) is also acceptable for all pages, suggesting that the initial rendering of content is fast.",
+      "The duration of the tests is consistent, ranging from 1022 ms to 1402 ms, indicating that the overall test environment is stable.",
+      "To improve the user experience, prioritize optimizing the \"How It Works\" page and then focus on reducing the homepage load time."
+    ]
+  }
+}
