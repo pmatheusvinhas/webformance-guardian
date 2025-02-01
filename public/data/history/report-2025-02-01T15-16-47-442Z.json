@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-01T15:16:47.442Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1584,
+      "metrics": {
+        "loadTime": 575.0999999999913,
+        "ttfb": 61.09999999999127,
+        "fcp": 338.1999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1385,
+      "metrics": {
+        "loadTime": 337.79999999998836,
+        "ttfb": 192.1999999999971,
+        "fcp": 332.3000000000029
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1452,
+      "metrics": {
+        "loadTime": 369.6999999999971,
+        "ttfb": 219.1999999999971,
+        "fcp": 329.3999999999942
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1333
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time. Recommendations include:\n  - Review and optimize images, videos, and other media on the page.\n  - Minify and compress CSS, JavaScript, and HTML files.\n  - Analyze and reduce the number of third-party requests.\n  - Evaluate server-side rendering or lazy-loading techniques to enhance initial page load.",
+    "issues": [],
+    "insights": [
+      "The passed tests for the homepage, pricing page, and blog page indicate that the website's overall performance is good, but there is still room for improvement. Implementing optimization techniques on these pages can further reduce load times and enhance user experience.",
+      "The failed test for the \"How It Works\" page highlights the need for immediate optimization to improve its performance. Investigating and addressing the root cause of the failure should be a priority.",
+      "Regularly monitoring and testing web performance can help identify issues early and maintain a high-performing website, ultimately improving user experience and potentially increasing conversion rates."
+    ]
+  }
+}
