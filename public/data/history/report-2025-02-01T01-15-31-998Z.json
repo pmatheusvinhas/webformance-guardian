@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-01T01:15:31.998Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1594,
+      "metrics": {
+        "loadTime": 576.5,
+        "ttfb": 75.60000000000582,
+        "fcp": 375.80000000001746
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1407,
+      "metrics": {
+        "loadTime": 469.1000000000058,
+        "ttfb": 179.20000000001164,
+        "fcp": 376.8999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1568,
+      "metrics": {
+        "loadTime": 522.1999999999825,
+        "ttfb": 232.10000000000582,
+        "fcp": 436.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1200
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of only 1200ms. It is recommended to investigate the cause of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time of the passed pages, but it is still within an acceptable range. It may be worth investigating ways to further optimize the homepage to reduce its load time.",
+      "The pricing page has the shortest Time to First Byte (TTFB) of all the pages, indicating that the server is responding quickly to requests. This is a positive sign for the website's performance.",
+      "The blog page has the shortest First Contentful Paint (FCP) of all the pages, meaning that users are able to see and interact with the content quickly. This is a good indicator of the website's user experience."
+    ]
+  }
+}
