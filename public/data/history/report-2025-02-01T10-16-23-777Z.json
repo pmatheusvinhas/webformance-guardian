@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-01T10:16:23.777Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1742,
+      "metrics": {
+        "loadTime": 628.8999999999942,
+        "ttfb": 50.39999999999418,
+        "fcp": 649.2999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 948,
+      "metrics": {
+        "loadTime": 215.19999999998254,
+        "ttfb": 72.69999999998254,
+        "fcp": 218.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1212,
+      "metrics": {
+        "loadTime": 315.30000000001746,
+        "ttfb": 158.20000000001164,
+        "fcp": 271.6000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 867
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time of all the pages tested, at 215.19999999998254ms. This is likely due to its simpler design and fewer resources to load compared to the other pages.",
+      "The blog page has the longest Time to First Contentful Paint (FCP) of all the pages tested, at 271.6000000000058ms. This indicates that there may be some initial content that is slow to load, causing a delay in displaying the first meaningful content to the user.",
+      "The \"How It Works\" page has the shortest duration of all the pages tested, at 867ms, but it still failed the test. This suggests that there may be a specific resource or script that is causing a bottleneck and preventing the page from loading properly. Investigating this issue should be a top priority."
+    ]
+  }
+}

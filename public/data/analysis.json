@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. This could be due to several reasons such as large images, excessive scripts, or poor server configuration. It is recommended to investigate this issue further and optimize the page.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The load times for all pages are fast, indicating good performance.",
-    "The TTFB is fast across all pages, meaning that the server is responding quickly.",
-    "The FCP is also reasonable, meaning that the user can see content on the page quickly.",
-    "The \"How It Works\" page failed the test and requires further investigation and optimization."
+    "The pricing page has the fastest load time of all the pages tested, at 215.19999999998254ms. This is likely due to its simpler design and fewer resources to load compared to the other pages.",
+    "The blog page has the longest Time to First Contentful Paint (FCP) of all the pages tested, at 271.6000000000058ms. This indicates that there may be some initial content that is slow to load, causing a delay in displaying the first meaningful content to the user.",
+    "The \"How It Works\" page has the shortest duration of all the pages tested, at 867ms, but it still failed the test. This suggests that there may be a specific resource or script that is causing a bottleneck and preventing the page from loading properly. Investigating this issue should be a top priority."
   ]
 }
