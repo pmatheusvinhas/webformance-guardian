@@ -1,9 +1,21 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time. Recommendations include:\n  - Review and optimize images, videos, and other media on the page.\n  - Minify and compress CSS, JavaScript, and HTML files.\n  - Analyze and reduce the number of third-party requests.\n  - Evaluate server-side rendering or lazy-loading techniques to enhance initial page load.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is crucial to investigate and optimize this page to ensure a better user experience. Recommendation: Analyze the page's content, resources, and scripts to identify bottlenecks and improve loading time.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the performance test. It is crucial to investigate and optimize this page to ensure a better user experience. Recommendation",
+      "recommendation": "Analyze the page's content, resources, and scripts to identify bottlenecks and improve loading time."
+    },
+    {
+      "severity": "info",
+      "message": "The homepage has a higher load time compared to the other pages. Although it passed the test, it can still be optimized for better performance. Recommendation",
+      "recommendation": "Consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching."
+    }
+  ],
   "insights": [
-    "The passed tests for the homepage, pricing page, and blog page indicate that the website's overall performance is good, but there is still room for improvement. Implementing optimization techniques on these pages can further reduce load times and enhance user experience.",
-    "The failed test for the \"How It Works\" page highlights the need for immediate optimization to improve its performance. Investigating and addressing the root cause of the failure should be a priority.",
-    "Regularly monitoring and testing web performance can help identify issues early and maintain a high-performing website, ultimately improving user experience and potentially increasing conversion rates."
+    "The Time to First Byte (TTFB) metric is relatively low across all pages, indicating that the server response time is good.",
+    "First Contentful Paint (FCP) is consistent across all pages, meaning that the initial view of the page is rendered quickly.",
+    "The blog page has the lowest load time, TTFB, and FCP among the pages that passed the test. This could serve as a benchmark for optimizing the other pages.",
+    "It is essential to address the critical issue on the \"How It Works\" page to ensure overall web performance and user satisfaction."
   ]
 }

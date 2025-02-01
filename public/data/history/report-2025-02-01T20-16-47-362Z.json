@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-02-01T20:16:47.362Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1515,
+      "metrics": {
+        "loadTime": 567.4000000000233,
+        "ttfb": 74.70000000001164,
+        "fcp": 624.3999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1129,
+      "metrics": {
+        "loadTime": 363,
+        "ttfb": 184.70000000001164,
+        "fcp": 371.3999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1173,
+      "metrics": {
+        "loadTime": 270.1000000000058,
+        "ttfb": 114.10000000000582,
+        "fcp": 263.69999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 986
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is crucial to investigate and optimize this page to ensure a better user experience. Recommendation: Analyze the page's content, resources, and scripts to identify bottlenecks and improve loading time.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the performance test. It is crucial to investigate and optimize this page to ensure a better user experience. Recommendation",
+        "recommendation": "Analyze the page's content, resources, and scripts to identify bottlenecks and improve loading time."
+      },
+      {
+        "severity": "info",
+        "message": "The homepage has a higher load time compared to the other pages. Although it passed the test, it can still be optimized for better performance. Recommendation",
+        "recommendation": "Consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching."
+      }
+    ],
+    "insights": [
+      "The Time to First Byte (TTFB) metric is relatively low across all pages, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) is consistent across all pages, meaning that the initial view of the page is rendered quickly.",
+      "The blog page has the lowest load time, TTFB, and FCP among the pages that passed the test. This could serve as a benchmark for optimizing the other pages.",
+      "It is essential to address the critical issue on the \"How It Works\" page to ensure overall web performance and user satisfaction."
+    ]
+  }
+}
