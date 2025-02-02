@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-02T10:16:21.117Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1849,
+      "metrics": {
+        "loadTime": 689.1000000000058,
+        "ttfb": 44.30000000001746,
+        "fcp": 585.2999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1254,
+      "metrics": {
+        "loadTime": 223.09999999997672,
+        "ttfb": 71.89999999999418,
+        "fcp": 201.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1388,
+      "metrics": {
+        "loadTime": 343.80000000001746,
+        "ttfb": 182.89999999999418,
+        "fcp": 297.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1245
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is essential to investigate the cause and optimize the page to improve its load time. Recommendations include reducing image sizes, minifying CSS and JavaScript files, and leveraging browser caching.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time, TTFB, and FCP among all pages, suggesting effective optimization techniques. Analyze the pricing page's configuration to apply similar optimizations to other pages.",
+      "The blog page has a longer TTFB than the pricing page, indicating that there might be server-side issues or database queries that need optimization.",
+      "The homepage load time is relatively high compared to the other pages. Investigate potential bottlenecks, such as third-party scripts, to reduce the overall load time."
+    ]
+  }
+}
