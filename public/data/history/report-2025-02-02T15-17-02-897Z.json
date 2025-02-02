@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-02T15:17:02.897Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1774,
+      "metrics": {
+        "loadTime": 626,
+        "ttfb": 62.69999999998254,
+        "fcp": 774.1999999999825
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1345,
+      "metrics": {
+        "loadTime": 339.5,
+        "ttfb": 103.90000000002328,
+        "fcp": 569.2999999999884
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1121,
+      "metrics": {
+        "loadTime": 364.29999999998836,
+        "ttfb": 120.20000000001164,
+        "fcp": 263.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 991
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time, at 339.5 milliseconds, indicating that its resources are well-optimized.",
+      "The homepage's time to first byte (TTFB) time is relatively high, at 62.69999999998254 milliseconds. This could indicate server-side issues that need to be addressed.",
+      "The blog page's FCP time is significantly faster than the homepage's and pricing page's, suggesting that its above-the-fold content is optimized for fast loading."
+    ]
+  }
+}
