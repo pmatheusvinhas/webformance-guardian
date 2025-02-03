@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-03T01:13:31.689Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1458,
+      "metrics": {
+        "loadTime": 603,
+        "ttfb": 74.10000000000582,
+        "fcp": 534.8000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1170,
+      "metrics": {
+        "loadTime": 218.70000000001164,
+        "ttfb": 55.10000000000582,
+        "fcp": 228
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1203,
+      "metrics": {
+        "loadTime": 252.89999999999418,
+        "ttfb": 66.69999999998254,
+        "fcp": 182.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 930
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include optimizing images, minifying CSS and JavaScript files, and leveraging browser caching.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have faster load times, likely due to fewer resources and simpler layouts. This suggests that optimizing the homepage's structure and content could lead to improved performance.",
+      "Time to First Byte (TTFB) is relatively fast across all pages, indicating that the server response time is adequate.",
+      "First Contentful Paint (FCP) is also acceptable, meaning that the pages are visually loading quickly for users. However, focusing on load time optimization can still enhance user experience."
+    ]
+  }
+}

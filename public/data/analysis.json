@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there might be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include optimizing images, minifying CSS and JavaScript files, and leveraging browser caching.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, indicating that the website's performance is generally good.",
-    "The \"How It Works\" page's failure in the web performance test suggests that there might be issues with its code, images, or other resources that are causing it to load slowly.",
-    "It is recommended to investigate and optimize the \"How It Works\" page to improve its performance and ensure that it meets the website's performance standards."
+    "The pricing page and blog page have faster load times, likely due to fewer resources and simpler layouts. This suggests that optimizing the homepage's structure and content could lead to improved performance.",
+    "Time to First Byte (TTFB) is relatively fast across all pages, indicating that the server response time is adequate.",
+    "First Contentful Paint (FCP) is also acceptable, meaning that the pages are visually loading quickly for users. However, focusing on load time optimization can still enhance user experience."
   ]
 }
