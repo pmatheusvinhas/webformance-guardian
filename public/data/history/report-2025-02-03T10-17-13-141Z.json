@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-03T10:17:13.141Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2081,
+      "metrics": {
+        "loadTime": 952.7999999999884,
+        "ttfb": 204.89999999999418,
+        "fcp": 806.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1396,
+      "metrics": {
+        "loadTime": 363.6000000000058,
+        "ttfb": 213.60000000000582,
+        "fcp": 336.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1645,
+      "metrics": {
+        "loadTime": 285,
+        "ttfb": 75.80000000001746,
+        "fcp": 191.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1256
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server configuration to identify the cause of the failure and improve its performance.",
+    "issues": [],
+    "insights": [
+      "The blog page has the lowest load time, TTFB, and FCP, indicating that it is the best-optimized page among the tested pages. Analyzing the blog page's code, resources, and configuration can provide insights into optimizing the other pages.",
+      "The homepage has the longest load time and FCP, suggesting that there are opportunities to optimize its performance further. Investigating and addressing the high TTFB and FCP values can significantly improve the user experience.",
+      "All pages have passed the test, but the \"How It Works\" page's failure indicates potential issues that need immediate attention. Addressing the failure and optimizing the page's performance can improve user experience and prevent potential user abandonment."
+    ]
+  }
+}

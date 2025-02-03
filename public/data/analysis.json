@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large images, scripts, or other resources that might be causing delays in loading the page.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server configuration to identify the cause of the failure and improve its performance.",
   "issues": [],
   "insights": [
-    "The Time To First Byte (TTFB) metric is relatively low for all pages, indicating that the server response time is good.",
-    "First Contentful Paint (FCP) is also within acceptable ranges for all pages, suggesting that the initial rendering of the page is happening quickly.",
-    "The blog page has the fastest load time (218.6 ms) among all pages, which could be due to its simpler design or fewer resources compared to the other pages. It can serve as a benchmark for optimizing the other pages.",
-    "It is crucial to investigate and address the issues causing the \"How It Works\" page to fail the web performance test to ensure a consistent user experience across all pages."
+    "The blog page has the lowest load time, TTFB, and FCP, indicating that it is the best-optimized page among the tested pages. Analyzing the blog page's code, resources, and configuration can provide insights into optimizing the other pages.",
+    "The homepage has the longest load time and FCP, suggesting that there are opportunities to optimize its performance further. Investigating and addressing the high TTFB and FCP values can significantly improve the user experience.",
+    "All pages have passed the test, but the \"How It Works\" page's failure indicates potential issues that need immediate attention. Addressing the failure and optimizing the page's performance can improve user experience and prevent potential user abandonment."
   ]
 }
