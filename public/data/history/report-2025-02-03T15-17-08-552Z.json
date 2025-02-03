@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-02-03T15:17:08.552Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1543,
+      "metrics": {
+        "loadTime": 750.1999999999971,
+        "ttfb": 80.5,
+        "fcp": 522.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 2154,
+      "metrics": {
+        "loadTime": 1107.199999999997,
+        "ttfb": 416.6999999999971,
+        "fcp": 598.8999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1690,
+      "metrics": {
+        "loadTime": 457.40000000000873,
+        "ttfb": 205.8000000000029,
+        "fcp": 396.59999999999127
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1265
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Recommendation: Investigate the cause of the failure and optimize the page's performance.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the web performance test. Recommendation",
+        "recommendation": "Investigate the cause of the failure and optimize the page's performance."
+      },
+      {
+        "severity": "info",
+        "message": "TTFB for the homepage and pricing page is relatively high (80.5ms and 416.7ms, respectively). Recommendation",
+        "recommendation": "Investigate server-side issues, such as database queries, caching, or rendering, that may be causing the delay in serving the first byte."
+      },
+      {
+        "severity": "critical",
+        "message": "FCP for the homepage is higher than ideal (522.6ms). Recommendation",
+        "recommendation": "Optimize above-the-fold content, such as images and critical CSS, to improve FCP."
+      }
+    ],
+    "insights": [
+      "The blog page has the best performance among all pages, with the lowest load time, TTFB, and FCP. This could be due to optimized above-the-fold content and efficient server-side rendering.",
+      "The homepage has a longer load time than the blog and pricing pages, despite having a lower TTFB than the pricing page. This suggests that there may be issues with rendering or loading non-critical resources that could be optimized.",
+      "The pricing page has a longer TTFB than the homepage, despite having a similar load time. This could be due to more complex server-side processing or database queries for the pricing page."
+    ]
+  }
+}

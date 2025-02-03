@@ -1,9 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server configuration to identify the cause of the failure and improve its performance.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Recommendation: Investigate the cause of the failure and optimize the page's performance.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. Recommendation",
+      "recommendation": "Investigate the cause of the failure and optimize the page's performance."
+    },
+    {
+      "severity": "info",
+      "message": "TTFB for the homepage and pricing page is relatively high (80.5ms and 416.7ms, respectively). Recommendation",
+      "recommendation": "Investigate server-side issues, such as database queries, caching, or rendering, that may be causing the delay in serving the first byte."
+    },
+    {
+      "severity": "critical",
+      "message": "FCP for the homepage is higher than ideal (522.6ms). Recommendation",
+      "recommendation": "Optimize above-the-fold content, such as images and critical CSS, to improve FCP."
+    }
+  ],
   "insights": [
-    "The blog page has the lowest load time, TTFB, and FCP, indicating that it is the best-optimized page among the tested pages. Analyzing the blog page's code, resources, and configuration can provide insights into optimizing the other pages.",
-    "The homepage has the longest load time and FCP, suggesting that there are opportunities to optimize its performance further. Investigating and addressing the high TTFB and FCP values can significantly improve the user experience.",
-    "All pages have passed the test, but the \"How It Works\" page's failure indicates potential issues that need immediate attention. Addressing the failure and optimizing the page's performance can improve user experience and prevent potential user abandonment."
+    "The blog page has the best performance among all pages, with the lowest load time, TTFB, and FCP. This could be due to optimized above-the-fold content and efficient server-side rendering.",
+    "The homepage has a longer load time than the blog and pricing pages, despite having a lower TTFB than the pricing page. This suggests that there may be issues with rendering or loading non-critical resources that could be optimized.",
+    "The pricing page has a longer TTFB than the homepage, despite having a similar load time. This could be due to more complex server-side processing or database queries for the pricing page."
   ]
 }
