@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-02-03T20:17:18.646Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2115,
+      "metrics": {
+        "loadTime": 746.1000000000058,
+        "ttfb": 170.20000000001164,
+        "fcp": 776.8000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1695,
+      "metrics": {
+        "loadTime": 553.6000000000058,
+        "ttfb": 310,
+        "fcp": 513.3000000000029
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 2169,
+      "metrics": {
+        "loadTime": 687.5,
+        "ttfb": 272.20000000001164,
+        "fcp": 452.8000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1482
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is essential to investigate the cause and optimize the page to improve its loading time. Recommendation: Review server logs, third-party integrations, and page components to identify bottlenecks and implement optimization strategies.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the performance test. It is essential to investigate the cause and optimize the page to improve its loading time. Recommendation",
+        "recommendation": "Review server logs, third-party integrations, and page components to identify bottlenecks and implement optimization strategies."
+      },
+      {
+        "severity": "info",
+        "message": "The homepage has a relatively high load time (746 ms) compared to the other pages. Although it passed the test, there is room for improvement. Recommendation",
+        "recommendation": "Analyze and optimize images, JavaScript, and CSS resources to reduce the load time."
+      },
+      {
+        "severity": "info",
+        "message": "The blog page has the fastest FCP (452 ms) among all pages. This indicates that the page's initial content is loading quickly. Recommendation",
+        "recommendation": "Maintain this performance by regularly checking and optimizing new blog posts."
+      }
+    ],
+    "insights": [
+      "TTFB is generally low across all pages, which indicates that the server is responding quickly. This is a positive sign for user experience and SEO.",
+      "FCP is within acceptable ranges for all pages, ensuring that users see the initial content quickly.",
+      "Investigating the cause of the \"How It Works\" page failure should be a priority to maintain consistent performance across the website."
+    ]
+  }
+}

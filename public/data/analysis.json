@@ -1,25 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Recommendation: Investigate the cause of the failure and optimize the page's performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is essential to investigate the cause and optimize the page to improve its loading time. Recommendation: Review server logs, third-party integrations, and page components to identify bottlenecks and implement optimization strategies.",
   "issues": [
     {
       "severity": "info",
-      "message": "The \"How It Works\" page failed the web performance test. Recommendation",
-      "recommendation": "Investigate the cause of the failure and optimize the page's performance."
+      "message": "The \"How It Works\" page failed the performance test. It is essential to investigate the cause and optimize the page to improve its loading time. Recommendation",
+      "recommendation": "Review server logs, third-party integrations, and page components to identify bottlenecks and implement optimization strategies."
     },
     {
       "severity": "info",
-      "message": "TTFB for the homepage and pricing page is relatively high (80.5ms and 416.7ms, respectively). Recommendation",
-      "recommendation": "Investigate server-side issues, such as database queries, caching, or rendering, that may be causing the delay in serving the first byte."
+      "message": "The homepage has a relatively high load time (746 ms) compared to the other pages. Although it passed the test, there is room for improvement. Recommendation",
+      "recommendation": "Analyze and optimize images, JavaScript, and CSS resources to reduce the load time."
     },
     {
-      "severity": "critical",
-      "message": "FCP for the homepage is higher than ideal (522.6ms). Recommendation",
-      "recommendation": "Optimize above-the-fold content, such as images and critical CSS, to improve FCP."
+      "severity": "info",
+      "message": "The blog page has the fastest FCP (452 ms) among all pages. This indicates that the page's initial content is loading quickly. Recommendation",
+      "recommendation": "Maintain this performance by regularly checking and optimizing new blog posts."
     }
   ],
   "insights": [
-    "The blog page has the best performance among all pages, with the lowest load time, TTFB, and FCP. This could be due to optimized above-the-fold content and efficient server-side rendering.",
-    "The homepage has a longer load time than the blog and pricing pages, despite having a lower TTFB than the pricing page. This suggests that there may be issues with rendering or loading non-critical resources that could be optimized.",
-    "The pricing page has a longer TTFB than the homepage, despite having a similar load time. This could be due to more complex server-side processing or database queries for the pricing page."
+    "TTFB is generally low across all pages, which indicates that the server is responding quickly. This is a positive sign for user experience and SEO.",
+    "FCP is within acceptable ranges for all pages, ensuring that users see the initial content quickly.",
+    "Investigating the cause of the \"How It Works\" page failure should be a priority to maintain consistent performance across the website."
   ]
 }
