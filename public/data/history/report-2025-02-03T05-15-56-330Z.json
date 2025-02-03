@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-03T05:15:56.330Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1294,
+      "metrics": {
+        "loadTime": 519.2000000000116,
+        "ttfb": 81.60000000000582,
+        "fcp": 335.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1113,
+      "metrics": {
+        "loadTime": 284.69999999998254,
+        "ttfb": 140,
+        "fcp": 300.69999999998254
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1385,
+      "metrics": {
+        "loadTime": 218.60000000000582,
+        "ttfb": 64.20000000001164,
+        "fcp": 211.90000000002328
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 926
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large images, scripts, or other resources that might be causing delays in loading the page.",
+    "issues": [],
+    "insights": [
+      "The Time To First Byte (TTFB) metric is relatively low for all pages, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) is also within acceptable ranges for all pages, suggesting that the initial rendering of the page is happening quickly.",
+      "The blog page has the fastest load time (218.6 ms) among all pages, which could be due to its simpler design or fewer resources compared to the other pages. It can serve as a benchmark for optimizing the other pages.",
+      "It is crucial to investigate and address the issues causing the \"How It Works\" page to fail the web performance test to ensure a consistent user experience across all pages."
+    ]
+  }
+}
