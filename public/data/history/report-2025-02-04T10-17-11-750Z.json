@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-04T10:17:11.750Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1421,
+      "metrics": {
+        "loadTime": 604.7000000000116,
+        "ttfb": 51.80000000001746,
+        "fcp": 468.0999999999767
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 984,
+      "metrics": {
+        "loadTime": 290.5,
+        "ttfb": 40.5,
+        "fcp": 169.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1010,
+      "metrics": {
+        "loadTime": 360.70000000001164,
+        "ttfb": 52.10000000000582,
+        "fcp": 195.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 955
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The Time to First Byte (TTFB) is low across all pages, which is a positive sign, as it indicates that the server is responding quickly.",
+      "The duration of the tests is within an acceptable range, with the longest test taking only 1.01 seconds.",
+      "There is a noticeable difference in load times between the \"How It Works\" page and the other pages, suggesting specific issues that need to be addressed."
+    ]
+  }
+}
