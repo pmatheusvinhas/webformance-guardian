@@ -1,25 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is essential to investigate the cause and optimize the page to improve its loading time. Recommendation: Review server logs, third-party integrations, and page components to identify bottlenecks and implement optimization strategies.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks. (Recommendation: Use browser developer tools or performance monitoring services to analyze detailed waterfall charts and identify specific issues.)",
   "issues": [
     {
       "severity": "info",
-      "message": "The \"How It Works\" page failed the performance test. It is essential to investigate the cause and optimize the page to improve its loading time. Recommendation",
-      "recommendation": "Review server logs, third-party integrations, and page components to identify bottlenecks and implement optimization strategies."
+      "message": "The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks. (Recommendation",
+      "recommendation": "Use browser developer tools or performance monitoring services to analyze detailed waterfall charts and identify specific issues.)"
     },
     {
-      "severity": "info",
-      "message": "The homepage has a relatively high load time (746 ms) compared to the other pages. Although it passed the test, there is room for improvement. Recommendation",
-      "recommendation": "Analyze and optimize images, JavaScript, and CSS resources to reduce the load time."
-    },
-    {
-      "severity": "info",
-      "message": "The blog page has the fastest FCP (452 ms) among all pages. This indicates that the page's initial content is loading quickly. Recommendation",
-      "recommendation": "Maintain this performance by regularly checking and optimizing new blog posts."
+      "severity": "critical",
+      "message": "The homepage has a slightly longer load time (591.7 ms) compared to the pricing page (438.7 ms) and blog page (502.7 ms). While this difference is not critical, it may be worth optimizing the homepage to reduce load time. (Recommendation",
+      "recommendation": "Review and optimize images, minify CSS and JavaScript, and leverage browser caching.)"
     }
   ],
   "insights": [
-    "TTFB is generally low across all pages, which indicates that the server is responding quickly. This is a positive sign for user experience and SEO.",
-    "FCP is within acceptable ranges for all pages, ensuring that users see the initial content quickly.",
-    "Investigating the cause of the \"How It Works\" page failure should be a priority to maintain consistent performance across the website."
+    "The Time to First Byte (TTFB) for all pages is within an acceptable range (68.6 ms for the homepage, 184.2 ms for the pricing page, and 200.5 ms for the blog page). This indicates that the server is responding quickly, and the issues likely lie in client-side rendering or resource loading.",
+    "First Contentful Paint (FCP) is also within an acceptable range for all pages (447.9 ms for the homepage, 332.3 ms for the pricing page, and 379 ms for the blog page). This suggests that the pages are rendering quickly and users are seeing content promptly.",
+    "The duration of the tests for all pages is relatively short (1405 ms for the homepage, 1098 ms for the pricing page, and 1270 ms for the blog page), indicating that the pages are loading efficiently. However, the \"How It Works\" page failed the test, highlighting the need for further investigation and optimization."
   ]
 }

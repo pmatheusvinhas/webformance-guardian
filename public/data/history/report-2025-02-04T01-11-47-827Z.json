@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-02-04T01:11:47.827Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1405,
+      "metrics": {
+        "loadTime": 591.6999999999825,
+        "ttfb": 68.60000000000582,
+        "fcp": 447.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1098,
+      "metrics": {
+        "loadTime": 438.69999999998254,
+        "ttfb": 184.19999999998254,
+        "fcp": 332.30000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1270,
+      "metrics": {
+        "loadTime": 502.70000000001164,
+        "ttfb": 200.5,
+        "fcp": 379
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 957
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks. (Recommendation: Use browser developer tools or performance monitoring services to analyze detailed waterfall charts and identify specific issues.)",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks. (Recommendation",
+        "recommendation": "Use browser developer tools or performance monitoring services to analyze detailed waterfall charts and identify specific issues.)"
+      },
+      {
+        "severity": "critical",
+        "message": "The homepage has a slightly longer load time (591.7 ms) compared to the pricing page (438.7 ms) and blog page (502.7 ms). While this difference is not critical, it may be worth optimizing the homepage to reduce load time. (Recommendation",
+        "recommendation": "Review and optimize images, minify CSS and JavaScript, and leverage browser caching.)"
+      }
+    ],
+    "insights": [
+      "The Time to First Byte (TTFB) for all pages is within an acceptable range (68.6 ms for the homepage, 184.2 ms for the pricing page, and 200.5 ms for the blog page). This indicates that the server is responding quickly, and the issues likely lie in client-side rendering or resource loading.",
+      "First Contentful Paint (FCP) is also within an acceptable range for all pages (447.9 ms for the homepage, 332.3 ms for the pricing page, and 379 ms for the blog page). This suggests that the pages are rendering quickly and users are seeing content promptly.",
+      "The duration of the tests for all pages is relatively short (1405 ms for the homepage, 1098 ms for the pricing page, and 1270 ms for the blog page), indicating that the pages are loading efficiently. However, the \"How It Works\" page failed the test, highlighting the need for further investigation and optimization."
+    ]
+  }
+}
