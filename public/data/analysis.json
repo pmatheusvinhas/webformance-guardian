@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its performance.",
   "issues": [],
   "insights": [
-    "The Time to First Byte (TTFB) is low across all pages, which is a positive sign, as it indicates that the server is responding quickly.",
-    "The duration of the tests is within an acceptable range, with the longest test taking only 1.01 seconds.",
-    "There is a noticeable difference in load times between the \"How It Works\" page and the other pages, suggesting specific issues that need to be addressed."
+    "The pricing page has the shortest duration of 1007ms, indicating that it loads quickly and efficiently.",
+    "The homepage has a longer duration of 1474ms, which is higher than the other pages. It is essential to investigate the cause of this longer duration and optimize the page.",
+    "The blog page has a longer time to first byte (TTFB) of 65.8ms, indicating that the server may be slower to respond to requests. It is recommended to investigate the server's performance and optimize it if necessary."
   ]
 }
