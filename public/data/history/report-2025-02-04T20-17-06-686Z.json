@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-04T20:17:06.686Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1740,
+      "metrics": {
+        "loadTime": 614.3000000000029,
+        "ttfb": 53.69999999999709,
+        "fcp": 385
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1266,
+      "metrics": {
+        "loadTime": 380.70000000001164,
+        "ttfb": 54.80000000000291,
+        "fcp": 190.09999999999127
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1436,
+      "metrics": {
+        "loadTime": 393.8000000000029,
+        "ttfb": 175.40000000000873,
+        "fcp": 291.6000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1324
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have load times below 400 ms, which is a good performance indicator.",
+      "The TTFB (Time to First Byte) for all pages is relatively low, suggesting that the server response time is adequate.",
+      "The FCP (First Contentful Paint) for all pages is also reasonable, indicating that the initial rendering of the page is quick.",
+      "However, the \"How It Works\" page failed the test, and it is essential to identify and address the issues causing this failure. Possible areas to investigate include server configuration, code optimization, and resource management."
+    ]
+  }
+}
