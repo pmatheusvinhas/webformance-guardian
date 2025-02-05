@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-02-05T15:16:50.972Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1880,
+      "metrics": {
+        "loadTime": 875.6999999999825,
+        "ttfb": 219,
+        "fcp": 570.5999999999767
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1409,
+      "metrics": {
+        "loadTime": 374.1000000000058,
+        "ttfb": 222.70000000001164,
+        "fcp": 349.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1486,
+      "metrics": {
+        "loadTime": 376,
+        "ttfb": 154,
+        "fcp": 266.80000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1245
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and optimize this page to improve its load time and passing rate.",
+    "issues": [],
+    "insights": [
+      "The homepage has a load time of 875.69 ms, which is within the acceptable range. However, optimizing the homepage further can enhance user experience.",
+      "The blog page has the lowest load time (376 ms) among all pages, indicating efficient optimization. This can serve as a benchmark for optimizing other pages.",
+      "The pricing page has a slightly higher load time (374.1 ms) than the blog page, but it is still within the acceptable range. It can be further optimized to reduce the load time.",
+      "The TTFB for all pages is low, suggesting that the server is performing well. However, optimizing the content delivery network (CDN), caching, and server-side rendering can help reduce the load time for the \"How It Works\" page.",
+      "It is essential to prioritize fixing the issues on the \"How It Works\" page to ensure consistent performance across all pages."
+    ]
+  }
+}
