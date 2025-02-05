@@ -1,11 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and optimize this page to improve its load time and passing rate.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1101ms. To address this, it is recommended to identify and optimize the elements causing the delay, such as images, scripts, or external resources.",
   "issues": [],
   "insights": [
-    "The homepage has a load time of 875.69 ms, which is within the acceptable range. However, optimizing the homepage further can enhance user experience.",
-    "The blog page has the lowest load time (376 ms) among all pages, indicating efficient optimization. This can serve as a benchmark for optimizing other pages.",
-    "The pricing page has a slightly higher load time (374.1 ms) than the blog page, but it is still within the acceptable range. It can be further optimized to reduce the load time.",
-    "The TTFB for all pages is low, suggesting that the server is performing well. However, optimizing the content delivery network (CDN), caching, and server-side rendering can help reduce the load time for the \"How It Works\" page.",
-    "It is essential to prioritize fixing the issues on the \"How It Works\" page to ensure consistent performance across all pages."
+    "The pricing page and blog page have the fastest load times, at 291.3999999999942ms and 430.5ms, respectively. This indicates that the optimization strategies applied to these pages are effective and could be used as a reference for other pages.",
+    "The time to first contentful paint (FCP) is relatively high on all pages, ranging from 307.8999999999942ms to 555.1000000000058ms. This suggests that there might be issues with rendering the initial visible content, which could be improved by optimizing critical rendering path elements, such as CSS and JavaScript.",
+    "The time to first byte (TTFB) is within an acceptable range on all pages, indicating that the server response time is not a significant factor affecting web performance. However, it is still essential to monitor and maintain this metric to ensure consistent performance."
   ]
 }
