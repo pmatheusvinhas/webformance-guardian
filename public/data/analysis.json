@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, with a duration of 1143ms. It is crucial to investigate and optimize this page to improve user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is good.",
-    "The FCP (First Contentful Paint) for all pages is also reasonable, suggesting that the pages are rendering quickly.",
-    "The failed \"How It Works\" page requires immediate attention to identify and resolve bottlenecks affecting its performance."
+    "The homepage, pricing page, and blog page have good load times, indicating efficient optimization and resource management.",
+    "The \"How It Works\" page's failure suggests potential bottlenecks, such as unoptimized images, excessive scripts, or inefficient server-side processing.",
+    "Addressing the issues on the \"How It Works\" page can significantly improve user experience and reduce bounce rates."
   ]
 }
