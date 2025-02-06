@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the performance test. Investigate the root cause of this failure and optimize the page's performance.",
   "issues": [],
   "insights": [
-    "The Time to First Byte (TTFB) metric is relatively low for all pages, indicating that the server's response time is fast. This is a good sign, as it means that users will see content on the page quickly.",
-    "The First Contentful Paint (FCP) metric is also low for most pages, indicating that the page's above-the-fold content is loading quickly. This is crucial for providing a good user experience, as users will see content on the page quickly.",
-    "The duration metric is a good indicator of the page's overall performance. The lower the duration, the better the page's performance. It is essential to optimize pages with high durations to improve user experience."
+    "The homepage has the longest load time (621.9 ms) among the pages, which could still be optimized. Consider reducing the number of requests, optimizing images, and minifying CSS and JavaScript files.",
+    "The Time To First Byte (TTFB) is consistent across all pages, ranging from 58.8 ms to 77.5 ms, indicating good server response times.",
+    "First Contentful Paint (FCP) is also consistent across all pages, ranging from 214.3 ms to 491.8 ms, suggesting that the pages are rendering their first bits of content quickly.",
+    "The \"How It Works\" page failed the performance test, which could be due to various reasons, such as large images, excessive render-blocking resources, or slow server response times. Investigate these potential issues and optimize the page accordingly."
   ]
 }

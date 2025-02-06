@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-06T15:17:24.106Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1532,
+      "metrics": {
+        "loadTime": 621.8999999999942,
+        "ttfb": 77.5,
+        "fcp": 491.80000000001746
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1026,
+      "metrics": {
+        "loadTime": 210.5,
+        "ttfb": 58.79999999998836,
+        "fcp": 225.89999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1144,
+      "metrics": {
+        "loadTime": 279.8999999999942,
+        "ttfb": 68.5,
+        "fcp": 214.30000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1001
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the performance test. Investigate the root cause of this failure and optimize the page's performance.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (621.9 ms) among the pages, which could still be optimized. Consider reducing the number of requests, optimizing images, and minifying CSS and JavaScript files.",
+      "The Time To First Byte (TTFB) is consistent across all pages, ranging from 58.8 ms to 77.5 ms, indicating good server response times.",
+      "First Contentful Paint (FCP) is also consistent across all pages, ranging from 214.3 ms to 491.8 ms, suggesting that the pages are rendering their first bits of content quickly.",
+      "The \"How It Works\" page failed the performance test, which could be due to various reasons, such as large images, excessive render-blocking resources, or slow server response times. Investigate these potential issues and optimize the page accordingly."
+    ]
+  }
+}
