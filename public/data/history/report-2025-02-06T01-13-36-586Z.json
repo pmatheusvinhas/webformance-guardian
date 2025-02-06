@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-06T01:13:36.586Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1821,
+      "metrics": {
+        "loadTime": 703.4000000000233,
+        "ttfb": 62,
+        "fcp": 831.2999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 945,
+      "metrics": {
+        "loadTime": 201.5,
+        "ttfb": 42.29999999998836,
+        "fcp": 206.09999999997672
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1069,
+      "metrics": {
+        "loadTime": 272.19999999995343,
+        "ttfb": 46.79999999998836,
+        "fcp": 188.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1041
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1041ms. To improve this page's performance, consider optimizing images, minifying CSS and JavaScript files, and reducing the number of HTTP requests.",
+    "issues": [],
+    "insights": [
+      "The Time To First Byte (TTFB) is relatively low for all pages, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) is also within acceptable ranges for all pages, meaning that the initial view of the page is rendered quickly.",
+      "To maintain consistent performance, regularly monitor and optimize all pages, focusing on reducing HTTP requests, optimizing images, and minifying CSS and JavaScript files."
+    ]
+  }
+}
