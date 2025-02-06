@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-06T20:16:43.216Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1508,
+      "metrics": {
+        "loadTime": 593.3000000000029,
+        "ttfb": 60,
+        "fcp": 585.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 991,
+      "metrics": {
+        "loadTime": 196.1999999999971,
+        "ttfb": 39,
+        "fcp": 188.09999999999127
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1256,
+      "metrics": {
+        "loadTime": 308.40000000000873,
+        "ttfb": 40.70000000001164,
+        "fcp": 189.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 916
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and address the causes of this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time, TTFB, and First Contentful Paint (FCP) among all pages. This indicates efficient optimization and resource management.",
+      "The blog page has a higher FCP than the pricing page, suggesting that the blog page might benefit from further optimization to improve user experience.",
+      "The homepage has a significantly higher load time than the pricing and blog pages, indicating potential optimization opportunities to enhance user experience."
+    ]
+  }
+}
