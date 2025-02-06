@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-06T05:17:07.234Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1477,
+      "metrics": {
+        "loadTime": 689.2000000000116,
+        "ttfb": 83.20000000001164,
+        "fcp": 444.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1029,
+      "metrics": {
+        "loadTime": 304.59999999999127,
+        "ttfb": 73.80000000000291,
+        "fcp": 227.90000000000873
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1171,
+      "metrics": {
+        "loadTime": 261.29999999998836,
+        "ttfb": 51.59999999999127,
+        "fcp": 186
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1051
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server configuration to identify and fix the problem.",
+    "issues": [],
+    "insights": [
+      "The test results indicate that the homepage, pricing page, and blog page have good load times, but there is still room for improvement. Implementing optimization techniques such as image optimization, minification, and caching can further reduce the load times and improve the user experience.",
+      "The \"How It Works\" page failed the test, indicating potential issues that need to be addressed. It is crucial to investigate and resolve the issue to ensure that the page performs well and provides a good user experience.",
+      "It is recommended to regularly test and monitor the website's performance to ensure that it meets the desired standards and provides a good user experience."
+    ]
+  }
+}
