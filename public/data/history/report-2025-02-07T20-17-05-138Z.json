@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-07T20:17:05.138Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1462,
+      "metrics": {
+        "loadTime": 620.3999999999942,
+        "ttfb": 54.39999999999418,
+        "fcp": 493.3999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 993,
+      "metrics": {
+        "loadTime": 210.60000000000582,
+        "ttfb": 50.10000000000582,
+        "fcp": 194.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1026,
+      "metrics": {
+        "loadTime": 284.1000000000058,
+        "ttfb": 65.79999999998836,
+        "fcp": 200.90000000002328
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1043
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of 1043ms. To address this issue, it is recommended to identify the elements causing the delay and optimize them. This may include image compression, minification of CSS and JavaScript files, or reducing the number of requests.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, indicating that their optimizations may serve as a good reference for other pages.",
+      "First Contentful Paint (FCP) times are relatively fast across all pages, suggesting that the initial view of the page is rendered quickly.",
+      "The Time to First Byte (TTFB) for all pages is within an acceptable range, indicating that the server is responding quickly. However, there is still room for improvement in reducing the overall load time."
+    ]
+  }
+}
