@@ -1,10 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works Page\" failed the test, indicating potential issues that need to be addressed. It is recommended to investigate the cause of the failure and optimize the page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The TTFB for all pages is relatively low, indicating that the server is responding quickly, which is a positive sign for the website's performance.",
-    "The homepage has a high FCP, which can impact user experience, and it is recommended to optimize the page to reduce the FCP and improve user experience.",
-    "The pricing page and blog page have good performance with low load times, indicating that the optimization efforts for these pages are paying off.",
-    "The \"How It Works Page\" failed the test, indicating potential issues that need to be addressed, it is recommended to investigate the cause of the failure and optimize the page to improve its performance."
+    "The web performance test results suggest that the pricing and blog pages are optimized and perform well.",
+    "The homepage load time can be improved by optimizing the elements that are causing the delay.",
+    "The \"How It Works\" page needs urgent attention to identify and resolve the issues that caused it to fail the web performance test.",
+    "It is important to continuously monitor and optimize web performance to ensure a good user experience."
   ]
 }
