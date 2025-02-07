@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-07T10:17:00.048Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1594,
+      "metrics": {
+        "loadTime": 571,
+        "ttfb": 41.90000000000873,
+        "fcp": 583.0999999999913
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 950,
+      "metrics": {
+        "loadTime": 188.39999999999418,
+        "ttfb": 41.29999999998836,
+        "fcp": 171.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1050,
+      "metrics": {
+        "loadTime": 248.60000000000582,
+        "ttfb": 43,
+        "fcp": 163.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 912
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the lowest load times, suggesting that their optimizations are working well. Analyze these pages to identify best practices that can be applied to other pages, such as the homepage and \"How It Works\" page.",
+      "TTFB is consistent across all pages, indicating that the server response time is reliable. Focus on optimizing client-side rendering and resource delivery to further improve the user experience.",
+      "The \"How It Works\" page has a shorter duration than the other pages but still failed the test. This might be due to a specific issue, such as a slow-loading resource or a script causing a render-blocking issue. Investigate these potential bottlenecks to resolve the problem."
+    ]
+  }
+}

@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
   "issues": [],
   "insights": [
-    "The web performance test results suggest that the pricing and blog pages are optimized and perform well.",
-    "The homepage load time can be improved by optimizing the elements that are causing the delay.",
-    "The \"How It Works\" page needs urgent attention to identify and resolve the issues that caused it to fail the web performance test.",
-    "It is important to continuously monitor and optimize web performance to ensure a good user experience."
+    "The pricing page and blog page have the lowest load times, suggesting that their optimizations are working well. Analyze these pages to identify best practices that can be applied to other pages, such as the homepage and \"How It Works\" page.",
+    "TTFB is consistent across all pages, indicating that the server response time is reliable. Focus on optimizing client-side rendering and resource delivery to further improve the user experience.",
+    "The \"How It Works\" page has a shorter duration than the other pages but still failed the test. This might be due to a specific issue, such as a slow-loading resource or a script causing a render-blocking issue. Investigate these potential bottlenecks to resolve the problem."
   ]
 }
