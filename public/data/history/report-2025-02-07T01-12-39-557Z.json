@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-07T01:12:39.557Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1397,
+      "metrics": {
+        "loadTime": 583.2000000000116,
+        "ttfb": 61.70000000001164,
+        "fcp": 461.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 914,
+      "metrics": {
+        "loadTime": 196.5,
+        "ttfb": 45.60000000000582,
+        "fcp": 190.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1103,
+      "metrics": {
+        "loadTime": 271.20000000001164,
+        "ttfb": 35.60000000000582,
+        "fcp": 210.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 946
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works Page\" failed the test, indicating potential issues that need to be addressed. It is recommended to investigate the cause of the failure and optimize the page to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The TTFB for all pages is relatively low, indicating that the server is responding quickly, which is a positive sign for the website's performance.",
+      "The homepage has a high FCP, which can impact user experience, and it is recommended to optimize the page to reduce the FCP and improve user experience.",
+      "The pricing page and blog page have good performance with low load times, indicating that the optimization efforts for these pages are paying off.",
+      "The \"How It Works Page\" failed the test, indicating potential issues that need to be addressed, it is recommended to investigate the cause of the failure and optimize the page to improve its performance."
+    ]
+  }
+}
