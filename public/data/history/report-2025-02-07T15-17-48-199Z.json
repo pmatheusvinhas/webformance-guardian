@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-07T15:17:48.199Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2037,
+      "metrics": {
+        "loadTime": 823.8999999999942,
+        "ttfb": 74.10000000000582,
+        "fcp": 1040.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1044,
+      "metrics": {
+        "loadTime": 220,
+        "ttfb": 71.70000000001164,
+        "fcp": 239.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1365,
+      "metrics": {
+        "loadTime": 347.6000000000058,
+        "ttfb": 125.89999999999418,
+        "fcp": 273.1000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1399
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1399ms. To improve this, consider optimizing images, minifying CSS and JavaScript files, and reducing server response time.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time, TTFB, and FCP among all pages, indicating efficient optimization.",
+      "The blog page has a longer TTFB than the pricing page, suggesting potential improvements in server response time.",
+      "Reducing load times, TTFB, and FCP for all pages will enhance user experience and potentially improve search engine rankings."
+    ]
+  }
+}
