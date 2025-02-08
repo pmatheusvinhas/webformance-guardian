@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1129ms. It is recommended to investigate the causes of this failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a loading time of 915ms. It is recommended to investigate the cause of this delay and optimize the page to improve its loading time.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, but there is still room for optimization. It is recommended to continue monitoring these pages and implementing performance improvements as needed.",
-    "The \"How It Works\" page failed the performance test, indicating potential performance issues. It is critical to investigate the causes of this failure and optimize the page to improve its load time.",
-    "It is important to note that TTFB (Time to First Byte) is a key metric in web performance, as it measures the time it takes for the server to respond to the initial request. A low TTFB indicates a fast server response time, which is crucial for a good user experience."
+    "The homepage, pricing page, and blog page have fast load times, which is a positive sign for user experience.",
+    "The \"How It Works\" page needs optimization to improve its loading time and pass the performance test.",
+    "Further investigation and optimization of all pages can help improve overall user experience and reduce bounce rates."
   ]
 }
