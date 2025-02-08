@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-08T20:16:32.938Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1767,
+      "metrics": {
+        "loadTime": 676.6999999999825,
+        "ttfb": 56.79999999998836,
+        "fcp": 737.3999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1041,
+      "metrics": {
+        "loadTime": 215.39999999999418,
+        "ttfb": 50.29999999998836,
+        "fcp": 216.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1141,
+      "metrics": {
+        "loadTime": 285.20000000001164,
+        "ttfb": 47,
+        "fcp": 173.10000000000582
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 936
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, and its performance metrics are not available. It is crucial to investigate and address the issues causing the failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (676.69 ms) among the passing pages, indicating potential optimization opportunities.",
+      "The blog page has the fastest TTFB (47 ms) and FCP (173.1 ms), suggesting efficient server response and content rendering.",
+      "Comparing the TTFB and FCP across pages can help identify areas for improvement in server configuration and content delivery.",
+      "Investigating the cause of the \"How It Works\" page failure should be a priority to maintain consistent performance across all pages."
+    ]
+  }
+}
