@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-08T15:14:28.225Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1832,
+      "metrics": {
+        "loadTime": 649.1000000000058,
+        "ttfb": 52.89999999999418,
+        "fcp": 512.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1408,
+      "metrics": {
+        "loadTime": 351.5,
+        "ttfb": 197.29999999998836,
+        "fcp": 332.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1382,
+      "metrics": {
+        "loadTime": 224.89999999999418,
+        "ttfb": 30.89999999999418,
+        "fcp": 179.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1258
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. It could be due to large media files, unoptimized code, or server-side problems.",
+    "issues": [],
+    "insights": [
+      "The test results indicate that the homepage and pricing page could benefit from optimization techniques to reduce load times.",
+      "It is crucial to investigate and address the issues causing the \"How It Works\" page to fail the web performance test.",
+      "Implementing optimization techniques such as image optimization, minification, and caching can significantly improve the web performance of all pages.",
+      "Regular web performance testing can help identify issues and ensure optimal performance, providing a better user experience."
+    ]
+  }
+}

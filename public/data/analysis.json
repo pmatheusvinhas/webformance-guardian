@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. It could be due to large media files, unoptimized code, or server-side problems.",
   "issues": [],
   "insights": [
-    "The blog page has the lowest load time of all the pages tested, suggesting that the optimizations applied to this page could be used as a reference for improving the other pages.",
-    "The Fully Loaded Time (FCP) for all pages is close to their respective load times, indicating that the pages' critical content is loading quickly.",
-    "The failed \"How It Works\" page could be experiencing issues such as large image sizes, excessive scripts, or unoptimized CSS, all of which can significantly impact page load time. It is crucial to investigate and optimize these elements to improve the page's performance."
+    "The test results indicate that the homepage and pricing page could benefit from optimization techniques to reduce load times.",
+    "It is crucial to investigate and address the issues causing the \"How It Works\" page to fail the web performance test.",
+    "Implementing optimization techniques such as image optimization, minification, and caching can significantly improve the web performance of all pages.",
+    "Regular web performance testing can help identify issues and ensure optimal performance, providing a better user experience."
   ]
 }
