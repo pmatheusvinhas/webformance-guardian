@@ -118,5 +118,9 @@
   {
     "timestamp": "2025-02-07T20:17:05.138Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of 1043ms. To address this issue, it is recommended to identify the elements causing the delay and optimize them. This may include image compression, minification of CSS and JavaScript files, or reducing the number of requests."
+  },
+  {
+    "timestamp": "2025-02-08T01:10:30.871Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1129ms. It is recommended to investigate the causes of this failure and optimize the page to improve its load time."
   }
 ]

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-08T01:10:30.871Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1426,
+      "metrics": {
+        "loadTime": 581,
+        "ttfb": 49.39999999999418,
+        "fcp": 450.20000000001164
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 935,
+      "metrics": {
+        "loadTime": 200.89999999999418,
+        "ttfb": 41.89999999999418,
+        "fcp": 188
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 995,
+      "metrics": {
+        "loadTime": 261,
+        "ttfb": 42.80000000001746,
+        "fcp": 199
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1129
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1129ms. It is recommended to investigate the causes of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good load times, but there is still room for optimization. It is recommended to continue monitoring these pages and implementing performance improvements as needed.",
+      "The \"How It Works\" page failed the performance test, indicating potential performance issues. It is critical to investigate the causes of this failure and optimize the page to improve its load time.",
+      "It is important to note that TTFB (Time to First Byte) is a key metric in web performance, as it measures the time it takes for the server to respond to the initial request. A low TTFB indicates a fast server response time, which is crucial for a good user experience."
+    ]
+  }
+}
