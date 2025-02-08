@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-08T10:14:53.239Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2295,
+      "metrics": {
+        "loadTime": 849.7000000000116,
+        "ttfb": 260.20000000001164,
+        "fcp": 895.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1469,
+      "metrics": {
+        "loadTime": 496.90000000000873,
+        "ttfb": 195.40000000000873,
+        "fcp": 380.59999999999127
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1504,
+      "metrics": {
+        "loadTime": 601.5,
+        "ttfb": 194.89999999999418,
+        "fcp": 382.6999999999971
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1299
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The blog page has the lowest load time of all the pages tested, suggesting that the optimizations applied to this page could be used as a reference for improving the other pages.",
+      "The Fully Loaded Time (FCP) for all pages is close to their respective load times, indicating that the pages' critical content is loading quickly.",
+      "The failed \"How It Works\" page could be experiencing issues such as large image sizes, excessive scripts, or unoptimized CSS, all of which can significantly impact page load time. It is crucial to investigate and optimize these elements to improve the page's performance."
+    ]
+  }
+}
