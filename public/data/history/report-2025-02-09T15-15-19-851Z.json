@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-09T15:15:19.851Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1658,
+      "metrics": {
+        "loadTime": 807.7999999999884,
+        "ttfb": 71.20000000001164,
+        "fcp": 643.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1063,
+      "metrics": {
+        "loadTime": 205.59999999997672,
+        "ttfb": 61.5,
+        "fcp": 221.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1156,
+      "metrics": {
+        "loadTime": 285.29999999998836,
+        "ttfb": 72.89999999999418,
+        "fcp": 202.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1007
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the page's resources, scripts, and content to identify the cause of the delay.",
+    "issues": [],
+    "insights": [
+      "The Time to First Byte (TTFB) metric is consistently low across all pages, indicating that the server response time is fast.",
+      "The First Contentful Paint (FCP) metric is relatively high on the homepage, suggesting that there might be delays in rendering the initial content of the page.",
+      "The duration metric for the \"How It Works\" page is lower than the other pages, but it still failed the test. This could be due to a specific resource or script that is causing a delay, making it essential to investigate further."
+    ]
+  }
+}
