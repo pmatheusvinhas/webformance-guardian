@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-09T05:17:07.944Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2169,
+      "metrics": {
+        "loadTime": 923.7000000000116,
+        "ttfb": 79.60000000003492,
+        "fcp": 1189.0999999999767
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1026,
+      "metrics": {
+        "loadTime": 225.59999999997672,
+        "ttfb": 57.59999999997672,
+        "fcp": 230.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1187,
+      "metrics": {
+        "loadTime": 299.4000000000233,
+        "ttfb": 88.80000000004657,
+        "fcp": 245.39999999996508
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1002
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have excellent Time To First Byte (TTFB) and First Contentful Paint (FCP) metrics, indicating fast server response times and quick rendering of visible content.",
+      "The TTFB for the homepage is relatively high (79.6 ms) compared to the pricing page and blog page. Investigate potential server configuration issues or network latency problems to improve TTFB.",
+      "The \"How It Works\" page has a duration of 1002 ms, but no metrics are provided. This could indicate an issue with the test or the page itself. Investigate and address the root cause to ensure optimal performance."
+    ]
+  }
+}
