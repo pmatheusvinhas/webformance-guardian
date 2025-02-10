@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant performance issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page accordingly.",
+  "summary": "ISSUES\nCritical:\n- The how it works page failed the test duration, indicating that there may be issues with the page's resources or code that need to be optimized. It is recommended to investigate the page's resources and optimize them to improve the load time.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good performance metrics, indicating that the website is generally well-optimized.",
-    "The \"How It Works\" page failed the test, suggesting that there might be issues with server-side processing, database queries, or render-blocking resources.",
-    "It is important to continuously monitor and optimize web performance to ensure a good user experience and improve search engine rankings."
+    "The pricing page has the shortest load time of all pages, indicating that its resources and code are well optimized. It can serve as a benchmark for optimizing the other pages.",
+    "The homepage and blog page have high FCP times, suggesting that there may be delays in rendering the first piece of content on these pages. This can impact user experience, as users may have to wait longer to see the page's content.",
+    "The how it works page failed the test duration, indicating that there may be issues with the page's resources or code that need to be optimized. It is recommended to investigate the page's resources and optimize them to improve the load time."
   ]
 }

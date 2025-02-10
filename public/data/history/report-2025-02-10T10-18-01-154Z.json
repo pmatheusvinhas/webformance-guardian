@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-10T10:18:01.154Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1860,
+      "metrics": {
+        "loadTime": 571.8000000000029,
+        "ttfb": 59.39999999999418,
+        "fcp": 596.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1213,
+      "metrics": {
+        "loadTime": 173.5,
+        "ttfb": 26.80000000000291,
+        "fcp": 146.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1388,
+      "metrics": {
+        "loadTime": 356,
+        "ttfb": 142.40000000000873,
+        "fcp": 268.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1228
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the test duration, indicating that there may be issues with the page's resources or code that need to be optimized. It is recommended to investigate the page's resources and optimize them to improve the load time.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the shortest load time of all pages, indicating that its resources and code are well optimized. It can serve as a benchmark for optimizing the other pages.",
+      "The homepage and blog page have high FCP times, suggesting that there may be delays in rendering the first piece of content on these pages. This can impact user experience, as users may have to wait longer to see the page's content.",
+      "The how it works page failed the test duration, indicating that there may be issues with the page's resources or code that need to be optimized. It is recommended to investigate the page's resources and optimize them to improve the load time."
+    ]
+  }
+}
