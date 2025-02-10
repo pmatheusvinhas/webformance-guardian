@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-10T01:14:56.433Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2252,
+      "metrics": {
+        "loadTime": 951.1000000000349,
+        "ttfb": 74,
+        "fcp": 1270.6999999999534
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1120,
+      "metrics": {
+        "loadTime": 372.1000000000349,
+        "ttfb": 133.5,
+        "fcp": 306.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1208,
+      "metrics": {
+        "loadTime": 339.3999999999651,
+        "ttfb": 131.5,
+        "fcp": 278.5999999999767
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 991
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate the cause of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page has a significantly shorter duration than the other pages, which suggests that there may be issues with the page's resources or code. It is recommended to investigate and optimize the page to improve its load time.",
+      "The homepage, pricing page, and blog page have good load times, but there is still room for improvement. It is recommended to continue optimizing these pages to provide a faster and more seamless user experience.",
+      "The Time to First Byte (TTFB) for all pages is low, indicating that the server response time is fast. This is a positive sign, as it means that the server is able to handle requests efficiently."
+    ]
+  }
+}
