@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-10T05:17:10.374Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1459,
+      "metrics": {
+        "loadTime": 605,
+        "ttfb": 72.5,
+        "fcp": 434.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1029,
+      "metrics": {
+        "loadTime": 304.69999999998254,
+        "ttfb": 63.59999999997672,
+        "fcp": 230.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1115,
+      "metrics": {
+        "loadTime": 265.29999999998836,
+        "ttfb": 57.60000000000582,
+        "fcp": 299.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 992
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant performance issues that need immediate attention. It is recommended to investigate the causes of the failure and optimize the page accordingly.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good performance metrics, indicating that the website is generally well-optimized.",
+      "The \"How It Works\" page failed the test, suggesting that there might be issues with server-side processing, database queries, or render-blocking resources.",
+      "It is important to continuously monitor and optimize web performance to ensure a good user experience and improve search engine rankings."
+    ]
+  }
+}
