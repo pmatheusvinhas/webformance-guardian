@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-10T15:17:31.913Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2153,
+      "metrics": {
+        "loadTime": 925.8999999999942,
+        "ttfb": 384.8999999999942,
+        "fcp": 843.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1366,
+      "metrics": {
+        "loadTime": 337.20000000001164,
+        "ttfb": 180.10000000000582,
+        "fcp": 307.69999999998254
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1516,
+      "metrics": {
+        "loadTime": 430.30000000001746,
+        "ttfb": 220.40000000002328,
+        "fcp": 344.4000000000233
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1417
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, optimizing code, and minimizing HTTP requests.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time of the three passing pages, suggesting room for optimization.",
+      "The pricing and blog pages have load times below 3 seconds, indicating good performance.",
+      "It is crucial to investigate and address the issues causing the \"How It Works\" page to fail the web performance test to ensure a positive user experience."
+    ]
+  }
+}

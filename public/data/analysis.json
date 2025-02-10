@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The how it works page failed the test duration, indicating that there may be issues with the page's resources or code that need to be optimized. It is recommended to investigate the page's resources and optimize them to improve the load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, optimizing code, and minimizing HTTP requests.",
   "issues": [],
   "insights": [
-    "The pricing page has the shortest load time of all pages, indicating that its resources and code are well optimized. It can serve as a benchmark for optimizing the other pages.",
-    "The homepage and blog page have high FCP times, suggesting that there may be delays in rendering the first piece of content on these pages. This can impact user experience, as users may have to wait longer to see the page's content.",
-    "The how it works page failed the test duration, indicating that there may be issues with the page's resources or code that need to be optimized. It is recommended to investigate the page's resources and optimize them to improve the load time."
+    "The homepage has the longest load time of the three passing pages, suggesting room for optimization.",
+    "The pricing and blog pages have load times below 3 seconds, indicating good performance.",
+    "It is crucial to investigate and address the issues causing the \"How It Works\" page to fail the web performance test to ensure a positive user experience."
   ]
 }
