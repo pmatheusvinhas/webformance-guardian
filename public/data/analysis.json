@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, optimizing code, and minimizing HTTP requests.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1035ms. To address this, it is recommended to identify bottlenecks, optimize resources, and minimize requests to improve the page's load time.",
   "issues": [],
   "insights": [
-    "The homepage has the longest load time of the three passing pages, suggesting room for optimization.",
-    "The pricing and blog pages have load times below 3 seconds, indicating good performance.",
-    "It is crucial to investigate and address the issues causing the \"How It Works\" page to fail the web performance test to ensure a positive user experience."
+    "The homepage has a load time of 569.6ms, which is within an acceptable range. However, there is still room for improvement to further enhance user experience.",
+    "The pricing page and blog page have faster load times (244.1ms and 262.3ms, respectively) than the homepage, indicating efficient resource handling and optimization.",
+    "The TTFB (Time to First Byte) for all pages is relatively low, suggesting that the server response time is adequate. Focusing on optimizing client-side rendering and resource loading will significantly improve the overall performance."
   ]
 }

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-10T20:16:22.137Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1379,
+      "metrics": {
+        "loadTime": 569.6000000000058,
+        "ttfb": 61.60000000000582,
+        "fcp": 420
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 981,
+      "metrics": {
+        "loadTime": 244.10000000000582,
+        "ttfb": 71.5,
+        "fcp": 235.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1004,
+      "metrics": {
+        "loadTime": 262.29999999998836,
+        "ttfb": 39.59999999997672,
+        "fcp": 174.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1035
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1035ms. To address this, it is recommended to identify bottlenecks, optimize resources, and minimize requests to improve the page's load time.",
+    "issues": [],
+    "insights": [
+      "The homepage has a load time of 569.6ms, which is within an acceptable range. However, there is still room for improvement to further enhance user experience.",
+      "The pricing page and blog page have faster load times (244.1ms and 262.3ms, respectively) than the homepage, indicating efficient resource handling and optimization.",
+      "The TTFB (Time to First Byte) for all pages is relatively low, suggesting that the server response time is adequate. Focusing on optimizing client-side rendering and resource loading will significantly improve the overall performance."
+    ]
+  }
+}
