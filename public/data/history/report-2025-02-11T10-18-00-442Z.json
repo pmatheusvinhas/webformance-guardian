@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-11T10:18:00.442Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1933,
+      "metrics": {
+        "loadTime": 730.7000000000116,
+        "ttfb": 197.80000000001746,
+        "fcp": 623.6999999999825
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1434,
+      "metrics": {
+        "loadTime": 398.29999999998836,
+        "ttfb": 253.39999999999418,
+        "fcp": 377.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1559,
+      "metrics": {
+        "loadTime": 521.3000000000175,
+        "ttfb": 323.5,
+        "fcp": 437.19999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1445
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (730.7ms) and duration (1933ms) compared to other pages. This may indicate that there are opportunities to optimize images, scripts, or other resources on the homepage.",
+      "The pricing page has the shortest load time (398.3ms) and duration (1434ms) among all pages. This suggests that the pricing page is well-optimized and could serve as a reference for optimizing other pages.",
+      "The \"How It Works\" page failed the test, indicating that there may be critical issues such as broken resources, scripts, or server errors. Investigate and resolve these issues to ensure a positive user experience."
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the cause of this failure, further investigation is required. It is recommended to check for any issues with server configuration, scripts, or large media files that might be causing delays in page rendering.",
+  "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
   "issues": [],
   "insights": [
-    "The homepage has the longest duration (1895 ms) and load time (794 ms) among the passed tests. This could be due to larger media files, excessive scripts, or complex server-side processing.",
-    "The blog page has the highest FCP (429.1 ms) among the passed tests. This might be due to slow-loading images or unoptimized above-the-fold content.",
-    "The pricing page has the lowest duration (1324 ms), load time (303.8 ms), TTFB (151.4 ms), and FCP (275.9 ms) among the passed tests. This page appears to be the most optimized in terms of web performance."
+    "The homepage has the longest load time (730.7ms) and duration (1933ms) compared to other pages. This may indicate that there are opportunities to optimize images, scripts, or other resources on the homepage.",
+    "The pricing page has the shortest load time (398.3ms) and duration (1434ms) among all pages. This suggests that the pricing page is well-optimized and could serve as a reference for optimizing other pages.",
+    "The \"How It Works\" page failed the test, indicating that there may be critical issues such as broken resources, scripts, or server errors. Investigate and resolve these issues to ensure a positive user experience."
   ]
 }
