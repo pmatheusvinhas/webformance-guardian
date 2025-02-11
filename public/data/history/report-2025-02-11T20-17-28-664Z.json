@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-11T20:17:28.664Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1819,
+      "metrics": {
+        "loadTime": 618.5999999999767,
+        "ttfb": 60.5,
+        "fcp": 504.69999999998254
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1048,
+      "metrics": {
+        "loadTime": 240.89999999999418,
+        "ttfb": 81.89999999999418,
+        "fcp": 218.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1125,
+      "metrics": {
+        "loadTime": 282.79999999998836,
+        "ttfb": 57.10000000000582,
+        "fcp": 187.59999999997672
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 952
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration time to improve user experience.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, indicating that their optimization strategies are effective. Analyze these pages to identify best practices that can be applied to other pages, such as the homepage and \"How It Works\" page.",
+      "Time to First Byte (TTFB) is relatively low across all pages, suggesting that the server response time is adequate. However, there is still room for improvement, especially on the \"How It Works\" page.",
+      "First Contentful Paint (FCP) is a good indicator of user-perceived loading speed. All pages have FCP values below 600 ms, indicating that users see content quickly after navigating to the pages. Continue focusing on optimizing FCP to enhance user experience."
+    ]
+  }
+}
