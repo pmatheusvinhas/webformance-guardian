@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- None identified in this dataset.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the root cause and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The homepage has the longest load time (730.7ms) and duration (1933ms) compared to other pages. This may indicate that there are opportunities to optimize images, scripts, or other resources on the homepage.",
-    "The pricing page has the shortest load time (398.3ms) and duration (1434ms) among all pages. This suggests that the pricing page is well-optimized and could serve as a reference for optimizing other pages.",
-    "The \"How It Works\" page failed the test, indicating that there may be critical issues such as broken resources, scripts, or server errors. Investigate and resolve these issues to ensure a positive user experience."
+    "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is adequate.",
+    "The FCP (First Contentful Paint) for the homepage is higher than the other pages, suggesting that the initial rendering of the homepage could be optimized.",
+    "The load time for the \"How It Works\" page is significantly higher than the other pages, indicating potential issues with resource loading, render-blocking JavaScript, or unoptimized images. Investigating and addressing these issues will improve user experience and ensure the page passes future performance tests."
   ]
 }
