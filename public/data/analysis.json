@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, indicating potential issues that need immediate attention. It is recommended to investigate the page's elements, scripts, and resources to identify bottlenecks and optimize them for better performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page did not pass the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience.",
   "issues": [],
   "insights": [
-    "The blog page has the best time to first contentful paint (FCP) of all pages, indicating that the most important content is rendered quickly. This is a positive sign, as users tend to perceive faster-loading content as more responsive and engaging.",
-    "The time to first byte (TTFB) for the homepage is relatively high, suggesting potential issues with server response time or network latency. Investigating these factors can help improve overall website performance.",
-    "Consistently applying web performance best practices, such as image optimization, minification, and caching, can help maintain and improve page load times across all pages, enhancing user experience and potentially increasing user engagement and conversion rates."
+    "The homepage, pricing page, and blog page have acceptable load times, ranging from 933 ms to 4169 ms. However, there is still room for improvement in TTFB and FCP metrics.",
+    "The \"How It Works\" page's failure indicates potential issues that need immediate attention. Addressing these issues will help ensure consistent performance across all pages.",
+    "Implementing server-side optimizations, such as caching and content compression, can help reduce TTFB and improve overall site performance."
   ]
 }

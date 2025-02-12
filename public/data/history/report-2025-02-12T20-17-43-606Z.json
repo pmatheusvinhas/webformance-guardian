@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-12T20:17:43.606Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 4469,
+      "metrics": {
+        "loadTime": 2331.0999999999767,
+        "ttfb": 262.29999999998836,
+        "fcp": 1521.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 2396,
+      "metrics": {
+        "loadTime": 933.2000000000116,
+        "ttfb": 132.39999999999418,
+        "fcp": 770.1999999999825
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 7131,
+      "metrics": {
+        "loadTime": 4169.899999999994,
+        "ttfb": 1409.7999999999884,
+        "fcp": 2434.1999999999825
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 2800
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page did not pass the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have acceptable load times, ranging from 933 ms to 4169 ms. However, there is still room for improvement in TTFB and FCP metrics.",
+      "The \"How It Works\" page's failure indicates potential issues that need immediate attention. Addressing these issues will help ensure consistent performance across all pages.",
+      "Implementing server-side optimizations, such as caching and content compression, can help reduce TTFB and improve overall site performance."
+    ]
+  }
+}
