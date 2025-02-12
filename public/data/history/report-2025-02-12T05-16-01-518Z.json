@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-12T05:16:01.518Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1526,
+      "metrics": {
+        "loadTime": 594.3999999999942,
+        "ttfb": 73.5,
+        "fcp": 508.4000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1003,
+      "metrics": {
+        "loadTime": 187.39999999999418,
+        "ttfb": 54,
+        "fcp": 219.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1063,
+      "metrics": {
+        "loadTime": 287,
+        "ttfb": 73.39999999999418,
+        "fcp": 226
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 978
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant issues affecting its performance. It is recommended to investigate this page thoroughly and optimize its resources, such as images, scripts, and stylesheets, to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The Fully Loaded Time (loadTime) for the pricing and blog pages is significantly lower than the homepage, suggesting that these pages have fewer or smaller resources. Analyzing the homepage's content and optimizing its resources can help reduce the load time.",
+      "The Time to First Contentful Paint (FCP) for all pages is within an acceptable range (under 600ms for the homepage and under 300ms for the other pages). This indicates that the pages' initial content is loading quickly, providing a good user experience.",
+      "The duration for all pages is under 1500ms, indicating that the website's performance is generally good. However, addressing the critical and warning issues can further improve the overall user experience."
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1038ms. It is recommended to investigate the cause of this failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant issues affecting its performance. It is recommended to investigate this page thoroughly and optimize its resources, such as images, scripts, and stylesheets, to improve its load time.",
   "issues": [],
   "insights": [
-    "The passed pages have acceptable load times, but there is still room for improvement to further optimize the pages for better user experience.",
-    "The failed \"How It Works\" page needs immediate attention to identify and fix the issues causing the longer load time.",
-    "It is important to regularly monitor and test the web performance of all pages to ensure optimal user experience and identify any potential issues early on."
+    "The Fully Loaded Time (loadTime) for the pricing and blog pages is significantly lower than the homepage, suggesting that these pages have fewer or smaller resources. Analyzing the homepage's content and optimizing its resources can help reduce the load time.",
+    "The Time to First Contentful Paint (FCP) for all pages is within an acceptable range (under 600ms for the homepage and under 300ms for the other pages). This indicates that the pages' initial content is loading quickly, providing a good user experience.",
+    "The duration for all pages is under 1500ms, indicating that the website's performance is generally good. However, addressing the critical and warning issues can further improve the overall user experience."
   ]
 }
