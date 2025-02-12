@@ -1,25 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large images, excessive scripts, or render-blocking resources that need to be optimized for faster loading.\n  - Recommendation: Analyze the page's resources and optimize them by compressing images, minifying scripts, and removing render-blocking resources.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the page's resources and optimize them by compressing images, minifying scripts, and removing render-blocking resources."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Identify the resources that are causing the delay and optimize them for faster loading."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Continue to monitor server response time and optimize as needed."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, indicating potential issues that need immediate attention. It is recommended to investigate the page's elements, scripts, and resources to identify bottlenecks and optimize them for better performance.",
+  "issues": [],
   "insights": [
-    "The First Contentful Paint (FCP) for the pricing and blog pages is significantly lower than the homepage, indicating that these pages display content faster, which can improve user experience.",
-    "The TTFB for all pages is low, indicating that the server is responding quickly, but further optimization of resources can still improve the overall load time.",
-    "The duration for the \"How It Works\" page is close to the other pages, but it failed the test, indicating that there may be specific issues that need to be addressed, such as render-blocking resources or large images."
+    "The blog page has the best time to first contentful paint (FCP) of all pages, indicating that the most important content is rendered quickly. This is a positive sign, as users tend to perceive faster-loading content as more responsive and engaging.",
+    "The time to first byte (TTFB) for the homepage is relatively high, suggesting potential issues with server response time or network latency. Investigating these factors can help improve overall website performance.",
+    "Consistently applying web performance best practices, such as image optimization, minification, and caching, can help maintain and improve page load times across all pages, enhancing user experience and potentially increasing user engagement and conversion rates."
   ]
 }

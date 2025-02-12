@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-12T15:23:51.983Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2524,
+      "metrics": {
+        "loadTime": 1209.6999999999534,
+        "ttfb": 73.19999999995343,
+        "fcp": 1571.8999999999069
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 947,
+      "metrics": {
+        "loadTime": 182.80000000004657,
+        "ttfb": 26.400000000023283,
+        "fcp": 145.69999999995343
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1194,
+      "metrics": {
+        "loadTime": 357.10000000009313,
+        "ttfb": 136.40000000002328,
+        "fcp": 299.89999999990687
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 938
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, indicating potential issues that need immediate attention. It is recommended to investigate the page's elements, scripts, and resources to identify bottlenecks and optimize them for better performance.",
+    "issues": [],
+    "insights": [
+      "The blog page has the best time to first contentful paint (FCP) of all pages, indicating that the most important content is rendered quickly. This is a positive sign, as users tend to perceive faster-loading content as more responsive and engaging.",
+      "The time to first byte (TTFB) for the homepage is relatively high, suggesting potential issues with server response time or network latency. Investigating these factors can help improve overall website performance.",
+      "Consistently applying web performance best practices, such as image optimization, minification, and caching, can help maintain and improve page load times across all pages, enhancing user experience and potentially increasing user engagement and conversion rates."
+    ]
+  }
+}
