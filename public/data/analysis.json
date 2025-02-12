@@ -1,9 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting that there might be significant issues affecting its performance. It is recommended to investigate this page thoroughly and optimize its resources, such as images, scripts, and stylesheets, to improve its load time.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large images, excessive scripts, or render-blocking resources that need to be optimized for faster loading.\n  - Recommendation: Analyze the page's resources and optimize them by compressing images, minifying scripts, and removing render-blocking resources.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Analyze the page's resources and optimize them by compressing images, minifying scripts, and removing render-blocking resources."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Identify the resources that are causing the delay and optimize them for faster loading."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Continue to monitor server response time and optimize as needed."
+    }
+  ],
   "insights": [
-    "The Fully Loaded Time (loadTime) for the pricing and blog pages is significantly lower than the homepage, suggesting that these pages have fewer or smaller resources. Analyzing the homepage's content and optimizing its resources can help reduce the load time.",
-    "The Time to First Contentful Paint (FCP) for all pages is within an acceptable range (under 600ms for the homepage and under 300ms for the other pages). This indicates that the pages' initial content is loading quickly, providing a good user experience.",
-    "The duration for all pages is under 1500ms, indicating that the website's performance is generally good. However, addressing the critical and warning issues can further improve the overall user experience."
+    "The First Contentful Paint (FCP) for the pricing and blog pages is significantly lower than the homepage, indicating that these pages display content faster, which can improve user experience.",
+    "The TTFB for all pages is low, indicating that the server is responding quickly, but further optimization of resources can still improve the overall load time.",
+    "The duration for the \"How It Works\" page is close to the other pages, but it failed the test, indicating that there may be specific issues that need to be addressed, such as render-blocking resources or large images."
   ]
 }

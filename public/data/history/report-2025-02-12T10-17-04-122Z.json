@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-02-12T10:17:04.122Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1683,
+      "metrics": {
+        "loadTime": 846.7000000000116,
+        "ttfb": 147.89999999999418,
+        "fcp": 687.8999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 990,
+      "metrics": {
+        "loadTime": 212.5,
+        "ttfb": 53.10000000000582,
+        "fcp": 220.89999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1074,
+      "metrics": {
+        "loadTime": 308.5,
+        "ttfb": 66.79999999998836,
+        "fcp": 207.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 948
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large images, excessive scripts, or render-blocking resources that need to be optimized for faster loading.\n  - Recommendation: Analyze the page's resources and optimize them by compressing images, minifying scripts, and removing render-blocking resources.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the page's resources and optimize them by compressing images, minifying scripts, and removing render-blocking resources."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Identify the resources that are causing the delay and optimize them for faster loading."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Continue to monitor server response time and optimize as needed."
+      }
+    ],
+    "insights": [
+      "The First Contentful Paint (FCP) for the pricing and blog pages is significantly lower than the homepage, indicating that these pages display content faster, which can improve user experience.",
+      "The TTFB for all pages is low, indicating that the server is responding quickly, but further optimization of resources can still improve the overall load time.",
+      "The duration for the \"How It Works\" page is close to the other pages, but it failed the test, indicating that there may be specific issues that need to be addressed, such as render-blocking resources or large images."
+    ]
+  }
+}
