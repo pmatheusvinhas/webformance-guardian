@@ -1,20 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration.\n  - Recommendation: Analyze the waterfall chart and network requests to identify bottlenecks, such as large images, render-blocking resources, or slow server responses. Optimize these elements to improve the page's load time.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the waterfall chart and network requests to identify bottlenecks, such as large images, render-blocking resources, or slow server responses. Optimize these elements to improve the page's load time."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Consider optimizing images, minifying CSS and JavaScript, and leveraging browser caching to further reduce the homepage's load time."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its loading time and pass the test.",
+  "issues": [],
   "insights": [
-    "The Time to First Byte (TTFB) is relatively fast for all pages, indicating that the server response time is adequate.",
-    "First Contentful Paint (FCP) is generally consistent across pages, suggesting that the pages are rendering their initial content quickly.",
-    "The blog page has the fastest load time (277.5 ms) and FCP (173.5 ms), demonstrating effective optimization techniques. Analyzing its structure and applying similar optimizations to other pages could further improve overall performance."
+    "Time to First Byte (TTFB) is consistently low across all pages, indicating that the server response time is adequate.",
+    "The blog page has a slightly longer Time to Interactive (TTI) due to its higher First Contentful Paint (FCP) value. Investigating and optimizing FCP can help improve TTI.",
+    "The pricing page has the best overall performance, likely due to its simpler design and fewer resources. Use this page as a benchmark for optimizing other pages."
   ]
 }
