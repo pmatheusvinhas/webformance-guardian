@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-02-13T20:17:26.943Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1412,
+      "metrics": {
+        "loadTime": 563,
+        "ttfb": 52.90000000000873,
+        "fcp": 301.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 949,
+      "metrics": {
+        "loadTime": 202.40000000000873,
+        "ttfb": 36.70000000001164,
+        "fcp": 175.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1130,
+      "metrics": {
+        "loadTime": 299.49999999998545,
+        "ttfb": 46.80000000000291,
+        "fcp": 198.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1121
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. (Recommendation: Review server logs, network requests, and page resources to identify bottlenecks and optimize performance.)",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. (Recommendation",
+        "recommendation": "Review server logs, network requests, and page resources to identify bottlenecks and optimize performance.)"
+      },
+      {
+        "severity": "info",
+        "message": "The homepage has a load time of 563ms, which is within an acceptable range. However, there is still room for improvement. (Recommendation",
+        "recommendation": "Continue optimizing images, minifying CSS and JavaScript, and leveraging browser caching.)"
+      }
+    ],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, indicating that their optimization strategies are effective.",
+      "The time to first byte (TTFB) is relatively low across all pages, suggesting that the server response time is good.",
+      "Further investigation is required to understand why the \"How It Works\" page failed the test and to implement necessary optimizations."
+    ]
+  }
+}

@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there might be significant issues affecting its loading time. It is recommended to investigate and optimize this page to improve its performance.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. (Recommendation: Review server logs, network requests, and page resources to identify bottlenecks and optimize performance.)",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. (Recommendation",
+      "recommendation": "Review server logs, network requests, and page resources to identify bottlenecks and optimize performance.)"
+    },
+    {
+      "severity": "info",
+      "message": "The homepage has a load time of 563ms, which is within an acceptable range. However, there is still room for improvement. (Recommendation",
+      "recommendation": "Continue optimizing images, minifying CSS and JavaScript, and leveraging browser caching.)"
+    }
+  ],
   "insights": [
-    "The homepage, pricing page, and blog page have good loading times, indicating that the website's performance is generally satisfactory.",
-    "The \"How It Works\" page's failure in the web performance test suggests that there may be issues with its code, resources, or server configuration that need to be addressed.",
-    "Further investigation and optimization of the \"How It Works\" page can help improve its loading time and ensure a consistent user experience across the website."
+    "The pricing page and blog page have the fastest load times, indicating that their optimization strategies are effective.",
+    "The time to first byte (TTFB) is relatively low across all pages, suggesting that the server response time is good.",
+    "Further investigation is required to understand why the \"How It Works\" page failed the test and to implement necessary optimizations."
   ]
 }
