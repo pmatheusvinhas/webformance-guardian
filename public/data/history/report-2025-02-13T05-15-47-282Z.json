@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-02-13T05:15:47.282Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1915,
+      "metrics": {
+        "loadTime": 693.6000000000058,
+        "ttfb": 58.60000000000582,
+        "fcp": 644.2000000000116
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1366,
+      "metrics": {
+        "loadTime": 338.8999999999942,
+        "ttfb": 177.89999999999418,
+        "fcp": 323
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1512,
+      "metrics": {
+        "loadTime": 277.5,
+        "ttfb": 49.40000000002328,
+        "fcp": 173.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1410
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration.\n  - Recommendation: Analyze the waterfall chart and network requests to identify bottlenecks, such as large images, render-blocking resources, or slow server responses. Optimize these elements to improve the page's load time.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the waterfall chart and network requests to identify bottlenecks, such as large images, render-blocking resources, or slow server responses. Optimize these elements to improve the page's load time."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Consider optimizing images, minifying CSS and JavaScript, and leveraging browser caching to further reduce the homepage's load time."
+      }
+    ],
+    "insights": [
+      "The Time to First Byte (TTFB) is relatively fast for all pages, indicating that the server response time is adequate.",
+      "First Contentful Paint (FCP) is generally consistent across pages, suggesting that the pages are rendering their initial content quickly.",
+      "The blog page has the fastest load time (277.5 ms) and FCP (173.5 ms), demonstrating effective optimization techniques. Analyzing its structure and applying similar optimizations to other pages could further improve overall performance."
+    ]
+  }
+}

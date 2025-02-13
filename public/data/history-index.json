@@ -118,5 +118,9 @@
   {
     "timestamp": "2025-02-13T01:12:57.970Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test with a duration of 925ms. Investigate the causes of this delay, such as heavy scripts, large images, or server-side issues, and optimize the page for improved performance."
+  },
+  {
+    "timestamp": "2025-02-13T05:15:47.282Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration.\n  - Recommendation: Analyze the waterfall chart and network requests to identify bottlenecks, such as large images, render-blocking resources, or slow server responses. Optimize these elements to improve the page's load time."
   }
 ]
