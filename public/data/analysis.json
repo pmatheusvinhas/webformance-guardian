@@ -1,20 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. (Recommendation: Review server logs, network requests, and page resources to identify bottlenecks and optimize performance.)",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. (Recommendation",
-      "recommendation": "Review server logs, network requests, and page resources to identify bottlenecks and optimize performance.)"
-    },
-    {
-      "severity": "info",
-      "message": "The homepage has a load time of 563ms, which is within an acceptable range. However, there is still room for improvement. (Recommendation",
-      "recommendation": "Continue optimizing images, minifying CSS and JavaScript, and leveraging browser caching.)"
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration. Consider reviewing the page's structure, optimizing images, minifying CSS and JavaScript files, and enabling browser caching.",
+  "issues": [],
   "insights": [
-    "The pricing page and blog page have the fastest load times, indicating that their optimization strategies are effective.",
-    "The time to first byte (TTFB) is relatively low across all pages, suggesting that the server response time is good.",
-    "Further investigation is required to understand why the \"How It Works\" page failed the test and to implement necessary optimizations."
+    "The pricing page has the fastest load time, likely due to its simpler structure and fewer resources to load.",
+    "The blog page has a longer Time to First Byte (TTFB) compared to the pricing page, which might be caused by a slower server response time or database queries.",
+    "Ensuring consistent optimization practices across all pages will help maintain a high-performance standard and provide a better user experience."
   ]
 }

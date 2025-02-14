@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-14T01:13:30.884Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1833,
+      "metrics": {
+        "loadTime": 757.3999999999651,
+        "ttfb": 51.59999999997672,
+        "fcp": 781.7000000000116
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1107,
+      "metrics": {
+        "loadTime": 432.20000000001164,
+        "ttfb": 187.60000000003492,
+        "fcp": 308
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1493,
+      "metrics": {
+        "loadTime": 499.20000000001164,
+        "ttfb": 253.5,
+        "fcp": 415.3999999999651
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 954
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration. Consider reviewing the page's structure, optimizing images, minifying CSS and JavaScript files, and enabling browser caching.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time, likely due to its simpler structure and fewer resources to load.",
+      "The blog page has a longer Time to First Byte (TTFB) compared to the pricing page, which might be caused by a slower server response time or database queries.",
+      "Ensuring consistent optimization practices across all pages will help maintain a high-performance standard and provide a better user experience."
+    ]
+  }
+}
