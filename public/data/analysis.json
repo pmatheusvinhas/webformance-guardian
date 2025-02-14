@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of 1077ms. To address this, it is recommended to optimize the page's resources, such as images, CSS, and JavaScript, to reduce its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
   "issues": [],
   "insights": [
-    "The blog page has the fastest load time (424.1ms) and TTFB (199ms) among all pages, indicating efficient resource management and server response times.",
-    "The pricing page has a longer TTFB (306.1ms) compared to the blog page, suggesting room for improvement in server response times.",
-    "The homepage has a longer load time (631.7ms) than the blog and pricing pages, which may be due to larger resource sizes or additional third-party requests. Investigating these factors can help improve the homepage's performance."
+    "The blog page has the best performance, with the lowest load time and TTFB. This could serve as a benchmark for optimizing other pages.",
+    "The homepage load time is reasonable, but there is room for improvement in TTFB and FCP.",
+    "The pricing page has a high TTFB, which might affect user experience and conversion rates. Addressing this issue should be a priority."
   ]
 }
