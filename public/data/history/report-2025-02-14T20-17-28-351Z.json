@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-14T20:17:28.351Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1736,
+      "metrics": {
+        "loadTime": 860.2000000000116,
+        "ttfb": 198.39999999996508,
+        "fcp": 622.7999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1160,
+      "metrics": {
+        "loadTime": 338.5,
+        "ttfb": 187.10000000003492,
+        "fcp": 312.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1529,
+      "metrics": {
+        "loadTime": 518.9000000000233,
+        "ttfb": 306.5,
+        "fcp": 458.1000000000349
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 979
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure indicates that there might be issues with the page's code, resources, or server configuration. A thorough investigation is required to identify the root cause and implement the necessary fixes.",
+      "It is good practice to maintain a consistent loading speed across all pages. While the pricing page has the fastest load time, there is a noticeable difference between it and the other pages. Implementing optimization techniques on the homepage and blog page can help reduce this gap.",
+      "First Contentful Paint (FCP) is an essential metric for user experience. All pages have FCP values close to their load times, suggesting that the primary content is loading quickly. Continuous monitoring and optimization of FCP can help ensure a positive user experience."
+    ]
+  }
+}

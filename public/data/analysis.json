@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
   "issues": [],
   "insights": [
-    "The homepage has the longest load time (430.8 ms) among the passed tests, which could be due to larger image sizes or more complex scripts. Analyze and optimize these elements to improve performance.",
-    "The blog page has the best TTFB (140.8 ms) and FCP (264.9 ms) among the passed tests. Use this page as a benchmark for optimizing other pages.",
-    "Ensure that all pages follow best practices for web performance, such as minifying CSS, JavaScript, and HTML files, optimizing images, and leveraging browser caching."
+    "The \"How It Works\" page's failure indicates that there might be issues with the page's code, resources, or server configuration. A thorough investigation is required to identify the root cause and implement the necessary fixes.",
+    "It is good practice to maintain a consistent loading speed across all pages. While the pricing page has the fastest load time, there is a noticeable difference between it and the other pages. Implementing optimization techniques on the homepage and blog page can help reduce this gap.",
+    "First Contentful Paint (FCP) is an essential metric for user experience. All pages have FCP values close to their load times, suggesting that the primary content is loading quickly. Continuous monitoring and optimization of FCP can help ensure a positive user experience."
   ]
 }
