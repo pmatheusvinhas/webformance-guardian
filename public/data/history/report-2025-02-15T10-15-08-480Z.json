@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-15T10:15:08.480Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1425,
+      "metrics": {
+        "loadTime": 636.5999999999767,
+        "ttfb": 79.69999999998254,
+        "fcp": 511.80000000001746
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 945,
+      "metrics": {
+        "loadTime": 195.5,
+        "ttfb": 59.80000000001746,
+        "fcp": 208.89999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1022,
+      "metrics": {
+        "loadTime": 276.19999999998254,
+        "ttfb": 67,
+        "fcp": 210.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 958
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there may be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The Time to First Byte (TTFB) metric is relatively low across all pages, indicating that the server response time is good.",
+      "The First Contentful Paint (FCP) metric is also reasonable, suggesting that the pages are rendering quickly.",
+      "The longest load time is observed on the homepage, which may be due to larger resource sizes, more requests, or slower rendering of critical content. It is recommended to prioritize optimizing the homepage for better user experience.",
+      "The \"How It Works\" page failed the web performance test, which could be due to various reasons such as large resource sizes, slow server response, or inefficient rendering. It is crucial to identify and address the issues on this page to ensure a smooth user experience."
+    ]
+  }
+}
