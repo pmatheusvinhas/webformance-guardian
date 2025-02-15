@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The pricing and blog pages have the best performance, with load times under 300ms.",
-    "The homepage has a longer load time, mainly due to a higher FCP, indicating that there might be room for optimization in rendering the initial view of the page.",
-    "The \"How It Works\" page failed the test, suggesting potential issues such as unoptimized resources, slow server response time, or inefficient code. A thorough investigation is required to identify and resolve these issues."
+    "The pricing page has the lowest Time to First Byte (TTFB) among all pages, indicating faster server response times. This is a positive sign for user engagement and conversion rates.",
+    "The blog page has the lowest load time (370 ms) and FCP (310.69 ms), suggesting efficient rendering and content delivery. This can be attributed to well-optimized resources and a streamlined structure.",
+    "The duration of the tests varies significantly, with the \"How It Works\" page having the shortest duration (1187 ms) despite failing the test. This could indicate that the page has fewer resources to load, but they are not optimized or encountering issues during loading."
   ]
 }

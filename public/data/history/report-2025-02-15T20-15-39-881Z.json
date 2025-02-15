@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-15T20:15:39.881Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2105,
+      "metrics": {
+        "loadTime": 1062.800000000003,
+        "ttfb": 464.6999999999971,
+        "fcp": 1073
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1373,
+      "metrics": {
+        "loadTime": 433.6000000000058,
+        "ttfb": 176.30000000001746,
+        "fcp": 410.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1421,
+      "metrics": {
+        "loadTime": 370,
+        "ttfb": 153.20000000001164,
+        "fcp": 310.69999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1187
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the lowest Time to First Byte (TTFB) among all pages, indicating faster server response times. This is a positive sign for user engagement and conversion rates.",
+      "The blog page has the lowest load time (370 ms) and FCP (310.69 ms), suggesting efficient rendering and content delivery. This can be attributed to well-optimized resources and a streamlined structure.",
+      "The duration of the tests varies significantly, with the \"How It Works\" page having the shortest duration (1187 ms) despite failing the test. This could indicate that the page has fewer resources to load, but they are not optimized or encountering issues during loading."
+    ]
+  }
+}
