@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-15T01:11:54.763Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1675,
+      "metrics": {
+        "loadTime": 722.1000000000058,
+        "ttfb": 53.40000000002328,
+        "fcp": 713.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 921,
+      "metrics": {
+        "loadTime": 199.5,
+        "ttfb": 35,
+        "fcp": 182.89999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1292,
+      "metrics": {
+        "loadTime": 302.5,
+        "ttfb": 70.09999999997672,
+        "fcp": 189.80000000004657
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 937
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server configuration to identify and fix the problem.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the shortest load time of 199.5ms, indicating that the page's resources are optimized and the server is responding quickly.",
+      "The blog page has a load time of 302.5ms, which is relatively low, indicating that the page's resources are optimized and the server is responding quickly.",
+      "The TTFB for all pages is relatively low, indicating that the server is responding quickly. However, the FCP for the homepage is slightly higher than the other pages, suggesting that there might be some delay in rendering the initial content on the homepage. It is recommended to review the page's code and resources to optimize the FCP."
+    ]
+  }
+}
