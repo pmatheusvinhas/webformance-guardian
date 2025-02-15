@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server configuration to identify and fix the problem.",
+  "summary": "ISSUES\nCritical:\n- None",
   "issues": [],
   "insights": [
-    "The pricing page has the shortest load time of 199.5ms, indicating that the page's resources are optimized and the server is responding quickly.",
-    "The blog page has a load time of 302.5ms, which is relatively low, indicating that the page's resources are optimized and the server is responding quickly.",
-    "The TTFB for all pages is relatively low, indicating that the server is responding quickly. However, the FCP for the homepage is slightly higher than the other pages, suggesting that there might be some delay in rendering the initial content on the homepage. It is recommended to review the page's code and resources to optimize the FCP."
+    "The homepage has a longer load time of 585ms, but this is still within an acceptable range.",
+    "The pricing page has the shortest load time of 206ms, indicating that it is optimized for fast loading.",
+    "The blog page has a longer first contentful paint time of 245ms, which could indicate that the page takes longer to render the initial content.",
+    "It is recommended to continue monitoring the web performance and optimizing the pages for faster loading times."
   ]
 }

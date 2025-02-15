@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-15T05:15:33.516Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1274,
+      "metrics": {
+        "loadTime": 585.4000000000233,
+        "ttfb": 75.90000000002328,
+        "fcp": 353.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1018,
+      "metrics": {
+        "loadTime": 206.5,
+        "ttfb": 58,
+        "fcp": 227.19999999998254
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1287,
+      "metrics": {
+        "loadTime": 394.6000000000058,
+        "ttfb": 111.29999999998836,
+        "fcp": 245.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 999
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None",
+    "issues": [],
+    "insights": [
+      "The homepage has a longer load time of 585ms, but this is still within an acceptable range.",
+      "The pricing page has the shortest load time of 206ms, indicating that it is optimized for fast loading.",
+      "The blog page has a longer first contentful paint time of 245ms, which could indicate that the page takes longer to render the initial content.",
+      "It is recommended to continue monitoring the web performance and optimizing the pages for faster loading times."
+    ]
+  }
+}
