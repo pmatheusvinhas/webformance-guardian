@@ -1,11 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there might be issues with the page's loading time. It is recommended to investigate the page's content, scripts, and images to identify the cause of the slow loading time.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience. (Recommendation: Review server logs, network requests, and page structure to identify bottlenecks and optimize performance.)",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience. (Recommendation",
+      "recommendation": "Review server logs, network requests, and page structure to identify bottlenecks and optimize performance.)"
+    },
+    {
+      "severity": "info",
+      "message": "The Time to First Byte (TTFB) for the homepage is relatively high at 87.3 ms. Although it is within the acceptable range, reducing TTFB can improve user experience. (Recommendation",
+      "recommendation": "Optimize server-side processing, minimize database queries, and enable caching.)"
+    },
+    {
+      "severity": "info",
+      "message": "The First Contentful Paint (FCP) for the pricing page is higher than the other pages. While it is within an acceptable range, it could be improved. (Recommendation",
+      "recommendation": "Optimize and prioritize the rendering of above-the-fold content.)"
+    }
+  ],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, indicating that the website's performance is optimized. However, there is still room for improvement, and further optimization can be done to reduce the load times.",
-    "The \"How It Works\" page's failure in the test indicates that there might be issues with the page's content, scripts, or images. Investigating the page's content can help identify the cause of the slow loading time and improve the page's performance.",
-    "The TTFB (Time to First Byte) metric is an essential indicator of the website's server response time. A good TTFB value is below 200ms, and the test results show that all pages have a TTFB value below 50ms, indicating a fast server response time.",
-    "The FCP (First Contentful Paint) metric is an essential indicator of the website's visual loading time. A good FCP value is below 1000ms, and the test results show that all pages have an FCP value below 500ms, indicating a fast visual loading time.",
-    "Reducing the number of requests, optimizing images, and minifying scripts can further improve the website's performance and reduce the load times."
+    "The blog page has the lowest load time and TTFB among the passed tests, indicating efficient optimization and server-side processing.",
+    "The homepage has a longer load time than the pricing and blog pages, suggesting room for improvement in optimizing above-the-fold content and server-side processing.",
+    "The FCP for the pricing page is significantly higher than the TTFB, indicating that optimizing the rendering of above-the-fold content could provide a quicker perceived loading time."
   ]
 }
