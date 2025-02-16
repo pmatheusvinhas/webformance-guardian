@@ -1,25 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience. (Recommendation: Review server logs, network requests, and page structure to identify bottlenecks and optimize performance.)",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a smooth user experience. (Recommendation",
-      "recommendation": "Review server logs, network requests, and page structure to identify bottlenecks and optimize performance.)"
-    },
-    {
-      "severity": "info",
-      "message": "The Time to First Byte (TTFB) for the homepage is relatively high at 87.3 ms. Although it is within the acceptable range, reducing TTFB can improve user experience. (Recommendation",
-      "recommendation": "Optimize server-side processing, minimize database queries, and enable caching.)"
-    },
-    {
-      "severity": "info",
-      "message": "The First Contentful Paint (FCP) for the pricing page is higher than the other pages. While it is within an acceptable range, it could be improved. (Recommendation",
-      "recommendation": "Optimize and prioritize the rendering of above-the-fold content.)"
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+  "issues": [],
   "insights": [
-    "The blog page has the lowest load time and TTFB among the passed tests, indicating efficient optimization and server-side processing.",
-    "The homepage has a longer load time than the pricing and blog pages, suggesting room for improvement in optimizing above-the-fold content and server-side processing.",
-    "The FCP for the pricing page is significantly higher than the TTFB, indicating that optimizing the rendering of above-the-fold content could provide a quicker perceived loading time."
+    "The pricing page and blog page have the fastest load times, at 333.099ms and 326.899ms, respectively. This indicates that the optimization strategies applied to these pages are effective and could potentially be implemented on other pages, such as the homepage and \"How It Works\" page.",
+    "The Time To First Byte (TTFB) metric is relatively low across all pages, indicating that the server response time is good. This is a positive sign, as it shows that the server is quickly providing the first byte of data, which can help reduce overall load times.",
+    "The First Contentful Paint (FCP) metric, which measures when the first piece of content is displayed on the page, is also within acceptable ranges for all pages. However, there is still room for improvement, particularly for the \"How It Works\" page, to ensure a better user experience."
   ]
 }
