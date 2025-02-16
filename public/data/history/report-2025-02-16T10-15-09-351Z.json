@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-02-16T10:15:09.351Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1428,
+      "metrics": {
+        "loadTime": 616.3000000000029,
+        "ttfb": 49.89999999999418,
+        "fcp": 453.59999999999127
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 923,
+      "metrics": {
+        "loadTime": 211.10000000000582,
+        "ttfb": 43.60000000000582,
+        "fcp": 190.29999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1016,
+      "metrics": {
+        "loadTime": 290.40000000000873,
+        "ttfb": 48.80000000000291,
+        "fcp": 171.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 933
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there might be issues with the page's loading time. It is recommended to investigate the page's content, scripts, and images to identify the cause of the slow loading time.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good load times, indicating that the website's performance is optimized. However, there is still room for improvement, and further optimization can be done to reduce the load times.",
+      "The \"How It Works\" page's failure in the test indicates that there might be issues with the page's content, scripts, or images. Investigating the page's content can help identify the cause of the slow loading time and improve the page's performance.",
+      "The TTFB (Time to First Byte) metric is an essential indicator of the website's server response time. A good TTFB value is below 200ms, and the test results show that all pages have a TTFB value below 50ms, indicating a fast server response time.",
+      "The FCP (First Contentful Paint) metric is an essential indicator of the website's visual loading time. A good FCP value is below 1000ms, and the test results show that all pages have an FCP value below 500ms, indicating a fast visual loading time.",
+      "Reducing the number of requests, optimizing images, and minifying scripts can further improve the website's performance and reduce the load times."
+    ]
+  }
+}
