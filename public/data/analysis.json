@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is crucial to investigate the cause of this failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's code, resources, and server response time to identify the root cause of the failure.",
   "issues": [],
   "insights": [
-    "The load times for all passing pages are within the recommended range, providing a good user experience.",
-    "The Time to First Byte (TTFB) for all pages is relatively low, indicating fast server response times.",
-    "The blog page has a higher load time than the other pages, mainly due to a higher First Contentful Paint (FCP). Investigating and optimizing this metric could further improve user experience."
+    "The pricing and blog pages have significantly lower load times compared to the homepage, indicating that they are optimized and well-structured.",
+    "The TTFB metric is fast for all pages, indicating that the server is responding quickly and efficiently.",
+    "The FCP metric is also fast for all pages, suggesting that the pages are rendering quickly and providing a good user experience. However, there is still room for improvement in reducing the load times, particularly for the homepage."
   ]
 }
