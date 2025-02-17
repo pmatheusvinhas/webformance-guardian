@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1147ms. It is recommended to investigate the cause of the failure and optimize the page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The homepage has the longest duration of 1940ms, but it has the lowest load time of 630.8ms. This indicates that there are opportunities to optimize the other pages to reduce their duration while maintaining a fast load time.",
-    "The blog page has the lowest TTFB of 209.9ms and the lowest FCP of 461.4ms. This indicates that the blog page is well-optimized and could serve as a model for optimizing the other pages.",
-    "The pricing page has the highest TTFB of 483.6ms, which is significantly higher than the other pages. This suggests that there may be issues with the server or the page's resources that need to be addressed to improve its performance."
+    "The homepage, pricing page, and blog page have good load times, indicating efficient optimization and resource management.",
+    "The \"How It Works\" page failed the test, suggesting possible issues such as inefficient code, large media files, or slow server response times.",
+    "Investigating and addressing the issues on the \"How It Works\" page should be a priority to ensure consistent performance across all pages."
   ]
 }
