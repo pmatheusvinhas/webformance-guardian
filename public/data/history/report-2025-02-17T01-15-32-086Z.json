@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-17T01:15:32.086Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1499,
+      "metrics": {
+        "loadTime": 666.5,
+        "ttfb": 60.89999999999418,
+        "fcp": 521.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1312,
+      "metrics": {
+        "loadTime": 342.6000000000058,
+        "ttfb": 191.39999999999418,
+        "fcp": 350.19999999998254
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1362,
+      "metrics": {
+        "loadTime": 509.29999999998836,
+        "ttfb": 299.1000000000058,
+        "fcp": 414.8999999999942
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1174
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is crucial to investigate the cause of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The load times for all passing pages are within the recommended range, providing a good user experience.",
+      "The Time to First Byte (TTFB) for all pages is relatively low, indicating fast server response times.",
+      "The blog page has a higher load time than the other pages, mainly due to a higher First Contentful Paint (FCP). Investigating and optimizing this metric could further improve user experience."
+    ]
+  }
+}
