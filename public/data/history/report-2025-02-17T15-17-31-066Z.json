@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-17T15:17:31.066Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1940,
+      "metrics": {
+        "loadTime": 630.8000000000175,
+        "ttfb": 95.30000000001746,
+        "fcp": 679.3000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1575,
+      "metrics": {
+        "loadTime": 748.1999999999825,
+        "ttfb": 483.5999999999767,
+        "fcp": 667.6000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1654,
+      "metrics": {
+        "loadTime": 563.5,
+        "ttfb": 209.89999999999418,
+        "fcp": 461.3999999999942
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1147
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1147ms. It is recommended to investigate the cause of the failure and optimize the page to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest duration of 1940ms, but it has the lowest load time of 630.8ms. This indicates that there are opportunities to optimize the other pages to reduce their duration while maintaining a fast load time.",
+      "The blog page has the lowest TTFB of 209.9ms and the lowest FCP of 461.4ms. This indicates that the blog page is well-optimized and could serve as a model for optimizing the other pages.",
+      "The pricing page has the highest TTFB of 483.6ms, which is significantly higher than the other pages. This suggests that there may be issues with the server or the page's resources that need to be addressed to improve its performance."
+    ]
+  }
+}
