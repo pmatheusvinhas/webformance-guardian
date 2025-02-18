@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-18T15:17:59.994Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1660,
+      "metrics": {
+        "loadTime": 636.6999999999825,
+        "ttfb": 51.09999999997672,
+        "fcp": 539.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1068,
+      "metrics": {
+        "loadTime": 237.80000000001746,
+        "ttfb": 52.70000000001164,
+        "fcp": 193.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1034,
+      "metrics": {
+        "loadTime": 276.3999999999942,
+        "ttfb": 43.5,
+        "fcp": 173.19999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 998
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large file sizes, unoptimized images, or slow server response time. It is recommended to investigate and optimize these factors to improve page performance.",
+    "issues": [],
+    "insights": [
+      "The Time to First Byte (TTFB) for all pages is relatively fast, ranging from 43.5 ms to 52.7 ms, indicating that the server response time is adequate.",
+      "The First Contentful Paint (FCP) for the pricing page (193.6 ms) and blog page (173.2 ms) is significantly faster than the homepage (539.6 ms), suggesting that the latter may have larger above-the-fold content or slower rendering of initial content.",
+      "The duration for the pricing page (1068 ms) and blog page (1034 ms) is slightly higher than recommended best practices, although their load times and TTFB are acceptable. This might be due to additional HTTP requests or larger file sizes that can be further optimized."
+    ]
+  }
+}
