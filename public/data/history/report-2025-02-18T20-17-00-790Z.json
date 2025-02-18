@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-18T20:17:00.790Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1420,
+      "metrics": {
+        "loadTime": 598.9000000000233,
+        "ttfb": 60.70000000001164,
+        "fcp": 463.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1008,
+      "metrics": {
+        "loadTime": 213.60000000000582,
+        "ttfb": 33.60000000000582,
+        "fcp": 213.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1113,
+      "metrics": {
+        "loadTime": 470.1000000000058,
+        "ttfb": 96.10000000000582,
+        "fcp": 227.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 994
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating potential issues that need immediate attention. It is recommended to investigate the page's resources, scripts, and content to identify the cause of the failure.",
+    "issues": [],
+    "insights": [
+      "The Pricing Page had the shortest load time, TTFB, and FCP, indicating that its optimization is better than the other pages. It can serve as a benchmark for optimizing the other pages.",
+      "The duration for all pages was within the recommended threshold of 3000 ms, indicating that the server's response time is adequate.",
+      "The TTFB for all pages was within the recommended threshold of 200 ms, indicating that the server's processing time is efficient.",
+      "It is recommended to conduct further tests to identify the cause of the \"How It Works\" page failure and optimize the other pages' load time, TTFB, and FCP."
+    ]
+  }
+}
