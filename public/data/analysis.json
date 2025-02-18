@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks on this page.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, indicating efficient optimization and resource management.",
-    "The \"How It Works\" page failed the test, suggesting possible issues such as inefficient code, large media files, or slow server response times.",
-    "Investigating and addressing the issues on the \"How It Works\" page should be a priority to ensure consistent performance across all pages."
+    "The homepage has the longest load time, but it still falls within an acceptable range. Focus on optimizing the \"How It Works\" page first, then consider further optimizing the homepage if needed.",
+    "The pricing page has the best performance, with the shortest load time, TTFB, and First Contentful Paint (FCP). Analyze this page to identify best practices that can be applied to other pages.",
+    "Although the blog page's TTFB is longer, its load time and FCP are still acceptable. Prioritize addressing the \"How It Works\" page's issues before focusing on TTFB optimization."
   ]
 }

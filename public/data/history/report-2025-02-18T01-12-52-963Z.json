@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-18T01:12:52.963Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1479,
+      "metrics": {
+        "loadTime": 602.2000000000116,
+        "ttfb": 63.90000000002328,
+        "fcp": 511.1000000000349
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1060,
+      "metrics": {
+        "loadTime": 201.70000000001164,
+        "ttfb": 38.70000000001164,
+        "fcp": 208.60000000003492
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1352,
+      "metrics": {
+        "loadTime": 387.5999999999767,
+        "ttfb": 142.19999999995343,
+        "fcp": 308.30000000004657
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1011
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks on this page.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time, but it still falls within an acceptable range. Focus on optimizing the \"How It Works\" page first, then consider further optimizing the homepage if needed.",
+      "The pricing page has the best performance, with the shortest load time, TTFB, and First Contentful Paint (FCP). Analyze this page to identify best practices that can be applied to other pages.",
+      "Although the blog page's TTFB is longer, its load time and FCP are still acceptable. Prioritize addressing the \"How It Works\" page's issues before focusing on TTFB optimization."
+    ]
+  }
+}
