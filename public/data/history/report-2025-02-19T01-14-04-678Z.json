@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-19T01:14:04.678Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1776,
+      "metrics": {
+        "loadTime": 768.9000000000233,
+        "ttfb": 96.70000000001164,
+        "fcp": 841.9000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 931,
+      "metrics": {
+        "loadTime": 266.6000000000349,
+        "ttfb": 35.800000000046566,
+        "fcp": 183.09999999997672
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1235,
+      "metrics": {
+        "loadTime": 353,
+        "ttfb": 124,
+        "fcp": 291.5999999999767
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 2082
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To improve the load time, consider optimizing images, minifying CSS and JavaScript files, and reducing the number of HTTP requests.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time, which is a good sign as it's a crucial page for conversions.",
+      "The blog page has a faster first contentful paint (FCP) time (291.6 ms) compared to the homepage (842 ms), indicating that the blog page's above-the-fold content is rendered faster.",
+      "The time to first byte (TTFB) for all pages is within acceptable limits (less than 200 ms), indicating that the server response time is good."
+    ]
+  }
+}
