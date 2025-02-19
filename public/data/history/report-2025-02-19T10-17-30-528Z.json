@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-19T10:17:30.528Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1528,
+      "metrics": {
+        "loadTime": 711.5,
+        "ttfb": 98,
+        "fcp": 479.79999999998836
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1181,
+      "metrics": {
+        "loadTime": 349.59999999999127,
+        "ttfb": 71.29999999998836,
+        "fcp": 233
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1124,
+      "metrics": {
+        "loadTime": 279.5,
+        "ttfb": 64.10000000000582,
+        "fcp": 187.59999999999127
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 938
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential issues that need immediate attention. It is essential to investigate why this page took longer to load than the others and implement necessary optimizations.",
+    "issues": [],
+    "insights": [
+      "The blog page has the shortest load time, TTFB, and FCP, indicating that it is the most optimized page. Use it as a benchmark for optimizing the other pages.",
+      "The pricing page has a longer FCP than the blog page, suggesting that there might be some render-blocking resources that need to be optimized.",
+      "Although the TTFB is low for all pages, there is still room for improvement in reducing load time. Consider optimizing server-side rendering, reducing database queries, and implementing a content delivery network (CDN) to improve TTFB."
+    ]
+  }
+}

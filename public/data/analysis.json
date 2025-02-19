@@ -1,21 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.\n  - Recommendation: Analyze the page's resources, such as images, scripts, and stylesheets, to identify any bottlenecks that may be causing the slow load time. Consider optimizing or compressing these resources, minifying CSS and JavaScript files, and leveraging browser caching to enhance the page's performance.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the page's resources, such as images, scripts, and stylesheets, to identify any bottlenecks that may be causing the slow load time. Consider optimizing or compressing these resources, minifying CSS and JavaScript files, and leveraging browser caching to enhance the page's performance."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Continue optimizing images, scripts, and stylesheets to further reduce the load time."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential issues that need immediate attention. It is essential to investigate why this page took longer to load than the others and implement necessary optimizations.",
+  "issues": [],
   "insights": [
-    "The Time to First Byte (TTFB) metric is consistently low across all pages, indicating that the server is responding quickly.",
-    "First Contentful Paint (FCP) is also relatively low, suggesting that the pages are rendering their initial content rapidly.",
-    "The duration metric for each page is close to the load time, implying that the pages are loading efficiently without significant delays between resources.",
-    "It is crucial to address the failed \"How It Works\" page to ensure consistent performance across all pages of the website."
+    "The blog page has the shortest load time, TTFB, and FCP, indicating that it is the most optimized page. Use it as a benchmark for optimizing the other pages.",
+    "The pricing page has a longer FCP than the blog page, suggesting that there might be some render-blocking resources that need to be optimized.",
+    "Although the TTFB is low for all pages, there is still room for improvement in reducing load time. Consider optimizing server-side rendering, reducing database queries, and implementing a content delivery network (CDN) to improve TTFB."
   ]
 }
