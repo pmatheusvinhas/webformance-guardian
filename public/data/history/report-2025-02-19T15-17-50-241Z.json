@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-02-19T15:17:50.241Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1488,
+      "metrics": {
+        "loadTime": 613.5,
+        "ttfb": 69.80000000000291,
+        "fcp": 547.3999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 956,
+      "metrics": {
+        "loadTime": 175.90000000000873,
+        "ttfb": 25.5,
+        "fcp": 169.8000000000029
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1153,
+      "metrics": {
+        "loadTime": 349.1999999999971,
+        "ttfb": 101.59999999999127,
+        "fcp": 215.10000000000582
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 941
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.\n  - Recommendation: Analyze the page's resources, such as images, videos, and scripts, to identify any large files or bottlenecks that could be causing the slow load time. Consider optimizing these resources, implementing lazy loading, or removing unnecessary elements to enhance the page's performance.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the page's resources, such as images, videos, and scripts, to identify any large files or bottlenecks that could be causing the slow load time. Consider optimizing these resources, implementing lazy loading, or removing unnecessary elements to enhance the page's performance."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Optimize images, minify CSS and JavaScript files, and leverage browser caching to reduce the homepage's load time."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Continue monitoring TTFB to ensure it remains low as the website's traffic and content grow."
+      }
+    ],
+    "insights": [
+      "The pricing page has the fastest load time (175.9 ms) among all pages, suggesting that its optimized resources and lighter content contribute to its superior performance.",
+      "The blog page has a longer Time to First Byte (101.6 ms) than the pricing page and homepage, indicating that there might be room for improvement in server-side processing or database queries.",
+      "Implementing similar optimizations as those on the pricing page across all pages can help maintain consistent performance and user experience throughout the website."
+    ]
+  }
+}
