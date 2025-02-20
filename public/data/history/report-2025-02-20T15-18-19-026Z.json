@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-20T15:18:19.026Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1473,
+      "metrics": {
+        "loadTime": 652.7000000000116,
+        "ttfb": 78.30000000001746,
+        "fcp": 543.2000000000116
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 912,
+      "metrics": {
+        "loadTime": 172.39999999999418,
+        "ttfb": 30.89999999999418,
+        "fcp": 156.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1053,
+      "metrics": {
+        "loadTime": 264.1000000000058,
+        "ttfb": 60,
+        "fcp": 229.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 979
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive scripts, or network requests that could be optimized or removed.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (652.7 ms) but still falls within an acceptable range. Consider optimizing images, minifying scripts, and leveraging browser caching to improve load time.",
+      "The pricing page has the shortest TTFB (30.9 ms) and FCP (156.5 ms), indicating efficient server response and content rendering. This page serves as a good example for optimizing other pages.",
+      "The blog page has a moderate load time (264.1 ms), TTFB (60 ms), and FCP (229.2 ms). It may benefit from similar optimizations as the homepage, such as image optimization and minification."
+    ]
+  }
+}
