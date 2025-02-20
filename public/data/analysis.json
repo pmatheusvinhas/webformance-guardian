@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large media files, unoptimized scripts, or server-side rendering problems. It is recommended to investigate and optimize these elements to improve the page's performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive HTTP requests, or slow server response times.",
   "issues": [],
   "insights": [
-    "The pricing and blog pages have shorter load times than the homepage, indicating that these pages might have been optimized previously. Analyzing the differences in optimization techniques between these pages and the homepage could provide valuable insights for improving the homepage's performance.",
-    "Reducing Time to First Byte (TTFB) is crucial for improving user experience, as it directly affects the perceived loading speed of a page. Investigating and optimizing server-side rendering and caching can significantly improve TTFB.",
-    "Implementing a Content Delivery Network (CDN) can help distribute static assets across multiple servers, reducing the load time for users in different geographical locations. This could be particularly beneficial for the homepage, which has the longest load time."
+    "The pricing page has the fastest load time, TTFB, and FCP among the pages tested. This indicates efficient optimization and quick server response times.",
+    "The blog page has a longer TTFB (112.30000000001746 ms) compared to the pricing page (29.5 ms), suggesting room for improvement in server response times.",
+    "Investigating the cause of the failed test for the \"How It Works\" page should be a priority to ensure optimal user experience."
   ]
 }
