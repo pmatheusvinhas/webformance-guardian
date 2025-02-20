@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large media files, unoptimized scripts, or server-side rendering problems. It is recommended to investigate and optimize these elements to improve the page's performance.",
   "issues": [],
   "insights": [
-    "The Time to First Byte (TTFB) metric is low for all pages, indicating that the server response time is fast.",
-    "The First Contentful Paint (FCP) metric is also low for all pages, suggesting that the pages are rendering quickly.",
-    "The duration of the pricing page and blog page is shorter than the homepage, indicating that they may have fewer resources to load. It is essential to optimize the homepage further to reduce its load time.",
-    "The \"How It Works\" page failed the test, indicating potential performance issues. It is crucial to investigate and optimize this page to improve its performance."
+    "The pricing and blog pages have shorter load times than the homepage, indicating that these pages might have been optimized previously. Analyzing the differences in optimization techniques between these pages and the homepage could provide valuable insights for improving the homepage's performance.",
+    "Reducing Time to First Byte (TTFB) is crucial for improving user experience, as it directly affects the perceived loading speed of a page. Investigating and optimizing server-side rendering and caching can significantly improve TTFB.",
+    "Implementing a Content Delivery Network (CDN) can help distribute static assets across multiple servers, reducing the load time for users in different geographical locations. This could be particularly beneficial for the homepage, which has the longest load time."
   ]
 }

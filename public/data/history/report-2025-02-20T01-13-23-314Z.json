@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-20T01:13:23.314Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1683,
+      "metrics": {
+        "loadTime": 661.3999999999942,
+        "ttfb": 57.10000000000582,
+        "fcp": 627
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1040,
+      "metrics": {
+        "loadTime": 273,
+        "ttfb": 109.89999999999418,
+        "fcp": 237.40000000002328
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1013,
+      "metrics": {
+        "loadTime": 312.29999999998836,
+        "ttfb": 98,
+        "fcp": 226.69999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 893
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large media files, unoptimized scripts, or server-side rendering problems. It is recommended to investigate and optimize these elements to improve the page's performance.",
+    "issues": [],
+    "insights": [
+      "The pricing and blog pages have shorter load times than the homepage, indicating that these pages might have been optimized previously. Analyzing the differences in optimization techniques between these pages and the homepage could provide valuable insights for improving the homepage's performance.",
+      "Reducing Time to First Byte (TTFB) is crucial for improving user experience, as it directly affects the perceived loading speed of a page. Investigating and optimizing server-side rendering and caching can significantly improve TTFB.",
+      "Implementing a Content Delivery Network (CDN) can help distribute static assets across multiple servers, reducing the load time for users in different geographical locations. This could be particularly beneficial for the homepage, which has the longest load time."
+    ]
+  }
+}
