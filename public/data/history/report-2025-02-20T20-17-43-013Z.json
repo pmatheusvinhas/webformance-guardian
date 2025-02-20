@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-20T20:17:43.013Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1459,
+      "metrics": {
+        "loadTime": 600.3999999999942,
+        "ttfb": 98.39999999999418,
+        "fcp": 536.3999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 960,
+      "metrics": {
+        "loadTime": 203.40000000002328,
+        "ttfb": 62.20000000001164,
+        "fcp": 205.30000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1189,
+      "metrics": {
+        "loadTime": 281.70000000001164,
+        "ttfb": 68,
+        "fcp": 331.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1023
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the performance test with a duration of 1023ms. This is significantly higher than the recommended threshold of 1000ms. Recommendation is to optimize the page by reducing the size of images, minifying CSS and JavaScript files, and improving server-side rendering.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the shortest load time of all pages, indicating that it is optimized for performance. This is a good sign, as it means that users will be able to access the pricing information quickly and easily.",
+      "The blog page has a low load time of 281.7ms, indicating that it is also optimized for performance. This is important, as it means that users will be able to access the blog content quickly and easily.",
+      "The Time To First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good. This is a positive sign, as it means that the server is able to handle requests efficiently. However, it is important to note that TTFB is only one aspect of web performance, and other factors such as rendering and network latency can also impact the user experience."
+    ]
+  }
+}

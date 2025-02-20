@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive scripts, or network requests that could be optimized or removed.",
+  "summary": "ISSUES\nCritical:\n- The how it works page failed the performance test with a duration of 1023ms. This is significantly higher than the recommended threshold of 1000ms. Recommendation is to optimize the page by reducing the size of images, minifying CSS and JavaScript files, and improving server-side rendering.",
   "issues": [],
   "insights": [
-    "The homepage has the longest load time (652.7 ms) but still falls within an acceptable range. Consider optimizing images, minifying scripts, and leveraging browser caching to improve load time.",
-    "The pricing page has the shortest TTFB (30.9 ms) and FCP (156.5 ms), indicating efficient server response and content rendering. This page serves as a good example for optimizing other pages.",
-    "The blog page has a moderate load time (264.1 ms), TTFB (60 ms), and FCP (229.2 ms). It may benefit from similar optimizations as the homepage, such as image optimization and minification."
+    "The pricing page has the shortest load time of all pages, indicating that it is optimized for performance. This is a good sign, as it means that users will be able to access the pricing information quickly and easily.",
+    "The blog page has a low load time of 281.7ms, indicating that it is also optimized for performance. This is important, as it means that users will be able to access the blog content quickly and easily.",
+    "The Time To First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good. This is a positive sign, as it means that the server is able to handle requests efficiently. However, it is important to note that TTFB is only one aspect of web performance, and other factors such as rendering and network latency can also impact the user experience."
   ]
 }
