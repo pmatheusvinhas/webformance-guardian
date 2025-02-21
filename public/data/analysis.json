@@ -1,11 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, with a duration of 1009ms. It is recommended to investigate the causes of this failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The TTFB (Time to First Byte) metric for all pages is within acceptable ranges, indicating that the server response time is fast enough.",
-    "The FCP (First Contentful Paint) metric for all pages, except for the homepage, is within acceptable ranges. This means that the pages are rendering their first piece of content quickly, providing a good user experience.",
-    "The homepage has the longest load time among all pages, indicating that there might be issues with the page's resources, such as images, scripts, or stylesheets. It is recommended to optimize these resources to improve the page's performance.",
-    "The \"How It Works\" page failed the test, indicating potential issues that need to be addressed. It is recommended to investigate the causes of this failure, such as large page size, slow server response, or unoptimized resources, and take necessary actions to optimize the page.",
-    "The blog page has the best performance, with the shortest load time among all pages. This page can serve as a benchmark for optimizing the other pages, by applying the same optimization techniques used on this page."
+    "The \"How It Works\" page's failure indicates potential issues such as heavy resource usage, slow server response time, or inefficient code. A thorough investigation is required to identify and resolve these problems.",
+    "Optimizing images, minifying CSS and JavaScript, and leveraging browser caching can significantly improve the load times for all pages, providing a better user experience.",
+    "Reducing the number of requests and prioritizing critical resources can help decrease the overall load time, TTFB, and FCP, further enhancing the web performance."
   ]
 }

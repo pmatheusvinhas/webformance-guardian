@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-21T05:15:42.033Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1676,
+      "metrics": {
+        "loadTime": 580,
+        "ttfb": 74.30000000001746,
+        "fcp": 755.6999999999825
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 960,
+      "metrics": {
+        "loadTime": 210.70000000001164,
+        "ttfb": 57.80000000001746,
+        "fcp": 206
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1146,
+      "metrics": {
+        "loadTime": 284.1000000000058,
+        "ttfb": 74.5,
+        "fcp": 211.30000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 982
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure indicates potential issues such as heavy resource usage, slow server response time, or inefficient code. A thorough investigation is required to identify and resolve these problems.",
+      "Optimizing images, minifying CSS and JavaScript, and leveraging browser caching can significantly improve the load times for all pages, providing a better user experience.",
+      "Reducing the number of requests and prioritizing critical resources can help decrease the overall load time, TTFB, and FCP, further enhancing the web performance."
+    ]
+  }
+}
