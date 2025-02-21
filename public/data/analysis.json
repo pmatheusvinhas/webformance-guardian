@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page's performance. Recommendations include reviewing the page's code, checking for any large media files or unoptimized scripts, and analyzing network requests to identify bottlenecks.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks. Once the issue is identified, optimize the page accordingly to improve its performance.",
   "issues": [],
   "insights": [
-    "The pricing page and blog page have better TTFB and FCP metrics than the homepage, suggesting that these pages might have better optimization strategies in place. Analyzing the differences between these pages and the homepage could provide insights into further optimization opportunities.",
-    "The homepage load time is relatively high compared to the pricing page and blog page, indicating that there might be unnecessary resources or scripts that can be removed or optimized.",
-    "It is crucial to address the performance issues on the \"How It Works\" page to ensure a consistent user experience across all pages of the website."
+    "The passed tests for the homepage, pricing page, and blog page indicate that current optimization efforts are effective. However, it is essential to consistently monitor and optimize these pages to maintain their performance.",
+    "The failed test for the \"How It Works\" page highlights the need for proactive performance monitoring and optimization. Regularly test and address issues on all pages to ensure a positive user experience.",
+    "Web performance optimization is an ongoing process. Continuously review and implement best practices, such as minification, compression, and caching, to enhance user experience and search engine rankings."
   ]
 }

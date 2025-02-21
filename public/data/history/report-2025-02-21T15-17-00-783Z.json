@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-21T15:17:00.783Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1382,
+      "metrics": {
+        "loadTime": 621.3000000000175,
+        "ttfb": 57.89999999999418,
+        "fcp": 356.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 937,
+      "metrics": {
+        "loadTime": 203.80000000001746,
+        "ttfb": 40.39999999999418,
+        "fcp": 199.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1301,
+      "metrics": {
+        "loadTime": 366.8999999999942,
+        "ttfb": 145.20000000001164,
+        "fcp": 282.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1105
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks. Once the issue is identified, optimize the page accordingly to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The passed tests for the homepage, pricing page, and blog page indicate that current optimization efforts are effective. However, it is essential to consistently monitor and optimize these pages to maintain their performance.",
+      "The failed test for the \"How It Works\" page highlights the need for proactive performance monitoring and optimization. Regularly test and address issues on all pages to ensure a positive user experience.",
+      "Web performance optimization is an ongoing process. Continuously review and implement best practices, such as minification, compression, and caching, to enhance user experience and search engine rankings."
+    ]
+  }
+}
