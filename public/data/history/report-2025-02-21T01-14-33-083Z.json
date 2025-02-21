@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-02-21T01:14:33.083Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1995,
+      "metrics": {
+        "loadTime": 833.6999999999825,
+        "ttfb": 71.10000000000582,
+        "fcp": 1043.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1062,
+      "metrics": {
+        "loadTime": 296.20000000001164,
+        "ttfb": 109.5,
+        "fcp": 261.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1039,
+      "metrics": {
+        "loadTime": 241.5,
+        "ttfb": 27.5,
+        "fcp": 164.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1009
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, with a duration of 1009ms. It is recommended to investigate the causes of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The TTFB (Time to First Byte) metric for all pages is within acceptable ranges, indicating that the server response time is fast enough.",
+      "The FCP (First Contentful Paint) metric for all pages, except for the homepage, is within acceptable ranges. This means that the pages are rendering their first piece of content quickly, providing a good user experience.",
+      "The homepage has the longest load time among all pages, indicating that there might be issues with the page's resources, such as images, scripts, or stylesheets. It is recommended to optimize these resources to improve the page's performance.",
+      "The \"How It Works\" page failed the test, indicating potential issues that need to be addressed. It is recommended to investigate the causes of this failure, such as large page size, slow server response, or unoptimized resources, and take necessary actions to optimize the page.",
+      "The blog page has the best performance, with the shortest load time among all pages. This page can serve as a benchmark for optimizing the other pages, by applying the same optimization techniques used on this page."
+    ]
+  }
+}
