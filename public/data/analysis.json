@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks. Once the issue is identified, optimize the page accordingly to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the cause of the failure and optimize the page to improve its performance.",
   "issues": [],
   "insights": [
-    "The passed tests for the homepage, pricing page, and blog page indicate that current optimization efforts are effective. However, it is essential to consistently monitor and optimize these pages to maintain their performance.",
-    "The failed test for the \"How It Works\" page highlights the need for proactive performance monitoring and optimization. Regularly test and address issues on all pages to ensure a positive user experience.",
-    "Web performance optimization is an ongoing process. Continuously review and implement best practices, such as minification, compression, and caching, to enhance user experience and search engine rankings."
+    "The pricing page has the fastest load time (289.5ms) and TTFB (147.1ms), indicating that it is the most optimized page. Analyzing the elements on this page and applying the same optimization techniques to other pages can help improve their performance.",
+    "The blog page has a longer FCP (353ms) compared to its load time (420.29ms), indicating that there may be some elements that are causing a delay in painting the first content on the page. Investigating these elements and optimizing them can help improve the user experience.",
+    "Reducing the load time of the homepage can help improve the user experience, as it is the first page that users see when they visit the website. Optimizing the elements on the homepage can help reduce the load time and provide a faster and more seamless user experience."
   ]
 }
