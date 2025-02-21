@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-21T10:17:27.067Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1367,
+      "metrics": {
+        "loadTime": 588.6999999999971,
+        "ttfb": 51.09999999999127,
+        "fcp": 306.6999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1136,
+      "metrics": {
+        "loadTime": 321.1999999999971,
+        "ttfb": 173.1999999999971,
+        "fcp": 343.8000000000029
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1368,
+      "metrics": {
+        "loadTime": 457.5,
+        "ttfb": 244.5,
+        "fcp": 352.59999999999127
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 968
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page's performance. Recommendations include reviewing the page's code, checking for any large media files or unoptimized scripts, and analyzing network requests to identify bottlenecks.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have better TTFB and FCP metrics than the homepage, suggesting that these pages might have better optimization strategies in place. Analyzing the differences between these pages and the homepage could provide insights into further optimization opportunities.",
+      "The homepage load time is relatively high compared to the pricing page and blog page, indicating that there might be unnecessary resources or scripts that can be removed or optimized.",
+      "It is crucial to address the performance issues on the \"How It Works\" page to ensure a consistent user experience across all pages of the website."
+    ]
+  }
+}
