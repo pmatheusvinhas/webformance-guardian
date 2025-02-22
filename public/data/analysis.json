@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, investigate the page's content, resources, and scripts to identify bottlenecks and optimize them accordingly.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the performance test with a duration of 881ms, which is significantly lower than the other pages. To address this, it is recommended to identify and optimize the heavy resources or scripts that are causing the delay in loading.",
   "issues": [],
   "insights": [
-    "The pricing page and blog page have the lowest load times, suggesting that their optimizations can serve as a benchmark for other pages.",
-    "The Time to First Byte (TTFB) for all pages is relatively low, indicating that the server response time is adequate.",
-    "The First Contentful Paint (FCP) for the homepage is slightly higher than the other pages, suggesting that the initial rendering of content could be improved. Focus on optimizing critical above-the-fold content to reduce FCP."
+    "The homepage, pricing page, and blog page have good load times, with the homepage being the fastest at 564ms. This suggests that the optimization strategies applied to these pages are effective and can serve as a benchmark for optimizing the \"How It Works\" page.",
+    "The TTFB (Time to First Byte) for the pricing page is relatively high (149.9ms) compared to the other pages. Although it is not a critical issue, it is worth investigating if there are any server-side configurations that can be improved to reduce this time.",
+    "The load time for the blog page is slightly higher than the homepage and pricing page, despite having a lower TTFB. This might be due to larger images or other heavy resources on the blog page. An audit of these elements can help in optimizing the blog page further."
   ]
 }
