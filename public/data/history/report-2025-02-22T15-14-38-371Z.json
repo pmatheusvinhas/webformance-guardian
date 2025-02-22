@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-02-22T15:14:38.371Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1282,
+      "metrics": {
+        "loadTime": 393.5,
+        "ttfb": 50.90000000002328,
+        "fcp": 340
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 980,
+      "metrics": {
+        "loadTime": 266.8999999999942,
+        "ttfb": 125.79999999998836,
+        "fcp": 267
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 982,
+      "metrics": {
+        "loadTime": 269.29999999998836,
+        "ttfb": 50,
+        "fcp": 162.69999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 916
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The Time to First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good.",
+      "The First Contentful Paint (FCP) for the homepage and pricing page is higher than the TTFB, suggesting that there may be some render-blocking resources that need to be optimized.",
+      "The FCP for the blog page is significantly lower than the TTFB, indicating that the page's initial rendering is fast, and there are fewer render-blocking resources.",
+      "It is essential to investigate the issues causing the \"How It Works\" page to fail the web performance test and prioritize fixing them to ensure optimal user experience.",
+      "Continuous monitoring and optimization of web performance are crucial to providing a fast, responsive, and positive user experience."
+    ]
+  }
+}
