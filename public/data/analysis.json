@@ -1,11 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is essential to ensure that all pages on the website load correctly and efficiently.",
   "issues": [],
   "insights": [
-    "The Time to First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good.",
-    "The First Contentful Paint (FCP) for the homepage and pricing page is higher than the TTFB, suggesting that there may be some render-blocking resources that need to be optimized.",
-    "The FCP for the blog page is significantly lower than the TTFB, indicating that the page's initial rendering is fast, and there are fewer render-blocking resources.",
-    "It is essential to investigate the issues causing the \"How It Works\" page to fail the web performance test and prioritize fixing them to ensure optimal user experience.",
-    "Continuous monitoring and optimization of web performance are crucial to providing a fast, responsive, and positive user experience."
+    "The pricing page and blog page have the fastest load times, indicating that the optimizations implemented on these pages are working well. It may be beneficial to apply similar optimizations to the other pages on the website.",
+    "The TTFB for the pricing page and blog page is lower than the homepage, indicating that the server response time for these pages is faster. This could be due to several factors, including caching, server configuration, or the amount of data being requested.",
+    "The FCP for the pricing page and blog page is also lower than the homepage, indicating that these pages are rendering faster. This could be due to several factors, including optimized images, efficient CSS, and JavaScript, or a faster server response time."
   ]
 }

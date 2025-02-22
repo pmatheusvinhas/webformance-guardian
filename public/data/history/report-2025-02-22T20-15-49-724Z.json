@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-22T20:15:49.724Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1273,
+      "metrics": {
+        "loadTime": 638.0999999999767,
+        "ttfb": 49.89999999999418,
+        "fcp": 361.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1091,
+      "metrics": {
+        "loadTime": 334.9000000000233,
+        "ttfb": 156.80000000001746,
+        "fcp": 326.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1043,
+      "metrics": {
+        "loadTime": 491,
+        "ttfb": 138.79999999998836,
+        "fcp": 265.4000000000233
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 904
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is essential to ensure that all pages on the website load correctly and efficiently.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, indicating that the optimizations implemented on these pages are working well. It may be beneficial to apply similar optimizations to the other pages on the website.",
+      "The TTFB for the pricing page and blog page is lower than the homepage, indicating that the server response time for these pages is faster. This could be due to several factors, including caching, server configuration, or the amount of data being requested.",
+      "The FCP for the pricing page and blog page is also lower than the homepage, indicating that these pages are rendering faster. This could be due to several factors, including optimized images, efficient CSS, and JavaScript, or a faster server response time."
+    ]
+  }
+}
