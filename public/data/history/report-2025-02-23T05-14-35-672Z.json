@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-23T05:14:35.672Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1562,
+      "metrics": {
+        "loadTime": 658.5,
+        "ttfb": 57.19999999999709,
+        "fcp": 637.7000000000116
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1006,
+      "metrics": {
+        "loadTime": 276.6999999999971,
+        "ttfb": 113.59999999999127,
+        "fcp": 268.40000000000873
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 976,
+      "metrics": {
+        "loadTime": 258.3000000000029,
+        "ttfb": 35.5,
+        "fcp": 157.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 935
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's content, resources, and code to identify the cause of the failure and optimize it for better performance.",
+    "issues": [],
+    "insights": [
+      "The blog page has the fastest TTFB of 35.5ms, indicating that the server configuration and database queries are optimized for this page. This can be used as a benchmark for optimizing other pages.",
+      "The First Contentful Paint (FCP) for all pages is relatively fast, ranging from 157.3ms to 637.7ms. This indicates that the pages' above-the-fold content is rendered quickly, providing a good user experience.",
+      "The duration for all pages is relatively short, ranging from 935ms to 1562ms. This indicates that the pages are loading quickly, and the user is not waiting for a long time to see the content. However, further optimization can be done to improve the load time and provide a better user experience."
+    ]
+  }
+}
