@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. Investigate and optimize the page's resources, such as images, scripts, and stylesheets, to improve load times.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. (Recommendation: Review server logs, network requests, and page components to identify bottlenecks and optimize performance.)",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. (Recommendation",
+      "recommendation": "Review server logs, network requests, and page components to identify bottlenecks and optimize performance.)"
+    },
+    {
+      "severity": "info",
+      "message": "The load time for the homepage is relatively high (646 ms) compared to the other pages. Consider optimizing images, minifying CSS and JavaScript, and leveraging browser caching to improve homepage performance. (Recommendation",
+      "recommendation": "Use image optimization tools, minify CSS and JavaScript files, and configure browser caching.)"
+    }
+  ],
   "insights": [
-    "The blog page has the fastest load time (282 ms) and time to first byte (58.4 ms) among the tested pages. This indicates effective optimization of resources on this page.",
-    "The pricing page has a slightly longer load time (272.6 ms) than the blog page, but its time to first byte (106.1 ms) is higher. This suggests that server response time could be improved for the pricing page.",
-    "The homepage has the longest first contentful paint time (425.5 ms), indicating that the page's above-the-fold content could be optimized to display faster."
+    "The Time to First Byte (TTFB) is within acceptable limits for all pages, indicating that the server is responding quickly.",
+    "First Contentful Paint (FCP) is also within acceptable limits for all pages, suggesting that the browser is rendering the first piece of content quickly.",
+    "The duration of the tests varies, with the \"How It Works\" page having the shortest duration. This could indicate that the page has fewer resources or that the test environment may have experienced issues during the test."
   ]
 }
