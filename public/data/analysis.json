@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is recommended to review the page's content, resources, and code to identify the cause of the failure and optimize it for better performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and address the issue to ensure optimal performance.",
   "issues": [],
   "insights": [
-    "The blog page has the fastest TTFB of 35.5ms, indicating that the server configuration and database queries are optimized for this page. This can be used as a benchmark for optimizing other pages.",
-    "The First Contentful Paint (FCP) for all pages is relatively fast, ranging from 157.3ms to 637.7ms. This indicates that the pages' above-the-fold content is rendered quickly, providing a good user experience.",
-    "The duration for all pages is relatively short, ranging from 935ms to 1562ms. This indicates that the pages are loading quickly, and the user is not waiting for a long time to see the content. However, further optimization can be done to improve the load time and provide a better user experience."
+    "The Time To First Byte (TTFB) is relatively low for all pages, indicating that the server response time is good.",
+    "First Contentful Paint (FCP) is reasonable for all pages, suggesting that the initial rendering of the page is happening quickly.",
+    "The duration of the tests varies, with the homepage taking the longest (1834ms). This could be due to more complex resources or larger file sizes on the homepage. Investigating these factors and optimizing where possible can help improve overall performance."
   ]
 }

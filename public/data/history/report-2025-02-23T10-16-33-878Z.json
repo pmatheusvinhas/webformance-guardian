@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-23T10:16:33.878Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1834,
+      "metrics": {
+        "loadTime": 571.5,
+        "ttfb": 51.59999999999127,
+        "fcp": 915.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 909,
+      "metrics": {
+        "loadTime": 201.09999999999127,
+        "ttfb": 39.80000000000291,
+        "fcp": 183.6999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1079,
+      "metrics": {
+        "loadTime": 316.59999999999127,
+        "ttfb": 108.09999999999127,
+        "fcp": 231.6999999999971
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 909
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and address the issue to ensure optimal performance.",
+    "issues": [],
+    "insights": [
+      "The Time To First Byte (TTFB) is relatively low for all pages, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) is reasonable for all pages, suggesting that the initial rendering of the page is happening quickly.",
+      "The duration of the tests varies, with the homepage taking the longest (1834ms). This could be due to more complex resources or larger file sizes on the homepage. Investigating these factors and optimizing where possible can help improve overall performance."
+    ]
+  }
+}
