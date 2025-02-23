@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-23T01:18:58.633Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1743,
+      "metrics": {
+        "loadTime": 687,
+        "ttfb": 66.39999999999418,
+        "fcp": 818.2000000000116
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1002,
+      "metrics": {
+        "loadTime": 233.19999999998254,
+        "ttfb": 93.5,
+        "fcp": 250.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1116,
+      "metrics": {
+        "loadTime": 360.8999999999942,
+        "ttfb": 155.69999999998254,
+        "fcp": 297.3999999999942
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 918
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive HTTP requests, or slow server response times.",
+    "issues": [],
+    "insights": [
+      "The TTFB (Time to First Byte) values for all pages are low, indicating that the server is responding quickly. This is a positive sign for user experience and SEO.",
+      "The FCP (First Contentful Paint) values for all pages are reasonable, meaning that users see relevant content quickly after loading the page.",
+      "It is essential to investigate and address the issues causing the \"How It Works\" page to fail the web performance test. This will ensure consistent user experience across the website and prevent potential SEO penalties."
+    ]
+  }
+}
