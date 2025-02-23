@@ -1,9 +1,5 @@
 [
   {
-    "timestamp": "2025-02-17T10:18:23.925Z",
-    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, optimizing code, and minimizing HTTP requests."
-  },
-  {
     "timestamp": "2025-02-17T15:17:31.066Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 1147ms. It is recommended to investigate the cause of the failure and optimize the page to improve its performance."
   },
@@ -118,5 +114,9 @@
   {
     "timestamp": "2025-02-23T10:16:33.878Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and address the issue to ensure optimal performance."
+  },
+  {
+    "timestamp": "2025-02-23T15:14:40.207Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. Investigate and optimize the page's resources, such as images, scripts, and stylesheets, to improve load times."
   }
 ]

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-23T15:14:40.207Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1372,
+      "metrics": {
+        "loadTime": 619.3000000000175,
+        "ttfb": 52.10000000000582,
+        "fcp": 425.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1014,
+      "metrics": {
+        "loadTime": 272.6000000000058,
+        "ttfb": 106.10000000000582,
+        "fcp": 252.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1210,
+      "metrics": {
+        "loadTime": 282,
+        "ttfb": 58.39999999999418,
+        "fcp": 184.80000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 977
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. Investigate and optimize the page's resources, such as images, scripts, and stylesheets, to improve load times.",
+    "issues": [],
+    "insights": [
+      "The blog page has the fastest load time (282 ms) and time to first byte (58.4 ms) among the tested pages. This indicates effective optimization of resources on this page.",
+      "The pricing page has a slightly longer load time (272.6 ms) than the blog page, but its time to first byte (106.1 ms) is higher. This suggests that server response time could be improved for the pricing page.",
+      "The homepage has the longest first contentful paint time (425.5 ms), indicating that the page's above-the-fold content could be optimized to display faster."
+    ]
+  }
+}
