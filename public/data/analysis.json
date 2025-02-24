@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The \"How It Works\" page's failure indicates potential issues such as large images, excessive scripts, or inefficient rendering. Investigating these areas can help identify and resolve the issues.",
-    "Optimizing TTFB (Time to First Byte) can significantly improve user experience. This can be achieved by optimizing server-side rendering, caching, and minimizing HTTP requests.",
-    "First Contentful Paint (FCP) is an essential metric for user experience. Ensuring that the main content is visible as quickly as possible can help engage users and reduce bounce rates. Focusing on optimizing FCP can improve user satisfaction and engagement."
+    "The homepage, pricing page, and blog page have good web performance metrics, indicating that the website is optimized for speed.",
+    "The \"How It Works\" page failed the web performance test, indicating potential issues that need to be addressed.",
+    "Implementing caching strategies, minifying and compressing files, optimizing images, and reducing HTTP requests can further improve the website's web performance."
   ]
 }
