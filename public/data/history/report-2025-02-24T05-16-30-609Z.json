@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-24T05:16:30.609Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1588,
+      "metrics": {
+        "loadTime": 724.8999999999942,
+        "ttfb": 44.69999999998254,
+        "fcp": 571.8000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1122,
+      "metrics": {
+        "loadTime": 335.1000000000058,
+        "ttfb": 183.29999999998836,
+        "fcp": 316.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1075,
+      "metrics": {
+        "loadTime": 400.5,
+        "ttfb": 179.39999999999418,
+        "fcp": 312.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1005
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure indicates potential issues such as large images, excessive scripts, or inefficient rendering. Investigating these areas can help identify and resolve the issues.",
+      "Optimizing TTFB (Time to First Byte) can significantly improve user experience. This can be achieved by optimizing server-side rendering, caching, and minimizing HTTP requests.",
+      "First Contentful Paint (FCP) is an essential metric for user experience. Ensuring that the main content is visible as quickly as possible can help engage users and reduce bounce rates. Focusing on optimizing FCP can improve user satisfaction and engagement."
+    ]
+  }
+}
