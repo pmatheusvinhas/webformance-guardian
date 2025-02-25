@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-25T01:14:57.465Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1229,
+      "metrics": {
+        "loadTime": 574.3000000000029,
+        "ttfb": 55.59999999999127,
+        "fcp": 308.6999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1483,
+      "metrics": {
+        "loadTime": 348.59999999999127,
+        "ttfb": 182.09999999999127,
+        "fcp": 346.09999999999127
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1274,
+      "metrics": {
+        "loadTime": 366.1999999999971,
+        "ttfb": 143.8000000000029,
+        "fcp": 327.3999999999942
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 938
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, optimizing code, and minimizing HTTP requests.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (574.3000000000029 ms) among the passing pages. However, it still provides a decent user experience.",
+      "The blog page has the lowest TTFB (143.8000000000029 ms) and FCP (327.3999999999942 ms) among the passing pages, indicating good performance.",
+      "It is essential to investigate and address the issues causing the \"How It Works\" page to fail the web performance test to ensure consistent performance across all pages."
+    ]
+  }
+}
