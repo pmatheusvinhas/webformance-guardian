@@ -1,10 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1003ms. Investigate and optimize this page to improve its load time and pass the test.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. Recommendation: Review server logs, network requests, and front-end code to identify bottlenecks and optimize performance.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience. Recommendation",
+      "recommendation": "Review server logs, network requests, and front-end code to identify bottlenecks and optimize performance."
+    },
+    {
+      "severity": "info",
+      "message": "The homepage has a load time of 599.9 ms, TTFB of 78.1 ms, and FCP of 544.9 ms. This is within an acceptable range, but there is still room for improvement. Recommendation",
+      "recommendation": "Continue optimizing images, minifying CSS and JavaScript, and leveraging browser caching."
+    }
+  ],
   "insights": [
-    "The Time To First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good.",
-    "First Contentful Paint (FCP) is reasonable for the homepage, pricing page, and blog page, but there is room for improvement.",
-    "The \"How It Works\" page failed the test, suggesting that there might be issues with the page's resources, such as large images, excessive scripts, or unoptimized CSS. Investigate these areas to identify and resolve the performance issues.",
-    "Overall, the web performance test results show that optimization efforts have been made, but there is still room for improvement. Continuously monitor and optimize page load times to ensure a smooth user experience."
+    "The pricing page and blog page have better performance than the homepage, with load times of 262.5 ms and 359.9 ms, respectively. This suggests that further optimizations applied to the pricing and blog pages could be beneficial for the homepage as well.",
+    "TTFB (Time to First Byte) is relatively low across all pages, indicating that the server is responding quickly. This is a positive sign, as it reduces the waiting time for users before content starts loading.",
+    "FCP (First Contentful Paint) is generally acceptable, but there is still room for improvement. Focusing on rendering the critical, user-visible content faster can enhance user experience and perceived performance."
   ]
 }
