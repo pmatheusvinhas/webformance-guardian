@@ -1,10 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and address the causes of this failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1003ms. Investigate and optimize this page to improve its load time and pass the test.",
   "issues": [],
   "insights": [
-    "The homepage has a load time of 795 ms, which is within the recommended range for a good user experience.",
-    "The pricing page has the fastest load time (463 ms) among the tested pages, indicating efficient resource loading and rendering.",
-    "The blog page has a slightly longer load time (589 ms) than the homepage and pricing page, but it still falls within an acceptable range.",
-    "The \"How It Works\" page's failure suggests potential issues with resource loading, rendering, or script execution. Investigating and addressing these issues will significantly improve the page's performance and user experience."
+    "The Time To First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good.",
+    "First Contentful Paint (FCP) is reasonable for the homepage, pricing page, and blog page, but there is room for improvement.",
+    "The \"How It Works\" page failed the test, suggesting that there might be issues with the page's resources, such as large images, excessive scripts, or unoptimized CSS. Investigate these areas to identify and resolve the performance issues.",
+    "Overall, the web performance test results show that optimization efforts have been made, but there is still room for improvement. Continuously monitor and optimize page load times to ensure a smooth user experience."
   ]
 }

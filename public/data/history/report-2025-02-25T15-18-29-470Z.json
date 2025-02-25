@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-25T15:18:29.470Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1520,
+      "metrics": {
+        "loadTime": 640.7999999999884,
+        "ttfb": 56.89999999999418,
+        "fcp": 455.4000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1122,
+      "metrics": {
+        "loadTime": 305.80000000001746,
+        "ttfb": 139.60000000000582,
+        "fcp": 267
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1269,
+      "metrics": {
+        "loadTime": 385.69999999998254,
+        "ttfb": 163.5,
+        "fcp": 280.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1003
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1003ms. Investigate and optimize this page to improve its load time and pass the test.",
+    "issues": [],
+    "insights": [
+      "The Time To First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) is reasonable for the homepage, pricing page, and blog page, but there is room for improvement.",
+      "The \"How It Works\" page failed the test, suggesting that there might be issues with the page's resources, such as large images, excessive scripts, or unoptimized CSS. Investigate these areas to identify and resolve the performance issues.",
+      "Overall, the web performance test results show that optimization efforts have been made, but there is still room for improvement. Continuously monitor and optimize page load times to ensure a smooth user experience."
+    ]
+  }
+}
