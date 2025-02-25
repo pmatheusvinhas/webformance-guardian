@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-02-25T05:16:11.569Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1530,
+      "metrics": {
+        "loadTime": 587.2000000000116,
+        "ttfb": 60.70000000001164,
+        "fcp": 564.8000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 970,
+      "metrics": {
+        "loadTime": 200.79999999998836,
+        "ttfb": 43.29999999998836,
+        "fcp": 181
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1171,
+      "metrics": {
+        "loadTime": 268.5,
+        "ttfb": 49.5,
+        "fcp": 171.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 938
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its load time and pass the test.\n  - Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them accordingly.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them accordingly."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Continue optimizing images, scripts, and other resources to reduce load time further."
+      }
+    ],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, which could be due to their simpler structures and fewer resources compared to the homepage and \"How It Works\" page.",
+      "The time to first byte (TTFB) is relatively low across all pages, indicating that the server response time is good.",
+      "The first contentful paint (FCP) is slightly higher than the load time for the homepage, suggesting that there might be an opportunity to improve the initial rendering of the page's content."
+    ]
+  }
+}

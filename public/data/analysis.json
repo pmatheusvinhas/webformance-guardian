@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, optimizing code, and minimizing HTTP requests.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its load time and pass the test.\n  - Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them accordingly.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them accordingly."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Continue optimizing images, scripts, and other resources to reduce load time further."
+    }
+  ],
   "insights": [
-    "The homepage has the longest load time (574.3000000000029 ms) among the passing pages. However, it still provides a decent user experience.",
-    "The blog page has the lowest TTFB (143.8000000000029 ms) and FCP (327.3999999999942 ms) among the passing pages, indicating good performance.",
-    "It is essential to investigate and address the issues causing the \"How It Works\" page to fail the web performance test to ensure consistent performance across all pages."
+    "The pricing page and blog page have the fastest load times, which could be due to their simpler structures and fewer resources compared to the homepage and \"How It Works\" page.",
+    "The time to first byte (TTFB) is relatively low across all pages, indicating that the server response time is good.",
+    "The first contentful paint (FCP) is slightly higher than the load time for the homepage, suggesting that there might be an opportunity to improve the initial rendering of the page's content."
   ]
 }
