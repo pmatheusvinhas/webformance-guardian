@@ -1,20 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its load time and pass the test.\n  - Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them accordingly.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them accordingly."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Continue optimizing images, scripts, and other resources to reduce load time further."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and address the causes of this failure to ensure optimal user experience.",
+  "issues": [],
   "insights": [
-    "The pricing page and blog page have the fastest load times, which could be due to their simpler structures and fewer resources compared to the homepage and \"How It Works\" page.",
-    "The time to first byte (TTFB) is relatively low across all pages, indicating that the server response time is good.",
-    "The first contentful paint (FCP) is slightly higher than the load time for the homepage, suggesting that there might be an opportunity to improve the initial rendering of the page's content."
+    "The homepage has a load time of 795 ms, which is within the recommended range for a good user experience.",
+    "The pricing page has the fastest load time (463 ms) among the tested pages, indicating efficient resource loading and rendering.",
+    "The blog page has a slightly longer load time (589 ms) than the homepage and pricing page, but it still falls within an acceptable range.",
+    "The \"How It Works\" page's failure suggests potential issues with resource loading, rendering, or script execution. Investigating and addressing these issues will significantly improve the page's performance and user experience."
   ]
 }

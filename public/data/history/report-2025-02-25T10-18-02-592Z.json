@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-02-25T10:18:02.592Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1573,
+      "metrics": {
+        "loadTime": 795.3999999999942,
+        "ttfb": 81,
+        "fcp": 573.1999999999825
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1278,
+      "metrics": {
+        "loadTime": 463.3999999999942,
+        "ttfb": 151.59999999997672,
+        "fcp": 412
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1622,
+      "metrics": {
+        "loadTime": 589.3000000000175,
+        "ttfb": 245,
+        "fcp": 425.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1166
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and address the causes of this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage has a load time of 795 ms, which is within the recommended range for a good user experience.",
+      "The pricing page has the fastest load time (463 ms) among the tested pages, indicating efficient resource loading and rendering.",
+      "The blog page has a slightly longer load time (589 ms) than the homepage and pricing page, but it still falls within an acceptable range.",
+      "The \"How It Works\" page's failure suggests potential issues with resource loading, rendering, or script execution. Investigating and addressing these issues will significantly improve the page's performance and user experience."
+    ]
+  }
+}
