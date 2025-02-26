@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-26T15:20:02.434Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1896,
+      "metrics": {
+        "loadTime": 891.5,
+        "ttfb": 68.30000000004657,
+        "fcp": 874
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1290,
+      "metrics": {
+        "loadTime": 302.29999999998836,
+        "ttfb": 56.09999999997672,
+        "fcp": 244.39999999996508
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1577,
+      "metrics": {
+        "loadTime": 423.5,
+        "ttfb": 193.79999999998836,
+        "fcp": 387.5999999999767
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1123
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of 1123ms. It is recommended to investigate the cause of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The TTFB (Time to First Byte) metric is relatively low for all pages, indicating that the server response time is fast.",
+      "The FCP (First Contentful Paint) metric is close to the load time for all pages, suggesting that the pages are rendering quickly after the initial server response.",
+      "The \"How It Works\" page failed the performance test, indicating potential issues such as large images, excessive scripts, or inefficient rendering that need to be addressed to improve its load time."
+    ]
+  }
+}

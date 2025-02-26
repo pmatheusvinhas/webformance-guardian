@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate and resolve these issues to ensure the page performs optimally.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of 1123ms. It is recommended to investigate the cause of this failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The First Contentful Paint (FCP) for the homepage is relatively high compared to the pricing and blog pages, suggesting that the initial rendering of the homepage could be improved.",
-    "The Time to Interactive (TTI) is not provided in the test results, which is an important metric to consider when evaluating web performance. It is recommended to measure TTI for a more comprehensive understanding of user experience.",
-    "Implementing techniques such as lazy loading, code splitting, and image optimization can further improve the load times for all pages, ensuring a faster and more seamless user experience."
+    "The TTFB (Time to First Byte) metric is relatively low for all pages, indicating that the server response time is fast.",
+    "The FCP (First Contentful Paint) metric is close to the load time for all pages, suggesting that the pages are rendering quickly after the initial server response.",
+    "The \"How It Works\" page failed the performance test, indicating potential issues such as large images, excessive scripts, or inefficient rendering that need to be addressed to improve its load time."
   ]
 }
