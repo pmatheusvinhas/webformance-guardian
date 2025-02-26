@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-26T20:18:07.598Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1803,
+      "metrics": {
+        "loadTime": 620.7999999999884,
+        "ttfb": 86.29999999998836,
+        "fcp": 448.80000000001746
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 940,
+      "metrics": {
+        "loadTime": 205.19999999998254,
+        "ttfb": 39.89999999999418,
+        "fcp": 195.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1187,
+      "metrics": {
+        "loadTime": 550.8999999999942,
+        "ttfb": 62.20000000001164,
+        "fcp": 222.80000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 959
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the possible causes, such as heavy scripts, large media files, or server-side issues, and optimize the page accordingly.",
+    "issues": [],
+    "insights": [
+      "Optimizing the \"How It Works\" page should be a priority, as it failed the web performance test. Investigating and addressing the issues will ensure a better user experience.",
+      "While the other pages have passed the tests, optimizing their load times, TTFB, and FCP can still improve user experience. Consider techniques such as lazy loading, minifying scripts and stylesheets, and optimizing images.",
+      "Regularly monitoring and testing web performance can help maintain optimal user experience and identify issues early on."
+    ]
+  }
+}
