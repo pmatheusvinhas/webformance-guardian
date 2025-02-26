@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-26T10:20:37.801Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1924,
+      "metrics": {
+        "loadTime": 855.1000000000349,
+        "ttfb": 70.60000000003492,
+        "fcp": 942.9000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1014,
+      "metrics": {
+        "loadTime": 209.79999999998836,
+        "ttfb": 62.40000000002328,
+        "fcp": 216.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1016,
+      "metrics": {
+        "loadTime": 277.70000000001164,
+        "ttfb": 60.09999999997672,
+        "fcp": 198.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 961
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate and resolve these issues to ensure the page performs optimally.",
+    "issues": [],
+    "insights": [
+      "The First Contentful Paint (FCP) for the homepage is relatively high compared to the pricing and blog pages, suggesting that the initial rendering of the homepage could be improved.",
+      "The Time to Interactive (TTI) is not provided in the test results, which is an important metric to consider when evaluating web performance. It is recommended to measure TTI for a more comprehensive understanding of user experience.",
+      "Implementing techniques such as lazy loading, code splitting, and image optimization can further improve the load times for all pages, ensuring a faster and more seamless user experience."
+    ]
+  }
+}
