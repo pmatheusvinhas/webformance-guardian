@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-26T05:16:37.777Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1387,
+      "metrics": {
+        "loadTime": 435.5,
+        "ttfb": 56.80000000001746,
+        "fcp": 397.29999999998836
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 946,
+      "metrics": {
+        "loadTime": 219.10000000000582,
+        "ttfb": 45.5,
+        "fcp": 193.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1218,
+      "metrics": {
+        "loadTime": 272.1000000000058,
+        "ttfb": 37.70000000001164,
+        "fcp": 182.69999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 946
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The passed tests for the homepage, pricing page, and blog page indicate that the website's performance is generally good. However, the failed test for the \"How It Works\" page highlights the need for further investigation and optimization.",
+      "The load times for all pages are within an acceptable range, but there is still room for improvement. Optimizing the website's performance can lead to better user experience, increased user engagement, and higher conversion rates.",
+      "It is essential to monitor web performance regularly to identify and address any issues promptly. This can help maintain a high-performing website and provide a positive user experience."
+    ]
+  }
+}
