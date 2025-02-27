@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-27T01:14:44.708Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1773,
+      "metrics": {
+        "loadTime": 604.3000000000029,
+        "ttfb": 50.80000000000291,
+        "fcp": 534
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 958,
+      "metrics": {
+        "loadTime": 176.6999999999971,
+        "ttfb": 32.69999999999709,
+        "fcp": 175.3000000000029
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1062,
+      "metrics": {
+        "loadTime": 298.8000000000029,
+        "ttfb": 82.5,
+        "fcp": 205.1999999999971
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1026
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential issues that need to be addressed immediately. It is recommended to investigate the cause of the failure and optimize the page for better performance.",
+    "issues": [],
+    "insights": [
+      "The Time to First Byte (TTFB) is relatively low for all pages, indicating that the server response time is fast.",
+      "The First Contentful Paint (FCP) is relatively high for the homepage, indicating that it takes longer for the page to start rendering.",
+      "The load time for the how it works page is not provided, indicating a potential issue that needs to be investigated."
+    ]
+  }
+}
