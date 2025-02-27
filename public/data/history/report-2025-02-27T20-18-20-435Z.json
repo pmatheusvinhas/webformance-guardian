@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-27T20:18:20.435Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2701,
+      "metrics": {
+        "loadTime": 1227.8999999999942,
+        "ttfb": 73.79999999998836,
+        "fcp": 1751.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1017,
+      "metrics": {
+        "loadTime": 214.79999999998836,
+        "ttfb": 67.70000000001164,
+        "fcp": 258.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1069,
+      "metrics": {
+        "loadTime": 296.3999999999942,
+        "ttfb": 73.10000000000582,
+        "fcp": 206.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1013
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, suggesting potential issues that need immediate attention. It is recommended to investigate and resolve these issues to ensure proper page loading.",
+    "issues": [],
+    "insights": [
+      "The pricing and blog pages have shorter load times, suggesting that the optimization efforts on these pages have been successful. It would be beneficial to apply similar optimizations to the homepage and \"How It Works\" page.",
+      "Time to First Byte (TTFB) is consistent across all pages, indicating that server response time is not a significant factor in load times. However, optimizing server-side rendering or pre-rendering could further improve TTFB.",
+      "While FCP is relatively fast, there is still a noticeable delay between FCP and load time. Investigating and addressing this delay could provide a better user experience."
+    ]
+  }
+}
