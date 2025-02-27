@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-27T05:17:15.779Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1261,
+      "metrics": {
+        "loadTime": 554.0999999999913,
+        "ttfb": 52.5,
+        "fcp": 347.6999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 882,
+      "metrics": {
+        "loadTime": 178.89999999999418,
+        "ttfb": 36,
+        "fcp": 144.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 916,
+      "metrics": {
+        "loadTime": 239.1999999999971,
+        "ttfb": 35.60000000000582,
+        "fcp": 151.39999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 930
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and optimize this page to improve its load time and pass the test.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the best load times, at 178.89999999999418 ms and 239.1999999999971 ms, respectively. Analyze these pages to identify best practices that can be applied to other pages, such as the \"How It Works\" page.",
+      "Time to First Byte (TTFB) is relatively low across all pages, indicating that the server response time is good. However, there is still room for improvement on the \"How It Works\" page, as its TTFB is not available due to the test failure.",
+      "First Contentful Paint (FCP) is within an acceptable range for all pages, but optimizing it can significantly improve user experience. Consider prioritizing visible content and reducing render-blocking resources to improve FCP."
+    ]
+  }
+}
