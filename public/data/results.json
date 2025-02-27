@@ -2,36 +2,36 @@
   {
     "title": "Homepage Load",
     "passed": true,
-    "duration": 1349,
+    "duration": 1998,
     "metrics": {
-      "loadTime": 723.2000000000116,
-      "ttfb": 207.10000000000582,
-      "fcp": 426.6000000000058
+      "loadTime": 1210.5,
+      "ttfb": 95.39999999999418,
+      "fcp": 601.3999999999942
     }
   },
   {
     "title": "Pricing Page",
     "passed": true,
-    "duration": 887,
+    "duration": 1095,
     "metrics": {
-      "loadTime": 179.5,
-      "ttfb": 28.699999999982538,
-      "fcp": 160.60000000000582
+      "loadTime": 231.89999999999418,
+      "ttfb": 63.10000000000582,
+      "fcp": 301.19999999998254
     }
   },
   {
     "title": "Blog Page",
     "passed": true,
-    "duration": 1672,
+    "duration": 1160,
     "metrics": {
-      "loadTime": 245.69999999998254,
-      "ttfb": 28.79999999998836,
-      "fcp": 132.40000000002328
+      "loadTime": 362.0999999999767,
+      "ttfb": 65.5,
+      "fcp": 209.29999999998836
     }
   },
   {
     "title": "How It Works Page",
     "passed": false,
-    "duration": 906
+    "duration": 1032
   }
 ]
