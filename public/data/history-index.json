@@ -1,9 +1,5 @@
 [
   {
-    "timestamp": "2025-02-22T15:14:38.371Z",
-    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure optimal user experience."
-  },
-  {
     "timestamp": "2025-02-22T20:15:49.724Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. It is essential to ensure that all pages on the website load correctly and efficiently."
   },
@@ -118,5 +114,9 @@
   {
     "timestamp": "2025-02-28T10:18:33.142Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time."
+  },
+  {
+    "timestamp": "2025-02-28T15:20:02.562Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the longer duration and optimize the page to reduce load time."
   }
 ]

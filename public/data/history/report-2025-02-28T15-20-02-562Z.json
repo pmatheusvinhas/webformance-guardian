@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-28T15:20:02.562Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2096,
+      "metrics": {
+        "loadTime": 796.1999999999825,
+        "ttfb": 32.69999999998254,
+        "fcp": 1067
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1099,
+      "metrics": {
+        "loadTime": 288.5,
+        "ttfb": 24.39999999999418,
+        "fcp": 277.1000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1500,
+      "metrics": {
+        "loadTime": 426.6000000000058,
+        "ttfb": 161.10000000000582,
+        "fcp": 437.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1140
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the longer duration and optimize the page to reduce load time.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure indicates that there might be issues with the page's resources, such as images, scripts, or stylesheets. Analyze these resources to find bottlenecks and optimize them.",
+      "Implementing techniques like code minification, compression, and caching can help reduce load times for all pages, especially the homepage.",
+      "Consider using a Content Delivery Network (CDN) to distribute static assets and improve the loading speed of all pages, especially for users accessing the site from different geographical locations."
+    ]
+  }
+}
