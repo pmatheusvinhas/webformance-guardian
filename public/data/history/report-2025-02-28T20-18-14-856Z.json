@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-02-28T20:18:14.856Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1445,
+      "metrics": {
+        "loadTime": 570.1000000000058,
+        "ttfb": 19.39999999999418,
+        "fcp": 544.2999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1076,
+      "metrics": {
+        "loadTime": 249.79999999998836,
+        "ttfb": 107.60000000000582,
+        "fcp": 282.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1229,
+      "metrics": {
+        "loadTime": 391.5,
+        "ttfb": 136,
+        "fcp": 299.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 984
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, with a duration of 984ms. To improve this page's performance, it is recommended to:\n  - Analyze and optimize the page's resources, such as images, videos, and third-party scripts.\n  - Minify and compress the HTML, CSS, and JavaScript files.\n  - Consider lazy loading non-critical resources.",
+    "issues": [],
+    "insights": [
+      "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is good.",
+      "The FCP (First Contentful Paint) for all pages is reasonable, suggesting that the initial rendering of the pages is fast.",
+      "The load times for the homepage, pricing page, and blog page are acceptable, but optimizing these metrics can provide a better user experience. Addressing the critical issue with the \"How It Works\" page should be the top priority."
+    ]
+  }
+}
