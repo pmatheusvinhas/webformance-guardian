@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential performance issues. It is recommended to investigate the root cause of the failure and optimize the page for better performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The homepage has the longest load time, indicating that there might be some elements on the page that are taking longer to load. It is recommended to investigate these elements and optimize them for better performance.",
-    "The blog page has the lowest TTFB, indicating that the server response time for this page is the fastest. This could be due to caching or other optimization techniques. It is recommended to apply similar techniques to other pages to improve server response time.",
-    "The pricing page has the lowest load time and FCP, indicating that this page is optimized for performance. It is recommended to apply similar optimization techniques to other pages to improve their performance."
+    "The homepage, pricing page, and blog page have good load times, indicating that the website is optimized for performance.",
+    "The \"How It Works\" page failed the test, suggesting that there may be issues with the page's code, images, or other resources that are causing it to load slowly.",
+    "It is recommended to investigate the cause of the failure and optimize the page to improve its load time, as slow-loading pages can negatively impact user experience and search engine rankings."
   ]
 }
