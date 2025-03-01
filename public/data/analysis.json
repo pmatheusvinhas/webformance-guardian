@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential issues with the page's performance. It is recommended to investigate and address these issues to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The TTFB is consistently low across all pages, indicating that the server is responding quickly. This is a positive sign, as it suggests that the server configuration is optimized.",
-    "The FCP is also reasonable, indicating that the pages are rendering quickly. This is important for user experience, as it ensures that users see content as soon as possible.",
-    "While the load times are within acceptable limits, optimizing them could further improve user experience. Consider implementing best practices such as image optimization, minification, and caching to reduce load times."
+    "The pricing page and blog page have the best load times, at 302.3ms and 224.8ms, respectively. Analyzing these pages can provide insights into best practices for optimizing the other pages.",
+    "The Time To First Byte (TTFB) is relatively low for all pages, indicating that the server response time is good. This is a positive sign, as it means that the server is not a bottleneck in page load times.",
+    "The First Contentful Paint (FCP) is generally consistent across pages, ranging from 14.8ms to 179.6ms. This metric shows when the first piece of content is rendered on the page, and its consistency indicates that the pages are loading their initial content quickly."
   ]
 }
