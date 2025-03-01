@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-01T20:16:32.577Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1579,
+      "metrics": {
+        "loadTime": 624,
+        "ttfb": 29,
+        "fcp": 579.6999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1244,
+      "metrics": {
+        "loadTime": 407.29999999998836,
+        "ttfb": 161.89999999999418,
+        "fcp": 406.8999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1535,
+      "metrics": {
+        "loadTime": 523.8000000000029,
+        "ttfb": 156,
+        "fcp": 504.59999999999127
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1075
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there might be significant issues affecting its load time. It is crucial to investigate and optimize this page to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "Although the load times for the homepage, pricing page, and blog page are within the recommended range, there is still room for improvement. Continuous monitoring and optimization of these pages can help maintain fast load times and provide a better user experience.",
+      "The failed \"How It Works\" page should be prioritized for investigation and optimization. Possible areas to look into include image optimization, minification of CSS and JavaScript files, and caching strategies.",
+      "It is essential to establish a web performance monitoring and optimization process to ensure that all pages maintain fast load times and provide a positive user experience."
+    ]
+  }
+}

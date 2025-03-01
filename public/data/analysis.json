@@ -1,25 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its load time and pass the test.\n  - Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them. This may include image optimization, minification of scripts and stylesheets, or lazy loading of resources.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them. This may include image optimization, minification of scripts and stylesheets, or lazy loading of resources."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Investigate the homepage's resources and scripts to identify potential optimizations. Consider image optimization, minification, and lazy loading to reduce the load time."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Continue focusing on optimizing FCP for a better user experience."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there might be significant issues affecting its load time. It is crucial to investigate and optimize this page to ensure a smooth user experience.",
+  "issues": [],
   "insights": [
-    "The pricing page has a longer Time to First Byte (TTFB) compared to the other pages. This might be due to server-side processing or database queries. Investigating these factors can help improve TTFB.",
-    "The blog page has the lowest load time and FCP, suggesting that its structure and resources are well optimized. Use this page as a benchmark for optimizing other pages.",
-    "The duration of the tests varies, with the \"How It Works\" page having the shortest duration. This might be due to the page's failure, as the test might have been terminated prematurely. Investigate the root cause of the failure to ensure accurate test durations for all pages."
+    "Although the load times for the homepage, pricing page, and blog page are within the recommended range, there is still room for improvement. Continuous monitoring and optimization of these pages can help maintain fast load times and provide a better user experience.",
+    "The failed \"How It Works\" page should be prioritized for investigation and optimization. Possible areas to look into include image optimization, minification of CSS and JavaScript files, and caching strategies.",
+    "It is essential to establish a web performance monitoring and optimization process to ensure that all pages maintain fast load times and provide a positive user experience."
   ]
 }
