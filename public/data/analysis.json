@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, with a duration of 984ms. To improve this page's performance, it is recommended to:\n  - Analyze and optimize the page's resources, such as images, videos, and third-party scripts.\n  - Minify and compress the HTML, CSS, and JavaScript files.\n  - Consider lazy loading non-critical resources.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, it is recommended to investigate the causes of the longer duration, such as large media files, excessive HTTP requests, or slow server response time.",
   "issues": [],
   "insights": [
-    "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is good.",
-    "The FCP (First Contentful Paint) for all pages is reasonable, suggesting that the initial rendering of the pages is fast.",
-    "The load times for the homepage, pricing page, and blog page are acceptable, but optimizing these metrics can provide a better user experience. Addressing the critical issue with the \"How It Works\" page should be the top priority."
+    "The homepage, pricing page, and blog page have good load times, with TTFB and FCP values within acceptable ranges.",
+    "The \"How It Works\" page needs immediate attention due to its longer duration, which could negatively impact user experience.",
+    "Regular web performance testing and optimization should be part of the development process to ensure a smooth and fast user experience."
   ]
 }

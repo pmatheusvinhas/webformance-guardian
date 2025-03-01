@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-01T01:20:34.738Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1598,
+      "metrics": {
+        "loadTime": 650.2000000000116,
+        "ttfb": 19.5,
+        "fcp": 696.7000000000116
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 932,
+      "metrics": {
+        "loadTime": 216.29999999998836,
+        "ttfb": 74.19999999995343,
+        "fcp": 237.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1011,
+      "metrics": {
+        "loadTime": 235.89999999996508,
+        "ttfb": 26.599999999976717,
+        "fcp": 185
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1289
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, it is recommended to investigate the causes of the longer duration, such as large media files, excessive HTTP requests, or slow server response time.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good load times, with TTFB and FCP values within acceptable ranges.",
+      "The \"How It Works\" page needs immediate attention due to its longer duration, which could negatively impact user experience.",
+      "Regular web performance testing and optimization should be part of the development process to ensure a smooth and fast user experience."
+    ]
+  }
+}
