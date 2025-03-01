@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, it is recommended to investigate the causes of the longer duration, such as large media files, excessive HTTP requests, or slow server response time.",
+  "summary": "ISSUES\nCritical:\n- The how it works page failed the test, indicating potential issues with the page's performance. It is recommended to investigate and address these issues to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, with TTFB and FCP values within acceptable ranges.",
-    "The \"How It Works\" page needs immediate attention due to its longer duration, which could negatively impact user experience.",
-    "Regular web performance testing and optimization should be part of the development process to ensure a smooth and fast user experience."
+    "The TTFB is consistently low across all pages, indicating that the server is responding quickly. This is a positive sign, as it suggests that the server configuration is optimized.",
+    "The FCP is also reasonable, indicating that the pages are rendering quickly. This is important for user experience, as it ensures that users see content as soon as possible.",
+    "While the load times are within acceptable limits, optimizing them could further improve user experience. Consider implementing best practices such as image optimization, minification, and caching to reduce load times."
   ]
 }
