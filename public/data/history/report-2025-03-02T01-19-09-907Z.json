@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-02T01:19:09.907Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1439,
+      "metrics": {
+        "loadTime": 533.6000000000058,
+        "ttfb": 25.29999999998836,
+        "fcp": 427.9000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 955,
+      "metrics": {
+        "loadTime": 215.79999999998836,
+        "ttfb": 77.29999999998836,
+        "fcp": 247.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1109,
+      "metrics": {
+        "loadTime": 289.0999999999767,
+        "ttfb": 72.5,
+        "fcp": 251.90000000002328
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 931
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating that there may be significant issues affecting its load time. It is recommended to investigate and optimize this page to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure indicates that it may have issues such as large images, excessive scripts, or unoptimized resources. Investigating and addressing these issues can significantly improve the page's performance.",
+      "Although the other pages have passed the test, optimizing their load times can still provide a better user experience. Techniques such as image optimization, minification of scripts and stylesheets, and lazy loading can be employed to enhance performance.",
+      "Regularly monitoring and testing web performance can help identify and resolve issues promptly, ensuring a smooth user experience."
+    ]
+  }
+}
