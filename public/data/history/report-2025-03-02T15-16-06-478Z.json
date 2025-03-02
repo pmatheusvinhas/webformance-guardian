@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-03-02T15:16:06.478Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1469,
+      "metrics": {
+        "loadTime": 394.80000000004657,
+        "ttfb": 27,
+        "fcp": 565.4000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 931,
+      "metrics": {
+        "loadTime": 178.5,
+        "ttfb": 18.600000000034925,
+        "fcp": 219.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1235,
+      "metrics": {
+        "loadTime": 231.59999999997672,
+        "ttfb": 27,
+        "fcp": 182
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 974
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page for better performance. (Recommendation: Review server logs, analyze network requests, and identify bottlenecks that could be causing the slow load time.)",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page for better performance. (Recommendation",
+        "recommendation": "Review server logs, analyze network requests, and identify bottlenecks that could be causing the slow load time.)"
+      },
+      {
+        "severity": "info",
+        "message": "The homepage has a load time of 394.8 ms, which is within an acceptable range. However, there is still room for improvement. (Recommendation",
+        "recommendation": "Continue optimizing images, minifying CSS and JavaScript files, and leveraging browser caching.)"
+      },
+      {
+        "severity": "info",
+        "message": "The pricing page has a load time of 178.5 ms, which is good but could be improved further. (Recommendation",
+        "recommendation": "Follow the same optimization strategies as for the homepage.)"
+      },
+      {
+        "severity": "info",
+        "message": "The blog page has a load time of 231.6 ms, which is also good but has room for improvement. (Recommendation",
+        "recommendation": "Follow the same optimization strategies as for the homepage.)"
+      }
+    ],
+    "insights": [
+      "The Time To First Byte (TTFB) for all pages is relatively low, indicating that the server is responding quickly.",
+      "The First Contentful Paint (FCP) for all pages is reasonable, suggesting that the initial view of the page is loading quickly.",
+      "The duration of the tests for all pages is within an acceptable range, indicating that the pages are loading efficiently.",
+      "It is crucial to investigate the reason for the \"How It Works\" page failing the test and optimize it for better performance."
+    ]
+  }
+}
