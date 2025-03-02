@@ -1,9 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the page's resources, scripts, and images to identify the cause of the delay and optimize them accordingly.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks on this page. Recommendation: Analyze server logs, network requests, and profiling data to pinpoint the issue and apply necessary optimizations.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page has failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks on this page. Recommendation",
+      "recommendation": "Analyze server logs, network requests, and profiling data to pinpoint the issue and apply necessary optimizations."
+    },
+    {
+      "severity": "critical",
+      "message": "First Contentful Paint (FCP) on the homepage is relatively high (527.79 ms). Although it is within the acceptable range, consider optimizing above-the-fold content to improve the user's initial perception of the page's load time. Recommendation",
+      "recommendation": "Optimize images, minify CSS, and prioritize critical rendering path to reduce FCP."
+    },
+    {
+      "severity": "info",
+      "message": "Time to First Byte (TTFB) on all pages is within the recommended range (less than 200 ms). This indicates that the server is responding quickly, and there are no significant delays in starting the page load. Recommendation",
+      "recommendation": "Continue monitoring TTFB to ensure consistent server performance."
+    }
+  ],
   "insights": [
-    "The pricing and blog pages have faster load times, indicating effective optimization of resources, scripts, and images.",
-    "The Time to First Byte (TTFB) metric is relatively low across all pages, suggesting that the server response time is good.",
-    "First Contentful Paint (FCP) is also low across all pages, indicating that the pages are rendering quickly and providing a good user experience."
+    "The blog page has the lowest load time and FCP among all pages, suggesting that the optimization techniques applied to this page are effective. Consider applying similar optimizations to other pages.",
+    "The pricing page has a moderate load time and FCP, but its TTFB is higher than the other pages. Investigate potential server-side optimizations to improve TTFB on this page.",
+    "The homepage load time is slightly higher than the blog page, despite having a similar FCP. Analyze network requests and resource loading to identify any unnecessary requests or large payloads that could be optimized."
   ]
 }
