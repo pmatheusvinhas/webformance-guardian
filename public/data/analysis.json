@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The How It Works Page failed the web performance test. It is recommended to investigate the page's resources, optimize images, minify CSS and JavaScript files, and leverage browser caching to improve load times.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have fast loading times, which is beneficial for user experience and SEO.",
-    "The \"How It Works\" page's failure indicates possible issues such as large images, excessive scripts, or server-side rendering problems. Investigating and addressing these issues will help improve the page's performance and user experience.",
-    "It is good practice to keep TTFB low, as it directly impacts the user's perception of the site's speed. The current TTFB values for all pages are within acceptable ranges.",
-    "FCP is an important metric for user experience, as it represents the time when the page's primary content is visible. The FCP values for all pages are reasonable, but there is still room for improvement."
+    "The Blog Page demonstrates the best performance, providing a benchmark for optimizing other pages.",
+    "Optimizing images, minifying CSS and JavaScript files, and leveraging browser caching can significantly improve load times for the How It Works Page.",
+    "Reducing the number of requests and efficiently loading resources can further enhance the performance of the Homepage and Pricing Page."
   ]
 }

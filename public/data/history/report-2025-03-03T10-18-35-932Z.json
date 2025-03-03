@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-03T10:18:35.932Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1168,
+      "metrics": {
+        "loadTime": 523.7000000000116,
+        "ttfb": 19.20000000001164,
+        "fcp": 261.9000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1126,
+      "metrics": {
+        "loadTime": 381.6000000000058,
+        "ttfb": 14.10000000000582,
+        "fcp": 381.80000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 924,
+      "metrics": {
+        "loadTime": 196.59999999997672,
+        "ttfb": 12.099999999976717,
+        "fcp": 138.39999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 851
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The How It Works Page failed the web performance test. It is recommended to investigate the page's resources, optimize images, minify CSS and JavaScript files, and leverage browser caching to improve load times.",
+    "issues": [],
+    "insights": [
+      "The Blog Page demonstrates the best performance, providing a benchmark for optimizing other pages.",
+      "Optimizing images, minifying CSS and JavaScript files, and leveraging browser caching can significantly improve load times for the How It Works Page.",
+      "Reducing the number of requests and efficiently loading resources can further enhance the performance of the Homepage and Pricing Page."
+    ]
+  }
+}
