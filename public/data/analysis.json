@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the page's content, resources, and configurations to identify the root cause and optimize it for better performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive scripts, or server-side bottlenecks.",
   "issues": [],
   "insights": [
-    "The passed pages (homepage, pricing page, and blog page) have load times under 600 ms, TTFB under 30 ms, and FCP under 600 ms, which are within acceptable ranges. However, optimizing these metrics can provide a better user experience.",
-    "The \"How It Works\" page's failure indicates potential issues such as large resource sizes, unoptimized images, excessive HTTP requests, render-blocking resources, or slow server response time. Investigating and addressing these issues will improve the page's performance.",
-    "Implementing best practices like image optimization, code minification, HTTP/2, browser caching, and server-side rendering can help improve the web performance for all pages, including the \"How It Works\" page."
+    "The homepage, pricing page, and blog page perform well, with load times under 600 ms, TTFB under 100 ms, and FCP under 500 ms. This indicates that the website's basic performance is good.",
+    "The \"How It Works\" page's failure suggests potential issues with media files, scripts, or server-side processing. Investigating these areas will help improve the page's performance.",
+    "To maintain and improve web performance, it is essential to continuously monitor, test, and optimize the website. This includes regularly checking for large media files, excessive scripts, and server-side bottlenecks."
   ]
 }

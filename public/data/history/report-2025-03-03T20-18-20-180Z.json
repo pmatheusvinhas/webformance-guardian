@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-03T20:18:20.180Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1350,
+      "metrics": {
+        "loadTime": 570.3999999999942,
+        "ttfb": 32.89999999999418,
+        "fcp": 436.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 936,
+      "metrics": {
+        "loadTime": 198.80000000001746,
+        "ttfb": 66.89999999999418,
+        "fcp": 250.30000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 938,
+      "metrics": {
+        "loadTime": 206.19999999998254,
+        "ttfb": 13.89999999999418,
+        "fcp": 196.80000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1146
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive scripts, or server-side bottlenecks.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page perform well, with load times under 600 ms, TTFB under 100 ms, and FCP under 500 ms. This indicates that the website's basic performance is good.",
+      "The \"How It Works\" page's failure suggests potential issues with media files, scripts, or server-side processing. Investigating these areas will help improve the page's performance.",
+      "To maintain and improve web performance, it is essential to continuously monitor, test, and optimize the website. This includes regularly checking for large media files, excessive scripts, and server-side bottlenecks."
+    ]
+  }
+}
