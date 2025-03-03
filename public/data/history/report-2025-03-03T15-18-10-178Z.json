@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-03T15:18:10.178Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1408,
+      "metrics": {
+        "loadTime": 587.1000000000058,
+        "ttfb": 23.900000000023283,
+        "fcp": 509.80000000001746
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 992,
+      "metrics": {
+        "loadTime": 255.20000000001164,
+        "ttfb": 15.400000000023283,
+        "fcp": 228.30000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1031,
+      "metrics": {
+        "loadTime": 238.69999999998254,
+        "ttfb": 17.199999999982538,
+        "fcp": 241.39999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 968
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the page's content, resources, and configurations to identify the root cause and optimize it for better performance.",
+    "issues": [],
+    "insights": [
+      "The passed pages (homepage, pricing page, and blog page) have load times under 600 ms, TTFB under 30 ms, and FCP under 600 ms, which are within acceptable ranges. However, optimizing these metrics can provide a better user experience.",
+      "The \"How It Works\" page's failure indicates potential issues such as large resource sizes, unoptimized images, excessive HTTP requests, render-blocking resources, or slow server response time. Investigating and addressing these issues will improve the page's performance.",
+      "Implementing best practices like image optimization, code minification, HTTP/2, browser caching, and server-side rendering can help improve the web performance for all pages, including the \"How It Works\" page."
+    ]
+  }
+}

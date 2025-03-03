@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The How It Works Page failed the web performance test. It is recommended to investigate the page's resources, optimize images, minify CSS and JavaScript files, and leverage browser caching to improve load times.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the page's content, resources, and configurations to identify the root cause and optimize it for better performance.",
   "issues": [],
   "insights": [
-    "The Blog Page demonstrates the best performance, providing a benchmark for optimizing other pages.",
-    "Optimizing images, minifying CSS and JavaScript files, and leveraging browser caching can significantly improve load times for the How It Works Page.",
-    "Reducing the number of requests and efficiently loading resources can further enhance the performance of the Homepage and Pricing Page."
+    "The passed pages (homepage, pricing page, and blog page) have load times under 600 ms, TTFB under 30 ms, and FCP under 600 ms, which are within acceptable ranges. However, optimizing these metrics can provide a better user experience.",
+    "The \"How It Works\" page's failure indicates potential issues such as large resource sizes, unoptimized images, excessive HTTP requests, render-blocking resources, or slow server response time. Investigating and addressing these issues will improve the page's performance.",
+    "Implementing best practices like image optimization, code minification, HTTP/2, browser caching, and server-side rendering can help improve the web performance for all pages, including the \"How It Works\" page."
   ]
 }
