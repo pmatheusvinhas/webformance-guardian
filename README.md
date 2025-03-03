@@ -1,6 +1,6 @@
 # WebFormance Guardian
 
-A continuous web performance monitoring project developed as part of the application process for Stably AI.
+A continuous web performance monitoring.
 
 ## 🎯 Live Demo & Status
 
