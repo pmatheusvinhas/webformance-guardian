@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-03T01:17:08.541Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1410,
+      "metrics": {
+        "loadTime": 621.9000000000233,
+        "ttfb": 29.70000000001164,
+        "fcp": 490.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 936,
+      "metrics": {
+        "loadTime": 180,
+        "ttfb": 18.70000000001164,
+        "fcp": 213.80000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1503,
+      "metrics": {
+        "loadTime": 685.3999999999942,
+        "ttfb": 19.599999999976717,
+        "fcp": 206.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1149
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test, and its performance metrics are not available. It is recommended to investigate the cause of the failure and optimize the page's performance.",
+    "issues": [],
+    "insights": [
+      "The TTFB times for all passing pages are under 30ms, which is an excellent result and shows that the server response time is fast.",
+      "The FCP times for all passing pages are under 700ms, which is a good result and shows that the page's content is loading quickly.",
+      "The duration times for all passing pages are under 1.6 seconds, which is a good result and shows that the page's overall load time is fast.",
+      "It is recommended to investigate the cause of the \"How It Works\" page's failure and optimize its performance to ensure good user experience."
+    ]
+  }
+}
