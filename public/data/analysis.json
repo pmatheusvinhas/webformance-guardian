@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, and its performance metrics are not available. It is crucial to investigate the cause of the failure and optimize the page's performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the root cause and optimize the page to improve load times.",
   "issues": [],
   "insights": [
-    "The pricing page and blog page have the fastest load times, indicating that their optimization is effective.",
-    "The TTFB for all pages is within acceptable ranges, indicating that the server response time is fast.",
-    "The FCP for all pages is also within acceptable ranges, indicating that the pages are rendering quickly.",
-    "It is essential to investigate the cause of the \"How It Works\" page failure and optimize its performance to ensure a consistent user experience across all pages."
+    "The pricing page and blog page have the fastest load times, indicating effective optimizations. Analyze these pages to identify best practices that can be applied to other pages, such as the \"How It Works\" page.",
+    "First Contentful Paint (FCP) is a significant metric, representing the time it takes for the first piece of content to appear on the page. The FCP for the homepage is 1380 ms, which is relatively high. Investigate opportunities to reduce this time to improve user experience.",
+    "Total Time to First Byte (TTFB) measures the duration from the user's request to the server's response. A low TTFB indicates efficient server response times. The TTFB for the homepage is 28.3 ms, which is good, but there is room for improvement on the other pages."
   ]
 }

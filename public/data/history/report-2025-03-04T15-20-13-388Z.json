@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-04T15:20:13.388Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2289,
+      "metrics": {
+        "loadTime": 1148.7000000000116,
+        "ttfb": 28.29999999998836,
+        "fcp": 1380
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1074,
+      "metrics": {
+        "loadTime": 271.1000000000349,
+        "ttfb": 127.70000000001164,
+        "fcp": 286.1000000000349
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1212,
+      "metrics": {
+        "loadTime": 412.3999999999651,
+        "ttfb": 116.79999999998836,
+        "fcp": 262.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 923
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the root cause and optimize the page to improve load times.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, indicating effective optimizations. Analyze these pages to identify best practices that can be applied to other pages, such as the \"How It Works\" page.",
+      "First Contentful Paint (FCP) is a significant metric, representing the time it takes for the first piece of content to appear on the page. The FCP for the homepage is 1380 ms, which is relatively high. Investigate opportunities to reduce this time to improve user experience.",
+      "Total Time to First Byte (TTFB) measures the duration from the user's request to the server's response. A low TTFB indicates efficient server response times. The TTFB for the homepage is 28.3 ms, which is good, but there is room for improvement on the other pages."
+    ]
+  }
+}
