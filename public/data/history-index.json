@@ -118,5 +118,9 @@
   {
     "timestamp": "2025-03-04T15:20:13.388Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the root cause and optimize the page to improve load times."
+  },
+  {
+    "timestamp": "2025-03-04T20:17:58.985Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is crucial to investigate why this page is slower than the others. Possible reasons could be larger images, more scripts, or complex layouts. Solutions might include optimizing images, minifying scripts, and simplifying the layout."
   }
 ]

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-04T20:17:58.985Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1532,
+      "metrics": {
+        "loadTime": 683.7999999999884,
+        "ttfb": 103.59999999997672,
+        "fcp": 440
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1011,
+      "metrics": {
+        "loadTime": 192.29999999998836,
+        "ttfb": 14.200000000011642,
+        "fcp": 210.29999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 953,
+      "metrics": {
+        "loadTime": 223.70000000001164,
+        "ttfb": 9.89999999999418,
+        "fcp": 183
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 943
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is crucial to investigate why this page is slower than the others. Possible reasons could be larger images, more scripts, or complex layouts. Solutions might include optimizing images, minifying scripts, and simplifying the layout.",
+    "issues": [],
+    "insights": [
+      "The TTFB is consistently low across all pages, indicating that the server is performing well. This is a positive sign as it means that the server is not a bottleneck in page loading.",
+      "The FCP is also reasonable, suggesting that the pages are rendering quickly. This is important for user experience as it gives users immediate feedback that the page is loading.",
+      "While the load times for the pricing and blog pages are good, there is still room for improvement on the homepage. Optimizing the homepage could lead to better user engagement and conversion rates."
+    ]
+  }
+}
