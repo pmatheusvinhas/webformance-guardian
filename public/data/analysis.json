@@ -1,15 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- None",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "High First Contentful Paint (FCP) on Homepage",
-      "recommendation": "Consider optimizing the initial content rendering on the homepage to improve user experience."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, and its performance metrics are not available. It is crucial to investigate the cause of the failure and optimize the page's performance.",
+  "issues": [],
   "insights": [
-    "The Time To First Byte (TTFB) is consistently low across all pages, indicating that the server response times are good.",
-    "The load times for the pricing and blog pages are very fast, which is a positive sign for user experience.",
-    "The how it works page failed the test, suggesting that there might be some issues with this page that need to be addressed. It could be due to a larger size, more complex scripts, or other factors that are causing it to take longer to load."
+    "The pricing page and blog page have the fastest load times, indicating that their optimization is effective.",
+    "The TTFB for all pages is within acceptable ranges, indicating that the server response time is fast.",
+    "The FCP for all pages is also within acceptable ranges, indicating that the pages are rendering quickly.",
+    "It is essential to investigate the cause of the \"How It Works\" page failure and optimize its performance to ensure a consistent user experience across all pages."
   ]
 }
