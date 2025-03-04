@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-03-04T05:16:15.719Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1231,
+      "metrics": {
+        "loadTime": 555.1999999999971,
+        "ttfb": 20.5,
+        "fcp": 295.09999999999127
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 935,
+      "metrics": {
+        "loadTime": 166.8000000000029,
+        "ttfb": 21.5,
+        "fcp": 189.29999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 919,
+      "metrics": {
+        "loadTime": 227.5,
+        "ttfb": 10.30000000000291,
+        "fcp": 163.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 884
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- None",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "High First Contentful Paint (FCP) on Homepage",
+        "recommendation": "Consider optimizing the initial content rendering on the homepage to improve user experience."
+      }
+    ],
+    "insights": [
+      "The Time To First Byte (TTFB) is consistently low across all pages, indicating that the server response times are good.",
+      "The load times for the pricing and blog pages are very fast, which is a positive sign for user experience.",
+      "The how it works page failed the test, suggesting that there might be some issues with this page that need to be addressed. It could be due to a larger size, more complex scripts, or other factors that are causing it to take longer to load."
+    ]
+  }
+}
