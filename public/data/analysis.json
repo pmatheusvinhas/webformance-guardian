@@ -1,9 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive scripts, or server-side bottlenecks.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience. (Recommendation: Review server logs, network requests, and page structure to identify and fix problems.)",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page has failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience. (Recommendation",
+      "recommendation": "Review server logs, network requests, and page structure to identify and fix problems.)"
+    },
+    {
+      "severity": "info",
+      "message": "The TTFB for the homepage is relatively high (39.4 ms). This could indicate server-side processing delays or network latency. (Recommendation",
+      "recommendation": "Optimize server-side processing, leverage caching, or consider a content delivery network (CDN) to improve TTFB.)"
+    },
+    {
+      "severity": "critical",
+      "message": "The FCP for the pricing page is higher than ideal (484.1 ms). This could be due to slow rendering of above-the-fold content. (Recommendation",
+      "recommendation": "Optimize and prioritize the rendering of critical above-the-fold content.)"
+    }
+  ],
   "insights": [
-    "The homepage, pricing page, and blog page perform well, with load times under 600 ms, TTFB under 100 ms, and FCP under 500 ms. This indicates that the website's basic performance is good.",
-    "The \"How It Works\" page's failure suggests potential issues with media files, scripts, or server-side processing. Investigating these areas will help improve the page's performance.",
-    "To maintain and improve web performance, it is essential to continuously monitor, test, and optimize the website. This includes regularly checking for large media files, excessive scripts, and server-side bottlenecks."
+    "The blog page has the lowest load time (315.6 ms) and TTFB (47.3 ms), indicating efficient page structure and server-side processing.",
+    "The homepage has a longer FCP (409.5 ms) than the pricing and blog pages, suggesting room for improvement in rendering above-the-fold content.",
+    "All pages have load times below 1500 ms, which is within acceptable limits. However, optimizing TTFB and FCP can further enhance user experience and reduce bounce rates."
   ]
 }

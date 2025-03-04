@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-03-04T01:15:49.569Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1319,
+      "metrics": {
+        "loadTime": 556.7000000000116,
+        "ttfb": 39.39999999999418,
+        "fcp": 409.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1178,
+      "metrics": {
+        "loadTime": 362.29999999998836,
+        "ttfb": 15.60000000000582,
+        "fcp": 484.1000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1098,
+      "metrics": {
+        "loadTime": 315.6000000000058,
+        "ttfb": 47.30000000001746,
+        "fcp": 218.90000000002328
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 896
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience. (Recommendation: Review server logs, network requests, and page structure to identify and fix problems.)",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page has failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience. (Recommendation",
+        "recommendation": "Review server logs, network requests, and page structure to identify and fix problems.)"
+      },
+      {
+        "severity": "info",
+        "message": "The TTFB for the homepage is relatively high (39.4 ms). This could indicate server-side processing delays or network latency. (Recommendation",
+        "recommendation": "Optimize server-side processing, leverage caching, or consider a content delivery network (CDN) to improve TTFB.)"
+      },
+      {
+        "severity": "critical",
+        "message": "The FCP for the pricing page is higher than ideal (484.1 ms). This could be due to slow rendering of above-the-fold content. (Recommendation",
+        "recommendation": "Optimize and prioritize the rendering of critical above-the-fold content.)"
+      }
+    ],
+    "insights": [
+      "The blog page has the lowest load time (315.6 ms) and TTFB (47.3 ms), indicating efficient page structure and server-side processing.",
+      "The homepage has a longer FCP (409.5 ms) than the pricing and blog pages, suggesting room for improvement in rendering above-the-fold content.",
+      "All pages have load times below 1500 ms, which is within acceptable limits. However, optimizing TTFB and FCP can further enhance user experience and reduce bounce rates."
+    ]
+  }
+}
