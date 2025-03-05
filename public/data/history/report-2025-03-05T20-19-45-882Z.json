@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-05T20:19:45.882Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1987,
+      "metrics": {
+        "loadTime": 842.4000000000233,
+        "ttfb": 33.79999999998836,
+        "fcp": 867.0999999999767
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1331,
+      "metrics": {
+        "loadTime": 410.70000000001164,
+        "ttfb": 146.10000000003492,
+        "fcp": 462.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1349,
+      "metrics": {
+        "loadTime": 442.9000000000233,
+        "ttfb": 175.70000000001164,
+        "fcp": 512.8999999999651
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1053
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and address the underlying issues to ensure a smooth user experience. Recommendations include checking for large media files, excessive scripts, or server-side bottlenecks.",
+    "issues": [],
+    "insights": [
+      "The passed tests for the homepage, pricing page, and blog page indicate good performance, with load times well below the recommended 3-second threshold.",
+      "The \"How It Works\" page's failure suggests potential optimization opportunities. Investigating and addressing these issues will help improve user experience and prevent potential bounce rates.",
+      "Implementing general optimization practices, such as image optimization, minification, and caching, will further enhance the web performance of all pages."
+    ]
+  }
+}
