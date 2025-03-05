@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, it is recommended to investigate the page's content, resources, and scripts to identify bottlenecks and optimize them for better performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The TTFB metrics for all pages are within an acceptable range, indicating that the server response time is adequate.",
-    "The FCP metrics for all pages are also within an acceptable range, suggesting that the pages are rendering visible content quickly.",
-    "To improve overall performance, consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching. Additionally, evaluate the usage of third-party scripts and plugins, as they can significantly impact page loading times."
+    "The pricing page has the fastest load time of all the pages tested, indicating effective optimization.",
+    "The blog page has a longer load time than the pricing page, suggesting that there may be opportunities to further optimize the blog page.",
+    "The ttfb (time to first byte) metric is consistently low across all pages, indicating that the server response time is fast. This is a positive sign of good web performance."
   ]
 }

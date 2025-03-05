@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-05T05:16:43.187Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1233,
+      "metrics": {
+        "loadTime": 553.5,
+        "ttfb": 36.19999999999709,
+        "fcp": 338.6999999999971
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 963,
+      "metrics": {
+        "loadTime": 326,
+        "ttfb": 15.30000000000291,
+        "fcp": 226
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1072,
+      "metrics": {
+        "loadTime": 530.0999999999913,
+        "ttfb": 18.39999999999418,
+        "fcp": 179.89999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1004
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time of all the pages tested, indicating effective optimization.",
+      "The blog page has a longer load time than the pricing page, suggesting that there may be opportunities to further optimize the blog page.",
+      "The ttfb (time to first byte) metric is consistently low across all pages, indicating that the server response time is fast. This is a positive sign of good web performance."
+    ]
+  }
+}
