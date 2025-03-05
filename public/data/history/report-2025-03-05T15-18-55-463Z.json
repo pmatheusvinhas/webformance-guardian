@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-05T15:18:55.463Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1471,
+      "metrics": {
+        "loadTime": 576.8000000000029,
+        "ttfb": 21,
+        "fcp": 541.2999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1383,
+      "metrics": {
+        "loadTime": 635.3999999999942,
+        "ttfb": 223.79999999998836,
+        "fcp": 651.3000000000029
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1303,
+      "metrics": {
+        "loadTime": 426.29999999998836,
+        "ttfb": 188.6999999999971,
+        "fcp": 354.6000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 863
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the test with a short duration of 863ms. It is recommended to investigate the issues with content loading or rendering on this page.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good performance with load times under 1 second, TTFB under 300ms (except for the pricing page), and FCP under 650ms.",
+      "The \"How It Works\" page has failed the test, indicating issues with content loading or rendering. It is recommended to investigate and optimize this page.",
+      "The TTFB for the pricing page is high, indicating that the server response time needs optimization. It is recommended to investigate and optimize the server configuration for this page.",
+      "The FCP for the homepage is high, indicating that the first contentful paint needs optimization. It is recommended to investigate and optimize the rendering of the first content on this page."
+    ]
+  }
+}
