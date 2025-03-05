@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-05T01:16:04.743Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1572,
+      "metrics": {
+        "loadTime": 611.6000000000058,
+        "ttfb": 34.39999999999418,
+        "fcp": 634.8000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1085,
+      "metrics": {
+        "loadTime": 465.29999999998836,
+        "ttfb": 149.59999999997672,
+        "fcp": 339
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1287,
+      "metrics": {
+        "loadTime": 483.5999999999767,
+        "ttfb": 98.5,
+        "fcp": 456.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 943
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, it is recommended to investigate the page's content, resources, and scripts to identify bottlenecks and optimize them for better performance.",
+    "issues": [],
+    "insights": [
+      "The TTFB metrics for all pages are within an acceptable range, indicating that the server response time is adequate.",
+      "The FCP metrics for all pages are also within an acceptable range, suggesting that the pages are rendering visible content quickly.",
+      "To improve overall performance, consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching. Additionally, evaluate the usage of third-party scripts and plugins, as they can significantly impact page loading times."
+    ]
+  }
+}

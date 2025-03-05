@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test. It is crucial to investigate why this page is slower than the others. Possible reasons could be larger images, more scripts, or complex layouts. Solutions might include optimizing images, minifying scripts, and simplifying the layout.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, it is recommended to investigate the page's content, resources, and scripts to identify bottlenecks and optimize them for better performance.",
   "issues": [],
   "insights": [
-    "The TTFB is consistently low across all pages, indicating that the server is performing well. This is a positive sign as it means that the server is not a bottleneck in page loading.",
-    "The FCP is also reasonable, suggesting that the pages are rendering quickly. This is important for user experience as it gives users immediate feedback that the page is loading.",
-    "While the load times for the pricing and blog pages are good, there is still room for improvement on the homepage. Optimizing the homepage could lead to better user engagement and conversion rates."
+    "The TTFB metrics for all pages are within an acceptable range, indicating that the server response time is adequate.",
+    "The FCP metrics for all pages are also within an acceptable range, suggesting that the pages are rendering visible content quickly.",
+    "To improve overall performance, consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching. Additionally, evaluate the usage of third-party scripts and plugins, as they can significantly impact page loading times."
   ]
 }
