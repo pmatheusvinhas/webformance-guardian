@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, investigate the page's content, resources, and scripts to identify bottlenecks and optimize them accordingly.",
   "issues": [],
   "insights": [
-    "The pricing page has the fastest load time of all the pages tested, indicating effective optimization.",
-    "The blog page has a longer load time than the pricing page, suggesting that there may be opportunities to further optimize the blog page.",
-    "The ttfb (time to first byte) metric is consistently low across all pages, indicating that the server response time is fast. This is a positive sign of good web performance."
+    "The pricing page has the best performance, with a load time of 148.4 ms. This can serve as a benchmark for optimizing other pages.",
+    "The blog page has a longer Time to First Byte (TTFB) of 136.4 ms, suggesting that the server response time could be improved. Investigate potential issues such as slow database queries or server configuration.",
+    "Although all passed pages have acceptable load times, it is essential to continuously monitor and optimize performance to ensure a positive user experience and maintain good search engine rankings."
   ]
 }
