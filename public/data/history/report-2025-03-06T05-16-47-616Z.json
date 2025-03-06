@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-06T05:16:47.616Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1397,
+      "metrics": {
+        "loadTime": 629.6000000000058,
+        "ttfb": 27.89999999999418,
+        "fcp": 498.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 928,
+      "metrics": {
+        "loadTime": 352.5,
+        "ttfb": 28.60000000000582,
+        "fcp": 221.89999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 967,
+      "metrics": {
+        "loadTime": 240.60000000000582,
+        "ttfb": 19.70000000001164,
+        "fcp": 200.60000000000582
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 977
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, and its performance metrics are not available. It is crucial to investigate and address the issue to ensure that the page performs well.",
+    "issues": [],
+    "insights": [
+      "The Time To First Byte (TTFB) is consistently low across all pages, indicating that the server response time is good.",
+      "The First Contentful Paint (FCP) is also satisfactory, meaning that the pages are visually loading quickly.",
+      "The load times for the passing pages are relatively fast, with the homepage being the slowest at 629.6 ms. Optimizing the homepage further could improve user experience.",
+      "The \"How It Works\" page failed the test, and its performance metrics are not available. It is essential to investigate and address the issue to ensure that the page performs well."
+    ]
+  }
+}
