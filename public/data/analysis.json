@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, and its performance metrics are not available. It is crucial to investigate and address the issue to ensure that the page performs well.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. Recommendations include checking for errors in the code, optimizing images and other media, and reducing the number of HTTP requests.",
   "issues": [],
   "insights": [
-    "The Time To First Byte (TTFB) is consistently low across all pages, indicating that the server response time is good.",
-    "The First Contentful Paint (FCP) is also satisfactory, meaning that the pages are visually loading quickly.",
-    "The load times for the passing pages are relatively fast, with the homepage being the slowest at 629.6 ms. Optimizing the homepage further could improve user experience.",
-    "The \"How It Works\" page failed the test, and its performance metrics are not available. It is essential to investigate and address the issue to ensure that the page performs well."
+    "The pricing and blog pages have significantly lower load times than the homepage, indicating that they are optimized for performance. This could be due to smaller images, fewer HTTP requests, or other factors.",
+    "The Time to First Contentful Paint (FCP) for all pages is relatively low, indicating that the pages are rendering quickly. This is an important metric for user experience, as it measures the time it takes for the user to see the first piece of content on the page.",
+    "The duration for all pages is relatively low, indicating that the pages are loading quickly. However, it is still important to optimize the pages for performance, as even small improvements can have a significant impact on user experience."
   ]
 }

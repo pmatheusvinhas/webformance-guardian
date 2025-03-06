@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-06T10:19:16.745Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1933,
+      "metrics": {
+        "loadTime": 806.3000000000175,
+        "ttfb": 37.70000000001164,
+        "fcp": 965.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 913,
+      "metrics": {
+        "loadTime": 248.5,
+        "ttfb": 17.39999999999418,
+        "fcp": 218.39999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 963,
+      "metrics": {
+        "loadTime": 239.89999999996508,
+        "ttfb": 25.20000000001164,
+        "fcp": 204.60000000003492
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 928
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need to be investigated and resolved. Recommendations include checking for errors in the code, optimizing images and other media, and reducing the number of HTTP requests.",
+    "issues": [],
+    "insights": [
+      "The pricing and blog pages have significantly lower load times than the homepage, indicating that they are optimized for performance. This could be due to smaller images, fewer HTTP requests, or other factors.",
+      "The Time to First Contentful Paint (FCP) for all pages is relatively low, indicating that the pages are rendering quickly. This is an important metric for user experience, as it measures the time it takes for the user to see the first piece of content on the page.",
+      "The duration for all pages is relatively low, indicating that the pages are loading quickly. However, it is still important to optimize the pages for performance, as even small improvements can have a significant impact on user experience."
+    ]
+  }
+}
