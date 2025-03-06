@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-06T20:18:23.245Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1417,
+      "metrics": {
+        "loadTime": 611.5999999999767,
+        "ttfb": 46.69999999998254,
+        "fcp": 505.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1160,
+      "metrics": {
+        "loadTime": 378.5999999999767,
+        "ttfb": 126.79999999998836,
+        "fcp": 374.1000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1456,
+      "metrics": {
+        "loadTime": 343,
+        "ttfb": 112.5,
+        "fcp": 359
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1222
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, it is recommended to investigate the causes of the failure, such as server-side rendering issues, heavy scripts, or large media files. Optimizing these elements can significantly improve the page's load time and overall performance.",
+    "issues": [],
+    "insights": [
+      "The blog page has the fastest load time (343 ms) and FCP (359 ms) among all pages. This indicates that the blog page's content and structure are optimized for fast rendering, and it can serve as a benchmark for optimizing other pages.",
+      "The pricing page has a higher TTFB (126.8 ms) than the other pages, suggesting that there might be server-side processing or database queries that could be optimized to reduce the initial response time.",
+      "The homepage has a longer load time than the blog and pricing pages, despite having a similar TTFB. This discrepancy indicates that there might be heavy scripts or large media files that are causing the homepage to take longer to fully render."
+    ]
+  }
+}
