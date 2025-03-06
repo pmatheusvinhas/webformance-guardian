@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-06T15:18:00.474Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1496,
+      "metrics": {
+        "loadTime": 490.5,
+        "ttfb": 40.10000000000582,
+        "fcp": 434
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1192,
+      "metrics": {
+        "loadTime": 478.20000000001164,
+        "ttfb": 164.10000000000582,
+        "fcp": 420
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1299,
+      "metrics": {
+        "loadTime": 415.1999999999971,
+        "ttfb": 127.10000000000582,
+        "fcp": 334.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1022
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the root cause and optimize the page to improve load times.",
+    "issues": [],
+    "insights": [
+      "The load times for all passing pages are under 500ms, which is a good sign of optimal performance.",
+      "Time to First Byte (TTFB) for all pages is within acceptable limits, ranging from 40ms to 164ms. This indicates that the server response time is adequate.",
+      "The duration of the tests varies, with the shortest duration for the pricing page (1192ms) and the longest for the homepage (1496ms). This difference could be due to the complexity and size of the pages.",
+      "The \"How It Works\" page failed the test, suggesting potential issues such as large image sizes, excessive scripts, or inefficient rendering. Investigate these areas to improve the page's performance."
+    ]
+  }
+}
