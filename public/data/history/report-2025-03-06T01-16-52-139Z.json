@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-06T01:16:52.139Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1760,
+      "metrics": {
+        "loadTime": 676.5,
+        "ttfb": 32.100000000034925,
+        "fcp": 848.2000000000116
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1100,
+      "metrics": {
+        "loadTime": 433.29999999998836,
+        "ttfb": 84.39999999996508,
+        "fcp": 282.29999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1228,
+      "metrics": {
+        "loadTime": 308,
+        "ttfb": 91,
+        "fcp": 280.9000000000233
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1334
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure suggests that there might be issues with the page's content, scripts, or images. An in-depth analysis of the page's components is required to identify and resolve the problems.",
+      "The homepage and pricing page load times could be improved by optimizing images, minifying CSS and JavaScript files, and leveraging browser caching.",
+      "The blog page's excellent performance can serve as a benchmark for optimizing the other pages. Analyzing the blog page's components and applying the best practices to other pages can help improve the overall web performance."
+    ]
+  }
+}
