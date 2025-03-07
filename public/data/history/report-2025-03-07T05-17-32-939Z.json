@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-07T05:17:32.939Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1361,
+      "metrics": {
+        "loadTime": 595.5999999999767,
+        "ttfb": 21.29999999998836,
+        "fcp": 475.29999999998836
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 859,
+      "metrics": {
+        "loadTime": 169.39999999996508,
+        "ttfb": 40.79999999998836,
+        "fcp": 173.80000000004657
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 893,
+      "metrics": {
+        "loadTime": 293.6000000000349,
+        "ttfb": 15.600000000034925,
+        "fcp": 157.10000000003492
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 856
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure indicates that there might be issues with the page's content, scripts, or resources. Investigating these elements and optimizing them can help improve the page's performance.",
+      "Implementing best practices such as optimizing images, minifying CSS and JavaScript, and leveraging browser caching can help reduce load times for all pages.",
+      "Regularly monitoring and testing web performance can help identify and address issues promptly, ensuring a positive user experience."
+    ]
+  }
+}
