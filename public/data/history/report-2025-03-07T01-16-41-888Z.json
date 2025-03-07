@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-07T01:16:41.888Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1442,
+      "metrics": {
+        "loadTime": 561.2999999999884,
+        "ttfb": 50.89999999999418,
+        "fcp": 527
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1689,
+      "metrics": {
+        "loadTime": 894.3999999999942,
+        "ttfb": 591.5,
+        "fcp": 787.6000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1237,
+      "metrics": {
+        "loadTime": 305.30000000001746,
+        "ttfb": 94.30000000001746,
+        "fcp": 280.4000000000233
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 928
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 928ms. This is significantly shorter than the recommended duration, indicating potential issues with the page's content, scripts, or server response time. It is recommended to investigate and optimize the page to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is good.",
+      "The FCP (First Contentful Paint) for all pages is within the recommended threshold of 1000ms, indicating that the pages are rendering quickly.",
+      "The duration for the \"How It Works\" page is significantly shorter than the other pages, indicating potential issues with the page's content, scripts, or server response time. It is recommended to investigate and optimize the page to improve its performance.",
+      "The load times for the homepage and pricing page are higher than the recommended threshold, indicating potential issues that need to be addressed. It is recommended to investigate and optimize these pages to improve their performance."
+    ]
+  }
+}
