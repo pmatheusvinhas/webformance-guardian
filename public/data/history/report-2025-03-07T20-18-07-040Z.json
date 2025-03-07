@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-03-07T20:18:07.040Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1500,
+      "metrics": {
+        "loadTime": 880,
+        "ttfb": 22,
+        "fcp": 277.90000000000873
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 889,
+      "metrics": {
+        "loadTime": 161.5,
+        "ttfb": 18.30000000000291,
+        "fcp": 200.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1109,
+      "metrics": {
+        "loadTime": 250.8000000000029,
+        "ttfb": 39,
+        "fcp": 247.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 914
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its loading time and pass the test.\n  - Recommendation: Analyze the page's resources, such as images, scripts, and stylesheets, to identify bottlenecks and optimize them. Consider using tools like Google PageSpeed Insights or WebPageTest to diagnose specific issues.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the page's resources, such as images, scripts, and stylesheets, to identify bottlenecks and optimize them. Consider using tools like Google PageSpeed Insights or WebPageTest to diagnose specific issues."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Optimize images, minify CSS and JavaScript files, and leverage browser caching to improve the homepage's load time."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Continue monitoring ttfb to ensure consistent performance."
+      }
+    ],
+    "insights": [
+      "The pricing page has the best performance metrics among all pages, with the lowest load time (161.5ms) and ttfb (18.3ms). This suggests that the pricing page is well optimized and could serve as a benchmark for other pages.",
+      "The blog page has a higher First Contentful Paint (fcp) time (247.5ms) compared to the pricing page (200.2ms), even though its load time is lower. This might indicate that the blog page's critical rendering path needs optimization.",
+      "Investigating and addressing the issues on the \"How It Works\" page can significantly improve the website's overall performance and user experience."
+    ]
+  }
+}

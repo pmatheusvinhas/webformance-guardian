@@ -1,9 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. It is recommended to investigate the cause of the failure and address it to ensure optimal performance.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its loading time and pass the test.\n  - Recommendation: Analyze the page's resources, such as images, scripts, and stylesheets, to identify bottlenecks and optimize them. Consider using tools like Google PageSpeed Insights or WebPageTest to diagnose specific issues.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Analyze the page's resources, such as images, scripts, and stylesheets, to identify bottlenecks and optimize them. Consider using tools like Google PageSpeed Insights or WebPageTest to diagnose specific issues."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Optimize images, minify CSS and JavaScript files, and leverage browser caching to improve the homepage's load time."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Continue monitoring ttfb to ensure consistent performance."
+    }
+  ],
   "insights": [
-    "The TTFB metric is consistently low across all pages, indicating that the server response time is fast.",
-    "The FCP metric is also low, suggesting that the pages are rendering quickly and users are seeing content rapidly.",
-    "The load times are under 1 second for all pages, indicating good performance and user experience. It is recommended to maintain this level of performance for all pages."
+    "The pricing page has the best performance metrics among all pages, with the lowest load time (161.5ms) and ttfb (18.3ms). This suggests that the pricing page is well optimized and could serve as a benchmark for other pages.",
+    "The blog page has a higher First Contentful Paint (fcp) time (247.5ms) compared to the pricing page (200.2ms), even though its load time is lower. This might indicate that the blog page's critical rendering path needs optimization.",
+    "Investigating and addressing the issues on the \"How It Works\" page can significantly improve the website's overall performance and user experience."
   ]
 }
