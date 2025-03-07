@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-07T15:18:40.459Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2051,
+      "metrics": {
+        "loadTime": 876.2999999999884,
+        "ttfb": 38.79999999998836,
+        "fcp": 1024.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1136,
+      "metrics": {
+        "loadTime": 362.79999999998836,
+        "ttfb": 123.40000000002328,
+        "fcp": 359.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1373,
+      "metrics": {
+        "loadTime": 468.6000000000349,
+        "ttfb": 154.29999999998836,
+        "fcp": 373.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1057
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test. It is recommended to investigate the cause of the failure and address it to ensure optimal performance.",
+    "issues": [],
+    "insights": [
+      "The TTFB metric is consistently low across all pages, indicating that the server response time is fast.",
+      "The FCP metric is also low, suggesting that the pages are rendering quickly and users are seeing content rapidly.",
+      "The load times are under 1 second for all pages, indicating good performance and user experience. It is recommended to maintain this level of performance for all pages."
+    ]
+  }
+}
