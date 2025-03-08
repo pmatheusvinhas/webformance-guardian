@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the cause of the failure and optimize the page to improve its performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is recommended to investigate the cause of the failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The First Contentful Paint (FCP) for all pages is relatively fast, indicating that the user sees the content quickly. This is a positive sign as it enhances user experience.",
-    "The duration for all pages is relatively short, indicating that the pages are loading quickly. This is a good sign as it reduces user waiting time.",
-    "It is recommended to continue monitoring and optimizing web performance to ensure fast loading times and enhance user experience."
+    "The pricing page and blog page have the fastest load times, indicating that their optimization strategies are effective.",
+    "The time to first byte (TTFB) for all pages is low, indicating that the server response time is fast.",
+    "The first contentful paint (FCP) for all pages is within acceptable limits, indicating that the page's above-the-fold content is loading quickly."
   ]
 }
