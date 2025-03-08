@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-08T20:13:30.528Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1330,
+      "metrics": {
+        "loadTime": 592.3999999999942,
+        "ttfb": 40.19999999999709,
+        "fcp": 426.90000000000873
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 890,
+      "metrics": {
+        "loadTime": 181.8000000000029,
+        "ttfb": 41.80000000000291,
+        "fcp": 194.39999999999418
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 994,
+      "metrics": {
+        "loadTime": 233.70000000001164,
+        "ttfb": 13.80000000000291,
+        "fcp": 174.6999999999971
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 903
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, excessive scripts, or network issues specific to this page.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, suggesting that their design and development practices may be more efficient. Analyzing these pages can provide insights to improve the performance of other pages.",
+      "The Time to First Byte (TTFB) is relatively fast across all pages, indicating that the server response time is adequate.",
+      "Implementing the recommendations for the homepage can help achieve a faster load time and create a better user experience."
+    ]
+  }
+}
