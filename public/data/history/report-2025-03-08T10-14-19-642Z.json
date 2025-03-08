@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-08T10:14:19.642Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1475,
+      "metrics": {
+        "loadTime": 611.6000000000058,
+        "ttfb": 32.5,
+        "fcp": 572.6999999999825
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 980,
+      "metrics": {
+        "loadTime": 203.89999999999418,
+        "ttfb": 57.89999999999418,
+        "fcp": 235.19999999998254
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1462,
+      "metrics": {
+        "loadTime": 687.0999999999767,
+        "ttfb": 476.79999999998836,
+        "fcp": 647.2000000000116
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 881
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the reasons for its failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have load times within acceptable ranges, indicating good performance.",
+      "The \"How It Works\" page's failure may be due to various factors such as large image sizes, excessive HTTP requests, or slow server response times. Investigate these areas to identify the root cause.",
+      "Although the TTFB for the blog page is high, it is still within the passing threshold. However, optimizing server response times can further improve user experience."
+    ]
+  }
+}
