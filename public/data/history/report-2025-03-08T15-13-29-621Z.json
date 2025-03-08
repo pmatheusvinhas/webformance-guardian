@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-08T15:13:29.621Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1301,
+      "metrics": {
+        "loadTime": 543.5,
+        "ttfb": 31.79999999998836,
+        "fcp": 344.90000000000873
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 903,
+      "metrics": {
+        "loadTime": 201.6999999999971,
+        "ttfb": 49.30000000000291,
+        "fcp": 198.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 952,
+      "metrics": {
+        "loadTime": 311.6000000000058,
+        "ttfb": 13,
+        "fcp": 168.1999999999971
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 902
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is good.",
+      "The FCP (First Contentful Paint) for all pages is also low, suggesting that the pages are rendering quickly.",
+      "The failed \"How It Works\" page needs immediate attention to identify and resolve the issues causing the failure. It is crucial to ensure that all pages provide a good user experience to maintain user engagement and satisfaction."
+    ]
+  }
+}

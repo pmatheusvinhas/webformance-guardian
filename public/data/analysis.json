@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the reasons for its failure to ensure a smooth user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have load times within acceptable ranges, indicating good performance.",
-    "The \"How It Works\" page's failure may be due to various factors such as large image sizes, excessive HTTP requests, or slow server response times. Investigate these areas to identify the root cause.",
-    "Although the TTFB for the blog page is high, it is still within the passing threshold. However, optimizing server response times can further improve user experience."
+    "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is good.",
+    "The FCP (First Contentful Paint) for all pages is also low, suggesting that the pages are rendering quickly.",
+    "The failed \"How It Works\" page needs immediate attention to identify and resolve the issues causing the failure. It is crucial to ensure that all pages provide a good user experience to maintain user engagement and satisfaction."
   ]
 }
