@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-08T01:01:45.554Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1438,
+      "metrics": {
+        "loadTime": 616.5,
+        "ttfb": 29.60000000000582,
+        "fcp": 528
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 947,
+      "metrics": {
+        "loadTime": 184.5,
+        "ttfb": 30.29999999998836,
+        "fcp": 195.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1029,
+      "metrics": {
+        "loadTime": 231.20000000001164,
+        "ttfb": 16,
+        "fcp": 204.39999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1455
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential issues that need immediate attention. It is recommended to investigate the cause of the failure and optimize the page to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The First Contentful Paint (FCP) for all pages is relatively fast, indicating that the user sees the content quickly. This is a positive sign as it enhances user experience.",
+      "The duration for all pages is relatively short, indicating that the pages are loading quickly. This is a good sign as it reduces user waiting time.",
+      "It is recommended to continue monitoring and optimizing web performance to ensure fast loading times and enhance user experience."
+    ]
+  }
+}
