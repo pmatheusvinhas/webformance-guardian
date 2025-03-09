@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-09T20:15:19.233Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1863,
+      "metrics": {
+        "loadTime": 577.3999999999942,
+        "ttfb": 33.10000000000582,
+        "fcp": 452.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1236,
+      "metrics": {
+        "loadTime": 460.0999999999767,
+        "ttfb": 137.89999999999418,
+        "fcp": 373
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1478,
+      "metrics": {
+        "loadTime": 430.3999999999942,
+        "ttfb": 139,
+        "fcp": 404.6000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 2241
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 2241ms, which is significantly higher than the other pages. Investigate the page and optimize it to reduce the load time.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have acceptable load times, indicating that the website's performance is generally good.",
+      "The \"How It Works\" page has a longer duration, which could be due to several factors such as large images, excessive scripts, or slow server response time. Investigating and optimizing these factors can help reduce the load time and improve user experience.",
+      "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is fast. This is a positive sign for the website's performance.",
+      "The FCP (First Contentful Paint) for all pages is also relatively low, indicating that the website's content is loading quickly. This is another positive sign for the website's performance."
+    ]
+  }
+}
