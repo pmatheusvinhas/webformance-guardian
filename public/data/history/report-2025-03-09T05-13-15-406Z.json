@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-09T05:13:15.406Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1290,
+      "metrics": {
+        "loadTime": 524.3000000000175,
+        "ttfb": 20.10000000000582,
+        "fcp": 386.3999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 845,
+      "metrics": {
+        "loadTime": 230.5,
+        "ttfb": 10.300000000017462,
+        "fcp": 149.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 888,
+      "metrics": {
+        "loadTime": 210.29999999998836,
+        "ttfb": 17,
+        "fcp": 147.19999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 847
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks on this specific page.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have faster load times than the homepage, suggesting that they may have been optimized previously. Use the same optimization techniques on the homepage to achieve similar performance.",
+      "The Time To First Byte (TTFB) for all pages is within acceptable limits (less than 200 ms), indicating that server response times are not a significant concern.",
+      "First Contentful Paint (FCP) is relatively fast for all pages, suggesting that users see content quickly upon loading the pages. However, optimizing FCP further can enhance user experience by making the pages feel even more responsive."
+    ]
+  }
+}
