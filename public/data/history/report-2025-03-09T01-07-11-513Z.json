@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-09T01:07:11.513Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1955,
+      "metrics": {
+        "loadTime": 798.3999999999651,
+        "ttfb": 24.79999999998836,
+        "fcp": 1012.0999999999767
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 847,
+      "metrics": {
+        "loadTime": 236.29999999998836,
+        "ttfb": 9.899999999965075,
+        "fcp": 152.70000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1013,
+      "metrics": {
+        "loadTime": 266.9000000000233,
+        "ttfb": 62.5,
+        "fcp": 205.79999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 897
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and address the underlying issues to ensure a smooth user experience. Recommendations include checking for render-blocking resources, optimizing images, and minifying CSS and JavaScript files.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the best performance, with load times significantly lower than the homepage. This suggests that these pages have been optimized more efficiently.",
+      "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is adequate.",
+      "The FCP (First Contentful Paint) for all pages is within acceptable ranges, meaning that users see the initial content quickly. However, optimizing FCP can further improve user experience."
+    ]
+  }
+}
