@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of 1356ms. To address this issue, it is recommended to perform a thorough analysis of the page's elements, resources, and scripts to identify bottlenecks and optimize them for faster loading.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 857ms, which is significantly shorter than the other pages. It is recommended to investigate the cause of this failure and optimize the page's performance.",
   "issues": [],
   "insights": [
-    "The pricing page and blog page have the fastest load times, suggesting that their optimizations may be more effective. Analyzing these pages' configurations could provide insights into improving the other pages' performance.",
-    "TTFB is generally low across all pages, indicating that the server response time is adequate. However, optimizing server-side rendering or preloading critical resources could further reduce TTFB and improve user experience.",
-    "FCP is a crucial metric for user experience, as it represents the time it takes for the user to see the first piece of content on the page. Ensuring that FCP is as low as possible will create a better initial impression for users visiting the website."
+    "The homepage, pricing page, and blog page have acceptable load times, with LCP times below 2500ms and TTFB times below 200ms.",
+    "The \"How It Works\" page has a longer LCP time and a shorter duration, indicating that there may be issues with the page's content or optimization.",
+    "It is important to optimize the page's performance and ensure that it passes the web performance test to provide a better user experience."
   ]
 }
