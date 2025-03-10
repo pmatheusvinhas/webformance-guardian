@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and address the underlying issues to ensure a smooth user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. Investigate the root cause and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The \"How It Works\" page has a longer duration (1218ms) compared to the other pages, suggesting potential bottlenecks or inefficiencies in page rendering.",
-    "Investigating and optimizing the \"How It Works\" page could significantly improve the overall web performance.",
-    "Ensuring consistent performance across all pages is crucial for a positive user experience. Regular monitoring and optimization of web performance can help maintain high-quality user experience and engagement."
+    "The pricing page has the fastest load time of all the pages tested, indicating effective optimization techniques. Analyze the pricing page's structure and apply similar optimizations to other pages.",
+    "The blog page has a longer time to first contentful paint (FCP) than the pricing page, suggesting that the blog page's above-the-fold content could be optimized to load faster.",
+    "Investigating and addressing the critical issue on the \"How It Works\" page should be prioritized to ensure optimal user experience and prevent potential user abandonment."
   ]
 }
