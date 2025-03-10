@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-10T01:05:31.163Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1896,
+      "metrics": {
+        "loadTime": 962.1000000000058,
+        "ttfb": 219.39999999999418,
+        "fcp": 875.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1211,
+      "metrics": {
+        "loadTime": 387.4000000000233,
+        "ttfb": 145.70000000001164,
+        "fcp": 392
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1406,
+      "metrics": {
+        "loadTime": 365,
+        "ttfb": 120.5,
+        "fcp": 357.0999999999767
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1111
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential critical issues that need to be addressed immediately. It is essential to investigate the cause of this failure and implement necessary fixes to ensure optimal performance.",
+    "issues": [],
+    "insights": [
+      "The blog page has the fastest load time, TTFB, and FCP, indicating that its optimization might serve as a good reference for other pages.",
+      "Although the TTFB for all pages is reasonable, it is still essential to monitor and optimize this metric to ensure fast response times and a positive user experience.",
+      "The homepage's high FCP might be due to large, unoptimized images or heavy scripts that delay the initial rendering of the page. Investigating and addressing these issues could significantly improve the user experience."
+    ]
+  }
+}

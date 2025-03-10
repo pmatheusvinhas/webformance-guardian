@@ -1,10 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 2241ms, which is significantly higher than the other pages. Investigate the page and optimize it to reduce the load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential critical issues that need to be addressed immediately. It is essential to investigate the cause of this failure and implement necessary fixes to ensure optimal performance.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have acceptable load times, indicating that the website's performance is generally good.",
-    "The \"How It Works\" page has a longer duration, which could be due to several factors such as large images, excessive scripts, or slow server response time. Investigating and optimizing these factors can help reduce the load time and improve user experience.",
-    "The TTFB (Time to First Byte) for all pages is relatively low, indicating that the server response time is fast. This is a positive sign for the website's performance.",
-    "The FCP (First Contentful Paint) for all pages is also relatively low, indicating that the website's content is loading quickly. This is another positive sign for the website's performance."
+    "The blog page has the fastest load time, TTFB, and FCP, indicating that its optimization might serve as a good reference for other pages.",
+    "Although the TTFB for all pages is reasonable, it is still essential to monitor and optimize this metric to ensure fast response times and a positive user experience.",
+    "The homepage's high FCP might be due to large, unoptimized images or heavy scripts that delay the initial rendering of the page. Investigating and addressing these issues could significantly improve the user experience."
   ]
 }
