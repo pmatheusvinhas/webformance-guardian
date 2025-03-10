@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. Investigate the root cause and optimize the page to improve its load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of 1356ms. To address this issue, it is recommended to perform a thorough analysis of the page's elements, resources, and scripts to identify bottlenecks and optimize them for faster loading.",
   "issues": [],
   "insights": [
-    "The pricing page has the fastest load time of all the pages tested, indicating effective optimization techniques. Analyze the pricing page's structure and apply similar optimizations to other pages.",
-    "The blog page has a longer time to first contentful paint (FCP) than the pricing page, suggesting that the blog page's above-the-fold content could be optimized to load faster.",
-    "Investigating and addressing the critical issue on the \"How It Works\" page should be prioritized to ensure optimal user experience and prevent potential user abandonment."
+    "The pricing page and blog page have the fastest load times, suggesting that their optimizations may be more effective. Analyzing these pages' configurations could provide insights into improving the other pages' performance.",
+    "TTFB is generally low across all pages, indicating that the server response time is adequate. However, optimizing server-side rendering or preloading critical resources could further reduce TTFB and improve user experience.",
+    "FCP is a crucial metric for user experience, as it represents the time it takes for the user to see the first piece of content on the page. Ensuring that FCP is as low as possible will create a better initial impression for users visiting the website."
   ]
 }
