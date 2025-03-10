@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating potential critical issues that need to be addressed immediately. It is essential to investigate the cause of this failure and implement necessary fixes to ensure optimal performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and address the underlying issues to ensure a smooth user experience.",
   "issues": [],
   "insights": [
-    "The blog page has the fastest load time, TTFB, and FCP, indicating that its optimization might serve as a good reference for other pages.",
-    "Although the TTFB for all pages is reasonable, it is still essential to monitor and optimize this metric to ensure fast response times and a positive user experience.",
-    "The homepage's high FCP might be due to large, unoptimized images or heavy scripts that delay the initial rendering of the page. Investigating and addressing these issues could significantly improve the user experience."
+    "The \"How It Works\" page has a longer duration (1218ms) compared to the other pages, suggesting potential bottlenecks or inefficiencies in page rendering.",
+    "Investigating and optimizing the \"How It Works\" page could significantly improve the overall web performance.",
+    "Ensuring consistent performance across all pages is crucial for a positive user experience. Regular monitoring and optimization of web performance can help maintain high-quality user experience and engagement."
   ]
 }

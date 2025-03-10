@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-10T05:15:24.076Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1976,
+      "metrics": {
+        "loadTime": 769.6000000000058,
+        "ttfb": 34.70000000001164,
+        "fcp": 1039.3000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1260,
+      "metrics": {
+        "loadTime": 380.3999999999942,
+        "ttfb": 132.10000000000582,
+        "fcp": 455.3999999999942
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1184,
+      "metrics": {
+        "loadTime": 372,
+        "ttfb": 134,
+        "fcp": 360
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1218
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and address the underlying issues to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page has a longer duration (1218ms) compared to the other pages, suggesting potential bottlenecks or inefficiencies in page rendering.",
+      "Investigating and optimizing the \"How It Works\" page could significantly improve the overall web performance.",
+      "Ensuring consistent performance across all pages is crucial for a positive user experience. Regular monitoring and optimization of web performance can help maintain high-quality user experience and engagement."
+    ]
+  }
+}
