@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-11T01:18:12.652Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2291,
+      "metrics": {
+        "loadTime": 994,
+        "ttfb": 37.70000000001164,
+        "fcp": 1385.6999999999825
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1438,
+      "metrics": {
+        "loadTime": 261.5999999999767,
+        "ttfb": 126.69999999995343,
+        "fcp": 689
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1041,
+      "metrics": {
+        "loadTime": 296,
+        "ttfb": 84.19999999995343,
+        "fcp": 265
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 938
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues that need immediate attention. It is crucial to investigate and resolve these problems to ensure consistent performance across all pages.",
+    "issues": [],
+    "insights": [
+      "The homepage load time is relatively high compared to the pricing and blog pages. Although it is still within an acceptable range, optimizing it can further enhance user experience.",
+      "The Time To First Byte (TTFB) for all pages is low, indicating that the server is responding quickly. This is a positive sign for web performance.",
+      "First Contentful Paint (FCP) is a critical user-centric metric that shows when the first piece of content is loaded. The FCP for the homepage is higher than the other pages, which could be improved to deliver content faster to users.",
+      "Investigate the reasons for the \"How It Works\" page failure and address the issues to maintain consistent performance across all pages."
+    ]
+  }
+}

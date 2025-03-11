@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test with a duration of 857ms, which is significantly shorter than the other pages. It is recommended to investigate the cause of this failure and optimize the page's performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues that need immediate attention. It is crucial to investigate and resolve these problems to ensure consistent performance across all pages.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have acceptable load times, with LCP times below 2500ms and TTFB times below 200ms.",
-    "The \"How It Works\" page has a longer LCP time and a shorter duration, indicating that there may be issues with the page's content or optimization.",
-    "It is important to optimize the page's performance and ensure that it passes the web performance test to provide a better user experience."
+    "The homepage load time is relatively high compared to the pricing and blog pages. Although it is still within an acceptable range, optimizing it can further enhance user experience.",
+    "The Time To First Byte (TTFB) for all pages is low, indicating that the server is responding quickly. This is a positive sign for web performance.",
+    "First Contentful Paint (FCP) is a critical user-centric metric that shows when the first piece of content is loaded. The FCP for the homepage is higher than the other pages, which could be improved to deliver content faster to users.",
+    "Investigate the reasons for the \"How It Works\" page failure and address the issues to maintain consistent performance across all pages."
   ]
 }
