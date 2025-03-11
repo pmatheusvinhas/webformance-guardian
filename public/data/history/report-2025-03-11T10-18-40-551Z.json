@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-11T10:18:40.551Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2008,
+      "metrics": {
+        "loadTime": 881,
+        "ttfb": 22.800000000017462,
+        "fcp": 1059.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 939,
+      "metrics": {
+        "loadTime": 153.89999999999418,
+        "ttfb": 14.200000000011642,
+        "fcp": 188.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 945,
+      "metrics": {
+        "loadTime": 224.10000000000582,
+        "ttfb": 15.900000000023283,
+        "fcp": 172.30000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 965
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, unoptimized scripts, or server-side bottlenecks.",
+    "issues": [],
+    "insights": [
+      "The passed tests for the homepage, pricing page, and blog page demonstrate effective optimization efforts. Continue monitoring and improving these pages to maintain their performance.",
+      "The failed test for the \"How It Works\" page highlights the need for further investigation and optimization. Addressing the issues on this page will likely improve user engagement and satisfaction.",
+      "Implementing a consistent optimization strategy across all pages will ensure a positive user experience and potentially lead to better search engine rankings."
+    ]
+  }
+}
