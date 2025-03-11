@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, and its performance metrics are not available. It is recommended to investigate and address the issues causing the failure to ensure optimal user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and optimize the page to improve its load time.",
   "issues": [],
   "insights": [
-    "The pricing page and blog page have the fastest load times, TTFB, and FCP, indicating that they are optimized for performance.",
-    "The homepage load time is longer than the pricing page and blog page, suggesting that there may be opportunities to further optimize the page.",
-    "The TTFB for all pages is within acceptable ranges, indicating that the server is responding quickly to requests. However, there is still room for improvement, especially for the homepage."
+    "The homepage has the longest load time (638 ms) among the passed tests, suggesting room for optimization. Investigate potential bottlenecks, such as large media files, excessive HTTP requests, or render-blocking resources.",
+    "The blog page has the shortest TTFB (Time to First Byte) (77 ms), indicating efficient server response times. Use this as a benchmark for other pages to improve server performance.",
+    "The pricing page has a higher FCP (249 ms) than the blog page, suggesting that the initial content rendering could be optimized. Analyze the critical rendering path and optimize the delivery of above-the-fold content."
   ]
 }

@@ -118,5 +118,9 @@
   {
     "timestamp": "2025-03-11T15:18:58.713Z",
     "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, and its performance metrics are not available. It is recommended to investigate and address the issues causing the failure to ensure optimal user experience."
+  },
+  {
+    "timestamp": "2025-03-11T20:18:23.193Z",
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and optimize the page to improve its load time."
   }
 ]

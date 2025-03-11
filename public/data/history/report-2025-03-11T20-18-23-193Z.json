@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-11T20:18:23.193Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1381,
+      "metrics": {
+        "loadTime": 637.7999999999884,
+        "ttfb": 23.599999999976717,
+        "fcp": 424.4000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1018,
+      "metrics": {
+        "loadTime": 358.30000000001746,
+        "ttfb": 32.80000000001746,
+        "fcp": 249.60000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1071,
+      "metrics": {
+        "loadTime": 305.3999999999942,
+        "ttfb": 76.89999999999418,
+        "fcp": 256.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 960
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the cause of the failure and optimize the page to improve its load time.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (638 ms) among the passed tests, suggesting room for optimization. Investigate potential bottlenecks, such as large media files, excessive HTTP requests, or render-blocking resources.",
+      "The blog page has the shortest TTFB (Time to First Byte) (77 ms), indicating efficient server response times. Use this as a benchmark for other pages to improve server performance.",
+      "The pricing page has a higher FCP (249 ms) than the blog page, suggesting that the initial content rendering could be optimized. Analyze the critical rendering path and optimize the delivery of above-the-fold content."
+    ]
+  }
+}
