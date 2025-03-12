@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-12T10:18:00.359Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1781,
+      "metrics": {
+        "loadTime": 755.5999999999767,
+        "ttfb": 165.29999999998836,
+        "fcp": 745.3000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1224,
+      "metrics": {
+        "loadTime": 396.5,
+        "ttfb": 145.5,
+        "fcp": 404.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1339,
+      "metrics": {
+        "loadTime": 392.70000000001164,
+        "ttfb": 150.20000000001164,
+        "fcp": 375.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1091
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test with a duration of 1091ms. To improve this page's performance, consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (755ms) among the passing pages. Although it passed the test, there is room for improvement. Investigate and optimize any heavy resources that might be causing longer load times.",
+      "The blog page has the lowest Time to First Byte (TTFB) value (150ms), indicating faster server response times. This is a positive sign, as it contributes to a better user experience.",
+      "The pricing page has the shortest load time (396ms) and FCP (404ms) among the passing pages. This suggests that the page is well-optimized and performs efficiently. Use this page as a benchmark for optimizing other pages on the website."
+    ]
+  }
+}
