@@ -1,25 +1,11 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.\n  - Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them. This may include minifying CSS, JavaScript, and HTML files, optimizing images, leveraging browser caching, and reducing the number of requests.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them. This may include minifying CSS, JavaScript, and HTML files, optimizing images, leveraging browser caching, and reducing the number of requests."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Investigate server-side issues, such as slow database queries, insufficient server resources, or network latency, and optimize them to reduce TTFB."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Optimize the pricing page's above-the-fold content, such as images or videos, to reduce FCP."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its loading time and pass the test.",
+  "issues": [],
   "insights": [
-    "The blog page has the lowest Time to First Byte (TTFB) and First Contentful Paint (FCP) among the pages that passed the test. This indicates that the blog page is well-optimized and could serve as a benchmark for optimizing other pages.",
-    "The homepage has a longer load time than the pricing and blog pages, despite having a lower TTFB. This suggests that there might be other factors, such as render-blocking resources or heavy scripts, that are affecting the homepage's load time.",
-    "The \"How It Works\" page's failure indicates that there are likely significant issues affecting its load time. It is crucial to prioritize optimizing this page to ensure a positive user experience."
+    "The homepage has a load time of 573.2 ms, which is within the acceptable range. However, there is still room for improvement to enhance user experience.",
+    "The pricing page has a fast load time of 319.5 ms, indicating good optimization.",
+    "The blog page has a load time of 222.2 ms, which is excellent and shows good optimization.",
+    "The \"How It Works\" page has a longer duration than the other pages, indicating potential issues that need to be investigated and resolved.",
+    "It is essential to ensure that all pages on the website are optimized for fast loading times to provide a good user experience."
   ]
 }

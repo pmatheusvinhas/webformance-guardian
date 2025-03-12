@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-03-12T20:18:37.178Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1376,
+      "metrics": {
+        "loadTime": 573.2000000000116,
+        "ttfb": 23.10000000000582,
+        "fcp": 461.29999999998836
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1121,
+      "metrics": {
+        "loadTime": 319.5,
+        "ttfb": 14,
+        "fcp": 211.69999999998254
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 947,
+      "metrics": {
+        "loadTime": 222.19999999998254,
+        "ttfb": 15,
+        "fcp": 182.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1267
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its loading time and pass the test.",
+    "issues": [],
+    "insights": [
+      "The homepage has a load time of 573.2 ms, which is within the acceptable range. However, there is still room for improvement to enhance user experience.",
+      "The pricing page has a fast load time of 319.5 ms, indicating good optimization.",
+      "The blog page has a load time of 222.2 ms, which is excellent and shows good optimization.",
+      "The \"How It Works\" page has a longer duration than the other pages, indicating potential issues that need to be investigated and resolved.",
+      "It is essential to ensure that all pages on the website are optimized for fast loading times to provide a good user experience."
+    ]
+  }
+}
