@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-03-12T15:18:55.883Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1306,
+      "metrics": {
+        "loadTime": 549.1000000000058,
+        "ttfb": 16.39999999999418,
+        "fcp": 412.3999999999942
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1136,
+      "metrics": {
+        "loadTime": 259.6000000000058,
+        "ttfb": 120.5,
+        "fcp": 450.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1433,
+      "metrics": {
+        "loadTime": 300.30000000001746,
+        "ttfb": 98.30000000001746,
+        "fcp": 414.80000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 883
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page to improve its load time.\n  - Recommendation: Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them. This may include minifying CSS, JavaScript, and HTML files, optimizing images, leveraging browser caching, and reducing the number of requests.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the page's structure, resources, and scripts to identify bottlenecks and optimize them. This may include minifying CSS, JavaScript, and HTML files, optimizing images, leveraging browser caching, and reducing the number of requests."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Investigate server-side issues, such as slow database queries, insufficient server resources, or network latency, and optimize them to reduce TTFB."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Optimize the pricing page's above-the-fold content, such as images or videos, to reduce FCP."
+      }
+    ],
+    "insights": [
+      "The blog page has the lowest Time to First Byte (TTFB) and First Contentful Paint (FCP) among the pages that passed the test. This indicates that the blog page is well-optimized and could serve as a benchmark for optimizing other pages.",
+      "The homepage has a longer load time than the pricing and blog pages, despite having a lower TTFB. This suggests that there might be other factors, such as render-blocking resources or heavy scripts, that are affecting the homepage's load time.",
+      "The \"How It Works\" page's failure indicates that there are likely significant issues affecting its load time. It is crucial to prioritize optimizing this page to ensure a positive user experience."
+    ]
+  }
+}
