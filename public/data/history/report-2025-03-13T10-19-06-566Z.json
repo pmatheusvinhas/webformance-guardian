@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-03-13T10:19:06.566Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1435,
+      "metrics": {
+        "loadTime": 711.7000000000116,
+        "ttfb": 41,
+        "fcp": 537.3000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 820,
+      "metrics": {
+        "loadTime": 146.89999999999418,
+        "ttfb": 12.10000000000582,
+        "fcp": 140.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 917,
+      "metrics": {
+        "loadTime": 201.60000000000582,
+        "ttfb": 8.89999999999418,
+        "fcp": 145.30000000001746
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 837
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test with a duration of 837 ms, indicating potential issues that need to be addressed urgently. Recommendation: Investigate the causes of the high duration and optimize the page accordingly.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the test with a duration of 837 ms, indicating potential issues that need to be addressed urgently. Recommendation",
+        "recommendation": "Investigate the causes of the high duration and optimize the page accordingly."
+      },
+      {
+        "severity": "info",
+        "message": "The homepage has a relatively high load time of 711.7 ms. Recommendation",
+        "recommendation": "Investigate the causes of the high load time and optimize the page to reduce the load time."
+      },
+      {
+        "severity": "info",
+        "message": "The pricing and blog pages have acceptable load times of 146.9 ms and 201.6 ms respectively. Recommendation",
+        "recommendation": "Continue to monitor these pages to ensure that the load times remain low."
+      }
+    ],
+    "insights": [
+      "The Time to First Byte (TTFB) metric is low for all pages, indicating that the server response time is fast.",
+      "The First Contentful Paint (FCP) metric is relatively high for the homepage, suggesting that there may be delays in rendering the first piece of content on the page.",
+      "The duration metric for the \"How It Works\" page is higher than the load time metric, indicating that there may be issues with the page that are not captured by the load time metric."
+    ]
+  }
+}
