@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-13T01:17:45.850Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1560,
+      "metrics": {
+        "loadTime": 654.9000000000233,
+        "ttfb": 22.20000000001164,
+        "fcp": 510
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 984,
+      "metrics": {
+        "loadTime": 249.39999999999418,
+        "ttfb": 18.70000000001164,
+        "fcp": 216.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 948,
+      "metrics": {
+        "loadTime": 227.39999999999418,
+        "ttfb": 16.60000000000582,
+        "fcp": 196.10000000000582
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 923
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large file sizes, slow server response time, or render-blocking resources. It is recommended to investigate and optimize these factors to improve the page's performance.",
+    "issues": [],
+    "insights": [
+      "The blog page has the fastest load time, TTFB, and FCP, suggesting that its optimization techniques can be applied to other pages.",
+      "Reducing the number of requests and optimizing file sizes can significantly improve the page's load time.",
+      "Implementing a Content Delivery Network (CDN) can help reduce the TTFB and improve the user experience for visitors from different geographical locations."
+    ]
+  }
+}

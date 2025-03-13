@@ -1,11 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its loading time and pass the test.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large file sizes, slow server response time, or render-blocking resources. It is recommended to investigate and optimize these factors to improve the page's performance.",
   "issues": [],
   "insights": [
-    "The homepage has a load time of 573.2 ms, which is within the acceptable range. However, there is still room for improvement to enhance user experience.",
-    "The pricing page has a fast load time of 319.5 ms, indicating good optimization.",
-    "The blog page has a load time of 222.2 ms, which is excellent and shows good optimization.",
-    "The \"How It Works\" page has a longer duration than the other pages, indicating potential issues that need to be investigated and resolved.",
-    "It is essential to ensure that all pages on the website are optimized for fast loading times to provide a good user experience."
+    "The blog page has the fastest load time, TTFB, and FCP, suggesting that its optimization techniques can be applied to other pages.",
+    "Reducing the number of requests and optimizing file sizes can significantly improve the page's load time.",
+    "Implementing a Content Delivery Network (CDN) can help reduce the TTFB and improve the user experience for visitors from different geographical locations."
   ]
 }
