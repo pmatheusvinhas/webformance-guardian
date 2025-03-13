@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-13T20:18:25.963Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1399,
+      "metrics": {
+        "loadTime": 582,
+        "ttfb": 20.5,
+        "fcp": 484.20000000001164
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 888,
+      "metrics": {
+        "loadTime": 177.5,
+        "ttfb": 10.200000000011642,
+        "fcp": 173.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 912,
+      "metrics": {
+        "loadTime": 229.90000000002328,
+        "ttfb": 11.400000000023283,
+        "fcp": 160.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 861
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time (582 ms) among the passed tests, which could be improved. However, it is still within an acceptable range.",
+      "The blog page has the lowest First Contentful Paint (FCP) time (160.5 ms), indicating that it renders the first bit of content quickly. This is a positive sign of good performance.",
+      "The pricing page has the shortest overall duration (888 ms) and load time (177.5 ms), making it the fastest-loading page among the passed tests. It could serve as a benchmark for improving the performance of other pages.",
+      "Investigating and addressing the issues causing the \"How It Works\" page to fail the web performance test should be a priority to ensure consistent performance across all pages."
+    ]
+  }
+}

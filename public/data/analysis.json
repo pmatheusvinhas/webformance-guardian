@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Recommendation is to investigate the cause of the failure and optimize the page for better performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
   "issues": [],
   "insights": [
-    "The homepage has the longest duration (1515 ms) but the lowest load time (410.4 ms), indicating that there may be unnecessary resources that can be removed or optimized.",
-    "The pricing page has the shortest duration (1008 ms) and load time (240.3 ms), suggesting that it is the most optimized page.",
-    "The blog page has the highest TTFB (305.3 ms) and FCP (449.7 ms), indicating that there is room for improvement in server-side rendering and above-the-fold content optimization."
+    "The homepage has the longest load time (582 ms) among the passed tests, which could be improved. However, it is still within an acceptable range.",
+    "The blog page has the lowest First Contentful Paint (FCP) time (160.5 ms), indicating that it renders the first bit of content quickly. This is a positive sign of good performance.",
+    "The pricing page has the shortest overall duration (888 ms) and load time (177.5 ms), making it the fastest-loading page among the passed tests. It could serve as a benchmark for improving the performance of other pages.",
+    "Investigating and addressing the issues causing the \"How It Works\" page to fail the web performance test should be a priority to ensure consistent performance across all pages."
   ]
 }
