@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-14T01:16:34.984Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1765,
+      "metrics": {
+        "loadTime": 720,
+        "ttfb": 33.20000000001164,
+        "fcp": 833.2999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1613,
+      "metrics": {
+        "loadTime": 394.30000000004657,
+        "ttfb": 131.30000000004657,
+        "fcp": 738.7000000000116
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1891,
+      "metrics": {
+        "loadTime": 373.79999999998836,
+        "ttfb": 135.10000000003492,
+        "fcp": 759
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1495
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating potential performance issues. It is crucial to investigate and address these issues to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have load times under 2 seconds, which is a good practice for user experience.",
+      "The TTFB for all pages is within acceptable ranges, indicating that the server response time is good.",
+      "The FCP for all pages is slightly higher than recommended best practices, meaning that the visual content takes a bit longer to appear on the page. This could impact user experience, and optimizing images, videos, and other visual elements could improve FCP.",
+      "The \"How It Works\" page failed the web performance test, indicating potential performance issues. It is crucial to investigate and address these issues to ensure a smooth user experience."
+    ]
+  }
+}
