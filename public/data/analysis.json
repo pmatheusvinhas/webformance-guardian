@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test with a duration of 893ms. Investigate the causes of this increased load time and optimize the page to improve performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing the longer duration. Recommendations include checking for large media files, optimizing code, and minimizing HTTP requests.",
   "issues": [],
   "insights": [
-    "Good server response times are observed across all pages, as indicated by low TTFB values (ranging from 13.60ms to 47.40ms).",
-    "Quick rendering of visible content is demonstrated by low FCP values (ranging from 164.30ms to 403.20ms), ensuring users see content promptly.",
-    "To maintain and improve web performance, continue monitoring page load times, TTFB, and FCP metrics, and address any issues as they arise."
+    "The homepage, pricing page, and blog page have fast load times, indicating efficient optimization and code structure.",
+    "The \"How It Works\" page's failure suggests potential issues with media files, code optimization, or HTTP requests. Investigating these areas will likely improve the page's performance.",
+    "Regularly monitoring web performance and addressing any issues will ensure a positive user experience and maintain good search engine rankings."
   ]
 }
