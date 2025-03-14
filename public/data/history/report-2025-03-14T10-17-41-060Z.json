@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-14T10:17:41.060Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1720,
+      "metrics": {
+        "loadTime": 776.6999999999971,
+        "ttfb": 47.39999999999418,
+        "fcp": 403.20000000001164
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 855,
+      "metrics": {
+        "loadTime": 150.60000000000582,
+        "ttfb": 13.60000000000582,
+        "fcp": 164.3000000000029
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 975,
+      "metrics": {
+        "loadTime": 212.6999999999971,
+        "ttfb": 13.799999999988358,
+        "fcp": 187.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 893
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test with a duration of 893ms. Investigate the causes of this increased load time and optimize the page to improve performance.",
+    "issues": [],
+    "insights": [
+      "Good server response times are observed across all pages, as indicated by low TTFB values (ranging from 13.60ms to 47.40ms).",
+      "Quick rendering of visible content is demonstrated by low FCP values (ranging from 164.30ms to 403.20ms), ensuring users see content promptly.",
+      "To maintain and improve web performance, continue monitoring page load times, TTFB, and FCP metrics, and address any issues as they arise."
+    ]
+  }
+}

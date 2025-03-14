@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, it is recommended to investigate the page's content, resources, and scripts to identify bottlenecks and optimize them for better performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test with a duration of 893ms. Investigate the causes of this increased load time and optimize the page to improve performance.",
   "issues": [],
   "insights": [
-    "The Time To First Byte (TTFB) metric is consistently low across all pages, indicating fast server response times.",
-    "First Contentful Paint (FCP) is also within acceptable ranges, suggesting that users perceive the pages as loading quickly.",
-    "The duration of the tests is relatively short, which is a positive sign. However, it is essential to ensure that all pages, especially the \"How It Works\" page, pass the performance tests to deliver a consistent user experience."
+    "Good server response times are observed across all pages, as indicated by low TTFB values (ranging from 13.60ms to 47.40ms).",
+    "Quick rendering of visible content is demonstrated by low FCP values (ranging from 164.30ms to 403.20ms), ensuring users see content promptly.",
+    "To maintain and improve web performance, continue monitoring page load times, TTFB, and FCP metrics, and address any issues as they arise."
   ]
 }
