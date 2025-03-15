@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-15T05:15:37.360Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1549,
+      "metrics": {
+        "loadTime": 627.8000000000175,
+        "ttfb": 22.300000000017462,
+        "fcp": 602.1000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1114,
+      "metrics": {
+        "loadTime": 384.20000000001164,
+        "ttfb": 81.29999999998836,
+        "fcp": 395.79999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1499,
+      "metrics": {
+        "loadTime": 581.3000000000175,
+        "ttfb": 127.80000000001746,
+        "fcp": 414.19999999998254
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1032
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a smooth user experience.",
+    "issues": [],
+    "insights": [
+      "The Time To First Byte (TTFB) for all pages is within an acceptable range, indicating that the server response time is good.",
+      "First Contentful Paint (FCP) for all pages is also within an acceptable range, suggesting that the initial rendering of the page is happening quickly.",
+      "The \"How It Works\" page's failure in the web performance test highlights the need for a thorough investigation of potential issues such as large images, excessive scripts, or inefficient rendering. Addressing these issues will significantly improve the user experience.",
+      "It is recommended to continuously monitor and optimize web performance, especially for pages with higher load times, to ensure a smooth and fast user experience."
+    ]
+  }
+}
