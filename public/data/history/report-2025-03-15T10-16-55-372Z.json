@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-03-15T10:16:55.372Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1403,
+      "metrics": {
+        "loadTime": 545.2000000000116,
+        "ttfb": 20.5,
+        "fcp": 431.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 947,
+      "metrics": {
+        "loadTime": 228.5,
+        "ttfb": 76.69999999995343,
+        "fcp": 254.09999999997672
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1081,
+      "metrics": {
+        "loadTime": 248.20000000001164,
+        "ttfb": 45.70000000001164,
+        "fcp": 213.19999999995343
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 970
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:",
+    "issues": [],
+    "insights": []
+  }
+}
