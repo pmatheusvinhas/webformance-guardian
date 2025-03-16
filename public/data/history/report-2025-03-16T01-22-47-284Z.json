@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-16T01:22:47.284Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1837,
+      "metrics": {
+        "loadTime": 699.6999999999825,
+        "ttfb": 24.10000000000582,
+        "fcp": 926.5
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 928,
+      "metrics": {
+        "loadTime": 182.60000000000582,
+        "ttfb": 44.10000000000582,
+        "fcp": 205.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1103,
+      "metrics": {
+        "loadTime": 224.69999999998254,
+        "ttfb": 15.199999999982538,
+        "fcp": 177.39999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 967
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The how it works page failed the test. Recommendation is to investigate the cause of the failure and optimize the page for better performance.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest load time, indicating that there might be issues with the page that need optimization.",
+      "The FCP for the homepage is high, suggesting that there might be an issue with rendering the initial content.",
+      "The how it works page failed the test, indicating a critical issue that needs immediate attention."
+    ]
+  }
+}
