@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-03-16T05:15:28.485Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1802,
+      "metrics": {
+        "loadTime": 628.8999999999942,
+        "ttfb": 24.39999999999418,
+        "fcp": 880.3000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1115,
+      "metrics": {
+        "loadTime": 355.8999999999942,
+        "ttfb": 195.8000000000029,
+        "fcp": 398.6999999999971
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1471,
+      "metrics": {
+        "loadTime": 358.40000000000873,
+        "ttfb": 161.6999999999971,
+        "fcp": 352.8000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 911
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate the cause of this failure and optimize the page to improve its performance.\n  - Recommendation: Analyze the page's resources, such as images, scripts, and stylesheets, to identify any bottlenecks. Optimize these resources by compressing images, minifying scripts and stylesheets, and leveraging browser caching.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the page's resources, such as images, scripts, and stylesheets, to identify any bottlenecks. Optimize these resources by compressing images, minifying scripts and stylesheets, and leveraging browser caching."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Investigate the cause of the longer load time and optimize the page accordingly. Consider optimizing images, minifying scripts and stylesheets, and reducing the number of HTTP requests."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Investigate the server configuration and optimize it to reduce the ttfb. Consider using server-side caching, reducing server response time, and optimizing database queries."
+      }
+    ],
+    "insights": [
+      "The passed pages have load times within acceptable ranges, but there is still room for improvement. Optimizing the pages can lead to better user experience and faster page loading.",
+      "The duration of the tests varies, with the homepage having the longest duration (1802 ms) and the pricing page having the shortest (1115 ms). Investigating the cause of these differences can help optimize the pages further.",
+      "The passed pages have different ttfb and First Contentful Paint (fcp) values, indicating that there are differences in server response time and content rendering. Analyzing these differences can provide insights into optimizing the pages' performance."
+    ]
+  }
+}
