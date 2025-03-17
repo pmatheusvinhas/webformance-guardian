@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To improve this page's performance, it is recommended to investigate the root cause of the failure and optimize the page's resources, such as images, scripts, and stylesheets.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating potential issues that need immediate attention. Recommendations include checking for large media files, unoptimized scripts, or server-side configurations affecting the page's load time.",
   "issues": [],
   "insights": [
-    "The homepage has the longest duration (1736ms) but still has an acceptable load time (726ms). This could be due to the number and size of resources on the page. It is recommended to periodically review and optimize these resources.",
-    "The blog page has the second-longest duration (1304ms) but has a faster load time (401ms) than the homepage. This suggests that the blog page's resources are better optimized than the homepage.",
-    "The pricing page has the shortest duration (1289ms) and load time (345ms), indicating that this page has the best performance among the tested pages. It can serve as a benchmark for optimizing other pages."
+    "The blog page has the shortest duration (1070ms) and load time (210.9ms), indicating that optimizing the number of requests, media file sizes, and scripts can significantly improve web performance.",
+    "Reducing the Time to First Byte (TTFB) can help decrease the overall load time. TTFB measures the duration from the user making a request to the first byte of the page being received. In this case, the homepage has the lowest TTFB (21.7ms), while the pricing page has a higher TTFB (58.9ms).",
+    "First Contentful Paint (FCP) measures the time it takes for the first piece of content to be displayed on the page. Optimizing FCP can help create a better user experience by displaying content quickly. The homepage and blog page have similar FCPs (525.8ms and 166.3ms, respectively), while the pricing page has a higher FCP (240.5ms)."
   ]
 }

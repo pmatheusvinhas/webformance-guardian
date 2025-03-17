@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-17T20:18:29.289Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1424,
+      "metrics": {
+        "loadTime": 521.5,
+        "ttfb": 21.69999999999709,
+        "fcp": 525.8000000000029
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1438,
+      "metrics": {
+        "loadTime": 705,
+        "ttfb": 58.89999999999418,
+        "fcp": 240.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1070,
+      "metrics": {
+        "loadTime": 210.89999999999418,
+        "ttfb": 13.69999999999709,
+        "fcp": 166.3000000000029
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 905
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating potential issues that need immediate attention. Recommendations include checking for large media files, unoptimized scripts, or server-side configurations affecting the page's load time.",
+    "issues": [],
+    "insights": [
+      "The blog page has the shortest duration (1070ms) and load time (210.9ms), indicating that optimizing the number of requests, media file sizes, and scripts can significantly improve web performance.",
+      "Reducing the Time to First Byte (TTFB) can help decrease the overall load time. TTFB measures the duration from the user making a request to the first byte of the page being received. In this case, the homepage has the lowest TTFB (21.7ms), while the pricing page has a higher TTFB (58.9ms).",
+      "First Contentful Paint (FCP) measures the time it takes for the first piece of content to be displayed on the page. Optimizing FCP can help create a better user experience by displaying content quickly. The homepage and blog page have similar FCPs (525.8ms and 166.3ms, respectively), while the pricing page has a higher FCP (240.5ms)."
+    ]
+  }
+}
