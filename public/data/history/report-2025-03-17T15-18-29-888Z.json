@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-17T15:18:29.888Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1736,
+      "metrics": {
+        "loadTime": 726.6999999999825,
+        "ttfb": 17,
+        "fcp": 370
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1289,
+      "metrics": {
+        "loadTime": 345.8999999999942,
+        "ttfb": 127.60000000000582,
+        "fcp": 348.29999999998836
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1304,
+      "metrics": {
+        "loadTime": 401.29999999998836,
+        "ttfb": 186.60000000000582,
+        "fcp": 366.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 991
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To improve this page's performance, it is recommended to investigate the root cause of the failure and optimize the page's resources, such as images, scripts, and stylesheets.",
+    "issues": [],
+    "insights": [
+      "The homepage has the longest duration (1736ms) but still has an acceptable load time (726ms). This could be due to the number and size of resources on the page. It is recommended to periodically review and optimize these resources.",
+      "The blog page has the second-longest duration (1304ms) but has a faster load time (401ms) than the homepage. This suggests that the blog page's resources are better optimized than the homepage.",
+      "The pricing page has the shortest duration (1289ms) and load time (345ms), indicating that this page has the best performance among the tested pages. It can serve as a benchmark for optimizing other pages."
+    ]
+  }
+}

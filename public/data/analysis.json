@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large file sizes, slow server response time, or unoptimized resources. It is recommended to investigate and optimize these factors to improve page performance.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To improve this page's performance, it is recommended to investigate the root cause of the failure and optimize the page's resources, such as images, scripts, and stylesheets.",
   "issues": [],
   "insights": [
-    "The pricing and blog pages have faster load times, indicating effective optimization strategies. Analyze these pages to identify best practices that can be applied to other pages.",
-    "The Time to First Byte (TTFB) metric is consistently low across all pages, suggesting a fast server response time. This is a positive sign for overall website performance.",
-    "The First Contentful Paint (FCP) metric is relatively high on the homepage, indicating that users might have to wait longer before seeing any content on the page. Optimizing this metric can improve user experience and perceived performance."
+    "The homepage has the longest duration (1736ms) but still has an acceptable load time (726ms). This could be due to the number and size of resources on the page. It is recommended to periodically review and optimize these resources.",
+    "The blog page has the second-longest duration (1304ms) but has a faster load time (401ms) than the homepage. This suggests that the blog page's resources are better optimized than the homepage.",
+    "The pricing page has the shortest duration (1289ms) and load time (345ms), indicating that this page has the best performance among the tested pages. It can serve as a benchmark for optimizing other pages."
   ]
 }
