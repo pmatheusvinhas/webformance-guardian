@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-17T05:17:03.902Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1412,
+      "metrics": {
+        "loadTime": 589.7999999999884,
+        "ttfb": 70.79999999998836,
+        "fcp": 492.20000000001164
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1063,
+      "metrics": {
+        "loadTime": 370.20000000001164,
+        "ttfb": 164,
+        "fcp": 321.6000000000349
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1097,
+      "metrics": {
+        "loadTime": 293.69999999995343,
+        "ttfb": 88.29999999998836,
+        "fcp": 246.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 897
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. To improve its performance, consider optimizing images, minifying CSS and JavaScript, and enabling browser caching.",
+    "issues": [],
+    "insights": [
+      "The homepage, pricing page, and blog page have good load times, indicating effective optimization.",
+      "The \"How It Works\" page has a shorter duration, suggesting potential issues such as unoptimized images, large HTML payload, or slow server response time.",
+      "It is important to regularly monitor and optimize web performance to ensure a good user experience."
+    ]
+  }
+}
