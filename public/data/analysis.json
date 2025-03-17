@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page has failed the web performance test. To improve its performance, consider optimizing images, minifying CSS and JavaScript, and enabling browser caching.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large file sizes, slow server response time, or unoptimized resources. It is recommended to investigate and optimize these factors to improve page performance.",
   "issues": [],
   "insights": [
-    "The homepage, pricing page, and blog page have good load times, indicating effective optimization.",
-    "The \"How It Works\" page has a shorter duration, suggesting potential issues such as unoptimized images, large HTML payload, or slow server response time.",
-    "It is important to regularly monitor and optimize web performance to ensure a good user experience."
+    "The pricing and blog pages have faster load times, indicating effective optimization strategies. Analyze these pages to identify best practices that can be applied to other pages.",
+    "The Time to First Byte (TTFB) metric is consistently low across all pages, suggesting a fast server response time. This is a positive sign for overall website performance.",
+    "The First Contentful Paint (FCP) metric is relatively high on the homepage, indicating that users might have to wait longer before seeing any content on the page. Optimizing this metric can improve user experience and perceived performance."
   ]
 }

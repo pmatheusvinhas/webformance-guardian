@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-17T10:19:08.692Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1363,
+      "metrics": {
+        "loadTime": 601.5,
+        "ttfb": 17.5,
+        "fcp": 430.19999999998254
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 897,
+      "metrics": {
+        "loadTime": 172.70000000001164,
+        "ttfb": 20.400000000023283,
+        "fcp": 186.30000000001746
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 969,
+      "metrics": {
+        "loadTime": 223.10000000000582,
+        "ttfb": 17.800000000017462,
+        "fcp": 184.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1214
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the test, indicating possible issues such as large file sizes, slow server response time, or unoptimized resources. It is recommended to investigate and optimize these factors to improve page performance.",
+    "issues": [],
+    "insights": [
+      "The pricing and blog pages have faster load times, indicating effective optimization strategies. Analyze these pages to identify best practices that can be applied to other pages.",
+      "The Time to First Byte (TTFB) metric is consistently low across all pages, suggesting a fast server response time. This is a positive sign for overall website performance.",
+      "The First Contentful Paint (FCP) metric is relatively high on the homepage, indicating that users might have to wait longer before seeing any content on the page. Optimizing this metric can improve user experience and perceived performance."
+    ]
+  }
+}
