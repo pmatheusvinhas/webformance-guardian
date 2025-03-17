@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-03-17T01:20:19.311Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1990,
+      "metrics": {
+        "loadTime": 972.7999999999884,
+        "ttfb": 275.8999999999651,
+        "fcp": 994.1000000000349
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1262,
+      "metrics": {
+        "loadTime": 492.5999999999767,
+        "ttfb": 106,
+        "fcp": 483.5999999999767
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1548,
+      "metrics": {
+        "loadTime": 289.79999999998836,
+        "ttfb": 105.40000000002328,
+        "fcp": 261.0999999999767
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 964
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience. Recommendation: Analyze the waterfall chart and other diagnostic tools to identify bottlenecks, such as slow-loading resources, render-blocking JavaScript, or unoptimized images.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience. Recommendation",
+        "recommendation": "Analyze the waterfall chart and other diagnostic tools to identify bottlenecks, such as slow-loading resources, render-blocking JavaScript, or unoptimized images."
+      },
+      {
+        "severity": "info",
+        "message": "The homepage has a slightly longer load time (972.79 ms) compared to the pricing page (492.59 ms) and blog page (289.79 ms). This difference might be due to additional resources or more complex scripts on the homepage. Recommendation",
+        "recommendation": "Continuously monitor and optimize the homepage to maintain a fast load time and ensure a positive user experience."
+      }
+    ],
+    "insights": [
+      "The Time to First Byte (TTFB) metric is relatively low for all pages, indicating that the server response time is fast. This is a positive sign for user experience and SEO.",
+      "First Contentful Paint (FCP) is also low for all pages, meaning that the user sees the first piece of content quickly. This is another positive sign for user experience and engagement.",
+      "Although the homepage has a longer load time than the other pages, it still falls within an acceptable range (less than 3 seconds). However, it is crucial to keep optimizing the homepage to maintain a fast load time and prevent any potential issues that might arise in the future."
+    ]
+  }
+}

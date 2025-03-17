@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To improve this page's load time, consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience. Recommendation: Analyze the waterfall chart and other diagnostic tools to identify bottlenecks, such as slow-loading resources, render-blocking JavaScript, or unoptimized images.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure a positive user experience. Recommendation",
+      "recommendation": "Analyze the waterfall chart and other diagnostic tools to identify bottlenecks, such as slow-loading resources, render-blocking JavaScript, or unoptimized images."
+    },
+    {
+      "severity": "info",
+      "message": "The homepage has a slightly longer load time (972.79 ms) compared to the pricing page (492.59 ms) and blog page (289.79 ms). This difference might be due to additional resources or more complex scripts on the homepage. Recommendation",
+      "recommendation": "Continuously monitor and optimize the homepage to maintain a fast load time and ensure a positive user experience."
+    }
+  ],
   "insights": [
-    "The pricing page and blog page have the best load times, at 198.5ms and 214.6ms, respectively. This indicates that the optimization techniques used on these pages are effective and could be applied to other pages, such as the \"How It Works\" page.",
-    "The Time to First Byte (TTFB) for all pages is relatively low, indicating that the server response time is good. This is a positive sign, as it shows that the server is not a bottleneck in the web performance.",
-    "The First Contentful Paint (FCP) for all pages is also low, which means that the user sees the content quickly after the page starts loading. This is another positive sign, as it contributes to a better user experience."
+    "The Time to First Byte (TTFB) metric is relatively low for all pages, indicating that the server response time is fast. This is a positive sign for user experience and SEO.",
+    "First Contentful Paint (FCP) is also low for all pages, meaning that the user sees the first piece of content quickly. This is another positive sign for user experience and engagement.",
+    "Although the homepage has a longer load time than the other pages, it still falls within an acceptable range (less than 3 seconds). However, it is crucial to keep optimizing the homepage to maintain a fast load time and prevent any potential issues that might arise in the future."
   ]
 }
