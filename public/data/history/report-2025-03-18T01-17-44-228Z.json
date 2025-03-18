@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-18T01:17:44.228Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2039,
+      "metrics": {
+        "loadTime": 765.3999999999651,
+        "ttfb": 35.29999999998836,
+        "fcp": 1027.100000000035
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1343,
+      "metrics": {
+        "loadTime": 404.4000000000233,
+        "ttfb": 165,
+        "fcp": 554.4000000000233
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1662,
+      "metrics": {
+        "loadTime": 395.8999999999651,
+        "ttfb": 159,
+        "fcp": 491.29999999998836
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1178
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's failure indicates that there might be issues with the page's content, scripts, or resources that need to be addressed. Investigate and optimize these elements to improve the page's load time.",
+      "All pages can benefit from further optimization to reduce load times and improve user experience. Consider techniques such as minification, compression, and lazy loading of resources to enhance performance.",
+      "It is crucial to monitor web performance regularly to identify and address any issues that may arise, ensuring a consistently positive user experience."
+    ]
+  }
+}

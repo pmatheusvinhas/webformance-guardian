@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test, indicating potential issues that need immediate attention. Recommendations include checking for large media files, unoptimized scripts, or server-side configurations affecting the page's load time.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The blog page has the shortest duration (1070ms) and load time (210.9ms), indicating that optimizing the number of requests, media file sizes, and scripts can significantly improve web performance.",
-    "Reducing the Time to First Byte (TTFB) can help decrease the overall load time. TTFB measures the duration from the user making a request to the first byte of the page being received. In this case, the homepage has the lowest TTFB (21.7ms), while the pricing page has a higher TTFB (58.9ms).",
-    "First Contentful Paint (FCP) measures the time it takes for the first piece of content to be displayed on the page. Optimizing FCP can help create a better user experience by displaying content quickly. The homepage and blog page have similar FCPs (525.8ms and 166.3ms, respectively), while the pricing page has a higher FCP (240.5ms)."
+    "The \"How It Works\" page's failure indicates that there might be issues with the page's content, scripts, or resources that need to be addressed. Investigate and optimize these elements to improve the page's load time.",
+    "All pages can benefit from further optimization to reduce load times and improve user experience. Consider techniques such as minification, compression, and lazy loading of resources to enhance performance.",
+    "It is crucial to monitor web performance regularly to identify and address any issues that may arise, ensuring a consistently positive user experience."
   ]
 }
