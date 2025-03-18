@@ -1,9 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a positive user experience.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the causes of the longer duration and implement optimizations to reduce load times.",
   "issues": [],
   "insights": [
-    "The Time to First Byte (TTFB) is relatively low for all pages, indicating that the server response time is not a significant issue.",
-    "First Contentful Paint (FCP) is close to the load time for all pages, suggesting that the pages' above-the-fold content loads quickly, providing a positive initial user experience.",
-    "The pricing page has a higher load time than the homepage, despite having a lower TTFB and FCP. This indicates that there may be other factors, such as excessive HTTP requests or unoptimized resources, contributing to the slower load time."
+    "The homepage has the lowest Time to First Byte (TTFB) of 36ms, indicating a faster server response time compared to other pages.",
+    "The blog page has the highest First Contentful Paint (FCP) of 547.5ms, suggesting that there might be rendering or layout issues that need to be addressed.",
+    "The pricing page has the longest TTFB of 189.2ms, which could be improved by optimizing server-side processing or caching.",
+    "To ensure consistent performance, it is essential to investigate and address the issues on the \"How It Works\" page, as its duration is significantly lower than the other pages."
   ]
 }

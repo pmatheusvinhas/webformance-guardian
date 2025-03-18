@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-18T15:19:11.752Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1541,
+      "metrics": {
+        "loadTime": 613.5,
+        "ttfb": 36,
+        "fcp": 459.59999999999127
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1362,
+      "metrics": {
+        "loadTime": 439.6999999999971,
+        "ttfb": 189.1999999999971,
+        "fcp": 562.5
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1602,
+      "metrics": {
+        "loadTime": 530.9000000000087,
+        "ttfb": 155.90000000000873,
+        "fcp": 547.5
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1284
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the causes of the longer duration and implement optimizations to reduce load times.",
+    "issues": [],
+    "insights": [
+      "The homepage has the lowest Time to First Byte (TTFB) of 36ms, indicating a faster server response time compared to other pages.",
+      "The blog page has the highest First Contentful Paint (FCP) of 547.5ms, suggesting that there might be rendering or layout issues that need to be addressed.",
+      "The pricing page has the longest TTFB of 189.2ms, which could be improved by optimizing server-side processing or caching.",
+      "To ensure consistent performance, it is essential to investigate and address the issues on the \"How It Works\" page, as its duration is significantly lower than the other pages."
+    ]
+  }
+}
