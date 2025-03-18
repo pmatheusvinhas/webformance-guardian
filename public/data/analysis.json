@@ -1,9 +1,20 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing this failure to ensure optimal user experience.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page's performance. Recommendation: Review server logs, network requests, and page components to identify bottlenecks and implement optimizations.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of this failure and optimize the page's performance. Recommendation",
+      "recommendation": "Review server logs, network requests, and page components to identify bottlenecks and implement optimizations."
+    },
+    {
+      "severity": "info",
+      "message": "The homepage has a load time of 591.8 ms, which is within an acceptable range. However, there is still room for improvement. Recommendation",
+      "recommendation": "Continue optimizing images, minifying CSS and JavaScript, and leveraging browser caching."
+    }
+  ],
   "insights": [
-    "The \"How It Works\" page's failure indicates that there might be issues with the page's content, scripts, or resources that need to be addressed. Investigate and optimize these elements to improve the page's load time.",
-    "All pages can benefit from further optimization to reduce load times and improve user experience. Consider techniques such as minification, compression, and lazy loading of resources to enhance performance.",
-    "It is crucial to monitor web performance regularly to identify and address any issues that may arise, ensuring a consistently positive user experience."
+    "The pricing page and blog page have significantly better load times than the homepage, suggesting that these pages might have been optimized more efficiently.",
+    "The Time To First Byte (TTFB) is relatively low for all pages, indicating that the server response time is good.",
+    "The First Contentful Paint (FCP) is generally consistent across pages, suggesting that the initial rendering of content is happening quickly. However, there is still room for improvement, especially on the homepage."
   ]
 }
