@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-18T10:19:32.038Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1750,
+      "metrics": {
+        "loadTime": 864.1000000000058,
+        "ttfb": 27.900000000023283,
+        "fcp": 844.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1083,
+      "metrics": {
+        "loadTime": 470.79999999998836,
+        "ttfb": 73.39999999999418,
+        "fcp": 259.6000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1100,
+      "metrics": {
+        "loadTime": 230.29999999998836,
+        "ttfb": 16.599999999976717,
+        "fcp": 184.60000000000582
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1007
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the failure to ensure a positive user experience.",
+    "issues": [],
+    "insights": [
+      "The Time to First Byte (TTFB) is relatively low for all pages, indicating that the server response time is not a significant issue.",
+      "First Contentful Paint (FCP) is close to the load time for all pages, suggesting that the pages' above-the-fold content loads quickly, providing a positive initial user experience.",
+      "The pricing page has a higher load time than the homepage, despite having a lower TTFB and FCP. This indicates that there may be other factors, such as excessive HTTP requests or unoptimized resources, contributing to the slower load time."
+    ]
+  }
+}
