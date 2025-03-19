@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-19T10:18:44.952Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1511,
+      "metrics": {
+        "loadTime": 640.3999999999942,
+        "ttfb": 35,
+        "fcp": 582.7999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1139,
+      "metrics": {
+        "loadTime": 362.5,
+        "ttfb": 123.29999999998836,
+        "fcp": 352.1000000000058
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1530,
+      "metrics": {
+        "loadTime": 673.7999999999884,
+        "ttfb": 277.19999999998254,
+        "fcp": 519.3999999999942
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 992
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, investigate the page's content, resources, and scripts to identify bottlenecks and optimize for faster loading times.",
+    "issues": [],
+    "insights": [
+      "The \"How It Works\" page's shorter duration suggests that it may have fewer resources or less complex scripts compared to the other pages. Investigating this page first could provide insights into optimizing the other pages as well.",
+      "Focusing on optimizing TTFB (Time to First Byte) can significantly improve user experience, as it directly impacts how quickly the browser receives the first byte of data from the server.",
+      "Implementing techniques such as lazy loading, code splitting, and image optimization can help reduce load times and improve overall web performance."
+    ]
+  }
+}
