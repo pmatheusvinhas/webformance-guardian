@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-19T15:18:37.163Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1647,
+      "metrics": {
+        "loadTime": 695.9000000000233,
+        "ttfb": 32.60000000000582,
+        "fcp": 702.1999999999825
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 990,
+      "metrics": {
+        "loadTime": 182.39999999999418,
+        "ttfb": 49.10000000000582,
+        "fcp": 232.10000000000582
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1278,
+      "metrics": {
+        "loadTime": 273.3999999999942,
+        "ttfb": 11,
+        "fcp": 165.20000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 967
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the best performance, with load times significantly lower than the homepage. This suggests that these pages might have better optimization or fewer resources to load.",
+      "The TTFB (Time to First Byte) for all pages is within the recommended range, indicating that the server response time is adequate.",
+      "The FCP for the homepage is close to the TTFB, meaning that there might be room for improvement in rendering the initial content faster."
+    ]
+  }
+}

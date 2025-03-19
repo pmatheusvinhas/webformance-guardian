@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To address this, investigate the page's content, resources, and scripts to identify bottlenecks and optimize for faster loading times.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
   "issues": [],
   "insights": [
-    "The \"How It Works\" page's shorter duration suggests that it may have fewer resources or less complex scripts compared to the other pages. Investigating this page first could provide insights into optimizing the other pages as well.",
-    "Focusing on optimizing TTFB (Time to First Byte) can significantly improve user experience, as it directly impacts how quickly the browser receives the first byte of data from the server.",
-    "Implementing techniques such as lazy loading, code splitting, and image optimization can help reduce load times and improve overall web performance."
+    "The pricing page and blog page have the best performance, with load times significantly lower than the homepage. This suggests that these pages might have better optimization or fewer resources to load.",
+    "The TTFB (Time to First Byte) for all pages is within the recommended range, indicating that the server response time is adequate.",
+    "The FCP for the homepage is close to the TTFB, meaning that there might be room for improvement in rendering the initial content faster."
   ]
 }
