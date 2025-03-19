@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-03-19T20:19:05.851Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2506,
+      "metrics": {
+        "loadTime": 1006.6000000000058,
+        "ttfb": 25.10000000000582,
+        "fcp": 1597.8000000000175
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1494,
+      "metrics": {
+        "loadTime": 818,
+        "ttfb": 222.60000000000582,
+        "fcp": 791.0999999999767
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1004,
+      "metrics": {
+        "loadTime": 278.19999999998254,
+        "ttfb": 61.59999999997672,
+        "fcp": 230.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1132
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its load time and passing rate.\n  - Recommendation: Analyze the page's content, resources, and scripts to identify bottlenecks and optimize them. This may include image optimization, minification of CSS and JavaScript files, lazy loading, and caching strategies.",
+    "issues": [
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Analyze the page's content, resources, and scripts to identify bottlenecks and optimize them. This may include image optimization, minification of CSS and JavaScript files, lazy loading, and caching strategies."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Investigate the homepage's resources and optimize them where possible. This may include image optimization, minification of CSS and JavaScript files, and lazy loading."
+      },
+      {
+        "severity": "info",
+        "message": "Recommendation",
+        "recommendation": "Continue monitoring TTFB to ensure consistent performance."
+      }
+    ],
+    "insights": [
+      "The blog page demonstrates the best performance among all pages, suggesting that its design and optimization strategies can be applied to other pages for improvement.",
+      "First Contentful Paint (FCP) is generally consistent across pages, indicating that the initial rendering of content is happening quickly. However, there is still room for improvement on the homepage and pricing page.",
+      "Investigating and addressing the issues on the \"How It Works\" page should be prioritized, as it directly impacts user experience and may indicate broader issues affecting other pages."
+    ]
+  }
+}

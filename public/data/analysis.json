@@ -1,9 +1,25 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is crucial to investigate and resolve the issues causing this failure to ensure optimal user experience.",
-  "issues": [],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its load time and passing rate.\n  - Recommendation: Analyze the page's content, resources, and scripts to identify bottlenecks and optimize them. This may include image optimization, minification of CSS and JavaScript files, lazy loading, and caching strategies.",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Analyze the page's content, resources, and scripts to identify bottlenecks and optimize them. This may include image optimization, minification of CSS and JavaScript files, lazy loading, and caching strategies."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Investigate the homepage's resources and optimize them where possible. This may include image optimization, minification of CSS and JavaScript files, and lazy loading."
+    },
+    {
+      "severity": "info",
+      "message": "Recommendation",
+      "recommendation": "Continue monitoring TTFB to ensure consistent performance."
+    }
+  ],
   "insights": [
-    "The pricing page and blog page have the best performance, with load times significantly lower than the homepage. This suggests that these pages might have better optimization or fewer resources to load.",
-    "The TTFB (Time to First Byte) for all pages is within the recommended range, indicating that the server response time is adequate.",
-    "The FCP for the homepage is close to the TTFB, meaning that there might be room for improvement in rendering the initial content faster."
+    "The blog page demonstrates the best performance among all pages, suggesting that its design and optimization strategies can be applied to other pages for improvement.",
+    "First Contentful Paint (FCP) is generally consistent across pages, indicating that the initial rendering of content is happening quickly. However, there is still room for improvement on the homepage and pricing page.",
+    "Investigating and addressing the issues on the \"How It Works\" page should be prioritized, as it directly impacts user experience and may indicate broader issues affecting other pages."
   ]
 }
