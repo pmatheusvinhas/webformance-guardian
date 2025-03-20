@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-03-20T01:18:07.915Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 2131,
+      "metrics": {
+        "loadTime": 928.5,
+        "ttfb": 27.29999999998836,
+        "fcp": 1226
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 906,
+      "metrics": {
+        "loadTime": 167.90000000002328,
+        "ttfb": 21.900000000023283,
+        "fcp": 203.10000000003492
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1380,
+      "metrics": {
+        "loadTime": 486,
+        "ttfb": 18.79999999998836,
+        "fcp": 528
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1458
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of the failure and optimize the page to improve its performance.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the lowest load time (167.9ms) and duration (906ms), indicating excellent performance.",
+      "The blog page has a low TTFB (18.8ms) and load time (486ms), suggesting that the page is optimized for fast rendering.",
+      "The homepage has a high FCP (1226ms) compared to the other pages, indicating that there might be an issue with rendering the initial content on the page. It is recommended to investigate the cause of the high FCP and optimize the page accordingly.",
+      "The \"How It Works\" page failed the web performance test, indicating that there is a significant issue with the page's performance. It is crucial to investigate the cause of the failure and optimize the page to improve its performance."
+    ]
+  }
+}

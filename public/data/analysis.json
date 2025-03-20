@@ -1,25 +1,10 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and optimize this page to improve its load time and passing rate.\n  - Recommendation: Analyze the page's content, resources, and scripts to identify bottlenecks and optimize them. This may include image optimization, minification of CSS and JavaScript files, lazy loading, and caching strategies.",
-  "issues": [
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Analyze the page's content, resources, and scripts to identify bottlenecks and optimize them. This may include image optimization, minification of CSS and JavaScript files, lazy loading, and caching strategies."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Investigate the homepage's resources and optimize them where possible. This may include image optimization, minification of CSS and JavaScript files, and lazy loading."
-    },
-    {
-      "severity": "info",
-      "message": "Recommendation",
-      "recommendation": "Continue monitoring TTFB to ensure consistent performance."
-    }
-  ],
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate the cause of the failure and optimize the page to improve its performance.",
+  "issues": [],
   "insights": [
-    "The blog page demonstrates the best performance among all pages, suggesting that its design and optimization strategies can be applied to other pages for improvement.",
-    "First Contentful Paint (FCP) is generally consistent across pages, indicating that the initial rendering of content is happening quickly. However, there is still room for improvement on the homepage and pricing page.",
-    "Investigating and addressing the issues on the \"How It Works\" page should be prioritized, as it directly impacts user experience and may indicate broader issues affecting other pages."
+    "The pricing page has the lowest load time (167.9ms) and duration (906ms), indicating excellent performance.",
+    "The blog page has a low TTFB (18.8ms) and load time (486ms), suggesting that the page is optimized for fast rendering.",
+    "The homepage has a high FCP (1226ms) compared to the other pages, indicating that there might be an issue with rendering the initial content on the page. It is recommended to investigate the cause of the high FCP and optimize the page accordingly.",
+    "The \"How It Works\" page failed the web performance test, indicating that there is a significant issue with the page's performance. It is crucial to investigate the cause of the failure and optimize the page to improve its performance."
   ]
 }
