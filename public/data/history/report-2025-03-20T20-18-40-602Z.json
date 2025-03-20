@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-20T20:18:40.602Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1879,
+      "metrics": {
+        "loadTime": 994.2999999999884,
+        "ttfb": 33.399999999965075,
+        "fcp": 598.9000000000233
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1338,
+      "metrics": {
+        "loadTime": 424.30000000004657,
+        "ttfb": 171.5,
+        "fcp": 542
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1609,
+      "metrics": {
+        "loadTime": 410.5999999999767,
+        "ttfb": 164.89999999996508,
+        "fcp": 476.5999999999767
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1141
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. To identify the root cause, investigate server response times, resource loading, and potential bottlenecks.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the lowest Time to First Byte (TTFB) among all pages, suggesting that the server response time is optimal. This could be a result of efficient server-side rendering or caching.",
+      "The blog page has the lowest load time (410 ms) and FCP (476 ms), indicating that it is the best-performing page in terms of web performance. Analyze the differences between the blog page and other pages to identify best practices and areas for improvement.",
+      "The homepage has a higher load time than the pricing and blog pages, despite having a similar TTFB. This discrepancy suggests that there might be issues with resource loading or rendering, which should be investigated further."
+    ]
+  }
+}
