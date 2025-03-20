@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-20T15:19:03.350Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1729,
+      "metrics": {
+        "loadTime": 499.0999999999767,
+        "ttfb": 21,
+        "fcp": 526.2999999999884
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1169,
+      "metrics": {
+        "loadTime": 266.79999999998836,
+        "ttfb": 109.19999999998254,
+        "fcp": 347.4000000000233
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1356,
+      "metrics": {
+        "loadTime": 352.29999999998836,
+        "ttfb": 151,
+        "fcp": 401.70000000001164
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1172
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. Investigate the page's structure, resources, and scripts to identify bottlenecks and optimize performance.",
+    "issues": [],
+    "insights": [
+      "The homepage has a longer load time (499ms) compared to the pricing page (267ms) and blog page (352ms). Analyze the homepage's resources and scripts to find opportunities for optimization.",
+      "The First Contentful Paint (FCP) for the homepage (526ms) is slower than the pricing page (347ms) and blog page (402ms). Focus on optimizing above-the-fold content to improve FCP and deliver a faster perceived loading experience.",
+      "The TTFB for the \"How It Works\" page is not available, which could indicate a server-side issue. Investigate server configurations and optimize database queries or caching strategies to improve TTFB."
+    ]
+  }
+}
