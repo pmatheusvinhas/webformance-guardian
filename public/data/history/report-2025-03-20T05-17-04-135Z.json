@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-20T05:17:04.135Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1737,
+      "metrics": {
+        "loadTime": 851.6999999999825,
+        "ttfb": 34.39999999999418,
+        "fcp": 826.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 1263,
+      "metrics": {
+        "loadTime": 371.6000000000058,
+        "ttfb": 126.40000000002328,
+        "fcp": 535.4000000000233
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 1592,
+      "metrics": {
+        "loadTime": 511.5,
+        "ttfb": 153.29999999998836,
+        "fcp": 530.6000000000058
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 1231
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1231ms. To improve this page's performance, consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching.",
+    "issues": [],
+    "insights": [
+      "The pricing page has the fastest load time (371.6000000000058ms) and time to first contentful paint (535.4000000000233ms) among the tested pages. This indicates that the pricing page's content and resources are well optimized.",
+      "The blog page has a slightly higher load time (511.5ms) than the pricing page, but its time to first contentful paint (530.6000000000058ms) is very close. This suggests that the blog page's main content is loading quickly, but some secondary resources might be causing a slight delay in the overall load time.",
+      "The homepage's time to first contentful paint (826.6000000000058ms) is close to its load time (851.6999999999825ms), indicating that the main content is loading relatively quickly. However, there might be room for optimization in secondary resources or render-blocking elements to reduce the overall load time."
+    ]
+  }
+}
