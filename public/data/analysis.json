@@ -1,9 +1,9 @@
 {
-  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the performance test, with a duration of 1231ms. To improve this page's performance, consider optimizing images, minifying CSS and JavaScript files, and leveraging browser caching.",
+  "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. We recommend checking for any large media files, scripts, or stylesheets that could be causing the delay.",
   "issues": [],
   "insights": [
-    "The pricing page has the fastest load time (371.6000000000058ms) and time to first contentful paint (535.4000000000233ms) among the tested pages. This indicates that the pricing page's content and resources are well optimized.",
-    "The blog page has a slightly higher load time (511.5ms) than the pricing page, but its time to first contentful paint (530.6000000000058ms) is very close. This suggests that the blog page's main content is loading quickly, but some secondary resources might be causing a slight delay in the overall load time.",
-    "The homepage's time to first contentful paint (826.6000000000058ms) is close to its load time (851.6999999999825ms), indicating that the main content is loading relatively quickly. However, there might be room for optimization in secondary resources or render-blocking elements to reduce the overall load time."
+    "The pricing page and blog page have the fastest load times, indicating that their optimizations are working effectively. Analyze these pages to identify best practices that can be applied to other pages, such as the \"How It Works\" page.",
+    "First Contentful Paint (FCP) is relatively high on all pages, suggesting that there might be an opportunity to improve the initial rendering of the page. Investigate ways to reduce FCP, such as optimizing critical render path elements or using a content delivery network (CDN) for faster content delivery.",
+    "Although the test results do not show any critical issues on the homepage, it is essential to continuously monitor and optimize web performance to ensure a smooth user experience."
   ]
 }

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-03-20T10:18:35.271Z",
+  "results": [
+    {
+      "title": "Homepage Load",
+      "passed": true,
+      "duration": 1589,
+      "metrics": {
+        "loadTime": 689.6999999999825,
+        "ttfb": 27.699999999982538,
+        "fcp": 691.6000000000058
+      }
+    },
+    {
+      "title": "Pricing Page",
+      "passed": true,
+      "duration": 914,
+      "metrics": {
+        "loadTime": 165.39999999999418,
+        "ttfb": 20.89999999999418,
+        "fcp": 200.20000000001164
+      }
+    },
+    {
+      "title": "Blog Page",
+      "passed": true,
+      "duration": 975,
+      "metrics": {
+        "loadTime": 233.5,
+        "ttfb": 24,
+        "fcp": 197.39999999999418
+      }
+    },
+    {
+      "title": "How It Works Page",
+      "passed": false,
+      "duration": 932
+    }
+  ],
+  "analysis": {
+    "summary": "ISSUES\nCritical:\n- The \"How It Works\" page failed the web performance test. It is essential to investigate and resolve the issues causing the longer duration. We recommend checking for any large media files, scripts, or stylesheets that could be causing the delay.",
+    "issues": [],
+    "insights": [
+      "The pricing page and blog page have the fastest load times, indicating that their optimizations are working effectively. Analyze these pages to identify best practices that can be applied to other pages, such as the \"How It Works\" page.",
+      "First Contentful Paint (FCP) is relatively high on all pages, suggesting that there might be an opportunity to improve the initial rendering of the page. Investigate ways to reduce FCP, such as optimizing critical render path elements or using a content delivery network (CDN) for faster content delivery.",
+      "Although the test results do not show any critical issues on the homepage, it is essential to continuously monitor and optimize web performance to ensure a smooth user experience."
+    ]
+  }
+}
